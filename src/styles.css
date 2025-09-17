@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: night --default;
+}
+:root {
+  --sidebar-bg: #1e295f;
+}
+/* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: night --default;
+}

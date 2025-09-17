@@ -1,3 +1,7 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { PdfDemoComponent } from './pages/pdf-demo/pdf-demo.component';
+
+export const routes: Routes = [
+	{ path: 'pdf-demo', component: PdfDemoComponent },
+];
