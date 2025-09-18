@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="p-4" [ngStyle]="{'background': 'var(--sidebar-bg, #1e293b)'}">
+    <div class="p-4" [ngStyle]="{'background': 'var(--clr-primary, #1e293b)'}">
       <h3 class="text-lg font-bold mb-2">Skills</h3>
       <div class="flex flex-wrap gap-2 mb-4">
         <button *ngFor="let skill of skills" class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">{{ skill }}</button>

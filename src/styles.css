@@ -6,7 +6,68 @@
   themes: night --default;
 }
 :root {
-  --sidebar-bg: #1e295f;
+  --clr-primary: #1e295f;
+  --clr-secondary: #a28848;
+  --cl-gray-900: rgb(188, 190, 192);
+  --clr-gray-500: #aaa;
+}
+.h6-primary {
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--cl-gray-900);
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--clr-secondary);
+  font-size: 18px;
+  text-transform: uppercase;
+
+
+}
+.h2--primary {
+  color: var(--clr-primary);
+}
+
+.h2--secondary {
+  color: var(--clr-secondary);
+}
+
+body, html {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+* {
+    font-variant-ligatures: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    text-size-adjust: 100%;
+    outline: none !important;
+}
+
+
+.font-ubuntu-light {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+.font-ubuntu-regular {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+.font-ubuntu-medium {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+.font-ubuntu-bold {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+.font-ubuntu-italic {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
 }
 /* You can add global styles to this file, and also import other style files */
 
@@ -14,4 +75,41 @@
 
 @plugin "daisyui" {
   themes: night --default;
+}
+
+
+
+.sidebar-block-item {
+  display: block;
+  break-inside: avoid;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  position: relative;
+}
+.sidebar-block-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: rgb(128, 129, 131);
+}
+
+
+.sidebar-heading {
+  position: relative;
+  width: 100%;
+  cursor: default;
+
+  font-family: Ubuntu, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #a28848;
+  margin-bottom: 24px;
+  position: relative;
+  word-break: break-word;
+  break-inside: avoid;
+  padding: 0;
+  white-space: normal;
 }

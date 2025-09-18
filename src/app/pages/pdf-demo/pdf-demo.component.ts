@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import { SidebarComponent } from '../../components/sidebar.component';
-import { MainPanelComponent } from '../../components/main-panel.component';
-import { SectionComponent } from '../../components/section.component';
+import { SidebarComponent } from '../../components/sidebar/sidebar/sidebar.component';
+import { MainPanelComponent } from '../../components/main-panel/main-panel/main-panel.component';
+import { SectionComponent } from '../../components/main-panel/section/section.component';
 
 @Component({
   selector: 'app-pdf-demo',
   standalone: true,
   imports: [SidebarComponent, MainPanelComponent],
   template: `
-    <div class="flex flex-row w-[210mm] h-[297mm] bg-gray-100 border border-gray-300" id="pdf-content">
+    <div class="flex flex-row w-[210mm] h-[297mm] bg-gray-100 border border-gray-300 shadow-lg mx-auto " id ="pdf-content">
       <app-sidebar></app-sidebar>
       <app-main-panel></app-main-panel>
     </div>

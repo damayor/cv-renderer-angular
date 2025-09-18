@@ -1,12 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar-links',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   template: `
-    <h2 class="text-lg font-bold mb-2" style="color: gold;">Links</h2>
+  <h2 class="h2-primary">Links</h2>
     <ul class="mb-2">
       <li *ngFor="let link of links">
         <a [href]="link.url" target="_blank" class="text-blue-500 underline">{{ link.label }}</a>

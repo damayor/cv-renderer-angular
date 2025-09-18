@@ -1,0 +1,78 @@
+
+
+
+
+.skills-container {
+  /* background: linear-gradient(90deg, #f6e27a 0%, #f9d423 100%); */
+     position: relative;
+    flex-flow: wrap;
+    align-items: center;
+    display: flex !important;
+    padding: 0px !important;
+    margin-top: 21.0378px;
+}
+
+.skills-item-wrapper {
+  break-inside: auto;
+  display: block;
+  position: relative;
+  cursor: default;
+}
+
+.skills-item-tag {
+    border-width: 1px;
+
+    display: block;
+  width: fit-content;
+  line-height: 19px;
+  font-size: 12.8564px;
+  text-transform: uppercase;
+  color: rgb(188, 190, 192);
+  break-inside: avoid !important;
+  border-radius: 2px;
+  padding: 7px 14.0252px;
+  margin: 0px 7px 7px 0px;
+  border-color: rgb(162, 136, 72) !important;
+}
+
+.skill-tag {
+  /* border: 2px solid #f9d423;
+  color: #7c6f00;
+  background: #fffbe6;
+  margin: 2px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: bold;
+  transition: box-shadow 0.2s; */
+
+      pointer-events: auto;
+    cursor: default;
+    font-variant-ligatures: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(22, 18, 18, 0);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    text-size-adjust: 100%;
+    outline: none !important;
+    user-select: none;
+    position: relative;
+
+  border-width: 1px;
+  white-space: normal !important;
+  word-break: break-word !important;
+  font-family: Ubuntu;
+  display: block;
+  width: fit-content;
+  line-height: 19px;
+  font-size: 12.8564px;
+  text-transform: uppercase;
+  color: rgb(188, 190, 192);
+  break-inside: avoid !important;
+  border-radius: 2px;
+  padding: 7px 14.0252px;
+  margin: 0px 7px 7px 0px;
+  border-color: rgb(162, 136, 72) !important;
+}
+/* .skill-tag:hover {
+  box-shadow: 0 2px 8px #f9d42355;
+} */
