@@ -3,23 +3,26 @@ import { CommonModule } from '@angular/common';
 import { Language } from '../../../../assets/cv-data/frontend.mock';
 
 @Component({
-  selector: 'app-sidebar-languages',
+  selector: 'sidebar-languages',
   standalone: true,
   imports: [CommonModule],
   template: `
-    <h2 class="h2-primary">Languages</h2>
-    <div class="flex flex-col gap-4 mb-2">
-      <div *ngFor="let lang of languages">
-        <div class="h6-primary mb-1">{{ lang.name }}</div>
-        <div class="w-full h-3 rounded bg-[var(--cl-gray-900)] flex">
-          <div
-            class="h-3 rounded"
-            [ngStyle]="{ width: lang.level + '%', background: 'var(--clr-secondary)' }"
-          ></div>
-        </div>
+    <ng-container>
+      <div class="sidebar-heading text-left">Languages</div>
+      <div class="sidebar-block-content flex flex-col gap-4 mb-2">
+        @for (lang of languages; track $index) {
+          <div class="flex flex-col w-full">
+            <div class="h6-primary mb-1 languages-font">{{ lang.name }}</div>
+            <div class="w-full h-3 rounded bg-[var(--clr-gray-900)] flex">
+              <div
+                class="h-3 rounded"
+                [ngStyle]="{ width: lang.level + '%', background: 'var(--clr-secondary)' }"
+              ></div>
+            </div>
+          </div>
+        }
       </div>
-    </div>
-    <hr class="border-t border-gray-400 mb-4" />
+    </ng-container>
   `
 })
 export class SidebarLanguagesComponent {

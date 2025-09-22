@@ -3,20 +3,21 @@ import { SidebarSkillsComponent } from '../sidebar-skills/sidebar-skills.compone
 import { SidebarLanguagesComponent } from '../sidebar-languages/sidebar-languages.component';
 import { SidebarLinksComponent } from '../sidebar-links/sidebar-links.component';
 import { SidebarCoursesComponent } from '../sidebar-courses/sidebar-courses.component';
-import { frontendMockData } from '../../../../assets/cv-data/frontend.mock';
+import { frontendMockData, Course } from '../../../../assets/cv-data/frontend.mock';
+import { SidebarAboutMeComponent } from "../sidebar-about-me/sidebar-about-me.component";
 
 @Component({
-  selector: 'app-sidebar',
+  selector: 'sidebar',
   standalone: true,
-  imports: [SidebarSkillsComponent, SidebarLanguagesComponent, SidebarLinksComponent, SidebarCoursesComponent],
+  imports: [SidebarSkillsComponent, SidebarLanguagesComponent, SidebarLinksComponent, SidebarCoursesComponent, SidebarAboutMeComponent],
   template: `
     <div class="flex flex-col items-center h-full w-64 p-6" style="background: var(--clr-primary, #1e293b); color: white;">
-      <img src="https://i.pravatar.cc/120" alt="Profile" class="rounded-full w-24 h-24 mb-4" />
-      <h2 class="h2-primary">{{ contact.name }}</h2>
-      <app-sidebar-skills [skills]="cvData.skills"></app-sidebar-skills>
-      <app-sidebar-languages [languages]="cvData.languages"></app-sidebar-languages>
-      <app-sidebar-links [links]="cvData.links"></app-sidebar-links>
-      <app-sidebar-courses [courses]="cvData.courses"></app-sidebar-courses>
+      <img src="./assets/images/profile.jpg" alt="Profile" class="rounded-full w-48 h-48 mb-2" />
+      <sidebar-about-me></sidebar-about-me>
+      <sidebar-skills [skills]="cvData.skills"></sidebar-skills>
+      <sidebar-languages  class="sidebar-block" [languages]="cvData.languages"></sidebar-languages>
+      <sidebar-links class="sidebar-block" [links]="cvData.links"></sidebar-links>
+      <!-- <sidebar-courses class="sidebar-block" [courses]="cvData.courses"></sidebar-courses> -->
     </div>
   `
 })

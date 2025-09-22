@@ -12,7 +12,7 @@ export interface MainSectionEntry {
 }
 
 @Component({
-  selector: 'app-main-section',
+  selector: 'main-section',
   standalone: true,
   imports: [CommonModule],
   // template: `

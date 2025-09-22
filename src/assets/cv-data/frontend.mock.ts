@@ -1,5 +1,11 @@
 // import { CvData } from '../app/services/cv-data.service';
 
+export interface Course {
+  name: string;
+  institution: string;
+  date: string;
+}
+
 export interface CvData {
   contact: {
     name: string;
@@ -9,7 +15,7 @@ export interface CvData {
   skills: string[];
   languages: Language[];
   links: { label: string; url: string }[];
-  courses: string[];
+  courses: Course[];
   workExperiences: any[];
   educations: any[];
   extraCurriculars: any[];
@@ -37,7 +43,12 @@ export const frontendMockData: CvData = {
     { label: "GitHub", url: "https://github.com/yourprofile" },
     { label: "Portfolio", url: "https://yourportfolio.com" }
   ],
-  courses: ["Angular Mastery", "TypeScript Deep Dive", "Advanced CSS", "RxJS in Practice"],
+  courses: [
+    { name: "Angular Mastery", institution: "Udemy", date: "Jun 2023" },
+    { name: "TypeScript Deep Dive", institution: "Coursera", date: "Jan 2022" },
+    { name: "Advanced CSS", institution: "Pluralsight", date: "Aug 2021" },
+    { name: "RxJS in Practice", institution: "Frontend Masters", date: "Nov 2020" }
+  ],
   workExperiences: [
     {
       enterprise: "TechCorp",

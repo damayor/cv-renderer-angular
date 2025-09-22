@@ -5,17 +5,109 @@
 @plugin "daisyui" {
   themes: night --default;
 }
+
+@font-face {
+  /* ToDo se necesitan todos estos files? */
+  font-family: 'icomoon';
+  src:  url('./assets/icons/icomoon.eot');
+  src:  url('./assets/icons/icomoon.eot#iefix') format('embedded-opentype'),
+    url('./assets/icons/icomoon.ttf') format('truetype'),
+    url('./assets/icons/icomoon.woff') format('woff'),
+    url('./assets/icons/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 :root {
+  font-family: 'Ubuntu', sans-serif;
+
+   /* Game Develop color */
   --clr-primary: #1e295f;
+
+
   --clr-secondary: #a28848;
-  --cl-gray-900: rgb(188, 190, 192);
+  --clr-gray-900: rgb(188, 190, 192);
   --clr-gray-500: #aaa;
+  --clr-white: #e6e7e8;
+
 }
 .h6-primary {
   font-family: 'Ubuntu', sans-serif;
-  color: var(--cl-gray-900);
+  color: var(--clr-gray-900);
   font-size: 15px;
   text-transform: uppercase;
+}
+
+/* Icons by  Icomoon */
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+
+
+
+/* <div class="text-5xl font-bold text-gray-800 font-ubuntu-bold leading-tight"> */
+.h1-cv-name {
+  /* font-family: Ubuntu; */
+  font-size: 42.0756px;
+  line-height: 42.0756px;
+  letter-spacing: 2.10378px;
+  margin-bottom: 0px;
+  color: var(--clr-primary);
+  
+  text-transform: uppercase;
+
+  break-inside: avoid;
+
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+.h3-occupation {
+  font-size: 14.0252px;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+  color: var(--clr-secondary);
+  text-transform: uppercase;
+}
+
+.user-header__contact-info {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12.8564px;
+  line-height: 1.33;
+  color: var(--clr-gray-500);
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  white-space: normal !important;
+  word-break: break-word !important;
 }
 
 h2 {
@@ -28,6 +120,7 @@ h2 {
 }
 .h2--primary {
   color: var(--clr-primary);
+  border-bottom: 2px solid var(--clr-gray-500);
 }
 
 .h2--secondary {
@@ -71,22 +164,17 @@ body, html {
 }
 /* You can add global styles to this file, and also import other style files */
 
-@import "tailwindcss";
 
-@plugin "daisyui" {
-  themes: night --default;
-}
-
-
-
-.sidebar-block-item {
+.sidebar-block {
   display: block;
   break-inside: avoid;
   padding-top: 26px;
   padding-bottom: 26px;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
-.sidebar-block-item::after {
+.sidebar-block::after {
   content: "";
   position: absolute;
   left: 0;
@@ -112,4 +200,144 @@ body, html {
   break-inside: avoid;
   padding: 0;
   white-space: normal;
+}
+
+.sidebar-block-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding: 0 !important;
+  margin-top: 21px;
+  box-sizing: border-box;
+}
+
+.about-me-font {
+    font-family: Ubuntu;
+  word-break: break-word;
+  font-size: 14.0252px;
+  line-height: 1.46;
+  text-decoration: none;
+  color: inherit;
+  display: inline;
+}
+
+
+/* ToDo unalo con .h6-primary */
+.languages-font {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 2.33753px;
+  color: var(--clr-gray-900);
+}
+
+.link-font {
+  font-weight: 600;
+  color: var(--clr-gray-900);
+  font-size: 14.0252px;
+  /* line-height: 1.33; */
+}
+
+.link-url-font {
+  word-break: break-all;
+  pointer-events: none;
+  text-decoration: underline;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -moz-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+   color: var(--clr-gray-900);
+}
+
+.course-font, .institution-font {
+  color: var(--clr-gray-900);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0px;
+}
+
+/* para fechas y lenguages */
+.h4-titles {
+    text-transform: uppercase;
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 1.33;
+  color: var(--clr-gray-900);
+}
+
+/* Main Panel */
+
+
+
+
+.experience__institution-font  {
+    /* font-family: Ubuntu Bold; */
+  font-size: 14.0252px;
+  line-height: 23.3753px;
+  margin-bottom: 0px;
+  text-transform: none;
+  z-index: 1;
+  color: rgb(44, 58, 75);
+}
+
+.experience__city-font, .experience__timeframe-font {
+    /* font-family: Ubuntu; */
+  font-size: 14.0252px;
+  line-height: 1.33;
+  color: rgb(128, 129, 131);
+  font-size: 12.8564px;
+  text-transform: capitalize;
+}
+
+
+
+  /* color: rgb(44, 58, 75); */
+    /* color: #808183; */
+
+.experience__role-font {
+    /* font-family: Ubuntu ; */
+  font-size: 12.8564px;
+  line-height: 16.3627px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  z-index: 1;
+  color: var(--clr-primary)
+}
+
+.experience__tasks-font {
+    /* font-family: Ubuntu; */
+  font-size: 14.0252px;
+  line-height: 1.33;
+  color: #808183;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  white-space: normal !important;
+  word-break: break-word !important;
+  break-inside: auto;
+}
+
+.experience__decoration-dot {
+    position: absolute;
+  width: 10.5189px;
+  height: 10.5189px;
+  border-radius: 5.84383px;
+  left: -5.84383px;
+  z-index: 10;
+  background: rgb(162, 136, 72) !important;
+  top: 0; 
+}
+
+.experience__tasks-border, .decoration-border {
+  top: 7.01259px; 
+  position: absolute;
+  left: -1.16877px;
+  right: unset;
+  bottom: 0px;
+  width: 1.16877px;
+  background: rgb(162, 136, 72) !important;
 }

@@ -2,28 +2,28 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-user-header',
+  selector: 'user-header',
   standalone: true,
-  imports: [CommonModule],
+    imports: [CommonModule],
   template: `
-    <div class="flex items-center justify-between py-8">
+    <div class="flex items-center justify-between py-4">
       <!-- Left: Name and Role -->
       <div class="flex flex-col">
-        <div class="text-5xl font-bold text-gray-800 font-ubuntu-bold leading-tight">{{ name }}</div>
-        <div class="text-xl font-ubuntu-bold text-yellow-700 mt-2 tracking-wide">{{ role }}</div>
+        <div class="h1-cv-name">{{ name }}</div>
+        <div class="h3-occupation">{{ role }}</div>
       </div>
       <!-- Right: Contact Info -->
-      <div class="flex flex-col gap-2 min-w-[260px]">
-        <div class="flex items-center gap-2 text-gray-700">
-          <span class="material-icons text-yellow-700">location_on</span>
+      <div class="flex flex-col gap-2 user-header__contact-info ">
+        <div class="flex items-center gap-2">
+          <span style="color: var(--clr-secondary);"> <span class="icon-location2"></span></span>
           <span>{{ location }}</span>
         </div>
-        <div class="flex items-center gap-2 text-gray-700 border-t border-gray-200 pt-2">
-          <span class="material-icons text-yellow-700">call</span>
+        <div class="flex items-center gap-2 border-t border-gray-200 pt-2">
+          <span style="color: var(--clr-secondary);"> <span class="icon-phone"></span></span>
           <span>{{ phone }}</span>
         </div>
-        <div class="flex items-center gap-2 text-gray-700 border-t border-gray-200 pt-2">
-          <span class="material-icons text-yellow-700">mail</span>
+        <div class="flex items-center gap-2 border-t border-gray-200 pt-2">
+          <span style="color: var(--clr-secondary);"> <span class="icon-envelop"></span></span>
           <span>{{ email }}</span>
         </div>
       </div>

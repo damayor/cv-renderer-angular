@@ -1,38 +1,39 @@
 import { Component } from '@angular/core';
-import { SectionComponent } from '../section/section.component';
 import { MainSectionComponent, MainSectionEntry } from '../main-section/main-section.component';
 import { MainSectionTimelineComponent, TimelineExperience } from '../main-section-timeline/main-section-timeline.component';
 import { UserHeaderComponent } from '../user-header/user-header.component';
 import { frontendMockData } from '../../../../assets/cv-data/frontend.mock';
 
 @Component({
-  selector: 'app-main-panel',
+  selector: 'main-panel',
   standalone: true,
-  imports: [SectionComponent, MainSectionComponent, MainSectionTimelineComponent, UserHeaderComponent],
+  imports: [MainSectionComponent, MainSectionTimelineComponent, UserHeaderComponent],
   template: `
     <div class="flex flex-col p-8 bg-white min-h-screen">
-      <app-user-header
+      <user-header
         [name]="contact.name"
         [role]="'Senior Software Engineer'"
         [location]="'Berlin, Germany'"
         [phone]="'+49 01525 2198970'"
         [email]="'dr.mayorga20@gmail.com'"
-      ></app-user-header>
-      <app-main-section-timeline [experiences]="timelineExperiences"></app-main-section-timeline>
-      <app-main-section
+      ></user-header>
+      <main-section-timeline [experiences]="timelineExperiences"></main-section-timeline>
+      <main-section
         title="Education"
         [entries]="cvData.educations"
-      ></app-main-section>
-      <app-main-section
+      ></main-section>
+      <main-section
         title="Extra-Curricular Activities"
         [entries]="cvData.extraCurriculars"
-      ></app-main-section>
+      ></main-section>
     </div>
   `
 })
 export class MainPanelComponent {
   cvData = frontendMockData;
   contact = frontendMockData.contact;
+
+  //ToDo read of Mock or CvDataService
   timelineExperiences: TimelineExperience[] = [
     {
       company: 'ADIDAS',

@@ -4,12 +4,12 @@
 
 .skills-container {
   /* background: linear-gradient(90deg, #f6e27a 0%, #f9d423 100%); */
-     position: relative;
-    flex-flow: wrap;
-    align-items: center;
-    display: flex !important;
-    padding: 0px !important;
-    margin-top: 21.0378px;
+  position: relative;
+  flex-flow: wrap;
+  align-items: center;
+  display: flex !important;
+  padding: 0px !important;
+  margin-top: 21.0378px;
 }
 
 .skills-item-wrapper {
