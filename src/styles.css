@@ -2,9 +2,10 @@
 
 @import "tailwindcss";
 
-@plugin "daisyui" {
-  themes: night --default;
-}
+/* @plugin "daisyui" {
+  themes: aqua --default;
+  
+} */
 
 @font-face {
   /* ToDo se necesitan todos estos files? */
@@ -31,6 +32,7 @@
   --clr-gray-500: #aaa;
   --clr-white: #e6e7e8;
 
+  background-color: var(--clr-primary);
 }
 .h6-primary {
   font-family: 'Ubuntu', sans-serif;
@@ -107,7 +109,7 @@
   margin: 0px;
   padding: 0px;
   white-space: normal !important;
-  word-break: break-word !important;
+  word-break: keep-all !important;
 }
 
 h2 {
@@ -194,7 +196,7 @@ body, html {
   font-size: 18px;
   text-transform: uppercase;
   color: #a28848;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   position: relative;
   word-break: break-word;
   break-inside: avoid;
@@ -214,12 +216,10 @@ body, html {
 }
 
 .about-me-font {
-    font-family: Ubuntu;
+  color: var(--clr-gray-900);
   word-break: break-word;
-  font-size: 14.0252px;
-  line-height: 1.46;
-  text-decoration: none;
-  color: inherit;
+  font-size: 14px;
+  line-height: 1;
   display: inline;
 }
 
@@ -241,7 +241,6 @@ body, html {
 
 .link-url-font {
   word-break: break-all;
-  pointer-events: none;
   text-decoration: underline;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -277,9 +276,10 @@ body, html {
 .experience__institution-font  {
     /* font-family: Ubuntu Bold; */
   font-size: 14.0252px;
-  line-height: 23.3753px;
+  line-height: 18.3753px;
   margin-bottom: 0px;
-  text-transform: none;
+
+    text-transform: uppercase;
   z-index: 1;
   color: rgb(44, 58, 75);
 }
@@ -299,7 +299,7 @@ body, html {
     /* color: #808183; */
 
 .experience__role-font {
-    /* font-family: Ubuntu ; */
+  /* font-family: Ubuntu ; */
   font-size: 12.8564px;
   line-height: 16.3627px;
   margin-bottom: 0px;
@@ -309,7 +309,6 @@ body, html {
 }
 
 .experience__tasks-font {
-    /* font-family: Ubuntu; */
   font-size: 14.0252px;
   line-height: 1.33;
   color: #808183;
@@ -319,6 +318,10 @@ body, html {
   white-space: normal !important;
   word-break: break-word !important;
   break-inside: auto;
+}
+
+.experience__tasks-font ul {
+  list-style: disc;
 }
 
 .experience__decoration-dot {

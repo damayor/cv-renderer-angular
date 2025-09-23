@@ -20,9 +20,9 @@
 }
 
 .skills-item-tag {
-    border-width: 1px;
+  border-width: 1px;
 
-    display: block;
+  display: block;
   width: fit-content;
   line-height: 19px;
   font-size: 12.8564px;
@@ -36,26 +36,17 @@
 }
 
 .skill-tag {
-  /* border: 2px solid #f9d423;
-  color: #7c6f00;
-  background: #fffbe6;
-  margin: 2px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-weight: bold;
-  transition: box-shadow 0.2s; */
-
-      pointer-events: auto;
-    cursor: default;
-    font-variant-ligatures: none;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(22, 18, 18, 0);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
-    text-size-adjust: 100%;
-    outline: none !important;
-    user-select: none;
-    position: relative;
+  pointer-events: auto;
+  cursor: default;
+  font-variant-ligatures: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(22, 18, 18, 0);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  outline: none !important;
+  user-select: none;
+  position: relative;
 
   border-width: 1px;
   white-space: normal !important;
