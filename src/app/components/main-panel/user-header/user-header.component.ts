@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
     <div class="flex items-center justify-between py-4">
       <!-- Left: Name and Role -->
       <div class="flex flex-col">
-        <div class="h1-cv-name">{{ name }}</div>
+        <div class="h1-cv-name">{{ fullname }}</div>
         <div class="h3-occupation">{{ role }}</div>
       </div>
       <!-- Right: Contact Info -->
@@ -32,7 +32,7 @@ import { CommonModule } from '@angular/common';
   styles: [``]
 })
 export class UserHeaderComponent {
-  @Input() name: string = '';
+  @Input() fullname: string = '';
   @Input() role: string = '';
   @Input() location: string = '';
   @Input() phone: string = '';

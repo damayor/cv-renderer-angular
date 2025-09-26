@@ -8,14 +8,14 @@ import { Component, Input } from '@angular/core';
   <ng-container>
     <div class="sidebar-heading">Links</div>
     <div class="sidebar-block-content">
-      <ul class="links-container">
+      <div class="links-container flex flex-row w-full gap-5">
         @for (link of links; track $index) {
-          <li class="mb-2">
+          <div>
             <a [href]="link.url" target="_blank" class="link-url-font">{{ link.label }}</a>
-          </li>
+        </div>
         }
-      </ul>
       </div>
+    </div>
   </ng-container>
   `
 })

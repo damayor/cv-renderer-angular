@@ -4,7 +4,7 @@ import { PdfDemoComponent } from "./pages/pdf-demo/pdf-demo.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PdfDemoComponent],
+  imports: [PdfDemoComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

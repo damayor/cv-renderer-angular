@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { SidebarSkillsComponent } from '../sidebar-skills/sidebar-skills.component';
 import { SidebarLanguagesComponent } from '../sidebar-languages/sidebar-languages.component';
 import { SidebarLinksComponent } from '../sidebar-links/sidebar-links.component';
 import { SidebarCoursesComponent } from '../sidebar-courses/sidebar-courses.component';
-import { frontendMockData, Course } from '../../../../assets/cv-data/frontend.mock';
 import { SidebarAboutMeComponent } from "../sidebar-about-me/sidebar-about-me.component";
+import { CvData } from '@interfaces/CVData';
 
 @Component({
   selector: 'sidebar',
@@ -13,17 +13,19 @@ import { SidebarAboutMeComponent } from "../sidebar-about-me/sidebar-about-me.co
   template: `
     <div class="flex flex-col items-center h-full w-64 p-6" style="background: var(--clr-primary, #1e293b); color: white;">
       <img src="./assets/images/profile.jpg" alt="Profile" class="rounded-full w-48 h-48 mb-2" />
-      <sidebar-about-me [aboutMeText]="cvData.aboutme"></sidebar-about-me>
-      <sidebar-skills [skills]="cvData.skills"></sidebar-skills>
-      <sidebar-languages  class="sidebar-block" [languages]="cvData.languages"></sidebar-languages>
-      <sidebar-links class="sidebar-block" [links]="cvData.links"></sidebar-links>
-      <sidebar-courses class="sidebar-block" [courses]="cvData.courses"></sidebar-courses>
+      <sidebar-about-me [aboutMeText]="cvData().aboutme"></sidebar-about-me>
+      <sidebar-skills [skills]="cvData().skills"></sidebar-skills>
+      <sidebar-languages  class="sidebar-block" [languages]="cvData().languages"></sidebar-languages>
+      <sidebar-links class="sidebar-block" [links]="cvData().links"></sidebar-links>
+      <sidebar-courses class="sidebar-block" [courses]="cvData().courses"></sidebar-courses>
     </div>
   `
 })
 export class SidebarComponent {
-  cvData = frontendMockData;
-  contact = frontendMockData.contact;
+  // cvData = frontend;
+  cvData = input.required<CvData>();
+
+  // contact = frontend.contact;
   // If you use CvDataService and do not subscribe, you may get:
   // "Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received"
 }

@@ -1,32 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { MainSectionTimelineComponent } from '../main-section-timeline/main-section-timeline.component';
 import { UserHeaderComponent } from '../user-header/user-header.component';
-import { frontendMockData } from '../../../../assets/cv-data/frontend.mock';
 import { PersonalDetailsComponent } from "../personal-details/personal-details.component";
+import { CvData } from '../../../interfaces/CVData';
 
 @Component({
   selector: 'main-panel',
   standalone: true,
   imports: [MainSectionTimelineComponent, UserHeaderComponent, PersonalDetailsComponent],
   template: `
-    <div class="flex flex-col p-8 bg-white min-h-screen">
+    <div class="flex flex-col p-6 bg-white min-h-screen">
       <user-header
-        [name]="contact.name"
-        [role]="contact.occupation"
-        [location]="contact.location"
-        [phone]="contact.phone"
-        [email]="contact.email"
+        [fullname]="contact().fullname"
+        [role]="cvData().occupation.value"
+        [location]="contact().location"
+        [phone]="contact().phone"
+        [email]="contact().email"
       ></user-header>
-      @for (section of cvData.experiences; track $index) {
+      @for (section of cvData().experiences; track $index) {
         <main-section-timeline [title]="section.title" [experiences]="section.entries"></main-section-timeline>
 
       }
-      <personal-details></personal-details>
+      <personal-details [cvPersonalDetailsData]="cvData().contact" ></personal-details>
     </div>
   `
 })
 export class MainPanelComponent {
-  cvData = frontendMockData;
-  contact = frontendMockData.contact;
-
+  cvData =  input.required<CvData>();
+  contact = input() as any; // CvData['contact'];
 }

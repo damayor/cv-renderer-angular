@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Course } from '../../../../assets/cv-data/frontend.mock';
-
+import { Course } from '@interfaces/CVData';
 @Component({
   selector: 'sidebar-courses',
   standalone: true,
@@ -16,7 +15,7 @@ import { Course } from '../../../../assets/cv-data/frontend.mock';
     }
     .course-title {
       font-weight: 600;
-      color: #a28848;
+      color: var(--clr-secondary);
       text-transform: uppercase;
       font-size: 0.95rem;
     }
