@@ -5,18 +5,18 @@ import { CvData } from "../interfaces/CVData";
 import { environment } from '@environments/environment.dev';
 
 import { frontend, gameDeveloper, seniorSoftware, sre } from '../../assets/cv-data/en-EN.mock';
-import { frontend as frontendDE, gameDeveloper as gameDeveloperDE, seniorSoftware as seniorSoftwareDE, sre as sreDE } from '../../assets/cv-data/de-DE.mock';
+import { frontend as frontendDE, gameEntwickler, seniorSoftware as seniorSoftwareDE, sre as sreDE } from '../../assets/cv-data/de-DE.mock';
 
 
 const files: any = { frontend, gameDeveloper, seniorSoftware, sre,
-  frontendDE, gameDeveloperDE, seniorSoftwareDE, sreDE,
+  frontendDE, gameEntwickler, seniorSoftwareDE, sreDE,
 };
 
 
 export function loadMockData() {
 
   // const cvFile = environment.mockDataFile;
-  const cvFile = 'seniorSoftware';
+  const cvFile = 'frontendDE' //'seniorSoftware';
 
   const data = files[cvFile] as CvData;
   return data;

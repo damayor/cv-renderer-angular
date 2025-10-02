@@ -24,21 +24,7 @@ import { Course } from '@interfaces/CVData';
       color: #cbd5e1;
     }
   `],
-  template: `
-  <ng-container>
-    <div class="sidebar-heading">Courses</div>
-    <div class="sidebar-block-content">
-      <ul>
-        @for (course of courses; track $index) {
-          <li class="course-item">
-            <div class="course-font">{{ course.name }}</div>
-            <div class="course-meta">{{ course.institution }} &mdash; {{ course.date }}</div>
-          </li>
-        }
-      </ul>
-    </div>
-  </ng-container>
-  `
+  templateUrl: './sidebar-courses.component.html'
 })
 export class SidebarCoursesComponent {
   @Input() courses: Course[] = [];

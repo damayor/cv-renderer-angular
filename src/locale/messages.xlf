@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="personalDetailsTitle" datatype="html">
+        <source>Personal Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main-panel/personal-details/personal-details.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personalDetailsNationality" datatype="html">
+        <source> Nationality </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main-panel/personal-details/personal-details.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personalDetailsVisum" datatype="html">
+        <source> Visa status </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/main-panel/personal-details/personal-details.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutMeTitle" datatype="html">
+        <source>About Me</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sidebar/sidebar-about-me/sidebar-about-me.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="coursesTitle" datatype="html">
+        <source>Courses</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sidebar/sidebar-courses/sidebar-courses.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="languagesTitle" datatype="html">
+        <source>Languages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sidebar/sidebar-languages/sidebar-languages.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="linksTitle" datatype="html">
+        <source>Links</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sidebar/sidebar-links/sidebar-links.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skillsTitle" datatype="html">
+        <source>SKILLS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sidebar/sidebar-skills/sidebar-skills.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

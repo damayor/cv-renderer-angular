@@ -1,0 +1,13 @@
+  <ng-container>
+    <div i18n="@@coursesTitle" class="sidebar-heading">Courses</div>
+    <div class="sidebar-block-content">
+      <ul>
+        @for (course of courses; track $index) {
+          <li class="course-item">
+            <div class="course-font">{{ course.name }}</div>
+            <div class="course-meta">{{ course.institution }} &mdash; {{ course.date }}</div>
+          </li>
+        }
+      </ul>
+    </div>
+  </ng-container>

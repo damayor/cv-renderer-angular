@@ -1,13 +1,13 @@
  <div class="w-full py-8">
-    <h2 class="h2--primary pb-2 mb-4">Personal Details</h2>
+    <h2 i18n="@@personalDetailsTitle" class="h2--primary pb-2 mb-4">Personal Details</h2>
     <div class="flex flex-row justify-between">
-        <div >
-            <div class="experience__role-font font-ubuntu-bold"> Nationality </div>
+        <div class="flex-1/2" >
+            <div i18n="@@personalDetailsNationality" class="experience__role-font font-ubuntu-bold"> Nationality </div>
             <div class="experience__tasks-font">{{cvPersonalDetailsData().nationality}} </div>
         </div>
         <!-- @if (cvPersonalDetailsData.arguments['visaStatus'].hasValue()) {  ToDo revisar la clase, para si tiene value un prop -->
-        <div>
-            <div class="experience__role-font font-ubuntu-bold"> Visa status </div>
+        <div class="flex-1/2">
+            <div i18n="@@personalDetailsVisum" class="experience__role-font font-ubuntu-bold"> Visa status </div>
             <div class="experience__tasks-font">{{cvPersonalDetailsData().visaStatus}}</div>
         </div>
         <!-- } -->

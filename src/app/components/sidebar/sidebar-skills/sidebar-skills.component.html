@@ -1,0 +1,11 @@
+<div class="sidebar-block">
+  <div  i18n="@@skillsTitle" class="sidebar-heading">SKILLS</div>
+  <div class="sidebar-block-content skills-container">
+      @for (skill of skills; track skill) {
+        <div class="skills-item-wrapper">
+          <div class="skills-item-tag">{{ skill }}</div>
+        </div>
+      }
+
+    </div>
+</div>

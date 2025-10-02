@@ -31,7 +31,7 @@ import { TimelineExperience } from '@interfaces/CVData';
             </div>
             <div class="experience__decoration-dot">
           </div>
-            <!-- Timeline Dot and Line -->
+            <!-- Timeline Dot und Line -->
           <div class="experience__tasks-border"></div>
           </div>
 

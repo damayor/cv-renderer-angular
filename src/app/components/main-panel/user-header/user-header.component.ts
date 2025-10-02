@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
     imports: [CommonModule],
   template: `
     <div class="flex items-center justify-between py-4">
-      <!-- Left: Name and Role -->
+      <!-- Left: Name und Role -->
       <div class="flex flex-col">
         <div class="h1-cv-name">{{ fullname }}</div>
         <div class="h3-occupation">{{ role }}</div>

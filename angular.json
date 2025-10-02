@@ -9,6 +9,17 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "de": { 
+            "translation": "src/locale/messages.de.xlf"
+          },
+          "es": { 
+            "translation": "src/locale/messages.es.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -24,6 +35,9 @@
             ],
             "styles": [
               "src/styles.css"
+            ],
+            "polyfills": [
+              "@angular/localize/init"
             ]
           },
           "configurations": {
@@ -40,12 +54,19 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "localize": true
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "de": {
+              "localize": ["de"]
+            },
+            "es": {
+              "localize": ["es"]
             }
           },
           "defaultConfiguration": "production"
@@ -58,6 +79,12 @@
             },
             "development": {
               "buildTarget": "cv-renderer:build:development"
+            },
+            "de": {
+              "buildTarget": "cv-renderer:build:development,de" 
+            },
+            "es": {
+              "buildTarget": "cv-renderer:build:development,es"
             }
           },
           "defaultConfiguration": "development"
@@ -77,6 +104,9 @@
             ],
             "styles": [
               "src/styles.css"
+            ],
+            "polyfills": [
+              "@angular/localize/init"
             ]
           }
         }
