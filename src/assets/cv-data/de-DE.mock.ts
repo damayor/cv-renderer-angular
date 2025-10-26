@@ -12,20 +12,20 @@ const contactDefault : Contact = {
 export const frontend: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "Senior Frontend Ingeneuer",
+    value: "Senior Frontend Ingeniuer",
     acronym: 'SF_DE'
   },
   colors: {
     primary: '#48011d',
   },
-  aboutme: `Frontend Engineer mit Erfahrung in großskaligen Webplattformen bei
-     einem multinationalen Unternehmen, spezialisiert auf ReactJS, NodeJS 
+  aboutme: `Frontend Ingeniuer mit Erfahrung in großskaligen Webplattformen bei
+     einem multinationalen Unternehmen, spezialisiert auf ReactJS, NodeJS, Flutter
     und interaktive 3D-Lösungen mit Three.js. Solide Kenntnisse 
     in Site Reliability Engineering, mit Fokus auf Monitoring, 
     Performance und Skalierbarkeit. Derzeit in Deutschland 
     ansässig und motiviert, zu innovativen Teams beizutragen 
     und meine Expertise weiter auszubauen.`,
-  skills: ["Javascript", "React", "NodeJs", "Angular", "TypeScript", "C#", "C++", "Java", "Three.JS", "CSS/SCSS", "SRE", "Unity", "Linux", "CI/CD", "Jenkins", "Kubernetes", "Testing"],
+  skills: ["Javascript", "React", "NodeJs", "Flutter","Angular", "TypeScript", "C#", "C++", "Java", "Three.JS", "CSS/SCSS", "SRE", "Unity", "Linux", "CI/CD", "Jenkins", "Kubernetes", "Testing"],
   languages: [
     { name: "Englisch", level: 75 },
     { name: "Spanisch", level: 100 },
@@ -68,7 +68,7 @@ export const frontend: CvData = {
       entries: [
         {
           company: "Universidad de los Andes",
-          role: "M.Sc. Systems und Computing Engineering",
+          role: "M.Sc. System- und Computertechnik",
           dates: " 2019",
           location: "Bogotá, Kolumbien",
           "tasks": [
@@ -78,7 +78,7 @@ export const frontend: CvData = {
         },
         {
           company: "Universidad de los Andes",
-          role: "Bachelor on Systems und Computing Engineering",
+          role: "Bachelor on System- und Computertechnik",
           dates: "2017",
           location: "Bogotá, Kolumbien",
           "tasks": [
@@ -125,7 +125,7 @@ export const seniorSoftware: CvData = {
     primary: '#48011d',
     secondary: '#808183'
   },
-  aboutme: `Softwareingenieur  mit 7 Jahren Erfahrung in 
+  aboutme: `Softwareingenieur mit 7 Jahren Erfahrung in 
   großskaligen Webplattformen bei einem multinationalen 
   Unternehmen, spezialisiert auf ReactJS, NodeJS und 
   interaktive 3D-Lösungen mit Unity, Three.js und Unreal. 
@@ -186,7 +186,7 @@ export const seniorSoftware: CvData = {
       entries: [
         {
           company: "Universidad de los Andes",
-          role: "M.Sc. Systems und Computing Engineering",
+          role: "M.Sc. System- und Computertechnik",
           dates: " 2019",
           location: "Bogotá, Kolumbien",
           tasks: [
@@ -196,7 +196,7 @@ export const seniorSoftware: CvData = {
         },
         {
           company: "Universidad de los Andes",
-          role: "Bachelor on Systems und Computing Engineering",
+          role: "Bachelor on System- und Computertechnik",
           dates: "2017",
           location: "Bogotá, Kolumbien",
           "tasks": [
@@ -311,7 +311,7 @@ export const gameEntwickler: CvData = {
       entries: [
         {
           company: "Universidad de los Andes",
-          role: "M.Sc. Systems und Computing Engineering",
+          role: "M.Sc. System- und Computertechnik",
           dates: " 2019",
           location: "Bogotá, Kolumbien",
           "tasks": [
@@ -321,7 +321,7 @@ export const gameEntwickler: CvData = {
         },
         {
           company: "Universidad de los Andes",
-          role: "Bachelor on Systems und Computing Engineering",
+          role: "Bachelor on System- und Computertechnik",
           dates: "2017",
           location: "Bogotá, Kolumbien",
           "tasks": [
@@ -427,7 +427,7 @@ export const sre: CvData = {
       entries: [
         {
           company: "Universidad de los Andes",
-          role: "M.Sc. Systems und Computing Engineering",
+          role: "M.Sc. System- und Computertechnik",
           dates: " 2019",
           location: "Bogotá, Kolumbien",
           "tasks": [
@@ -437,7 +437,7 @@ export const sre: CvData = {
         },
         {
           company: "Universidad de los Andes",
-          role: "Bachelor on Systems und Computing Engineering",
+          role: "Bachelor on System- und Computertechnik",
           dates: "2017",
           location: "Bogotá, Kolumbien",
           "tasks": [

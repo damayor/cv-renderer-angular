@@ -31,13 +31,14 @@ export const frontend: CvData = {
       eager to contribute to innovative
       teams while continuing to grow
       my expertise`,
-  skills: ["Javascript", "React", "NodeJs", "Angular", "TypeScript", "C#", "C++", "Java", "Three.JS", "CSS/SCSS", "SRE", "Unity", "CI/CD", "Jenkins", "Kubernetes", "Testing"],
+  skills: ["Javascript", "React", "NodeJs", "Angular", "TypeScript", "C#", "C++", "Java", "AI", "Copilot", "Three.JS", "CSS/SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
   languages: [
     { name: "English", level: 75 },
     { name: "Spanish", level: 100 },
     { name: "German", level: 75 }
   ],
   links: [
+    { label: "Portfolio", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -125,17 +126,17 @@ export const seniorSoftware: CvData = {
   contact: contactDefault,
   occupation: {
     value: "Senior Software Engineer",
-    acronym: 'FE'
+    acronym: 'SE'
   },
   colors: {
     primary: '#48011d',
     secondary: '#808183'
   },
-  aboutme: `Software Engineer with 7 years
+  aboutme: `Software Engineer with 8 years
     of experience in large-scale web
     platforms at a multinational,
     specialising in ReactJS, NodeJS,
-    and interactive 3D solutions with
+    and interactive solutions with
     Unity, Three.js and Unreal. Strong
     foundations in C++, Linux bash,
     managing Site Reliability
@@ -145,13 +146,14 @@ export const seniorSoftware: CvData = {
     Germany and eager to contribute
     to innovative teams while
     continuing to grow my expertise.`,
-  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
+  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "Copilot", "C#", "Java", "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   languages: [
     { name: "English", level: 75 },
     { name: "Spanish", level: 100 },
     { name: "German", level: 75 }
   ],
   links: [
+    { label: "Portfolio", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -201,8 +203,8 @@ export const seniorSoftware: CvData = {
           dates: " 2019",
           location: "Bogotá, Colombia",
           tasks: [
-            "Research Internship in AG HCI and Computer Graphics at Technical University of <b>Kaiserslautern</b> during 2018",
-            "Designed and developed a <b> VR & haptic-based</b>  training simulator for trauma orthopedic surgery in Unity and Oculus, improving trainee performance during pilot tests."
+            "Internship in AG HCI and Computer Graphics at Technical University of <b>Kaiserslautern</b> during 2018",
+            "Role as research monitor focused on designing and developing a <b> VR & haptic-based</b> training simulator for trauma orthopedic surgery in Unity and Oculus, improving trainee performance during pilot tests."
           ]
         },
         {
@@ -243,7 +245,6 @@ export const seniorSoftware: CvData = {
   ],
 };
 
-
 export const gameDeveloper: CvData = {
   contact: contactDefault,
   occupation: {
@@ -254,7 +255,7 @@ export const gameDeveloper: CvData = {
     primary: '#2c2e81',
     secondary: '#808183',
   },
-  aboutme: `Visual computing developer with
+  aboutme: `Visual computing engineer with
       experience in casual games and
       serious simulators, most of the
       time with Unity and VR/AR.
@@ -270,13 +271,14 @@ export const gameDeveloper: CvData = {
       eager to contribute to innovative
       teams while continuing to grow
       my expertise`,
-  skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'Javascript', 'React', 'WebGL', 'Three.Js', 'PixiJs', 'Python', 'VR', 'Figma', 'Blender', 'Sketchup', 'Godot', 'AR', '3dMax'],
+  skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'Javascript', 'React', 'WebGL', 'Three.Js', 'PixiJs', 'Python', 'XR', 'Figma', 'Blender', 'Sketchup', 'Godot', '3dMax'],
   languages: [
     { name: "English", level: 75 },
     { name: "Spanish", level: 100 },
     { name: "German", level: 75 }
   ],
   links: [
+    { label: "Portfolio", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "GitHub", url: "https://github.com/damayor" },
     { label: "Behance", url: "https://www.behance.net/dev3d_may" }
@@ -476,6 +478,139 @@ export const sre: CvData = {
           location: "Bogotá",
           tasks: [
             "Introduction to games and immersive development for highschool students, touching topics about materials, humanoids, animations, and script programming. Led by Universidad Nacional de Colombia and SENA."          
+          ]
+        },
+      ]
+    }
+  ],
+};
+
+export const contentcreator: CvData = {
+  contact: contactDefault,
+  occupation: {
+    value: "Senior Software Engineer",
+    acronym: 'SE'
+  },
+  colors: {
+    primary: '#48011d'
+  },
+  aboutme: `Software Engineer with 8 years
+    of experience in large-scale web
+    platforms at a multinational,
+    specialising in ReactJS, NodeJS,
+    and interactive solutions with
+    Unity, Three.js and Unreal. Strong
+    foundations in C++, Linux bash,
+    managing Site Reliability
+    Engineering practices, ensuring
+    monitoring, performance and
+    scalability. Currently based in
+    Germany and eager to contribute
+    to innovative teams while
+    continuing to grow my expertise.`,
+  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "Copilot", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
+  languages: [
+    { name: "English", level: 75 },
+    { name: "Spanish", level: 100 },
+    { name: "German", level: 75 }
+  ],
+  links: [
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "Github", url: "https://github.com/damayor" },
+    { label: "Instagram - Professional", url: "https://www.instagram.com/may.interactive/" },
+    { label: "Instagram - Personal", url: "https://www.instagram.com/davidmay___/" },
+
+  ],
+  courses: [
+    { name: "ANGULAR: FROM ZERO TO EXPERT - EDITION 2025", institution: "{D/T} DEVTALLES", date: "Jul 2025" },
+    { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
+  ],
+  experiences: [
+    {title: "Work Experience", entries: [ 
+      {
+        company: 'ADIDAS',
+        location: 'Bogotá',
+        dates: 'May 2021 - Jun 2025',
+        role: 'Software Engineer',
+        tasks: [
+          'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
+          'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, and <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Redux</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+        ]
+      },
+      {
+        company: 'MADBRICKS',
+        location: 'Remote',
+        dates: 'Sep 2020 - Dec 2020',
+        role: 'Game Developer',
+        tasks: [
+          'Developed and maintained hyper-casual mobile games using <b>Unity</b> and <b>Unreal/C++</b>, enhancing user engagement and UI/UX experience.'
+        ]
+      },
+      {
+        company: 'UMBRA 3D STUDIO - INTERACTIVE',
+        location: 'Bogotá',
+        dates: 'Jan 2020 - Sep 2020',
+        role: 'Frontend Software Developer',
+        tasks: [
+          'Created <b>immersive 3D applications</b> with <b>React</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector (PropTech)',
+          'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.'
+        ]
+      }
+    ]},
+    {title: "Education", 
+      entries: [
+        {
+          company: "Universidad de los Andes",
+          role: "M.Sc. Systems and Computing Engineering",
+          dates: " 2019",
+          location: "Bogotá, Colombia",
+          tasks: [
+            "Internship in AG HCI and Computer Graphics at Technical University of <b>Kaiserslautern</b> during 2018",
+            "Role as research monitor focused on designing and developing a <b> VR & haptic-based</b> training simulator for trauma orthopedic surgery in Unity and Oculus, improving trainee performance during pilot tests."
+          ]
+        },
+        {
+          company: "Universidad de los Andes",
+          role: "Bachelor on Systems and Computing Engineering",
+          dates: "2017",
+          location: "Bogotá, Colombia",
+          tasks: [
+            "Academic option in Visual and Computing Interaction",
+            "Research Monitor in IMAGINE group",
+            "Scholarship \"Quiero Estudiar\" given to the best national ICFES scores"
+          ]
+        },
+        {
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          role: "High School Diploma",
+          dates: "2012",
+          location: "Bogotá, Colombia",
+          tasks: [
+            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+          ]
+        }
+      ]
+    },
+     {title: "Extra-Curricular Activities", 
+      entries: [
+        {
+          company: "Castel Magazine Models",
+          role: "Model",
+          dates: "Jun 2024 - Jun 2025",
+          location: "Bogotá",
+          tasks: [
+            "Fashion model focused on photography, performance and body expression.",
+          ]
+        },
+        {
+          company: "SCIENCE AND TECHNOLOGY CLUBS",
+          role: "National Instructor in \"Virtual Reality in Unity\"",
+          dates: "Jun 2019 - Jul 2019",
+          location: "Bogotá",
+          tasks: [
+            "Teacher of games and immersive development for highschool students, touching topics about materials, humanoids, animations, and script programming. Led by Universidad Nacional de Colombia and SENA."          
           ]
         },
       ]

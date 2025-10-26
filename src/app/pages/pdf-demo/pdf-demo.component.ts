@@ -1,12 +1,15 @@
-import { Component, ElementRef, Renderer2, signal, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, Renderer2, signal, ViewChild } from '@angular/core';
 import { SidebarComponent } from '../../components/sidebar/sidebar/sidebar.component';
 import { MainPanelComponent } from '../../components/main-panel/main-panel/main-panel.component';
 import { CvData } from '@interfaces/CVData';
 import { loadMockData } from 'src/app/services/loadCVData';
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'pdf-demo',
-  standalone: true,
+  // standalone: true,
   imports: [SidebarComponent, MainPanelComponent],
   template: `
     <div #pdfContent class="flex flex-row w-[210mm] bg-gray-100 mx-auto">
@@ -18,17 +21,25 @@ import { loadMockData } from 'src/app/services/loadCVData';
 })
 export class PdfDemoComponent {
 
-  constructor(private renderer: Renderer2) {}
+  constructor() {}
+
+  occupation = inject(ActivatedRoute).snapshot.queryParamMap.get('occupation') ?? undefined;
 
 
   @ViewChild('pdfContent', { static: false }) pdfContentRef!: ElementRef<HTMLDivElement>;
 
+  //De Tipo asi path:'history/:query',
+  // queery = inject(ActivatedRoute).snapshot.queryParams['query']
+  // productIdSlug = inject(ActivatedRoute).snapshot.params['idSlug']
 
+  
 
   cvData = signal<CvData>({} as CvData);
 
   async ngOnInit() {
-    const loadedData = await loadMockData();
+    const loadedData = await loadMockData(this.occupation);
+    console.log('query loaded :', this.occupation);
+
     console.log('Loaded CV data:', loadedData);
     if(!loadedData) {
       console.error('No data loaded');
