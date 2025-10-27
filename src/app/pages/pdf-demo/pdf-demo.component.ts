@@ -24,21 +24,15 @@ export class PdfDemoComponent {
   constructor() {}
 
   occupation = inject(ActivatedRoute).snapshot.queryParamMap.get('occupation') ?? undefined;
-
+  lang = inject(ActivatedRoute).snapshot.queryParamMap.get('lang') ?? undefined;
 
   @ViewChild('pdfContent', { static: false }) pdfContentRef!: ElementRef<HTMLDivElement>;
-
-  //De Tipo asi path:'history/:query',
-  // queery = inject(ActivatedRoute).snapshot.queryParams['query']
-  // productIdSlug = inject(ActivatedRoute).snapshot.params['idSlug']
-
-  
 
   cvData = signal<CvData>({} as CvData);
 
   async ngOnInit() {
-    const loadedData = await loadMockData(this.occupation);
-    console.log('query loaded :', this.occupation);
+    const loadedData = await loadMockData(this.lang, this.occupation);
+    console.log('query loaded :', this.occupation, this.lang);
 
     console.log('Loaded CV data:', loadedData);
     if(!loadedData) {

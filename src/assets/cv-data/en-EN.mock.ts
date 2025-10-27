@@ -31,7 +31,7 @@ export const frontend: CvData = {
       eager to contribute to innovative
       teams while continuing to grow
       my expertise`,
-  skills: ["Javascript", "React", "NodeJs", "Angular", "TypeScript", "C#", "C++", "Java", "AI", "Copilot", "Three.JS", "CSS/SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
+  skills: ["Javascript", "React", "NodeJs", "Angular", "TypeScript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "CSS/SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
   languages: [
     { name: "English", level: 75 },
     { name: "Spanish", level: 100 },
@@ -146,7 +146,7 @@ export const seniorSoftware: CvData = {
     Germany and eager to contribute
     to innovative teams while
     continuing to grow my expertise.`,
-  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "Copilot", "C#", "Java", "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs", "C#", "Java", "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   languages: [
     { name: "English", level: 75 },
     { name: "Spanish", level: 100 },
@@ -281,7 +281,7 @@ export const gameDeveloper: CvData = {
     { label: "Portfolio", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "GitHub", url: "https://github.com/damayor" },
-    { label: "Behance", url: "https://www.behance.net/dev3d_may" }
+    { label: "Behance", url: "https://www.behance.net/may_interactive" }
   ],
   courses: [
     { name: "Game Development with Unreal Engine 4", institution: "Udemy", date: "Jan 2020" },
@@ -413,7 +413,7 @@ export const sre: CvData = {
         company: 'ADIDAS',
         location: 'Bogotá',
         dates: 'May 2021 - Jun 2025',
-        role: 'Frontend Software Engineer',
+        role: 'Software Engineer',
         tasks: [
           'Enhanced reliability of the Checkout backend microservice by observability with <b>Grafana</b> and alerting integrations, supporting uninterrupted daily transactions across <b>30+ countries.</b>',
           `Participated in on-call rotations to troubleshoot and resolve
@@ -508,7 +508,7 @@ export const contentcreator: CvData = {
     Germany and eager to contribute
     to innovative teams while
     continuing to grow my expertise.`,
-  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "Copilot", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
+  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
   languages: [
     { name: "English", level: 75 },
     { name: "Spanish", level: 100 },

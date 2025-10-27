@@ -7,19 +7,16 @@ import { frontend, gameDeveloper as gamedeveloper, seniorSoftware as seniorsoftw
 import { frontend as frontendDE, gameEntwickler, seniorSoftware as seniorSoftwareDE, sre as sreDE } from '../../assets/cv-data/de-DE.mock';
 
 
-const files: any = { frontend, gamedeveloper, seniorsoftware, sre, contentcreator,
-  frontendDE, gameEntwickler, seniorSoftwareDE, sreDE,
+const files: any = {
+  'EN':{ frontend, gamedeveloper, seniorsoftware, sre, contentcreator},
+  'DE':{ frontend: frontendDE, gamedeveloper: gameEntwickler, seniorsoftware: seniorSoftwareDE, sre:sreDE}
 };
 
 
-export function loadMockData(mockField? : string) {
+export function loadMockData(lang: string = 'EN', mockField? : string) {
 
-  // const cvFile = 'frontendDE' //'seniorSoftware';
+  const cvFile = mockField ?? 'frontend'
 
-  const cvFile = mockField ?? 'sre';
-
-  const data = files[cvFile] as CvData;
+  const data = files[lang][cvFile] as CvData;
   return data;
-
-
 }

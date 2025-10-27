@@ -12,26 +12,27 @@ const contactDefault : Contact = {
 export const frontend: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "Senior Frontend Ingeniuer",
+    value: "Senior Frontend Ingenieur",
     acronym: 'SF_DE'
   },
   colors: {
     primary: '#48011d',
   },
-  aboutme: `Frontend Ingeniuer mit Erfahrung in großskaligen Webplattformen bei
+  aboutme: `Frontend Ingenieur mit Erfahrung in großskaligen Webplattformen bei
      einem multinationalen Unternehmen, spezialisiert auf ReactJS, NodeJS, Flutter
     und interaktive 3D-Lösungen mit Three.js. Solide Kenntnisse 
     in Site Reliability Engineering, mit Fokus auf Monitoring, 
     Performance und Skalierbarkeit. Derzeit in Deutschland 
     ansässig und motiviert, zu innovativen Teams beizutragen 
     und meine Expertise weiter auszubauen.`,
-  skills: ["Javascript", "React", "NodeJs", "Flutter","Angular", "TypeScript", "C#", "C++", "Java", "Three.JS", "CSS/SCSS", "SRE", "Unity", "Linux", "CI/CD", "Jenkins", "Kubernetes", "Testing"],
+  skills: ["Javascript", "React", "NodeJs", "Flutter","Angular", "TypeScript", "AI", "LLMs","C#", "C++", "Java", "Three.JS", "CSS/SCSS", "SRE", "Unity", "Linux", "CI/CD", "Jenkins", "Kubernetes", "Testing"],
   languages: [
     { name: "Englisch", level: 75 },
     { name: "Spanisch", level: 100 },
     { name: "Deutsch", level: 75 }
   ],
   links: [
+    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -71,7 +72,7 @@ export const frontend: CvData = {
           role: "M.Sc. System- und Computertechnik",
           dates: " 2019",
           location: "Bogotá, Kolumbien",
-          "tasks": [
+          tasks: [
             "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
             "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
           ]
@@ -114,7 +115,6 @@ export const frontend: CvData = {
   ],
 };
 
-//ToDo translate el DEU de aqui pa bajo
 export const seniorSoftware: CvData = {
   contact: contactDefault,
   occupation: {
@@ -134,7 +134,7 @@ export const seniorSoftware: CvData = {
    Derzeit in Deutschland ansässig und motiviert, 
    zu innovativen Teams beizutragen und meine 
    Fachkenntnisse weiterzuentwickeln.`,
-  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
+  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs","C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
   languages: [
     { name: "Englisch", level: 75 },
     { name: "Spanisch", level: 100 },
@@ -156,10 +156,10 @@ export const seniorSoftware: CvData = {
         dates: 'Mai 2021 - Jun 2025',
         role: 'Softwareingenieur ',
         tasks: [
-          'Led the development of <b>customization modules</b> (frontend und 3D) for sportswear’s PDP using <b>Three.js</b> und <b>Unity</b>, enhancing user engagement und its end-to-end testing with <b>Jest</b> und <b>Cypress</b>.',
-          'Improved reliability und deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines und infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, und <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
-          'Developed und maintained scalable frontend components using <b>ReactJS</b> und <b>Redux</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
-          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design und <b>functional programming in Typescript</b>, resulting in a faster load time.'
+          "Leitung der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
+          "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Redux</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
+          "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten.",
+          "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
         ]
       },
       {
@@ -168,7 +168,7 @@ export const seniorSoftware: CvData = {
         dates: 'Sep 2020 - Dec 2020',
         role: 'Game Entwickler',
         tasks: [
-          'Developed und maintained hyper-casual mobile games using <b>Unity</b> und <b>Unreal/C++</b>, enhancing user engagement und UI/UX experience.'
+          "Entwickelte und pflegte Hyper-Casual-Mobile-Games mit <b>Unity</b> und <b>Unreal/C++</b>, wodurch die Nutzerbindung und das UI/UX-Erlebnis verbessert wurden.",
         ]
       },
       {
@@ -177,8 +177,8 @@ export const seniorSoftware: CvData = {
         dates: 'Jan 2020 - Sep 2020',
         role: 'Frontend Softwareentwickler',
         tasks: [
-          'Created <b>immersive 3D applications</b> with <b>React</b> und <b>Unreal/C++</b> und interactive masterplan visualisations for the real estate sector (PropTech)',
-          'Developed hyper-casual games in <b>Unity</b> und <b>Virtual Reality</b> to support brand marketing campaigns und mall activations, engaging audiences through interactive gameplay.'
+            "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
+            "Entwicklung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
         ]
       }
     ]},
@@ -190,8 +190,8 @@ export const seniorSoftware: CvData = {
           dates: " 2019",
           location: "Bogotá, Kolumbien",
           tasks: [
-            "Research Internship in AG HCI und Computer Graphics at Technical University of <b>Kaiserslautern</b> during 2018",
-            "Designed und developed a <b> VR & haptic-based</b>  training simulator for trauma orthopedic surgery in Unity und Oculus, improving trainee performance during pilot tests."
+            "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
+            "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
           ]
         },
         {
@@ -232,33 +232,30 @@ export const seniorSoftware: CvData = {
   ],
 };
 
-
+//ToDo translate el DEU de aqui pa bajo
 export const gameEntwickler: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "GAME Entwickler",
+    value: "Game Entwickler",
     acronym: 'VC',
   },
   colors: {
     primary: '#2c2e81',
     secondary: '#808183',
   },
-  aboutme: `Visual computing Entwickler with
-      experience in casual games and
-      serious simulators, most of the
-      time with Unity und VR/AR.
-      Skilled in frontend technologies
-      such as React und Three.js to
-      create interactive 3D applications
-      und engaging user interfaces.
-      Focused on delivering immersive
-      digital solutions that enhance
-      user experience, particularly in
-      industrial und web contexts.
-      Currently based in Deutschy and
-      eager to contribute to innovative
-      teams while continuing to grow
-      my expertise`,
+  aboutme: `Visual-Computing-Entwickler mit Erfahrung 
+    in Casual Games und Serious Simulators,
+     meist mit Unity und XR. Versiert in 
+     Frontend-Technologien wie React und Three.js 
+     zur Erstellung interaktiver 3D-Anwendungen 
+     und ansprechender Benutzerober- flächen. 
+     Fokussiert auf die Entwicklung immersiver 
+     digitaler Lösungen, die das Nutzererlebnis 
+     verbessern – besonders in industriellen 
+     und webbasierten Umgebungen. 
+     Derzeit in Deutschland ansässig und motiviert, 
+     zu innovativen Teams beizutragen und meine 
+     Fachkenntnisse weiter auszubauen.`,
   skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'Javascript', 'React', 'WebGL', 'Three.Js', 'PixiJs', 'Python', 'VR', 'Figma', 'Blender', 'Sketchup', 'Godot', 'AR', '3dMax'],
   languages: [
     { name: "Englisch", level: 75 },
@@ -266,9 +263,10 @@ export const gameEntwickler: CvData = {
     { name: "Deutsch", level: 75 }
   ],
   links: [
+    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "GitHub", url: "https://github.com/damayor" },
-    { label: "Behance", url: "https://www.behance.net/dev3d_may" }
+    { label: "Behance", url: "https://www.behance.net/may_interactive" }
   ],
   courses: [
     { name: "Game Development with Unreal Engine 4", institution: "Udemy", date: "Jan 2020" },
@@ -282,10 +280,10 @@ export const gameEntwickler: CvData = {
         dates: 'Mai 2021 - Jun 2025',
         role: 'Frontend Softwareingenieur',
         tasks: [
-          'Led the development of 3D customisation for sportswear using <b>Three.js</b> und <b>Unity</b>, enhancing web user engagement.',
-          'Developed und maintained scalable frontend components using <b>ReactJS</b> und <b>Redux</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
-          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design und <b>functional programming in Typescript</b>, resulting in a faster load time.'
-        ]
+          "Leitete die Entwicklung der 3D-Anpassungsfunktionen für Sportbekleidung mit <b>Three.js</b> und <b>Unity</b>, um die Web-User-Interaktion zu steigern.",
+          "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Redux</b> für die Global Team Sports Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug.",
+          "Trug zur Frontend-Architektur des <b>Yeezy E-Commerce-Portals</b> bei, das für sein minimalistisches Design und die <b>funktionale Programmierung in Typescript</b> bekannt ist und kürzere Ladezeiten ermöglichte."
+        ],
       },
       {
         company: 'MADBRICKS',
@@ -293,7 +291,7 @@ export const gameEntwickler: CvData = {
         dates: 'Sep 2020 - Dec 2020',
         role: 'Game Entwickler',
         tasks: [
-          'Developed und maintained hyper-casual mobile games using <b>Unity</b> und <b>Unreal/C++</b>, enhancing user engagement und UI/UX experience.'
+          "Entwickelte und pflegte Hyper-Casual-Mobile-Games mit <b>Unity</b> und <b>Unreal/C++</b>, wodurch die Nutzerbindung und das UI/UX-Erlebnis verbessert wurden.",
         ]
       },
       {
@@ -302,9 +300,9 @@ export const gameEntwickler: CvData = {
         dates: 'Jan 2020 - Sep 2020',
         role: 'Frontend Softwareentwickler',
         tasks: [
-          'Developed hyper-casual games in <b>Unity</b> with <b>Virtual Reality</b> to support brand marketing campaigns und mall activations, engaging audiences through interactive gameplay.',
-          'Created <b>immersive 3D applications</b> with <b>Unreal</b> und <b>React</b> creating interactive masterplan visualisations for the real estate sector (PropTech)',
-        ]
+            "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
+            "Entwicklung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
+          ]
       }
     ]},
     {title: "Ausbildung", 
@@ -367,22 +365,17 @@ export const sre: CvData = {
   colors: {
     primary: '#287848',
   },
-  aboutme: `Softwareingenieur  with 5 years
-    of experience in large-scale
-    platforms at a multinational,
-    combining strong foundations in
-    Linux Bash, und automation.
-    Skilled in Ci/CD, monitoring,
-    performance optimization, and
-    ensuring scalable, resilient
-    systems. Experienced in bridging
-    Softwareingenieur ing with SRE
-    practices to deliver reliable
-    solutions. Currently based in
-    Deutschy und motivated to
-    strengthen innovative teams with
-    my expertise.`,
-  skills: ['Linux', 'ci/cd','jenkins','groovy','SRE','DevOps','Kubernetes','Yaml','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
+  aboutme: `Softwareingenieur mit 5 Jahren Erfahrung 
+    in großskaligen Plattformen bei einem multinationalen 
+    Unternehmen. Verfügt über solide Kenntnisse in
+    Linux Bash und Automatisierung. Erfahren in CI/CD,
+    Monitoring, Performance-Optimierung 
+    und dem Aufbau skalierbarer, robuster Systeme.
+    Ich bringe Softwareentwicklung und SRE-Praktiken zusammen, 
+    um zuverlässige Lösungen zu liefern. 
+    Derzeit in Deutschland ansässig und motiviert, 
+    innovative Teams mit meiner Expertise zu stärken.`,
+  skills: ['Linux', 'ci/cd','jenkins','groovy',"AI", "LLMs",'SRE','DevOps','Kubernetes','Yaml','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
   languages: [
     { name: "Englisch", level: 75 },
     { name: "Spanisch", level: 100 },
@@ -401,15 +394,12 @@ export const sre: CvData = {
         company: 'ADIDAS',
         location: 'Bogotá',
         dates: 'Mai 2021 - Jun 2025',
-        role: 'Frontend Softwareingenieur ',
+        role: 'Softwareingenieur ',
         tasks: [
-          'Enhanced reliability of the Checkout backend microservice by observability with <b>Grafana</b> und alerting integrations, supporting uninterrupted daily transactions across <b>30+ countries.</b>',
-          `Participated in on-call rotations to troubleshoot und resolve
-          production issues, ensuring <b>99.99%</b> microservice availability.`,
-          `Refactored Jenkins pipelines und implemented CI/CD best
-          practices for the Checkout service repository, cutting
-          deployment time from <b>15 minutes to under 6 minutes</b>`,        
-          'Developed und maintained scalable frontend components using <b>ReactJS</b> und <b>Redux</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          "Verbesserte die Zuverlässigkeit des Checkout-Backend-Mikroservice durch Observability mit <b>Grafana</b> und Alerting-Integrationen, um tägliche Transaktionen in <b>30+ Ländern</b> ohne Unterbrechung zu unterstützen.",
+          "Beteiligte sich an On-Call-Rotationen zur Fehleranalyse und -behebung in der Produktion, um eine <b>99,99%</b>-Verfügbarkeit der Microservices sicherzustellen.",
+          "Refaktorierte Jenkins-Pipelines und implementierte CI/CD-Best Practices für das Checkout-Service-Repository, wodurch die Deployment-Zeit von <b>15 Minuten auf unter 6 Minuten</b> reduziert wurde.",
+          "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Redux</b> für die Global Team Sports Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug."
         ]
       },
       {
@@ -418,8 +408,8 @@ export const sre: CvData = {
         dates: 'Jan 2020 - Sep 2020',
         role: 'Frontend Softwareentwickler',
         tasks: [
-          'Created <b>immersive 3D applications</b> with <b>Unreal</b> und <b>React</b> creating interactive masterplan visualisations for the real estate sector (PropTech)',
-          'Developed hyper-casual games in <b>Unity</b> with <b>Virtual Reality</b> to support brand marketing campaigns und mall activations, engaging audiences through interactive gameplay.',
+          "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
+          "Entwicklung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
         ]
       }
     ]},
