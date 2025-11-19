@@ -9,23 +9,23 @@ const contactDefault : Contact = {
   visaStatus: "Chancenkarte"
 }
 
-export const frontend: CvData = {
+export const seniorfrontend: CvData = {
   contact: contactDefault,
   occupation: {
     value: "Senior Frontend Ingenieur",
-    acronym: 'SF_DE'
+    acronym: 'SF'
   },
   colors: {
     primary: '#48011d',
   },
   aboutme: `Frontend Ingenieur mit Erfahrung in großskaligen Webplattformen bei
-     einem multinationalen Unternehmen, spezialisiert auf ReactJS, NodeJS, Flutter
+     einem multinationalen Unternehmen, spezialisiert auf NodeJS, ReactJS, 
     und interaktive 3D-Lösungen mit Three.js. Solide Kenntnisse 
     in Site Reliability Engineering, mit Fokus auf Monitoring, 
-    Performance und Skalierbarkeit. Derzeit in Deutschland 
-    ansässig und motiviert, zu innovativen Teams beizutragen 
-    und meine Expertise weiter auszubauen.`,
-  skills: ["Javascript", "React", "NodeJs", "Flutter","Angular", "TypeScript", "AI", "LLMs","C#", "C++", "Java", "Three.JS", "CSS/SCSS", "SRE", "Unity", "Linux", "CI/CD", "Jenkins", "Kubernetes", "Testing"],
+    Performance und Skalierbarkeit. Derzeit in Deutschland ansässig und motiviert, Teams 
+  beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
+   begleiten und die kollektiven Fähigkeiten stärken könnte.`,
+  skills: ["Typescript", "React", "NodeJs", "Next.js", "Angular", "Vue.js","Tailwind" ,"Javascript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
   languages: [
     { name: "Englisch", level: 75 },
     { name: "Spanisch", level: 100 },
@@ -48,7 +48,7 @@ export const frontend: CvData = {
         dates: 'Mai 2021 - Jun 2025',
         role: 'Softwareingenieur ',
         tasks: [
-            "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Redux</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
+            "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
             "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout-<b>Backends</b> durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
             "Leitung der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
             "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten."
@@ -115,11 +115,19 @@ export const frontend: CvData = {
   ],
 };
 
+export const frontend: CvData = {
+  ...seniorfrontend,
+  occupation: {
+    value: "Frontend Ingenieur",
+    acronym: 'FE'
+  },
+}
+
 export const seniorSoftware: CvData = {
   contact: contactDefault,
   occupation: {
     value: "Senior Softwareingenieur ",
-    acronym: 'FE'
+    acronym: 'SE'
   },
   colors: {
     primary: '#48011d',
@@ -131,16 +139,17 @@ export const seniorSoftware: CvData = {
   interaktive 3D-Lösungen mit Unity, Three.js und Unreal. 
   Solide Kenntnisse in C++, Linux Bash und Site Reliability 
   Engineering (Monitoring, Performance, Skalierbarkeit).
-   Derzeit in Deutschland ansässig und motiviert, 
-   zu innovativen Teams beizutragen und meine 
-   Fachkenntnisse weiterzuentwickeln.`,
-  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs","C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
+  Derzeit in Deutschland ansässig und motiviert, Teams 
+  beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
+   begleiten und die kollektiven Fähigkeiten stärken könnte.`,
+  skills: ["Typescript", "NodeJs", "React", "Angular", "C++", "Javascript","Next.js", "TailwindCSS","Vue.js", "AI", "LLMs", "C#", "Java", 'Python', "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   languages: [
     { name: "Englisch", level: 75 },
     { name: "Spanisch", level: 100 },
     { name: "Deutsch", level: 75 }
   ],
   links: [
+    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -157,7 +166,7 @@ export const seniorSoftware: CvData = {
         role: 'Softwareingenieur ',
         tasks: [
           "Leitung der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
-          "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Redux</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
+          "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
           "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten.",
           "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
         ]
@@ -232,7 +241,26 @@ export const seniorSoftware: CvData = {
   ],
 };
 
-//ToDo translate el DEU de aqui pa bajo
+export const fullStackIngenieur: CvData = {
+  ...seniorSoftware,
+  occupation: {
+    value: "Full Stack Ingenieur",
+    acronym: 'FSE'
+  },
+  aboutme: 
+  `Softwareingenieur mit 5 Jahren Erfahrung in 
+  großskaligen Webplattformen bei einem multinationalen 
+  Unternehmen, spezialisiert auf NodeJS, TailwindCSS und 
+  interaktive 3D-Lösungen mit Unity, Three.js und Unreal. 
+  Solide Kenntnisse in C++, Linux Bash und Site Reliability 
+  Engineering (Monitoring, Performance, Skalierbarkeit).
+  Derzeit in Deutschland ansässig und motiviert, Teams 
+  beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
+   begleiten und die kollektiven Fähigkeiten stärken könnte.`,
+  skills: ["Typescript", "NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js","C++", "Java", 'Python',"AI", "LLMs", "C#",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+
+}
+
 export const gameEntwickler: CvData = {
   contact: contactDefault,
   occupation: {
@@ -253,9 +281,9 @@ export const gameEntwickler: CvData = {
      digitaler Lösungen, die das Nutzererlebnis 
      verbessern – besonders in industriellen 
      und webbasierten Umgebungen. 
-     Derzeit in Deutschland ansässig und motiviert, 
-     zu innovativen Teams beizutragen und meine 
-     Fachkenntnisse weiter auszubauen.`,
+    Derzeit in Deutschland ansässig und motiviert, Teams 
+    beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
+    begleiten und die kollektiven Fähigkeiten stärken könnte.`,
   skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'Javascript', 'React', 'WebGL', 'Three.Js', 'PixiJs', 'Python', 'VR', 'Figma', 'Blender', 'Sketchup', 'Godot', 'AR', '3dMax'],
   languages: [
     { name: "Englisch", level: 75 },
@@ -281,7 +309,7 @@ export const gameEntwickler: CvData = {
         role: 'Frontend Softwareingenieur',
         tasks: [
           "Leitete die Entwicklung der 3D-Anpassungsfunktionen für Sportbekleidung mit <b>Three.js</b> und <b>Unity</b>, um die Web-User-Interaktion zu steigern.",
-          "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Redux</b> für die Global Team Sports Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug.",
+          "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug.",
           "Trug zur Frontend-Architektur des <b>Yeezy E-Commerce-Portals</b> bei, das für sein minimalistisches Design und die <b>funktionale Programmierung in Typescript</b> bekannt ist und kürzere Ladezeiten ermöglichte."
         ],
       },
@@ -355,12 +383,11 @@ export const gameEntwickler: CvData = {
   ],
 };
 
-
 export const sre: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "Senior Softwareingenieur ",
-    acronym: 'SR',
+    value: "DevOps / Site Reliability Engineer",
+    acronym: 'DO',
   },
   colors: {
     primary: '#287848',
@@ -368,13 +395,15 @@ export const sre: CvData = {
   aboutme: `Softwareingenieur mit 5 Jahren Erfahrung 
     in großskaligen Plattformen bei einem multinationalen 
     Unternehmen. Verfügt über solide Kenntnisse in
-    Linux Bash und Automatisierung. Erfahren in CI/CD,
-    Monitoring, Performance-Optimierung 
-    und dem Aufbau skalierbarer, robuster Systeme.
+    Linux Bash und Automatisierung.     
     Ich bringe Softwareentwicklung und SRE-Praktiken zusammen, 
-    um zuverlässige Lösungen zu liefern. 
-    Derzeit in Deutschland ansässig und motiviert, 
-    innovative Teams mit meiner Expertise zu stärken.`,
+    um zuverlässige Lösungen zu liefern 
+    basierend auf Monitoring und Beobachtbarkeit.  
+    Erfahren in CI/CD, Performance-Optimierung 
+    und dem Aufbau skalierbarer, robuster Systeme.
+    Derzeit in Deutschland ansässig und motiviert, Teams 
+    beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
+    begleiten und die kollektiven Fähigkeiten stärken könnte.`,
   skills: ['Linux', 'ci/cd','jenkins','groovy',"AI", "LLMs",'SRE','DevOps','Kubernetes','Yaml','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
   languages: [
     { name: "Englisch", level: 75 },
@@ -384,6 +413,7 @@ export const sre: CvData = {
   links: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "Stackshare", url: "https://stackshare.io/damayor/software-engineer" },
+    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
   ],
   courses: [
     { "name": "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
@@ -399,7 +429,7 @@ export const sre: CvData = {
           "Verbesserte die Zuverlässigkeit des Checkout-Backend-Mikroservice durch Observability mit <b>Grafana</b> und Alerting-Integrationen, um tägliche Transaktionen in <b>30+ Ländern</b> ohne Unterbrechung zu unterstützen.",
           "Beteiligte sich an On-Call-Rotationen zur Fehleranalyse und -behebung in der Produktion, um eine <b>99,99%</b>-Verfügbarkeit der Microservices sicherzustellen.",
           "Refaktorierte Jenkins-Pipelines und implementierte CI/CD-Best Practices für das Checkout-Service-Repository, wodurch die Deployment-Zeit von <b>15 Minuten auf unter 6 Minuten</b> reduziert wurde.",
-          "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Redux</b> für die Global Team Sports Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug."
+          "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug."
         ]
       },
       {

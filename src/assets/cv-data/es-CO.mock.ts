@@ -4,48 +4,49 @@ const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: "+49 1525 2198970",
-  location: "Berlin, Germany",
-  nationality: "Colombian",
+  location: "Berlin, Alemania",
+  nationality: "Colombiano",
   visaStatus: "Chancenkarte / Opportunity Card"
 }
 
-export const seniorfrontend: CvData = {
+export const frontend: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "Senior Frontend Engineer",
+    value: "Ingeniro Senior Frontend",
     acronym: 'SF'
   },
   colors: {
     primary: '#48011d',
   },
-  aboutme: `Frontend Engineer with experience
-   building large-scale web platforms at a
-    multinational company. Specialized in Node.js, 
-    TypeScript development, and UI/UX solutions using 
-    TailwindCSS, SCSS, and interactive 3D experiences 
-    with Three.js. I also bring a strong foundation 
-    in Site Reliability Engineering practices,
-    ensuring effective monitoring, performance,
-    and scalability. Currently based in Germany 
-    and eager to contribute to innovative teams 
-    while continuing to grow my expertise.`,
-  skills: ["Typescript", "React", "NodeJs", "Next.js", "Angular", "Vue.js","Tailwind" ,"Javascript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
+  aboutme: `Ingeniero Frontend con experiencia 
+      en plataformas web de multinacionales 
+      a gran escala, especializado en ReactJS, 
+      NodeJS y soluciones interactivas y 3D 
+      con Three.JS y/o Unity. Bases solidas 
+      en SRE, asegurando monitoreo, trazabilidad 
+      y visualizacion. Actualmente asentado 
+      en Alemania para brindar la experiencia 
+      de equipos Colombianos. Caracterizando 
+      un rol de liderazgo brindando
+      apoyo constante al equipo con comunicación 
+      empática en las relaciones interpersonales. `,
+  skills: ["Javascript", "React", "NodeJs", "Angular", "TypeScript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "CSS/SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
   languages: [
-    { name: "English", level: 75 },
-    { name: "Spanish", level: 100 },
-    { name: "German", level: 75 }
+    { name: "Ingles", level: 75 },
+    { name: "Español", level: 100 },
+    { name: "Aleman", level: 75 }
   ],
   links: [
-    { label: "Portfolio", url: "https://mayinteractive.io/" },
+    { label: "Portafolio", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
   courses: [
-    { name: "ANGULAR: FROM ZERO TO EXPERT - EDITION 2025", institution: "{D/T} DEVTALLES", date: "Jul 2025" },
+    { name: "ANGULAR: DE CERO A EXPERTO - EDICION 2025", institution: "{D/T} DEVTALLES", date: "Jul 2025" },
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Experiencia Laboral", entries: [ 
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -69,7 +70,7 @@ export const seniorfrontend: CvData = {
         ]
       }
     ]},
-    {title: "Education", 
+    {title: "Formacion", 
       entries: [
         {
           company: "Universidad de los Andes",
@@ -103,7 +104,7 @@ export const seniorfrontend: CvData = {
         }
       ]
     },
-     {title: "Extra-Curricular Activities", 
+     {title: "Actividades Extra-Curriculares", 
       entries: [
         {
           company: "SCIENCE AND TECHNOLOGY CLUBS",
@@ -119,14 +120,6 @@ export const seniorfrontend: CvData = {
   ],
 };
 
-export const frontend: CvData = {
-  ...seniorfrontend,
-  occupation: {
-    value: "Frontend Engineer",
-    acronym: 'FE'
-  },
-}
-
 //C++, full stack
 export const seniorSoftware: CvData = {
   contact: contactDefault,
@@ -138,40 +131,37 @@ export const seniorSoftware: CvData = {
     primary: '#48011d',
     secondary: '#808183'
   },
-  aboutme: `Software Engineer with 8 years of experience 
-    building large-scale web platforms 
-    at a multinational company.
-    Specialized in Node.js, TypeScript development, 
-    UI/UX solutions using TailwindCSS, SCSS, and
-    interactive 3D experiences with
-    Unity, Three.js and Unreal. Strong
-    foundations in C++, and Linux bash
-    managing Site Reliability
-    Engineering practices, ensuring
-    monitoring, performance and
-    scalability. Currently based in Germany 
-    and committed to contributing to teams 
-    not only through my technical expertise, 
-    but by helping colleagues grow so the 
-    entire group can advance together.`,
-  skills: ["Typescript", "NodeJs", "React", "Angular", "C++", "Javascript","Next.js", "TailwindCSS","Vue.js", "AI", "LLMs", "C#", "Java", 'Python', "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  aboutme: 
+    `Ingeniero de Sistemas y Computacion (M.Eng.) 
+      con 8 años de experiencia especializado
+      en plataformas web y responsive con uso mundial, 
+      desarrollando más que todo con Typescript,
+      ReactJS, NodeJS, y soluciones 3D e interactivas 
+      con Three.JS y/o Unity. Bases solidas en C++, bash de Linux y
+      SRE, asegurando monitoreo, trazabilidad 
+      y visualizacion. Actualmente asentado 
+      en Alemania para brindar la experiencia 
+      de equipos colombianos, caracterizando 
+      un rol de liderazgo brindando
+      apoyo constante al equipo y a la vez, con comunicación 
+      empática en las relaciones interpersonales. `,
+  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs", "C#", "Java", 'Python', "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   languages: [
-    { name: "English", level: 75 },
-    { name: "Spanish", level: 100 },
-    { name: "German", level: 75 },
-    { name: "Portuguese", level: 33 }
+    { name: "Ingles", level: 75 },
+    { name: "Español", level: 100 },
+    { name: "Aleman", level: 75 }
   ],
   links: [
-    { label: "Portfolio", url: "https://mayinteractive.io/" },
+    { label: "Portafolio", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
   courses: [
-    { name: "ANGULAR: FROM ZERO TO EXPERT - EDITION 2025", institution: "{D/T} DEVTALLES", date: "Jul 2025" },
+    { name: "ANGULAR: DE CERO A EXPERTO - EDICION 2025", institution: "{D/T} DEVTALLES", date: "Jul 2025" },
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Experiencia Laboral", entries: [ 
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -204,7 +194,7 @@ export const seniorSoftware: CvData = {
         ]
       }
     ]},
-    {title: "Education", 
+    {title: "Formacion", 
       entries: [
         {
           company: "Universidad de los Andes",
@@ -238,7 +228,7 @@ export const seniorSoftware: CvData = {
         }
       ]
     },
-     {title: "Extra-Curricular Activities", 
+     {title: "Actividades Extra-Curriculares", 
       entries: [
         {
           company: "SCIENCE AND TECHNOLOGY CLUBS",
@@ -253,29 +243,6 @@ export const seniorSoftware: CvData = {
     }
   ],
 };
-
-export const fullStackEngineer: CvData = {
-  ...seniorSoftware,
-  occupation: {
-    value: "Full Stack Engineer",
-    acronym: 'FSE'
-  },
-  aboutme: `Software Engineer with 5 years
-    of experience in large-scale web
-    platforms, specialising in NodeJS, TailwindCSS
-    and interactive solutions with
-    Unity, Three.js and Unreal. Strong
-    foundations in C++ and Linux bash
-    managing Site Reliability
-    Engineering practices, ensuring
-    monitoring, performance and
-    scalability. Currently based in Germany 
-    and motivated to join teams where I can
-    share knowledge, mentor others, and 
-    help elevate the collective skills.`,
-  skills: ["Typescript", "NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js","C++", "Java", 'Python',"AI", "LLMs", "C#",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
-
-}
 
 export const gameDeveloper: CvData = {
   contact: contactDefault,
@@ -303,14 +270,14 @@ export const gameDeveloper: CvData = {
       eager to contribute to innovative
       teams while continuing to grow
       my expertise`,
-  skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'LLMs','Javascript', 'React', 'WebGL', 'Three.Js', 'PixiJs', 'Python', 'XR', 'Figma', 'Blender', 'Sketchup', 'Godot', '3dMax'],
+  skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'Javascript', 'React', 'WebGL', 'Three.Js', 'PixiJs', 'Python', 'XR', 'Figma', 'Blender', 'Sketchup', 'Godot', '3dMax'],
   languages: [
-    { name: "English", level: 75 },
-    { name: "Spanish", level: 100 },
-    { name: "German", level: 75 }
+    { name: "Ingles", level: 75 },
+    { name: "Español", level: 100 },
+    { name: "Aleman", level: 75 }
   ],
   links: [
-    { label: "Portfolio", url: "https://mayinteractive.io/" },
+    { label: "Portafolio", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
     { label: "GitHub", url: "https://github.com/damayor" },
     { label: "Behance", url: "https://www.behance.net/may_interactive" }
@@ -320,7 +287,7 @@ export const gameDeveloper: CvData = {
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Experiencia Laboral", entries: [ 
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -352,7 +319,7 @@ export const gameDeveloper: CvData = {
         ]
       }
     ]},
-    {title: "Education", 
+    {title: "Formacion", 
       entries: [
         {
           company: "Universidad de los Andes",
@@ -386,7 +353,7 @@ export const gameDeveloper: CvData = {
         }
       ]
     },
-     {title: "Extra-Curricular Activities", 
+     {title: "Actividades Extra-Curriculares", 
       entries: [
         {
           company: "SCIENCE AND TECHNOLOGY CLUBS",
@@ -405,7 +372,7 @@ export const gameDeveloper: CvData = {
 export const sre: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "DevOps / Site Reliability Engineer",
+    value: "Senior Software Engineer",
     acronym: 'DO',
   },
   colors: {
@@ -416,22 +383,21 @@ export const sre: CvData = {
     platforms at a multinational,
     combining strong foundations in
     Linux Bash, and DevOps automation.
-    Experienced in bridging
-    software engineering with SRE
-    practices to deliver reliable
-    solutions based on observability 
-    and monitoring. Skilled in CI/CD, 
+    Skilled in CI/CD, monitoring,
     performance optimization, and
     ensuring scalable, resilient
-    systems. Currently based in Germany 
-    and motivated to join teams where I can
-    share knowledge, mentor others, and 
-    help elevate the collective skills.`,
-  skills: ['Linux', 'SRE','ci/cd','jenkins','groovy','DevOps','Kubernetes','Yaml','LLMs','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
+    systems. Experienced in bridging
+    software engineering with SRE
+    practices to deliver reliable
+    solutions. Currently based in
+    Germany and motivated to
+    strengthen innovative teams with
+    my expertise.`,
+  skills: ['Linux', 'ci/cd','jenkins','groovy','SRE','DevOps','Kubernetes','Yaml','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
   languages: [
-    { name: "English", level: 75 },
-    { name: "Spanish", level: 100 },
-    { name: "German", level: 75 }
+    { name: "Ingles", level: 75 },
+    { name: "Español", level: 100 },
+    { name: "Aleman", level: 75 }
   ],
   links: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
@@ -441,7 +407,7 @@ export const sre: CvData = {
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Experiencia Laboral", entries: [ 
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -468,7 +434,7 @@ export const sre: CvData = {
         ]
       }
     ]},
-    {title: "Education", 
+    {title: "Formacion", 
       entries: [
         {
           company: "Universidad de los Andes",
@@ -502,7 +468,7 @@ export const sre: CvData = {
         }
       ]
     },
-     {title: "Extra-Curricular Activities", 
+     {title: "Actividades Extra-Curriculares", 
       entries: [
         {
           company: "SCIENCE AND TECHNOLOGY CLUBS",
@@ -537,15 +503,15 @@ export const contentcreator: CvData = {
     managing Site Reliability
     Engineering practices, ensuring
     monitoring, performance and
-    scalability. Currently based in Germany 
-    and motivated to join teams where I can
-    share knowledge, mentor others, and 
-    help elevate the collective skills.`,
+    scalability. Currently based in
+    Germany and eager to contribute
+    to innovative teams while
+    continuing to grow my expertise.`,
   skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
   languages: [
-    { name: "English", level: 75 },
-    { name: "Spanish", level: 100 },
-    { name: "German", level: 75 }
+    { name: "Ingles", level: 75 },
+    { name: "Español", level: 100 },
+    { name: "Aleman", level: 75 }
   ],
   links: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
@@ -555,11 +521,11 @@ export const contentcreator: CvData = {
 
   ],
   courses: [
-    { name: "ANGULAR: FROM ZERO TO EXPERT - EDITION 2025", institution: "{D/T} DEVTALLES", date: "Jul 2025" },
+    { name: "ANGULAR: DE CERO A EXPERTO - EDICION 2025", institution: "{D/T} DEVTALLES", date: "Jul 2025" },
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Experiencia Laboral", entries: [ 
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -592,7 +558,7 @@ export const contentcreator: CvData = {
         ]
       }
     ]},
-    {title: "Education", 
+    {title: "Formacion", 
       entries: [
         {
           company: "Universidad de los Andes",
@@ -626,7 +592,7 @@ export const contentcreator: CvData = {
         }
       ]
     },
-     {title: "Extra-Curricular Activities", 
+     {title: "Actividades Extra-Curriculares", 
       entries: [
         {
           company: "Castel Magazine Models",
@@ -644,145 +610,6 @@ export const contentcreator: CvData = {
           location: "Bogotá",
           tasks: [
             "Teacher of games and immersive development for highschool students, touching topics about materials, humanoids, animations, and script programming. Led by Universidad Nacional de Colombia and SENA."          
-          ]
-        },
-      ]
-    }
-  ],
-};
-
-export const supportAssistant: CvData = { //En ventas, en eventos, logistica
-  contact: contactDefault,
-  occupation: {
-    value: "Retail & Event Support Assistant",
-    acronym: 'SA'
-  },
-  colors: {
-    primary: '#2c2e81'
-  },
-  aboutme: `Detail-oriented professional 
-    with experience supporting store
-     operations, logistics, and inventory 
-     processes during high-demand seasons. 
-     Background as a software engineer 
-     and fashion model, skilled in event 
-     coordination and digital content 
-     for brand storytelling. 
-     Reliable, adaptable, and proactive. 
-    Currently based in Germany 
-    and motivated to join teams where I can
-    share knowledge, mentor others, and 
-    help elevate the collective skills.`,
-  skills: [
-    "Store assistance",
-    "Inventory management",
-    "Event support",
-    "Customer support",
-    "Problem solving",
-    "Team collaboration", 
-    "Social Media",
-    "Javascript", "C++", "React", "AI", "LLMs"],
-  languages: [
-    { name: "English", level: 75 },
-    { name: "Spanish", level: 100 },
-    { name: "German", level: 75 }
-  ],
-  links: [
-    { label: "Instagram", url: "https://www.instagram.com/davidmay___/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
-    { label: "May Interactive", url: "https://www.instagram.com/may.interactive/" },
-
-  ],
-  courses: [
-  ],
-  experiences: [
-    {title: "Work Experience", entries: [ 
-      {
-        company: 'ADIDAS',
-        location: 'Bogotá',
-        dates: 'May 2021 - Jun 2025',
-        role: 'Software Engineer',
-        tasks: [
-          'Supported retail operations during high-consumption days such as Christmas and Black Friday, assisting with <b>sales, inventory organization</b>, and <b>warehouse management</b>.',
-          'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines supporting daily transactions across <b>30+ countries</b>.',
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
-        ]
-      },
-     
-      {
-        company: 'UMBRA 3D STUDIO - INTERACTIVE',
-        location: 'Bogotá',
-        dates: 'Jan 2020 - Sep 2020',
-        role: 'Frontend Software Developer',
-        tasks: [
-          'Systems engineer responsible for the development, maintenance, and <b>24/7 support</b> of company websites for two brands: Umbra3D.Studio and Umbra Interactive.',
-          'Created <b>immersive 3D applications</b> with <b>React</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector (PropTech), brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.',
-        ]
-      },
-      {
-        company: "COLIVRI Lab - Universidad de los Andes",
-        role: "Research Monitor",
-        dates: "Jun 2017 - Ago 2019",
-        location: "Bogotá",
-        tasks: [
-          "Supporting demonstrations based on robotics & XR projects, <b>managing inventory</b> of the laboratory devices",
-          "Developing a <b> VR & haptic-based</b> training simulator for trauma orthopedic surgery in Unity and Oculus, improving trainee performance during pilot tests.",
-          "Internship in AG HCI and Computer Graphics at Technical University of <b>Kaiserslautern</b> during 2018",
-        ]
-      },
-
-    ]},
-    {title: "Education", 
-      entries: [
-        {
-          company: "Universidad de los Andes",
-          role: "Bachelor on Systems and Computing Engineering",
-          dates: "2017",
-          location: "Bogotá, Colombia",
-          tasks: [
-            "Academic option in Visual and Computing Interaction",
-            "Research Monitor in IMAGINE group",
-            "Scholarship \"Quiero Estudiar\" given to the best national ICFES scores"
-          ]
-        },
-        {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
-          role: "High School Diploma",
-          dates: "2012",
-          location: "Bogotá, Colombia",
-          tasks: [
-            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
-          ]
-        }
-      ]
-    },
-     {title: "Extra-Curricular Activities", 
-      entries: [
-        {
-          company: "Castel Magazine Models",
-          role: "Model",
-          dates: "Jun 2024 - Jun 2025",
-          location: "Bogotá",
-          tasks: [
-            "Fashion model focused on photography, body expression, creation of content and events management.",
-          ]
-        },
-        // {
-        //   company: "SCIENCE AND TECHNOLOGY CLUBS",
-        //   role: "National Instructor in \"Virtual Reality in Unity\"",
-        //   dates: "Jun 2019 - Jul 2019",
-        //   location: "Bogotá",
-        //   tasks: [
-        //     "Teacher of games and immersive development for highschool students. Led by Universidad Nacional de Colombia and SENA."          
-        //   ]
-        // },
-        {
-          company: "Universidad de los Andes",
-          role: "Theatre Group Member",
-          dates: "Ene 2016 - Jun 2018",
-          location: "Bogotá",
-          tasks: [
-            "Participated in acting and theater plays, developing teamwork, improvisation, and communication skills."          
           ]
         },
       ]

@@ -17,7 +17,9 @@ import { CvData } from '@interfaces/CVData';
       <sidebar-skills [skills]="cvData().skills"></sidebar-skills>
       <sidebar-languages  class="sidebar-block" [languages]="cvData().languages"></sidebar-languages>
       <sidebar-links class="sidebar-block" [links]="cvData().links"></sidebar-links>
-      <sidebar-courses class="sidebar-block" [courses]="cvData().courses"></sidebar-courses>
+      @if (cvData().courses.length > 0 ) {
+        <sidebar-courses class="sidebar-block" [courses]="cvData().courses"></sidebar-courses>
+      }
     </div>
   `
 })

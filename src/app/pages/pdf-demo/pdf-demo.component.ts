@@ -12,7 +12,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
   // standalone: true,
   imports: [SidebarComponent, MainPanelComponent],
   template: `
-    <div #pdfContent class="flex flex-row w-[210mm] bg-gray-100 mx-auto">
+    <div #pdfContent class="flex flex-row w-[210mm] bg-white mx-auto">
       <sidebar [cvData]="cvData()"></sidebar>
       <main-panel [cvData]="cvData()" [contact]="cvData().contact" ></main-panel>
     </div>

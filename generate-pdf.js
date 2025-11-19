@@ -7,10 +7,13 @@ const { exec } = require('child_process');
   console.log('All args:', args);
 
   const acronyms = {
-    'frontend': 'SF',
+    'frontend': 'FE',
+    'fullstackengineer': 'FSE',
+    'seniorfrontend': 'SF',
     'seniorsoftware': 'SE',
     'gamedeveloper':'VC',
-    'sre':'SR'
+    'sre':'DO',
+    'supportAssistant': 'SA'
   };
   
   const role = args[0]; // 'seniorsoftware';
@@ -40,7 +43,7 @@ const { exec } = require('child_process');
   await page.waitForSelector('sidebar');
   await page.waitForSelector('main-panel');
 
-  const height = await page.evaluate(() => document.body.scrollHeight); //1940
+  const height = await page.evaluate(() => document.body.scrollHeight); //1940 + 40
   console.log('height to print letter ', height)
 
   await page.pdf({
