@@ -5,10 +5,13 @@ import { CvData } from "../interfaces/CVData";
 
 import { frontend,seniorfrontend, gameDeveloper as gamedeveloper, seniorSoftware as seniorsoftware, fullStackEngineer as fullstackengineer, sre, contentcreator, supportAssistant } from '../../assets/cv-data/en-EN.mock';
 import { frontend as frontendDE, seniorfrontend as seniorfrontendDE, fullStackIngenieur , gameEntwickler, seniorSoftware as seniorSoftwareDE, sre as sreDE } from '../../assets/cv-data/de-DE.mock';
+import { frontend as frontendES, seniorfrontend as seniorfrontendES, ingenieroFullStack , seniorSoftware as seniorSoftwareES, sre as sreES } from '../../assets/cv-data/es-CO.mock';
 
 const files: any = {
   'EN':{ frontend, seniorfrontend, fullstackengineer, gamedeveloper, seniorsoftware, sre, contentcreator, supportAssistant},
-  'DE':{ frontend: frontendDE, seniorfrontend : seniorfrontendDE,  gamedeveloper: gameEntwickler, fullstackengineer: fullStackIngenieur,seniorsoftware: seniorSoftwareDE, sre:sreDE}
+  'DE':{ frontend: frontendDE, seniorfrontend : seniorfrontendDE,  gamedeveloper: gameEntwickler, fullstackengineer: fullStackIngenieur,seniorsoftware: seniorSoftwareDE, sre:sreDE},
+  'ES':{ frontend: frontendES, seniorfrontend : seniorfrontendES,       fullstackengineer: ingenieroFullStack, seniorsoftware: seniorSoftwareES, sre:sreES}
+
 };
 
 

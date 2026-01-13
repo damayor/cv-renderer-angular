@@ -25,7 +25,9 @@ const { exec } = require('child_process');
 
   const url = `http://localhost:4200/?lang=${lang}&occupation=${role}` ;
 
-  const prefix = lang == 'EN' ? 'CV' : 'LL'
+  const prefix = lang == 'EN' 
+    ? 'CV' 
+    : lang == 'DE' ? 'LL' : 'HV'
   const namepdf = 'DavidMayorga'+acronyms[role];
 
   const browser = await puppeteer.launch();
@@ -43,7 +45,7 @@ const { exec } = require('child_process');
   await page.waitForSelector('sidebar');
   await page.waitForSelector('main-panel');
 
-  const height = await page.evaluate(() => document.body.scrollHeight); //1940 + 40
+  const height = await page.evaluate(() => document.body.scrollHeight); //1930
   console.log('height to print letter ', height)
 
   await page.pdf({

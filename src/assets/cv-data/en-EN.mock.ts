@@ -3,6 +3,7 @@ import { Contact, CvData } from "../../app/interfaces/CVData";
 const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
+  // email: "davidrmayo@hotmail.com",
   phone: "+49 1525 2198970",
   location: "Berlin, Germany",
   nationality: "Colombian",
@@ -19,21 +20,23 @@ export const seniorfrontend: CvData = {
     primary: '#48011d',
   },
   aboutme: `Frontend Engineer with experience
-   building large-scale web platforms at a
-    multinational company. Specialized in Node.js, 
-    TypeScript development, and UI/UX solutions using 
-    TailwindCSS, SCSS, and interactive 3D experiences 
+   building large-scale web platforms and applications
+    specialized in Node.js, 
+    TypeScript, and UI/UX solutions using 
+    TailwindCSS, SCSS, and interactive or 3D experiences 
     with Three.js. I also bring a strong foundation 
     in Site Reliability Engineering practices,
-    ensuring effective monitoring, performance,
-    and scalability. Currently based in Germany 
-    and eager to contribute to innovative teams 
-    while continuing to grow my expertise.`,
+    ensuring effective monitoring, security,
+    and scalability. Currently based in Germany and
+     committed to contributing to teams not only 
+     through technical expertise, but by helping
+      colleagues grow so the entire group can advance 
+      together.`,
   skills: ["Typescript", "React", "NodeJs", "Next.js", "Angular", "Vue.js","Tailwind" ,"Javascript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
   languages: [
-    { name: "English", level: 75 },
+    { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
-    { name: "German", level: 75 }
+    { name: "German", level: 67 }
   ],
   links: [
     { label: "Portfolio", url: "https://mayinteractive.io/" },
@@ -93,7 +96,7 @@ export const seniorfrontend: CvData = {
           ]
         },
         {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
           role: "High School Diploma",
           dates: "2012",
           location: "Bogotá, Colombia",
@@ -139,27 +142,27 @@ export const seniorSoftware: CvData = {
     secondary: '#808183'
   },
   aboutme: `Software Engineer with 8 years of experience 
-    building large-scale web platforms 
-    at a multinational company.
-    Specialized in Node.js, TypeScript development, 
+    in large-scale web platforms and applications
+    specialized in Node.js, 
+    TypeScript, 
     UI/UX solutions using TailwindCSS, SCSS, and
     interactive 3D experiences with
     Unity, Three.js and Unreal. Strong
-    foundations in C++, and Linux bash
+    foundations in C++/C#, and Linux bash
     managing Site Reliability
     Engineering practices, ensuring
     monitoring, performance and
-    scalability. Currently based in Germany 
+    security. Currently based in Germany 
     and committed to contributing to teams 
     not only through my technical expertise, 
     but by helping colleagues grow so the 
     entire group can advance together.`,
-  skills: ["Typescript", "NodeJs", "React", "Angular", "C++", "Javascript","Next.js", "TailwindCSS","Vue.js", "AI", "LLMs", "C#", "Java", 'Python', "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  skills: ["Typescript", "NodeJs", "React", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   languages: [
-    { name: "English", level: 75 },
+    { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
-    { name: "German", level: 75 },
-    { name: "Portuguese", level: 33 }
+    { name: "German", level: 67 },
+    // { name: "Portuguese", level: 33 }
   ],
   links: [
     { label: "Portfolio", url: "https://mayinteractive.io/" },
@@ -228,7 +231,7 @@ export const seniorSoftware: CvData = {
           ]
         },
         {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
           role: "High School Diploma",
           dates: "2012",
           location: "Bogotá, Colombia",
@@ -261,26 +264,27 @@ export const fullStackEngineer: CvData = {
     acronym: 'FSE'
   },
   aboutme: `Software Engineer with 5 years
-    of experience in large-scale web
-    platforms, specialising in NodeJS, TailwindCSS
+    of experience in responsive web
+    platforms, deployed in 30+ countries, specialising in NodeJS, TailwindCSS
     and interactive solutions with
-    Unity, Three.js and Unreal. Strong
+    Unity & Three.js. Strong
     foundations in C++ and Linux bash
     managing Site Reliability
     Engineering practices, ensuring
     monitoring, performance and
-    scalability. Currently based in Germany 
-    and motivated to join teams where I can
-    share knowledge, mentor others, and 
-    help elevate the collective skills.`,
-  skills: ["Typescript", "NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js","C++", "Java", 'Python',"AI", "LLMs", "C#",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+    security. Currently based in Germany 
+    and committed to contributing to teams 
+    not only through my technical expertise, 
+    but by helping colleagues grow so the 
+    entire group can advance together.`,
+  skills: ["Typescript", "C++","NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js", "Java", 'Python',"AI", "LLMs", "C#",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
 
 }
 
 export const gameDeveloper: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "GAME DEVELOPER",
+    value: "Game Software Engineer",
     acronym: 'VC',
   },
   colors: {
@@ -294,20 +298,23 @@ export const gameDeveloper: CvData = {
       Skilled in frontend technologies
       such as React and Three.js to
       create interactive 3D applications
-      and engaging user interfaces.
+      and engaging user interfaces, 
+      mixed with REST endpoints using
+      backend microservices.
       Focused on delivering immersive
       digital solutions that enhance
       user experience, particularly in
       industrial and web contexts.
-      Currently based in Germany and
-      eager to contribute to innovative
-      teams while continuing to grow
-      my expertise`,
-  skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'LLMs','Javascript', 'React', 'WebGL', 'Three.Js', 'PixiJs', 'Python', 'XR', 'Figma', 'Blender', 'Sketchup', 'Godot', '3dMax'],
+      Currently based in Germany 
+      and committed to contributing to teams 
+      not only through my technical expertise, 
+      but by helping colleagues grow so the 
+      entire group can advance together.`,
+  skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'LLMs','React', 'WebGL', 'Three.Js','Typescript','REST','XR', 'Python', 'Figma', 'CI/CD', 'DevOps', 'Jenkins', 'K8', 'Blender', 'Sketchup', 'Godot', '3dMax'],
   languages: [
-    { name: "English", level: 75 },
+    { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
-    { name: "German", level: 75 }
+    { name: "German", level: 67 }
   ],
   links: [
     { label: "Portfolio", url: "https://mayinteractive.io/" },
@@ -329,6 +336,7 @@ export const gameDeveloper: CvData = {
         tasks: [
           'Led the development of 3D customisation for sportswear using <b>Three.js</b> and <b>Unity</b>, enhancing web user engagement.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Improved reliability and deployment speed of backend microservice by implementing <b>CI/CD</b> pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>',
           'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
         ]
       },
@@ -361,7 +369,7 @@ export const gameDeveloper: CvData = {
           location: "Bogotá, Colombia",
           tasks: [
             "Research Internship in AG HCI and Computer Graphics at Technical University of Kaiserslautern during 2018",
-            "Designed and developed a VR & haptic-based training simulator for trauma orthopedic surgery in Unity and Oculus, improving trainee performance during pilot tests."
+            "Designed and developed a VR & haptic-based training simulator for trauma orthopedic surgery in <b>Unity</b> and <b>Oculus</b>, improving trainee performance during pilot tests."
           ]
         },
         {
@@ -376,7 +384,7 @@ export const gameDeveloper: CvData = {
           ]
         },
         {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
           role: "High School Diploma",
           dates: "2012",
           location: "Bogotá, Colombia",
@@ -429,9 +437,9 @@ export const sre: CvData = {
     help elevate the collective skills.`,
   skills: ['Linux', 'SRE','ci/cd','jenkins','groovy','DevOps','Kubernetes','Yaml','LLMs','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
   languages: [
-    { name: "English", level: 75 },
+    { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
-    { name: "German", level: 75 }
+    { name: "German", level: 67 }
   ],
   links: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
@@ -492,7 +500,7 @@ export const sre: CvData = {
           ]
         },
         {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
           role: "High School Diploma",
           dates: "2012",
           location: "Bogotá, Colombia",
@@ -543,9 +551,9 @@ export const contentcreator: CvData = {
     help elevate the collective skills.`,
   skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
   languages: [
-    { name: "English", level: 75 },
+    { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
-    { name: "German", level: 75 }
+    { name: "German", level: 67 }
   ],
   links: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
@@ -616,7 +624,7 @@ export const contentcreator: CvData = {
           ]
         },
         {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
           role: "High School Diploma",
           dates: "2012",
           location: "Bogotá, Colombia",
@@ -675,22 +683,22 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
     help elevate the collective skills.`,
   skills: [
     "Store assistance",
-    "Inventory management",
     "Event support",
-    "Customer support",
-    "Problem solving",
     "Team collaboration", 
+    "Problem solving",
+    "Inventory management",
+    "Customer support",
     "Social Media",
-    "Javascript", "C++", "React", "AI", "LLMs"],
+    "Javascript", "NodeJs", "C#/C++", "AI", "LLMs"],
   languages: [
-    { name: "English", level: 75 },
+    { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
-    { name: "German", level: 75 }
+    { name: "German", level: 67 }
   ],
   links: [
-    { label: "Instagram", url: "https://www.instagram.com/davidmay___/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
-    { label: "May Interactive", url: "https://www.instagram.com/may.interactive/" },
+    // { label: "May Interactive", url: "https://www.instagram.com/may.interactive/" },
+    { label: "Instagram", url: "https://www.instagram.com/davidmay___/" },
 
   ],
   courses: [
@@ -704,7 +712,6 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
         role: 'Software Engineer',
         tasks: [
           'Supported retail operations during high-consumption days such as Christmas and Black Friday, assisting with <b>sales, inventory organization</b>, and <b>warehouse management</b>.',
-          'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines supporting daily transactions across <b>30+ countries</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
         ]
       },
@@ -716,7 +723,7 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
         role: 'Frontend Software Developer',
         tasks: [
           'Systems engineer responsible for the development, maintenance, and <b>24/7 support</b> of company websites for two brands: Umbra3D.Studio and Umbra Interactive.',
-          'Created <b>immersive 3D applications</b> with <b>React</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector (PropTech), brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.',
+          'Created <b>immersive 3D applications</b> for the real estate sector (PropTech), brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.',
         ]
       },
       {
@@ -726,7 +733,6 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
         location: "Bogotá",
         tasks: [
           "Supporting demonstrations based on robotics & XR projects, <b>managing inventory</b> of the laboratory devices",
-          "Developing a <b> VR & haptic-based</b> training simulator for trauma orthopedic surgery in Unity and Oculus, improving trainee performance during pilot tests.",
           "Internship in AG HCI and Computer Graphics at Technical University of <b>Kaiserslautern</b> during 2018",
         ]
       },
@@ -740,13 +746,11 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
           dates: "2017",
           location: "Bogotá, Colombia",
           tasks: [
-            "Academic option in Visual and Computing Interaction",
-            "Research Monitor in IMAGINE group",
             "Scholarship \"Quiero Estudiar\" given to the best national ICFES scores"
           ]
         },
         {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
           role: "High School Diploma",
           dates: "2012",
           location: "Bogotá, Colombia",

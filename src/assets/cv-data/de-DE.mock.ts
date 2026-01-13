@@ -27,9 +27,9 @@ export const seniorfrontend: CvData = {
    begleiten und die kollektiven Fähigkeiten stärken könnte.`,
   skills: ["Typescript", "React", "NodeJs", "Next.js", "Angular", "Vue.js","Tailwind" ,"Javascript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
   languages: [
-    { name: "Englisch", level: 75 },
+    { name: "Englisch", level: 83 },
     { name: "Spanisch", level: 100 },
-    { name: "Deutsch", level: 75 }
+    { name: "Deutsch", level: 67 }
   ],
   links: [
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
@@ -89,7 +89,7 @@ export const seniorfrontend: CvData = {
           ]
         },
         {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
           role: "Gymnasium",
           dates: "2012",
           location: "Bogotá, Kolumbien",
@@ -131,7 +131,7 @@ export const seniorSoftware: CvData = {
   },
   colors: {
     primary: '#48011d',
-    secondary: '#808183'
+    // secondary: '#808183'
   },
   aboutme: `Softwareingenieur mit 7 Jahren Erfahrung in 
   großskaligen Webplattformen bei einem multinationalen 
@@ -144,9 +144,9 @@ export const seniorSoftware: CvData = {
    begleiten und die kollektiven Fähigkeiten stärken könnte.`,
   skills: ["Typescript", "NodeJs", "React", "Angular", "C++", "Javascript","Next.js", "TailwindCSS","Vue.js", "AI", "LLMs", "C#", "Java", 'Python', "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   languages: [
-    { name: "Englisch", level: 75 },
+    { name: "Englisch", level: 83 },
     { name: "Spanisch", level: 100 },
-    { name: "Deutsch", level: 75 }
+    { name: "Deutsch", level: 67 }
   ],
   links: [
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
@@ -163,12 +163,12 @@ export const seniorSoftware: CvData = {
         company: 'ADIDAS',
         location: 'Bogotá',
         dates: 'Mai 2021 - Jun 2025',
-        role: 'Softwareingenieur ',
+        role: 'Softwareingenieur',
         tasks: [
-          "Leitung der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
-          "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
-          "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten.",
           "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
+          "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
+          "Leitung der Entwicklung von <b>Anpassungsmodulen</b> für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
+          "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten.",
         ]
       },
       {
@@ -215,7 +215,7 @@ export const seniorSoftware: CvData = {
           ]
         },
         {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
           role: "Gymnasium",
           dates: "2012",
           location: "Bogotá, Kolumbien",
@@ -257,7 +257,7 @@ export const fullStackIngenieur: CvData = {
   Derzeit in Deutschland ansässig und motiviert, Teams 
   beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
    begleiten und die kollektiven Fähigkeiten stärken könnte.`,
-  skills: ["Typescript", "NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js","C++", "Java", 'Python',"AI", "LLMs", "C#",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  skills: ["Typescript", "NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js","C++", "Java","AI", "LLMs", "C#",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
 
 }
 
@@ -286,9 +286,9 @@ export const gameEntwickler: CvData = {
     begleiten und die kollektiven Fähigkeiten stärken könnte.`,
   skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'Javascript', 'React', 'WebGL', 'Three.Js', 'PixiJs', 'Python', 'VR', 'Figma', 'Blender', 'Sketchup', 'Godot', 'AR', '3dMax'],
   languages: [
-    { name: "Englisch", level: 75 },
+    { name: "Englisch", level: 83 },
     { name: "Spanisch", level: 100 },
-    { name: "Deutsch", level: 75 }
+    { name: "Deutsch", level: 67 }
   ],
   links: [
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
@@ -357,7 +357,7 @@ export const gameEntwickler: CvData = {
           ]
         },
         {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
           role: "Gymnasium",
           dates: "2012",
           location: "Bogotá, Kolumbien",
@@ -406,9 +406,9 @@ export const sre: CvData = {
     begleiten und die kollektiven Fähigkeiten stärken könnte.`,
   skills: ['Linux', 'ci/cd','jenkins','groovy',"AI", "LLMs",'SRE','DevOps','Kubernetes','Yaml','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
   languages: [
-    { name: "Englisch", level: 75 },
+    { name: "Englisch", level: 83 },
     { name: "Spanisch", level: 100 },
-    { name: "Deutsch", level: 75 }
+    { name: "Deutsch", level: 67 }
   ],
   links: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
@@ -467,7 +467,7 @@ export const sre: CvData = {
           ]
         },
         {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE BOGOTA",
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
           role: "Gymnasium",
           dates: "2012",
           location: "Bogotá, Kolumbien",
