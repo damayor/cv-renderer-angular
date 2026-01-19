@@ -27,7 +27,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="aboutMeTitle" datatype="html">
-        <source>About Me</source>
+        <source>Profile</source>
         <target>Perfil Profesional</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sidebar/sidebar-about-me/sidebar-about-me.component.html</context>

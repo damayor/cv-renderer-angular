@@ -27,7 +27,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="aboutMeTitle" datatype="html">
-        <source>About Me</source>
+        <source>Profile</source>
         <!-- Kurzprofil begabungen -->
         <target>Begabungen</target>
         <context-group purpose="location">

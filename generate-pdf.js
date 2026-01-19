@@ -42,18 +42,19 @@ const { exec } = require('child_process');
 
   await page.goto(url, { waitUntil: 'networkidle0' });
 
+  await page.waitForSelector('user-header');
   await page.waitForSelector('sidebar');
   await page.waitForSelector('main-panel');
 
-  const height = await page.evaluate(() => document.body.scrollHeight); //1930
-  console.log('height to print letter ', height)
+  // const height = 2099 // await page.evaluate(() => document.body.scrollHeight); //1930
+  // console.log('height to print letter ', height)
 
   await page.pdf({
     path: pdfFilename,
     // Se puede pero deja un bottom border
     width: '210mm',   // A4 width
-    // format: 'A4',
-    height: `${height}px`, // full content height
+    format: 'A4',
+    // height: `${height}px`, // full content height
     printBackground: true
   });
 

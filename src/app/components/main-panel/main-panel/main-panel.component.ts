@@ -7,21 +7,21 @@ import { CvData } from '../../../interfaces/CVData';
 @Component({
   selector: 'main-panel',
   standalone: true,
-  imports: [MainSectionTimelineComponent, UserHeaderComponent, PersonalDetailsComponent],
+  imports: [MainSectionTimelineComponent],
   template: `
-    <div class="flex flex-col p-6 bg-white min-h-screen">
-      <user-header
+    <div class="flex flex-col bg-white min-h-screen">
+      <!-- <user-header
         [fullname]="contact().fullname"
         [role]="cvData().occupation.value"
         [location]="contact().location"
         [phone]="contact().phone"
         [email]="contact().email"
-      ></user-header>
+      ></user-header> -->
+      <!-- <personal-details [cvPersonalDetailsData]="cvData().contact" ></personal-details> -->
+
       @for (section of cvData().experiences; track $index) {
         <main-section-timeline [title]="section.title" [experiences]="section.entries"></main-section-timeline>
-
       }
-      <personal-details [cvPersonalDetailsData]="cvData().contact" ></personal-details>
     </div>
   `
 })

@@ -7,7 +7,7 @@ import { TimelineExperience } from '@interfaces/CVData';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="w-full pt-8">
+    <div class="w-full p-6">
       <h2 class="h2--primary pb-2 mb-4">{{ title }}</h2>
       <div class="flex flex-col">
        @for (exp of experiences; track $index) {

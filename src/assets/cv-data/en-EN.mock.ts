@@ -7,7 +7,7 @@ const contactDefault : Contact = {
   phone: "+49 1525 2198970",
   location: "Berlin, Germany",
   nationality: "Colombian",
-  visaStatus: "Chancenkarte / Opportunity Card"
+  visaStatus: "Chancenkarte (Opportunity Card)"
 }
 
 export const seniorfrontend: CvData = {
@@ -19,19 +19,18 @@ export const seniorfrontend: CvData = {
   colors: {
     primary: '#48011d',
   },
-  aboutme: `Frontend Engineer with experience
-   building large-scale web platforms and applications
+  aboutme: `Frontend engineer with 5+ years of experience
+    building large-scale web platforms and applications
     specialized in Node.js, 
     TypeScript, and UI/UX solutions using 
-    TailwindCSS, SCSS, and interactive or 3D experiences 
-    with Three.js. I also bring a strong foundation 
-    in Site Reliability Engineering practices,
-    ensuring effective monitoring, security,
-    and scalability. Currently based in Germany and
-     committed to contributing to teams not only 
-     through technical expertise, but by helping
-      colleagues grow so the entire group can advance 
-      together.`,
+    TailwindCSS, SCSS, and interactive experiences 
+    with Three.js. I own a deep understanding of CI/CD practices 
+    and SRE in international environments. 
+    Recently relocated to Berlin with full work authorization (Chancenkarte),  
+    I am looking for innovative engineering teams,
+    not only through my technical expertise, 
+    but by helping colleagues grow so the 
+    entire group can advance together.`,
   skills: ["Typescript", "React", "NodeJs", "Next.js", "Angular", "Vue.js","Tailwind" ,"Javascript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
   languages: [
     { name: "English", level: 83 },
@@ -128,6 +127,7 @@ export const frontend: CvData = {
     value: "Frontend Engineer",
     acronym: 'FE'
   },
+  // aboutme: `Frontend engineer with 5+ experience
 }
 
 //C++, full stack
@@ -141,7 +141,7 @@ export const seniorSoftware: CvData = {
     primary: '#48011d',
     secondary: '#808183'
   },
-  aboutme: `Software Engineer with 8 years of experience 
+  aboutme: `Software Engineer with 7+ years of experience 
     in large-scale web platforms and applications
     specialized in Node.js, 
     TypeScript, 
@@ -152,8 +152,9 @@ export const seniorSoftware: CvData = {
     managing Site Reliability
     Engineering practices, ensuring
     monitoring, performance and
-    security. Currently based in Germany 
-    and committed to contributing to teams 
+    security.  
+    Recently relocated to Berlin with full work authorization (Chancenkarte),  
+    I am looking for innovative engineering teams,
     not only through my technical expertise, 
     but by helping colleagues grow so the 
     entire group can advance together.`,
@@ -181,7 +182,7 @@ export const seniorSoftware: CvData = {
         dates: 'May 2021 - Jun 2025',
         role: 'Software Engineer',
         tasks: [
-          'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
+          'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
           'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, and <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
           'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
@@ -193,7 +194,7 @@ export const seniorSoftware: CvData = {
         dates: 'Sep 2020 - Dec 2020',
         role: 'Game Developer',
         tasks: [
-          'Developed and maintained hyper-casual mobile games using <b>Unity</b> and <b>Unreal/C++</b>, enhancing user engagement and UI/UX experience.'
+          'Developed and maintained hyper-casual mobile games using <b>Unity, C#</b> and <b>Unreal/C++</b>, enhancing user engagement and UI/UX experience.'
         ]
       },
       {
@@ -202,7 +203,7 @@ export const seniorSoftware: CvData = {
         dates: 'Jan 2020 - Sep 2020',
         role: 'Frontend Software Developer',
         tasks: [
-          'Created <b>immersive 3D applications</b> with <b>React</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector (PropTech)',
+          'Created <b>immersive 3D applications</b> with <b>React, C#</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector (PropTech)',
           'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.'
         ]
       }
@@ -263,21 +264,19 @@ export const fullStackEngineer: CvData = {
     value: "Full Stack Engineer",
     acronym: 'FSE'
   },
-  aboutme: `Software Engineer with 5 years
-    of experience in responsive web
-    platforms, deployed in 30+ countries, specialising in NodeJS, TailwindCSS
-    and interactive solutions with
-    Unity & Three.js. Strong
-    foundations in C++ and Linux bash
-    managing Site Reliability
-    Engineering practices, ensuring
-    monitoring, performance and
-    security. Currently based in Germany 
-    and committed to contributing to teams 
+  // and my B2 German language skills to contribute 
+  aboutme: `Software Engineer with 5+ years
+    of experience, specializing in high-scale platforms
+    and interactive solutions.
+    Having worked for global brands like adidas, 
+    I own a deep understanding of CI/CD practices 
+    and SRE in international environments. 
+    Recently relocated to Berlin with full work authorization (Chancenkarte),  
+    I am looking for innovative engineering teams,
     not only through my technical expertise, 
     but by helping colleagues grow so the 
     entire group can advance together.`,
-  skills: ["Typescript", "C++","NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js", "Java", 'Python',"AI", "LLMs", "C#",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  skills: ["Typescript", "C#","NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js", ".NET", 'Python',"AI", "LLMs", "C++",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
 
 }
 
@@ -305,8 +304,8 @@ export const gameDeveloper: CvData = {
       digital solutions that enhance
       user experience, particularly in
       industrial and web contexts.
-      Currently based in Germany 
-      and committed to contributing to teams 
+      Recently relocated to Berlin with full work authorization (Chancenkarte),  
+      I am looking for innovative engineering teams,
       not only through my technical expertise, 
       but by helping colleagues grow so the 
       entire group can advance together.`,
@@ -545,8 +544,9 @@ export const contentcreator: CvData = {
     managing Site Reliability
     Engineering practices, ensuring
     monitoring, performance and
-    scalability. Currently based in Germany 
-    and motivated to join teams where I can
+    scalability. 
+    Recently relocated to Berlin with full work authorization (Chancenkarte),  
+    I am looking for innovative teams where I can
     share knowledge, mentor others, and 
     help elevate the collective skills.`,
   skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
@@ -670,17 +670,16 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
   },
   aboutme: `Detail-oriented professional 
     with experience supporting store
-     operations, logistics, and inventory 
-     processes during high-demand seasons. 
-     Background as a software engineer 
-     and fashion model, skilled in event 
-     coordination and digital content 
-     for brand storytelling. 
-     Reliable, adaptable, and proactive. 
-    Currently based in Germany 
-    and motivated to join teams where I can
-    share knowledge, mentor others, and 
-    help elevate the collective skills.`,
+    operations, logistics, and inventory 
+    processes during high-demand seasons. 
+    Background as a software engineer 
+    and model. 
+    Reliable and adaptable with learning agibility. 
+    Recently relocated to Berlin with full work authorization (Chancenkarte),  
+    I am looking for innovative teams,
+    not only through my technical expertise, 
+    but by helping colleagues grow so the 
+    entire group can advance together.`,
   skills: [
     "Store assistance",
     "Event support",
@@ -688,7 +687,7 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
     "Problem solving",
     "Inventory management",
     "Customer support",
-    "Social Media",
+    "Social Media", "Windows Office",
     "Javascript", "NodeJs", "C#/C++", "AI", "LLMs"],
   languages: [
     { name: "English", level: 83 },

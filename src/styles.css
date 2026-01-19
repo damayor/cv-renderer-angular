@@ -70,7 +70,15 @@
 .icon-linkedin:before {
   content: "\eac9";
 }
-
+.icon-earth:before {
+  content: "\e9ca";
+}
+.icon-flag:before {
+  content: "\e9cc";
+}
+.icon-book:before {
+  content: "\e91f";
+}
 
 
 /* <div class="text-5xl font-bold text-gray-800 font-ubuntu-bold leading-tight"> */
@@ -130,6 +138,10 @@ h2 {
   color: var(--clr-secondary);
 }
 
+.border-b--primary {
+  border-bottom: 2px solid var(--clr-primary);
+}
+
 body, html {
   font-family: 'Ubuntu', sans-serif;
 }
@@ -173,8 +185,8 @@ body, html {
 .sidebar-block {
   display: block;
   break-inside: avoid;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -189,6 +201,16 @@ body, html {
   background-color: rgb(128, 129, 131);
 }
 
+/* .sidebar-block:first {
+
+  padding-top: 0;
+
+} */
+
+.sidebar-block--courses::after {
+  height: 0px;
+  display: none;
+}
 
 .sidebar-heading {
   position: relative;

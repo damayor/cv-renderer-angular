@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
     imports: [CommonModule],
   template: `
-    <div class="flex items-center justify-between py-4">
+    <div class="flex items-center justify-between p-6 border-b--primary">
       <!-- Left: Name und Role -->
       <div class="flex flex-col">
         <div class="h1-cv-name">{{ fullname }}</div>
@@ -26,6 +26,10 @@ import { CommonModule } from '@angular/common';
           <span style="color: var(--clr-secondary);"> <span class="icon-envelop"></span></span>
           <span>{{ email }}</span>
         </div>
+        <div class="flex items-center gap-2 border-t border-gray-200 pt-2">
+          <span style="color: var(--clr-secondary);"><span class="icon-earth"></span></span>
+          <span>{{visaStatus }}</span>
+        </div>
       </div>
     </div>
   `,
@@ -37,4 +41,5 @@ export class UserHeaderComponent {
   @Input() location: string = '';
   @Input() phone: string = '';
   @Input() email: string = '';
+  @Input() visaStatus: string | undefined = '';
 }

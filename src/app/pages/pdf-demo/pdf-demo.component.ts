@@ -6,15 +6,27 @@ import { loadMockData } from 'src/app/services/loadCVData';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { UserHeaderComponent } from 'src/app/components/main-panel/user-header/user-header.component';
 
 @Component({
   selector: 'pdf-demo',
   // standalone: true,
-  imports: [SidebarComponent, MainPanelComponent],
+  imports: [SidebarComponent, MainPanelComponent, UserHeaderComponent],
   template: `
-    <div #pdfContent class="flex flex-row w-[210mm] bg-white mx-auto">
-      <sidebar [cvData]="cvData()"></sidebar>
-      <main-panel [cvData]="cvData()" [contact]="cvData().contact" ></main-panel>
+    <div #pdfContent class="w-[210mm] bg-white mx-auto">
+      <user-header
+        [fullname]="cvData().contact.fullname"
+        [role]="cvData().occupation.value"
+        [location]="cvData().contact.location"
+        [phone]="cvData().contact.phone"
+        [email]="cvData().contact.email"
+        [visaStatus]="cvData().contact.visaStatus" 
+      ></user-header>
+      <div class="flex flex-row">
+        <sidebar [cvData]="cvData()"></sidebar>
+        <main-panel class="bg-white" [cvData]="cvData()" [contact]="cvData().contact" ></main-panel>
+      </div>
+     
     </div>
   `,
   styles: [``]
@@ -28,7 +40,7 @@ export class PdfDemoComponent {
 
   @ViewChild('pdfContent', { static: false }) pdfContentRef!: ElementRef<HTMLDivElement>;
 
-  cvData = signal<CvData>({} as CvData);
+  cvData = signal<CvData>({} as CvData)
 
   async ngOnInit() {
     const loadedData = await loadMockData(this.lang, this.occupation);
