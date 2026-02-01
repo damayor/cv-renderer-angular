@@ -18,13 +18,17 @@ export const seniorfrontend: CvData = {
   colors: {
     primary: '#48011d',
   },
-  aboutme: `Frontend Ingenieur mit Erfahrung in großskaligen Webplattformen bei
-     einem multinationalen Unternehmen, spezialisiert auf NodeJS, ReactJS, 
-    und interaktive 3D-Lösungen mit Three.js. Solide Kenntnisse 
-    in Site Reliability Engineering, mit Fokus auf Monitoring, 
-    Performance und Skalierbarkeit. Derzeit in Deutschland ansässig und motiviert, Teams 
-  beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
-   begleiten und die kollektiven Fähigkeiten stärken könnte.`,
+  aboutme: `
+   Ich bin Softwareingenieur mit 6+ Jahren Erfahrung
+   in der Erstellung von großen Web-Plattformen und Anwendungen. 
+   Ich bin spezialisiert auf NodeJS, TypeScript und UI/UX-Lösungen 
+   mit TailwindCSS, SCSS sowie interaktive Erfahrungen u.a. mit Three.js. 
+   Ich besitze ein tiefes Verständnis von CI/CD-Praktiken und SRE 
+   in internationalen Umgebungen. Da ich vor kurzem nach Berlin 
+   gezogen bin und über eine volle Arbeits-genehmigung verfüge, 
+   suche ich nach innovativen Engineering-Teams. Mein Ziel ist es, 
+   nicht nur meine technischen Kenntnisse einzubringen, sondern 
+   auch meine Kollegen zu fördern, damit die gesamte Gruppe gemeinsam wachsen kann.`,
   skills: ["Typescript", "React", "NodeJs", "Next.js", "Angular", "Vue.js","Tailwind" ,"Javascript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
   languages: [
     { name: "Englisch", level: 83 },
@@ -33,7 +37,7 @@ export const seniorfrontend: CvData = {
   ],
   links: [
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
   courses: [
@@ -73,7 +77,7 @@ export const seniorfrontend: CvData = {
           dates: " 2019",
           location: "Bogotá, Kolumbien",
           tasks: [
-            "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
+            "Forschungspraktikum in AG HCI und Computer Graphics an der <b>Technischen Universität Kaiserslautern</b> im Jahr 2018, um AR Anwendungen für Hololens zu entwickeln.",
             "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
           ]
         },
@@ -123,6 +127,17 @@ export const frontend: CvData = {
   },
 }
 
+export const frontend3d: CvData = {
+  ...seniorfrontend,
+  occupation: {
+    value: "Softwareingenieur - Fokus auf Computer Graphics und 3D",
+    acronym: 'F3D',
+    
+  },
+  skills: ["Typescript", "NodeJs", "React", "Storybook", "Three.JS", "R3F", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  // aboutme: `Frontend engineer with 5+ experience
+}
+
 export const seniorSoftware: CvData = {
   contact: contactDefault,
   occupation: {
@@ -150,7 +165,7 @@ export const seniorSoftware: CvData = {
   ],
   links: [
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
   courses: [
@@ -292,7 +307,7 @@ export const gameEntwickler: CvData = {
   ],
   links: [
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "GitHub", url: "https://github.com/damayor" },
     { label: "Behance", url: "https://www.behance.net/may_interactive" }
   ],
@@ -411,7 +426,7 @@ export const sre: CvData = {
     { name: "Deutsch", level: 67 }
   ],
   links: [
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Stackshare", url: "https://stackshare.io/damayor/software-engineer" },
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
   ],

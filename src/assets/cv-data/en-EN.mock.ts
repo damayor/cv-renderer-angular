@@ -26,7 +26,7 @@ export const seniorfrontend: CvData = {
     TailwindCSS, SCSS, and interactive experiences 
     with Three.js. I own a deep understanding of CI/CD practices 
     and SRE in international environments. 
-    Recently relocated to Berlin with full work authorization (Chancenkarte),  
+    Recently relocated to Berlin with full work authorization,  
     I am looking for innovative engineering teams,
     not only through my technical expertise, 
     but by helping colleagues grow so the 
@@ -39,7 +39,7 @@ export const seniorfrontend: CvData = {
   ],
   links: [
     { label: "Portfolio", url: "https://mayinteractive.io/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
   courses: [
@@ -54,9 +54,9 @@ export const seniorfrontend: CvData = {
         dates: 'May 2021 - Jun 2025',
         role: 'Software Engineer',
         tasks: [
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js, react-three/fiber</b> and <b>Unity</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
           'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, and <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
-          'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
           'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
         ]
       },
@@ -125,8 +125,21 @@ export const frontend: CvData = {
   ...seniorfrontend,
   occupation: {
     value: "Frontend Engineer",
-    acronym: 'FE'
+    acronym: 'FE',
+    
   },
+  skills: ["Typescript", "NodeJs", "React", "Storybook", "Three.JS", "R3F", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  // aboutme: `Frontend engineer with 5+ experience
+}
+
+export const frontend3d: CvData = {
+  ...seniorfrontend,
+  occupation: {
+    value: "Frontend Engineer - Focused on Computer Graphics and 3D",
+    acronym: 'F3D',
+    
+  },
+  skills: ["Typescript", "NodeJs", "React", "Storybook", "Three.JS", "R3F", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   // aboutme: `Frontend engineer with 5+ experience
 }
 
@@ -153,7 +166,7 @@ export const seniorSoftware: CvData = {
     Engineering practices, ensuring
     monitoring, performance and
     security.  
-    Recently relocated to Berlin with full work authorization (Chancenkarte),  
+    Recently relocated to Berlin with full work authorization,  
     I am looking for innovative engineering teams,
     not only through my technical expertise, 
     but by helping colleagues grow so the 
@@ -167,7 +180,7 @@ export const seniorSoftware: CvData = {
   ],
   links: [
     { label: "Portfolio", url: "https://mayinteractive.io/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
   courses: [
@@ -271,7 +284,7 @@ export const fullStackEngineer: CvData = {
     Having worked for global brands like adidas, 
     I own a deep understanding of CI/CD practices 
     and SRE in international environments. 
-    Recently relocated to Berlin with full work authorization (Chancenkarte),  
+    Recently relocated to Berlin with full work authorization,  
     I am looking for innovative engineering teams,
     not only through my technical expertise, 
     but by helping colleagues grow so the 
@@ -280,10 +293,10 @@ export const fullStackEngineer: CvData = {
 
 }
 
-export const gameDeveloper: CvData = {
+export const graphicsEngineer: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "Game Software Engineer",
+    value: "Graphics Software Engineer",
     acronym: 'VC',
   },
   colors: {
@@ -299,17 +312,18 @@ export const gameDeveloper: CvData = {
       create interactive 3D applications
       and engaging user interfaces, 
       mixed with REST endpoints using
-      backend microservices.
-      Focused on delivering immersive
+      backend microservices. Strong
+      foundations in C++/C#, and Linux bash
+      focused on delivering immersive
       digital solutions that enhance
       user experience, particularly in
       industrial and web contexts.
-      Recently relocated to Berlin with full work authorization (Chancenkarte),  
+      Recently relocated to Berlin with full work authorization,  
       I am looking for innovative engineering teams,
       not only through my technical expertise, 
       but by helping colleagues grow so the 
       entire group can advance together.`,
-  skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'LLMs','React', 'WebGL', 'Three.Js','Typescript','REST','XR', 'Python', 'Figma', 'CI/CD', 'DevOps', 'Jenkins', 'K8', 'Blender', 'Sketchup', 'Godot', '3dMax'],
+  skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'LLMs','React', 'WebGL', 'Three.Js','R3F', 'Typescript','REST','XR', 'Python', 'Figma', 'CI/CD', 'DevOps', 'Jenkins', 'K8', 'Blender', 'Sketchup', 'Godot', '3dMax'],
   languages: [
     { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
@@ -317,7 +331,7 @@ export const gameDeveloper: CvData = {
   ],
   links: [
     { label: "Portfolio", url: "https://mayinteractive.io/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "GitHub", url: "https://github.com/damayor" },
     { label: "Behance", url: "https://www.behance.net/may_interactive" }
   ],
@@ -430,7 +444,7 @@ export const sre: CvData = {
     and monitoring. Skilled in CI/CD, 
     performance optimization, and
     ensuring scalable, resilient
-    systems. Currently based in Germany 
+    systems. Recently relocated to Berlin with full work authorization, 
     and motivated to join teams where I can
     share knowledge, mentor others, and 
     help elevate the collective skills.`,
@@ -441,7 +455,7 @@ export const sre: CvData = {
     { name: "German", level: 67 }
   ],
   links: [
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Stackshare", url: "https://stackshare.io/damayor/software-engineer" },
   ],
   courses: [
@@ -545,7 +559,7 @@ export const contentcreator: CvData = {
     Engineering practices, ensuring
     monitoring, performance and
     scalability. 
-    Recently relocated to Berlin with full work authorization (Chancenkarte),  
+    Recently relocated to Berlin with full work authorization,  
     I am looking for innovative teams where I can
     share knowledge, mentor others, and 
     help elevate the collective skills.`,
@@ -556,7 +570,7 @@ export const contentcreator: CvData = {
     { name: "German", level: 67 }
   ],
   links: [
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
     { label: "Instagram - Professional", url: "https://www.instagram.com/may.interactive/" },
     { label: "Instagram - Personal", url: "https://www.instagram.com/davidmay___/" },
@@ -675,7 +689,7 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
     Background as a software engineer 
     and model. 
     Reliable and adaptable with learning agibility. 
-    Recently relocated to Berlin with full work authorization (Chancenkarte),  
+    Recently relocated to Berlin with full work authorization,  
     I am looking for innovative teams,
     not only through my technical expertise, 
     but by helping colleagues grow so the 
@@ -695,7 +709,7 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
     { name: "German", level: 67 }
   ],
   links: [
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     // { label: "May Interactive", url: "https://www.instagram.com/may.interactive/" },
     { label: "Instagram", url: "https://www.instagram.com/davidmay___/" },
 
@@ -779,6 +793,112 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
         //     "Teacher of games and immersive development for highschool students. Led by Universidad Nacional de Colombia and SENA."          
         //   ]
         // },
+        {
+          company: "Universidad de los Andes",
+          role: "Theatre Group Member",
+          dates: "Ene 2016 - Jun 2018",
+          location: "Bogotá",
+          tasks: [
+            "Participated in acting and theater plays, developing teamwork, improvisation, and communication skills."          
+          ]
+        },
+      ]
+    }
+  ],
+};
+
+export const itSupport: CvData = { //En ventas, en eventos, logistica
+  contact: contactDefault,
+  occupation: {
+    value: "IT Support Agent",
+    acronym: 'ITS'
+  },
+  colors: {
+    primary: '#2c2e81'
+  },
+  aboutme: `Reliable and detail-oriented professional with hands-on
+    experience supporting IT equipment, inventory, and daily operations.
+    Strong interest in IT Support and Helpdesk roles, with a background
+    in software engineering and a customer-focused mindset. Quick learner
+    with strong communication skills. Recently relocated to Berlin with
+    full work authorization and motivated to support users and
+     contribute to a collaborative IT team.`,
+  skills: [
+    "Inventory management",
+    "Customer service", "macOS", "Linux",
+    "Windows",
+    "Troubleshooting",
+    "Teamwork", "Network",
+    "Problem solving",
+    "Hardware", "AI", "configuration",
+    "LLMs"],
+  languages: [
+    { name: "English", level: 83 },
+    { name: "Spanish", level: 100 },
+    { name: "German", level: 67 }
+  ],
+  links: [
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
+  ],
+  courses: [
+  ],
+  experiences: [
+    {title: "Work Experience", entries: [ 
+      {
+        company: 'ADIDAS',
+        location: 'Bogotá',
+        dates: 'May 2021 - Jun 2025',
+        role: 'Software Developer',
+        tasks: [
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience.',
+          'Supported retail operations during high-consumption days such as Christmas and Black Friday, assisting with <b>sales, inventory organization</b>, and <b>warehouse management</b>.',
+        ]
+      },
+     
+      {
+        company: 'UMBRA 3D STUDIO - INTERACTIVE',
+        location: 'Bogotá',
+        dates: 'Jan 2020 - Sep 2020',
+        role: 'Software Developer',
+        tasks: [
+          'Systems engineer responsible for the development, maintenance, and <b>24/7 support</b> of company websites for two brands and their deployments mounted in FTP servers or Wordpress',
+        ]
+      },
+      {
+        company: "COLIVRI Lab - Universidad de los Andes",
+        role: "Research Monitor",
+        dates: "Jun 2017 - Ago 2019",
+        location: "Bogotá",
+        tasks: [
+          "Supporting demonstrations based on robotics & XR projects, <b>managing inventory</b> of the laboratory devices",
+          "Responsible in charge of computer labs, and providing laptops and other perfiferical devices to students."
+        ]
+      },
+    ]},
+    {title: "Education", 
+      entries: [
+        {
+          company: "Universidad de los Andes",
+          role: "Bachelor on Systems and Computing Engineering",
+          dates: "2017",
+          location: "Bogotá, Colombia",
+          tasks: [
+            "Scholarship \"Quiero Estudiar\" given to the best national ICFES scores"
+          ]
+        },
+        {
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
+          role: "High School Diploma",
+          dates: "2012",
+          location: "Bogotá, Colombia",
+          tasks: [
+            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+          ]
+        }
+      ]
+    },
+     {title: "Extra-Curricular Activities", 
+      entries: [
         {
           company: "Universidad de los Andes",
           role: "Theatre Group Member",

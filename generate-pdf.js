@@ -8,12 +8,14 @@ const { exec } = require('child_process');
 
   const acronyms = {
     'frontend': 'FE',
+    'frontend3d': 'F3D',
     'fullstackengineer': 'FSE',
     'seniorfrontend': 'SF',
     'seniorsoftware': 'SE',
-    'gamedeveloper':'VC',
+    'graphicsEngineer':'VC',
     'sre':'DO',
-    'supportAssistant': 'SA'
+    'supportAssistant': 'SA',
+    'itSupport':'ITS'
   };
   
   const role = args[0]; // 'seniorsoftware';

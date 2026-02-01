@@ -39,7 +39,7 @@ export const seniorfrontend: CvData = {
   ],
   links: [
     { label: "Portafolio", url: "https://mayinteractive.io/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
   courses: [
@@ -162,7 +162,7 @@ export const seniorSoftware: CvData = {
   ],
   links: [
     { label: "Portafolio", url: "https://mayinteractive.io/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
   courses: [
@@ -279,7 +279,7 @@ export const ingenieroFullStack: CvData = {
 
 }
 
-export const gameDeveloper: CvData = {
+export const graphicsEngineer: CvData = {
   contact: contactDefault,
   occupation: {
     value: "GAME DEVELOPER",
@@ -313,7 +313,7 @@ export const gameDeveloper: CvData = {
   ],
   links: [
     { label: "Portafolio", url: "https://mayinteractive.io/" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "GitHub", url: "https://github.com/damayor" },
     { label: "Behance", url: "https://www.behance.net/may_interactive" }
   ],
@@ -435,7 +435,7 @@ export const sre: CvData = {
     { name: "Alemán", level: 67 }
   ],
   links: [
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Stackshare", url: "https://stackshare.io/damayor/software-engineer" },
   ],
   courses: [
@@ -549,7 +549,7 @@ export const contentcreator: CvData = {
     { name: "Alemán", level: 67 }
   ],
   links: [
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/demayorgaherrera/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
     { label: "Instagram - Professional", url: "https://www.instagram.com/may.interactive/" },
     { label: "Instagram - Personal", url: "https://www.instagram.com/davidmay___/" },
