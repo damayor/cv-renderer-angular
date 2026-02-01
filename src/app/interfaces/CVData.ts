@@ -27,7 +27,7 @@ export interface CvData {
   occupation: { value: string; acronym?: string };
   aboutme: string;
   colors: Record<string, string>;
-  skills: string[];
+  skills: Record<string, string[]>;
   languages: Language[];
   links: { label: string; url: string }[];
   courses: Course[];

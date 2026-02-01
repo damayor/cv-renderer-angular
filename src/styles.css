@@ -1,6 +1,11 @@
 /* You can add global styles to this file, und also import other style files */
 
 @import "tailwindcss";
+@theme {
+  --color-primar: #1e295f;
+  --color-second: #a28848;
+  --text-tiny: 0.625rem;
+}
 
 /* @plugin "daisyui" {
   themes: aqua --default;

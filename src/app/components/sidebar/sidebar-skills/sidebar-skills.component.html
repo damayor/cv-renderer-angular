@@ -1,11 +1,15 @@
-<div class="sidebar-block">
-  <div  i18n="@@skillsTitle" class="sidebar-heading">SKILLS</div>
-  <div class="sidebar-block-content skills-container">
-      @for (skill of skills; track skill) {
-        <div class="skills-item-wrapper">
-          <div class="skills-item-tag">{{ skill }}</div>
-        </div>
-      }
-
+<ng-container>
+  <div i18n="@@skillsTitle" class="sidebar-heading">SKILLS</div>
+  @for (group of skillGroups; track group[0]) {
+    <div class="my-3">
+      <div class="flex flex-wrap items-center w-full relative p-0 m-0">
+        <span class="text-xs font-thin uppercase text-second mb-1 mr-1 ">{{ group[0] }}</span>
+        @for (skill of group[1]; track skill) {
+          <div class="relative block cursor-default break-inside-auto">
+            <div class="inline-block w-fit text-xs font-thin uppercase bg-pr text-white border-l-2 border-second px-1 py-1 mb-1">{{ skill }}</div>
+          </div>
+        }
+      </div>
     </div>
-</div>
+  }
+</ng-container>

@@ -31,7 +31,14 @@ export const seniorfrontend: CvData = {
     not only through my technical expertise, 
     but by helping colleagues grow so the 
     entire group can advance together.`,
-  skills: ["Typescript", "React", "NodeJs", "Next.js", "Angular", "Vue.js","Tailwind" ,"Javascript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
+  // skills: ["Typescript", "NodeJs", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  skills: {
+    "Frontend": [ "React","Angular","Storybook", "Three.JS", "R3F", "Vue.js", "SCSS","TailwindCSS" ],
+    "Graphics": ["Unity", "Unreal", "XR", "UI/UX", "Figma"],
+    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash","C++", "C#", "Python"],
+    "Tools": ["Git","Vite","Storybook", "ESLint", "Jest"],
+    "CI/CD": ['Docker','Jenkins','Kubernetes', "Linux", "Docker",]
+  },
   languages: [
     { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
@@ -128,8 +135,14 @@ export const frontend: CvData = {
     acronym: 'FE',
     
   },
-  skills: ["Typescript", "NodeJs", "React", "Storybook", "Three.JS", "R3F", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
-  // aboutme: `Frontend engineer with 5+ experience
+  // skills: ["Typescript", "NodeJs", "React", "Storybook", "Three.JS", "R3F", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  skills: {
+    "Frontend": [ "React","Angular","Storybook", "Three.JS", "R3F", "Vue.js", "SCSS","TailwindCSS" ],
+    "Graphics": ["Unity", "Unreal", "XR", "UI/UX", "Figma"],
+    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash","C++", "C#", "Python"],
+    "Tools": ["Git","Vite","Storybook", "ESLint", "Jest"],
+    "CI/CD": ['Docker','Jenkins','Kubernetes', "Linux", "Docker",]
+  },
 }
 
 export const frontend3d: CvData = {
@@ -139,8 +152,14 @@ export const frontend3d: CvData = {
     acronym: 'F3D',
     
   },
-  skills: ["Typescript", "NodeJs", "React", "Storybook", "Three.JS", "R3F", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  // skills: ["Typescript", "NodeJs", "React", "Storybook", "Three.JS", "R3F", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   // aboutme: `Frontend engineer with 5+ experience
+  skills: {
+    "Frontend": ["Angular", "React",],
+    "Backend": ["Node.js", "Python",],
+    // "Full-Stack": [...],
+    "CI/CD": ['K8']
+  },
 }
 
 //C++, full stack
@@ -171,7 +190,13 @@ export const seniorSoftware: CvData = {
     not only through my technical expertise, 
     but by helping colleagues grow so the 
     entire group can advance together.`,
-  skills: ["Typescript", "NodeJs", "React", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  // skills: ["Typescript", "NodeJs", "React", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  skills: {
+    "Frontend": ["Angular", "React",],
+    "Backend": ["Node.js", "Python",],
+    // "Full-Stack": [...],
+    "CI/CD": ['K8']
+  },
   languages: [
     { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
@@ -289,7 +314,13 @@ export const fullStackEngineer: CvData = {
     not only through my technical expertise, 
     but by helping colleagues grow so the 
     entire group can advance together.`,
-  skills: ["Typescript", "C#","NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js", ".NET", 'Python',"AI", "LLMs", "C++",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  // skills: ["Typescript", "C#","NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js", ".NET", 'Python',"AI", "LLMs", "C++",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  skills: {
+    "Frontend": ["Angular", "React",],
+    "Backend": ["Node.js", "Python",],
+    // "Full-Stack": [...],
+    "CI/CD": ['K8']
+  }
 
 }
 
@@ -323,7 +354,13 @@ export const graphicsEngineer: CvData = {
       not only through my technical expertise, 
       but by helping colleagues grow so the 
       entire group can advance together.`,
-  skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'LLMs','React', 'WebGL', 'Three.Js','R3F', 'Typescript','REST','XR', 'Python', 'Figma', 'CI/CD', 'DevOps', 'Jenkins', 'K8', 'Blender', 'Sketchup', 'Godot', '3dMax'],
+  // skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'LLMs','React', 'WebGL', 'Three.Js','R3F', 'Typescript','REST','XR', 'Python', 'Figma', 'CI/CD', 'DevOps', 'Jenkins', 'K8', 'Blender', 'Sketchup', 'Godot', '3dMax'],
+  skills: {
+    "Frontend": ["Angular", "React",],
+    "Backend": ["Node.js", "Python",],
+    // "Full-Stack": [...],
+    "CI/CD": ['K8']
+  },
   languages: [
     { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
@@ -448,7 +485,13 @@ export const sre: CvData = {
     and motivated to join teams where I can
     share knowledge, mentor others, and 
     help elevate the collective skills.`,
-  skills: ['Linux', 'SRE','ci/cd','jenkins','groovy','DevOps','Kubernetes','Yaml','LLMs','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
+  // skills: ['Linux', 'SRE','ci/cd','jenkins','groovy','DevOps','Kubernetes','Yaml','LLMs','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
+  skills: {
+    "Frontend": ["Angular", "React",],
+    "Backend": ["Node.js", "Python",],
+    // "Full-Stack": [...],
+    "CI/CD": ['K8']
+  },
   languages: [
     { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
@@ -563,7 +606,13 @@ export const contentcreator: CvData = {
     I am looking for innovative teams where I can
     share knowledge, mentor others, and 
     help elevate the collective skills.`,
-  skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
+  // skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
+  skills: {
+    "Frontend": ["Angular", "React",],
+    "Backend": ["Node.js", "Python",],
+    // "Full-Stack": [...],
+    "CI/CD": ['K8']
+  },
   languages: [
     { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
@@ -694,15 +743,21 @@ export const supportAssistant: CvData = { //En ventas, en eventos, logistica
     not only through my technical expertise, 
     but by helping colleagues grow so the 
     entire group can advance together.`,
-  skills: [
-    "Store assistance",
-    "Event support",
-    "Team collaboration", 
-    "Problem solving",
-    "Inventory management",
-    "Customer support",
-    "Social Media", "Windows Office",
-    "Javascript", "NodeJs", "C#/C++", "AI", "LLMs"],
+  // skills: [
+  //   "Store assistance",
+  //   "Event support",
+  //   "Team collaboration", 
+  //   "Problem solving",
+  //   "Inventory management",
+  //   "Customer support",
+  //   "Social Media", "Windows Office",
+  //   "Javascript", "NodeJs", "C#/C++", "AI", "LLMs"],
+  skills: {
+    "Frontend": ["Angular", "React",],
+    "Backend": ["Node.js", "Python",],
+    // "Full-Stack": [...],
+    "CI/CD": ['K8']
+  },
   languages: [
     { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
@@ -823,15 +878,21 @@ export const itSupport: CvData = { //En ventas, en eventos, logistica
     with strong communication skills. Recently relocated to Berlin with
     full work authorization and motivated to support users and
      contribute to a collaborative IT team.`,
-  skills: [
-    "Inventory management",
-    "Customer service", "macOS", "Linux",
-    "Windows",
-    "Troubleshooting",
-    "Teamwork", "Network",
-    "Problem solving",
-    "Hardware", "AI", "configuration",
-    "LLMs"],
+  // skills: [
+  //   "Inventory management",
+  //   "Customer service", "macOS", "Linux",
+  //   "Windows",
+  //   "Troubleshooting",
+  //   "Teamwork", "Network",
+  //   "Problem solving",
+  //   "Hardware", "AI", "configuration",
+  //   "LLMs"],
+  skills: {
+    "Frontend": ["Angular", "React",],
+    "Backend": ["Node.js", "Python",],
+    // "Full-Stack": [...],
+    "CI/CD": ['K8']
+  },
   languages: [
     { name: "English", level: 83 },
     { name: "Spanish", level: 100 },
