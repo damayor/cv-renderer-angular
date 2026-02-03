@@ -31,13 +31,13 @@ export const seniorfrontend: CvData = {
     not only through my technical expertise, 
     but by helping colleagues grow so the 
     entire group can advance together.`,
-  // skills: ["Typescript", "NodeJs", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   skills: {
-    "Frontend": [ "React","Angular","Storybook", "Three.JS", "R3F", "Vue.js", "SCSS","TailwindCSS" ],
-    "Graphics": ["Unity", "Unreal", "XR", "UI/UX", "Figma"],
-    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash","C++", "C#", "Python"],
-    "Tools": ["Git","Vite","Storybook", "ESLint", "Jest"],
-    "CI/CD": ['Docker','Jenkins','Kubernetes', "Linux", "Docker",]
+    "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
+    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
+    "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+    "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: [
     { name: "English", level: 83 },
@@ -86,7 +86,7 @@ export const seniorfrontend: CvData = {
           dates: " 2019",
           location: "Bogotá, Colombia",
           tasks: [
-            "Research Internship in AG HCI and Computer Graphics at Technical University of Kaiserslautern during 2018",
+            "Research Internship in AG HCI and Computer Graphics at <b>Technical University of Kaiserslautern</b> during 2018",
             "Designed and developed a VR & haptic-based training simulator for trauma orthopedic surgery in Unity and Oculus, improving trainee performance during pilot tests."
           ]
         },
@@ -136,13 +136,7 @@ export const frontend: CvData = {
     
   },
   // skills: ["Typescript", "NodeJs", "React", "Storybook", "Three.JS", "R3F", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
-  skills: {
-    "Frontend": [ "React","Angular","Storybook", "Three.JS", "R3F", "Vue.js", "SCSS","TailwindCSS" ],
-    "Graphics": ["Unity", "Unreal", "XR", "UI/UX", "Figma"],
-    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash","C++", "C#", "Python"],
-    "Tools": ["Git","Vite","Storybook", "ESLint", "Jest"],
-    "CI/CD": ['Docker','Jenkins','Kubernetes', "Linux", "Docker",]
-  },
+ 
 }
 
 export const frontend3d: CvData = {
@@ -154,12 +148,6 @@ export const frontend3d: CvData = {
   },
   // skills: ["Typescript", "NodeJs", "React", "Storybook", "Three.JS", "R3F", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   // aboutme: `Frontend engineer with 5+ experience
-  skills: {
-    "Frontend": ["Angular", "React",],
-    "Backend": ["Node.js", "Python",],
-    // "Full-Stack": [...],
-    "CI/CD": ['K8']
-  },
 }
 
 //C++, full stack
@@ -192,10 +180,11 @@ export const seniorSoftware: CvData = {
     entire group can advance together.`,
   // skills: ["Typescript", "NodeJs", "React", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
   skills: {
-    "Frontend": ["Angular", "React",],
-    "Backend": ["Node.js", "Python",],
-    // "Full-Stack": [...],
-    "CI/CD": ['K8']
+    "Full-Stack": ["Node.js","Typescript", "Next.js", "Angular", "C++", "Python", "JS"],
+    "Frontend": ["Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+    "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: [
     { name: "English", level: 83 },
@@ -254,7 +243,7 @@ export const seniorSoftware: CvData = {
           dates: " 2019",
           location: "Bogotá, Colombia",
           tasks: [
-            "Internship in AG HCI and Computer Graphics at Technical University of <b>Kaiserslautern</b> during 2018",
+            "Internship in AG HCI and Computer Graphics at <b>Technical University of Kaiserslautern</b> during 2018",
             "Role as research monitor focused on designing and developing a <b> VR & haptic-based</b> training simulator for trauma orthopedic surgery in Unity and Oculus, improving trainee performance during pilot tests."
           ]
         },
@@ -314,13 +303,6 @@ export const fullStackEngineer: CvData = {
     not only through my technical expertise, 
     but by helping colleagues grow so the 
     entire group can advance together.`,
-  // skills: ["Typescript", "C#","NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js", ".NET", 'Python',"AI", "LLMs", "C++",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
-  skills: {
-    "Frontend": ["Angular", "React",],
-    "Backend": ["Node.js", "Python",],
-    // "Full-Stack": [...],
-    "CI/CD": ['K8']
-  }
 
 }
 
@@ -356,10 +338,12 @@ export const graphicsEngineer: CvData = {
       entire group can advance together.`,
   // skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'LLMs','React', 'WebGL', 'Three.Js','R3F', 'Typescript','REST','XR', 'Python', 'Figma', 'CI/CD', 'DevOps', 'Jenkins', 'K8', 'Blender', 'Sketchup', 'Godot', '3dMax'],
   skills: {
-    "Frontend": ["Angular", "React",],
-    "Backend": ["Node.js", "Python",],
-    // "Full-Stack": [...],
-    "CI/CD": ['K8']
+    "Graphics": ['C++',"Unity",'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "Frontend": ["React","Angular","Three.JS", "SCSS","TailwindCSS" ],
+    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+    "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: [
     { name: "English", level: 83 },
@@ -418,7 +402,7 @@ export const graphicsEngineer: CvData = {
           dates: " 2019",
           location: "Bogotá, Colombia",
           tasks: [
-            "Research Internship in AG HCI and Computer Graphics at Technical University of Kaiserslautern during 2018",
+            "Research Internship in AG HCI and Computer Graphics at <b>Technical University of Kaiserslautern</b> during 2018",
             "Designed and developed a VR & haptic-based training simulator for trauma orthopedic surgery in <b>Unity</b> and <b>Oculus</b>, improving trainee performance during pilot tests."
           ]
         },
@@ -485,12 +469,20 @@ export const sre: CvData = {
     and motivated to join teams where I can
     share knowledge, mentor others, and 
     help elevate the collective skills.`,
-  // skills: ['Linux', 'SRE','ci/cd','jenkins','groovy','DevOps','Kubernetes','Yaml','LLMs','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
+  //TODo
+  // skills: ['Linux', 'SRE','ci/cd','jenkins','groovy','DevOps',
+  // 'Kubernetes','Yaml','LLMs','Observability','Grafana','Docker',
+  // 'Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++',
+  // 'React','JS/TS','Angular','Java'],
   skills: {
-    "Frontend": ["Angular", "React",],
-    "Backend": ["Node.js", "Python",],
-    // "Full-Stack": [...],
-    "CI/CD": ['K8']
+    // "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
+    "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
+    // "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+
+    "CI/CD": ['Docker','Jenkins','K8',"YAML","Grafana","YAML"],
+    "Monitoring": ['AWS','Grafana','Instana','Kibana','Prometheus','Opsgenie'],
+    "Tools": ['Linux','bash',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: [
     { name: "English", level: 83 },
@@ -540,7 +532,7 @@ export const sre: CvData = {
           dates: " 2019",
           location: "Bogotá, Colombia",
           tasks: [
-            "Research Internship in AG HCI and Computer Graphics at Technical University of Kaiserslautern during 2018",
+            "Research Internship in AG HCI and Computer Graphics at <b>Technical University of Kaiserslautern</b> during 2018",
             "Designed and developed a VR & haptic-based training simulator for trauma orthopedic surgery in Unity and Oculus, improving trainee performance during pilot tests."
           ]
         },
@@ -606,6 +598,7 @@ export const contentcreator: CvData = {
     I am looking for innovative teams where I can
     share knowledge, mentor others, and 
     help elevate the collective skills.`,
+  //ToDo
   // skills: ["Javascript", "C++", "React", "NodeJs", "Angular", "TypeScript", "AI", "LLMs", "C#", "Java", "Three.JS", "SRE", "Linux", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "UX/UI", "Figma"],
   skills: {
     "Frontend": ["Angular", "React",],
@@ -880,18 +873,19 @@ export const itSupport: CvData = { //En ventas, en eventos, logistica
      contribute to a collaborative IT team.`,
   // skills: [
   //   "Inventory management",
-  //   "Customer service", "macOS", "Linux",
-  //   "Windows",
+
   //   "Troubleshooting",
   //   "Teamwork", "Network",
   //   "Problem solving",
   //   "Hardware", "AI", "configuration",
   //   "LLMs"],
   skills: {
-    "Frontend": ["Angular", "React",],
-    "Backend": ["Node.js", "Python",],
-    // "Full-Stack": [...],
-    "CI/CD": ['K8']
+    "Service": ["Customer service","Inventory management","Troubleshooting", "Network","Problem solving",],
+    "Tech": [  
+        "macOS", "Linux",
+        "Windows", "Vibecoding"
+    ],
+    "Soft Skills":['Teamwork']
   },
   languages: [
     { name: "English", level: 83 },
