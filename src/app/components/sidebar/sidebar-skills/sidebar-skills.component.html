@@ -3,10 +3,10 @@
   @for (group of skillGroups; track group[0]) {
     <div class="my-3">
       <div class="flex flex-wrap items-center w-full relative p-0 m-0">
-        <span class="text-xs font-thin uppercase text-second mb-1 pr-1">{{ group[0] }}</span>
+        <span class="text-xs font-thin uppercase text-secondary mb-1 pr-1">{{ group[0] }}</span>
         @for (skill of group[1]; track skill) {
           <div class="relative block cursor-default break-inside-auto">
-            <div class="inline-block before:content-['•'] before:mr-1 before:text-second w-fit text-xs font-thin uppercase bg-pr text-white pr-1 py-1 mb-1">{{ skill }}</div>
+            <div class="inline-block before:content-['•'] before:mr-1 before:text-secondary w-fit text-xs font-thin uppercase bg-pr text-white pr-1 py-1 mb-1">{{ skill }}</div>
           </div>
         }
       </div>
