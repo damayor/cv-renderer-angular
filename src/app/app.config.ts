@@ -12,7 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes),
-        provideHttpClient(),
+    provideHttpClient(),
     provideTranslateService({
       lang: 'en',
       fallbackLang: 'en',

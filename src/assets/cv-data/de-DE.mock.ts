@@ -29,7 +29,7 @@ export const seniorfrontend: CvData = {
    suche ich nach innovativen Engineering-Teams. Mein Ziel ist es, 
    nicht nur meine technischen Kenntnisse einzubringen, sondern 
    auch meine Kollegen zu fördern, damit die gesamte Gruppe gemeinsam wachsen kann.`,
-  skills: ["Typescript", "React", "NodeJs", "Next.js", "Angular", "Vue.js","Tailwind" ,"Javascript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
+  skills: ["Typescript", "React", "NodeJs","Angular", "RxJs", "Next.js","Tailwind" ,"Javascript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
   languages: [
     { name: "Englisch", level: 83 },
     { name: "Spanisch", level: 100 },

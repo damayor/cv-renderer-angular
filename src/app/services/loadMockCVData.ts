@@ -1,5 +1,4 @@
 
-// ToDo Improve as an Angular service
 
 import { CvData } from "../interfaces/CVData";
 
