@@ -9,7 +9,6 @@ import { CVDataService } from 'src/app/services/cvData.service';
 
 @Component({
   selector: 'pdf-demo',
-  // standalone: true,
   imports: [SidebarComponent, MainPanelComponent, UserHeaderComponent],
   template: `
     <div #pdfContent class="w-[210mm] bg-white mx-auto">
@@ -69,8 +68,8 @@ export class PdfDemoComponent {
   setThemeColors(colors: Record<string, string>) {
     console.log('trying to set theme')
     Object.entries(colors).forEach(([key, value]) => {
-      // console.log(`setting --clr-${key} : ${value}`)
       document.documentElement.style.setProperty(`--clr-${key}`, value);
+      document.documentElement.style.setProperty(`--color-${key}`, value);
     });
   }
 }

@@ -14,7 +14,7 @@ import { CvData } from '@interfaces/CVData';
     <div class="flex flex-col items-center h-full w-64 px-6" style="background: var(--clr-primary, #1e293b); color: white;">
       <!-- <img src="./assets/images/profile.jpg" alt="Profile" class="rounded-full w-48 h-48 mb-2" /> -->
       <sidebar-about-me class="sidebar-block" [aboutMeText]="cvData().aboutme"></sidebar-about-me>
-      <sidebar-skills [skills]="cvData().skills"></sidebar-skills>
+      <sidebar-skills class="sidebar-block" [skills]="cvData().skills"></sidebar-skills>
       <sidebar-languages  class="sidebar-block" [languages]="cvData().languages"></sidebar-languages>
       <sidebar-links class="sidebar-block" [links]="cvData().links"></sidebar-links>
       @if (cvData().courses.length > 0 ) {

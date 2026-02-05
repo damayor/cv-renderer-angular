@@ -1,5 +1,3 @@
-
-
 import { CvData } from "../interfaces/CVData";
 
 import { frontend,seniorfrontend,frontend3d, graphicsEngineer as graphicsEngineer, seniorSoftware as seniorsoftware, fullStackEngineer as fullstackengineer, sre, contentcreator, supportAssistant, itSupport } from '../../assets/cv-data/en-EN.mock';
@@ -10,7 +8,6 @@ const files: any = {
   'EN':{ frontend, seniorfrontend, frontend3d, fullstackengineer, graphicsEngineer, seniorsoftware, sre, contentcreator, supportAssistant, itSupport},
   'DE':{ frontend: frontendDE, frontend3d:frontend3dDE, seniorfrontend : seniorfrontendDE,  graphicsEngineer: gameEntwickler, fullstackengineer: fullStackIngenieur,seniorsoftware: seniorSoftwareDE, sre:sreDE},
   'ES':{ frontend: frontendES, seniorfrontend : seniorfrontendES,       fullstackengineer: ingenieroFullStack, seniorsoftware: seniorSoftwareES, sre:sreES}
-
 };
 
 

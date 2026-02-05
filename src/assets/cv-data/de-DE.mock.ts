@@ -9,6 +9,78 @@ const contactDefault : Contact = {
   visaStatus: "Chancenkarte"
 }
 
+const defaultSkills =  {
+  "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
+  "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
+  "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+  "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+  "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+  "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+}
+
+const languagesData =   [
+    { name: "Englisch", level: 83 },
+    { name: "Spanisch", level: 100 },
+    { name: "Deutsch", level: 67 }
+  ]
+
+const defaultCourses = [
+    { "name": "ANGULAR: VON NULL ZUM EXPERTEN - AUSGABE 2025", "institution": "{D/T} DEVTALLES", "date": "Jul 2025" },
+    { "name": "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
+  ] 
+
+const defaultEducation = 
+  {title: "Ausbildung", 
+      entries: [
+        {
+          company: "Universidad de los Andes",
+          role: "M.Sc. System- und Computertechnik",
+          dates: " 2019",
+          location: "Bogotá, Kolumbien",
+          tasks: [
+            "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
+            "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
+          ]
+        },
+        {
+          company: "Universidad de los Andes",
+          role: "Bachelor on System- und Computertechnik",
+          dates: "2017",
+          location: "Bogotá, Kolumbien",
+          "tasks": [
+            "Akademische Vertiefung in Visual und Computing Interaction.",
+            "Forschungsmonitor in der Gruppe IMAGINE.",
+            "Stipendium „Quiero Estudiar“ für die besten nationalen ICFES-Ergebnisse."
+          ]
+        },
+        {
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
+          role: "Gymnasium",
+          dates: "2012",
+          location: "Bogotá, Kolumbien",
+          tasks: [
+            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+          ]
+        }
+      ]
+    }
+
+const defaultExtraCurricular = {
+  title: "Außerunterrichtliche Aktivitäten", 
+  entries: [
+  {
+        company: "SCIENCE und TECHNOLOGY CLUBS",
+        role: "Nationaler Dozent für „Virtual Reality in Unity“",
+        dates: "Jun 2019 - Jul 2019",
+        location: "Bogotá",
+        tasks: [
+          "Einführung in Spiele- und Immersive-Entwicklung für Schüler, mit Themen wie Materialien, Humanoiden, Animationen und Script-Programmierung. Organisiert von der Universidad Nacional de Colombia und SENA."          
+        ]
+      },
+    ]
+  }
+
+
 export const seniorfrontend: CvData = {
   contact: contactDefault,
   occupation: {
@@ -29,21 +101,24 @@ export const seniorfrontend: CvData = {
    suche ich nach innovativen Engineering-Teams. Mein Ziel ist es, 
    nicht nur meine technischen Kenntnisse einzubringen, sondern 
    auch meine Kollegen zu fördern, damit die gesamte Gruppe gemeinsam wachsen kann.`,
-  skills: ["Typescript", "React", "NodeJs","Angular", "RxJs", "Next.js","Tailwind" ,"Javascript", "C#", "C++", "Java", "AI", "LLMs", "Three.JS", "SCSS", "SRE", "Unity", "UI/UX", "Figma", "Jenkins", "Kubernetes", "Testing"],
+  skills: {
+    "Frontend": [ "React","Angular","Storybook", "Three.JS", "R3F", "Vue.js", "SCSS","TailwindCSS" ],
+    "Graphics": ["Unity", "Unreal", "XR", "UI/UX", "Figma"],
+    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash","C++", "C#", "Python"],
+    "Tools": ["Git","Vite","Storybook", "ESLint", "Jest"],
+    "CI/CD": ['Docker','Jenkins','Kubernetes', "Linux", "Docker",]
+  },
   languages: [
+    { name: "Deutsch", level: 67 },
     { name: "Englisch", level: 83 },
     { name: "Spanisch", level: 100 },
-    { name: "Deutsch", level: 67 }
   ],
   links: [
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
-  courses: [
-    { name: "ANGULAR: VON NULL ZUM EXPERTEN - AUSGABE 2025", "institution": "{D/T} DEVTALLES", "date": "Jul 2025" },
-    { name: "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
-  ],
+  courses: defaultCourses,
   experiences: [
     {title: "Berufserfahrung", entries: [ 
       {
@@ -52,9 +127,9 @@ export const seniorfrontend: CvData = {
         dates: 'Mai 2021 - Jun 2025',
         role: 'Softwareingenieur ',
         tasks: [
+            "Leitung der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
             "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
             "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout-<b>Backends</b> durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
-            "Leitung der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
             "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten."
           ]
       },
@@ -69,53 +144,8 @@ export const seniorfrontend: CvData = {
           ]
       }
     ]},
-    {title: "Ausbildung", 
-      entries: [
-        {
-          company: "Universidad de los Andes",
-          role: "M.Sc. System- und Computertechnik",
-          dates: " 2019",
-          location: "Bogotá, Kolumbien",
-          tasks: [
-            "Forschungspraktikum in AG HCI und Computer Graphics an der <b>Technischen Universität Kaiserslautern</b> im Jahr 2018, um AR Anwendungen für Hololens zu entwickeln.",
-            "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
-          ]
-        },
-        {
-          company: "Universidad de los Andes",
-          role: "Bachelor on System- und Computertechnik",
-          dates: "2017",
-          location: "Bogotá, Kolumbien",
-          "tasks": [
-            "Akademische Vertiefung in Visuelle und Interaktive Informatik.",
-            "Forschungsmonitor in der Gruppe IMAGINE.",
-            "Stipendium „Quiero Estudiar“ für die besten nationalen ICFES-Ergebnisse."
-          ]
-        },
-        {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
-          role: "Gymnasium",
-          dates: "2012",
-          location: "Bogotá, Kolumbien",
-          tasks: [
-            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
-          ]
-        }
-      ]
-    },
-     {title: "Außerunterrichtliche Aktivitäten", 
-      entries: [
-        {
-          company: "Clubes de Ciencia y Tecnologia",
-          role: "Nationaler Dozent für „Virtual Reality in Unity“",
-          dates: "Jun 2019 - Jul 2019",
-          location: "Bogotá",
-          tasks: [
-           "Einführung in Spiele- und Immersive-Entwicklung für Schüler, mit Themen wie Materialien, Humanoiden, Animationen und Script-Programmierung. Organisiert von der Universidad Nacional de Colombia und SENA."          
-          ]
-        },
-      ]
-    }
+    defaultEducation,
+    defaultExtraCurricular
   ],
 };
 
@@ -134,7 +164,14 @@ export const frontend3d: CvData = {
     acronym: 'F3D',
     
   },
-  skills: ["Typescript", "NodeJs", "React", "Storybook", "Three.JS", "R3F", "Angular", "C++", "C#", 'Python',"Vue.js","Javascript","Next.js", "TailwindCSS", "AI", "LLMs","Java", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
+  skills: {
+    "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
+    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
+    "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+    "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  },
   // aboutme: `Frontend engineer with 5+ experience
 }
 
@@ -146,7 +183,7 @@ export const seniorSoftware: CvData = {
   },
   colors: {
     primary: '#48011d',
-    // secondary: '#808183'
+    secondary: '#808183'
   },
   aboutme: `Softwareingenieur mit 7 Jahren Erfahrung in 
   großskaligen Webplattformen bei einem multinationalen 
@@ -157,21 +194,14 @@ export const seniorSoftware: CvData = {
   Derzeit in Deutschland ansässig und motiviert, Teams 
   beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
    begleiten und die kollektiven Fähigkeiten stärken könnte.`,
-  skills: ["Typescript", "NodeJs", "React", "Angular", "C++", "Javascript","Next.js", "TailwindCSS","Vue.js", "AI", "LLMs", "C#", "Java", 'Python', "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
-  languages: [
-    { name: "Englisch", level: 83 },
-    { name: "Spanisch", level: 100 },
-    { name: "Deutsch", level: 67 }
-  ],
+  skills: defaultSkills,
+  languages: languagesData,
   links: [
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
-  courses: [
-    { "name": "ANGULAR: VON NULL ZUM EXPERTEN - AUSGABE 2025", "institution": "{D/T} DEVTALLES", "date": "Jul 2025" },
-    { "name": "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
-  ],
+  courses: defaultCourses,
   experiences: [
     {title: "Berufserfahrung", entries: [ 
       {
@@ -240,19 +270,7 @@ export const seniorSoftware: CvData = {
         }
       ]
     },
-     {title: "Außerunterrichtliche Aktivitäten", 
-      entries: [
-        {
-          company: "SCIENCE und TECHNOLOGY CLUBS",
-          role: "Nationaler Dozent für „Virtual Reality in Unity“",
-          dates: "Jun 2019 - Jul 2019",
-          location: "Bogotá",
-          tasks: [
-           "Einführung in Spiele- und Immersive-Entwicklung für Schüler, mit Themen wie Materialien, Humanoiden, Animationen und Script-Programmierung. Organisiert von der Universidad Nacional de Colombia und SENA."          
-          ]
-        },
-      ]
-    }
+     defaultExtraCurricular
   ],
 };
 
@@ -272,8 +290,7 @@ export const fullStackIngenieur: CvData = {
   Derzeit in Deutschland ansässig und motiviert, Teams 
   beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
    begleiten und die kollektiven Fähigkeiten stärken könnte.`,
-  skills: ["Typescript", "NodeJs", "React", "Angular", "Next.js", "TailwindCSS","Javascript","Vue.js","C++", "Java","AI", "LLMs", "C#",  "Three.JS", "SRE", "Linux", "Docker", "Unity", "SCSS", "CI/CD", "Jenkins", "Kubernetes", "Testing", "Unreal", "XR", "UI/UX", "Figma"],
-
+  skills: defaultSkills
 }
 
 export const gameEntwickler: CvData = {
@@ -299,12 +316,11 @@ export const gameEntwickler: CvData = {
     Derzeit in Deutschland ansässig und motiviert, Teams 
     beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
     begleiten und die kollektiven Fähigkeiten stärken könnte.`,
-  skills: ['C#', 'Unity', 'C++', 'Unreal', 'UI/UX', 'Javascript', 'React', 'WebGL', 'Three.Js', 'PixiJs', 'Python', 'VR', 'Figma', 'Blender', 'Sketchup', 'Godot', 'AR', '3dMax'],
-  languages: [
-    { name: "Englisch", level: 83 },
-    { name: "Spanisch", level: 100 },
-    { name: "Deutsch", level: 67 }
-  ],
+  skills:{...defaultSkills,
+    "Graphics": ['C++',"Unity",'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "Frontend": ["React","Angular","Three.JS", "SCSS","TailwindCSS" ],
+  },
+  languages: languagesData,
   links: [
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
@@ -313,7 +329,7 @@ export const gameEntwickler: CvData = {
   ],
   courses: [
     { name: "Game Development with Unreal Engine 4", institution: "Udemy", date: "Jan 2020" },
-    { "name": "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
+    { name: "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
   ],
   experiences: [
     {title: "Berufserfahrung", entries: [ 
@@ -348,53 +364,8 @@ export const gameEntwickler: CvData = {
           ]
       }
     ]},
-    {title: "Ausbildung", 
-      entries: [
-        {
-          company: "Universidad de los Andes",
-          role: "M.Sc. System- und Computertechnik",
-          dates: " 2019",
-          location: "Bogotá, Kolumbien",
-          "tasks": [
-            "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
-            "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
-          ]
-        },
-        {
-          company: "Universidad de los Andes",
-          role: "Bachelor on System- und Computertechnik",
-          dates: "2017",
-          location: "Bogotá, Kolumbien",
-          "tasks": [
-            "Akademische Vertiefung in Visual und Computing Interaction.",
-            "Forschungsmonitor in der Gruppe IMAGINE.",
-            "Stipendium „Quiero Estudiar“ für die besten nationalen ICFES-Ergebnisse."
-          ]
-        },
-        {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
-          role: "Gymnasium",
-          dates: "2012",
-          location: "Bogotá, Kolumbien",
-          tasks: [
-            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
-          ]
-        }
-      ]
-    },
-     {title: "Außerunterrichtliche Aktivitäten", 
-      entries: [
-        {
-          company: "SCIENCE und TECHNOLOGY CLUBS",
-          role: "Nationaler Dozent für „Virtual Reality in Unity“",
-          dates: "Jun 2019 - Jul 2019",
-          location: "Bogotá",
-          tasks: [
-           "Einführung in Spiele- und Immersive-Entwicklung für Schüler, mit Themen wie Materialien, Humanoiden, Animationen und Script-Programmierung. Organisiert von der Universidad Nacional de Colombia und SENA."          
-          ]
-        },
-      ]
-    }
+    defaultEducation,
+     defaultExtraCurricular
   ],
 };
 
@@ -419,12 +390,14 @@ export const sre: CvData = {
     Derzeit in Deutschland ansässig und motiviert, Teams 
     beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
     begleiten und die kollektiven Fähigkeiten stärken könnte.`,
-  skills: ['Linux', 'ci/cd','jenkins','groovy',"AI", "LLMs",'SRE','DevOps','Kubernetes','Yaml','Observability','Grafana','Docker','Instana','Kibana','Prometheus','Aws','Opsgenie','NodeJs','C++','React','JS/TS','Angular','Java'],
-  languages: [
-    { name: "Englisch", level: 83 },
-    { name: "Spanisch", level: 100 },
-    { name: "Deutsch", level: 67 }
-  ],
+  skills: {
+    "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
+    "CI/CD": ['Docker','Jenkins','K8',"YAML","Grafana","YAML"],
+    "Monitoring": ['AWS','Grafana','Instana','Kibana','Prometheus','Opsgenie'],
+    "Tools": ['Linux','bash',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  },
+  languages: languagesData,
   links: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Stackshare", url: "https://stackshare.io/damayor/software-engineer" },
@@ -458,52 +431,7 @@ export const sre: CvData = {
         ]
       }
     ]},
-    {title: "Ausbildung", 
-      entries: [
-        {
-          company: "Universidad de los Andes",
-          role: "M.Sc. System- und Computertechnik",
-          dates: " 2019",
-          location: "Bogotá, Kolumbien",
-          "tasks": [
-            "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
-            "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
-          ]
-        },
-        {
-          company: "Universidad de los Andes",
-          role: "Bachelor on System- und Computertechnik",
-          dates: "2017",
-          location: "Bogotá, Kolumbien",
-          "tasks": [
-            "Akademische Vertiefung in Visual und Computing Interaction.",
-            "Forschungsmonitor in der Gruppe IMAGINE.",
-            "Stipendium „Quiero Estudiar“ für die besten nationalen ICFES-Ergebnisse."
-          ]
-        },
-        {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
-          role: "Gymnasium",
-          dates: "2012",
-          location: "Bogotá, Kolumbien",
-          tasks: [
-            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
-          ]
-        }
-      ]
-    },
-     {title: "Außerunterrichtliche Aktivitäten", 
-      entries: [
-        {
-          company: "SCIENCE und TECHNOLOGY CLUBS",
-          role: "Nationaler Dozent für „Virtual Reality in Unity“",
-          dates: "Jun 2019 - Jul 2019",
-          location: "Bogotá",
-          tasks: [
-           "Einführung in Spiele- und Immersive-Entwicklung für Schüler, mit Themen wie Materialien, Humanoiden, Animationen und Script-Programmierung. Organisiert von der Universidad Nacional de Colombia und SENA."          
-          ]
-        },
-      ]
-    }
-  ],
-};
+    defaultEducation,
+    defaultExtraCurricular
+  ]
+}
