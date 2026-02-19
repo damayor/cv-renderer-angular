@@ -62,6 +62,14 @@
               "extractLicenses": false,
               "sourceMap": true
             },
+            "eu": {
+               "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.eu.ts"
+                }
+              ]
+            },
             "de": {
               "localize": ["de"]
             },
@@ -79,6 +87,9 @@
             },
             "development": {
               "buildTarget": "cv-renderer:build:development"
+            },
+            "eu": {
+              "buildTarget": "cv-renderer:build:development,eu" 
             },
             "de": {
               "buildTarget": "cv-renderer:build:development,de" 

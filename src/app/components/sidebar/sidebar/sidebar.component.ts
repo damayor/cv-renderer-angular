@@ -25,8 +25,4 @@ import { CvData } from '@interfaces/CVData';
 })
 export class SidebarComponent {
   cvData = input.required<CvData>();
-
-  // contact = frontend.contact;
-  // If you use CvDataService und do not subscribe, you may get:
-  // "Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received"
 }

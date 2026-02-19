@@ -26,10 +26,12 @@ import { CommonModule } from '@angular/common';
           <span style="color: var(--clr-secondary);"> <span class="icon-envelop"></span></span>
           <span>{{ email }}</span>
         </div>
-        <div class="flex items-center gap-2 border-t border-gray-200 pt-2">
-          <span style="color: var(--clr-secondary);"><span class="icon-earth"></span></span>
-          <span>{{visaStatus }}</span>
-        </div>
+          
+          <!-- <div class="flex items-center gap-2 border-t border-gray-200 pt-2">
+            <span style="color: var(--clr-secondary);"><span class="icon-earth"></span></span>
+            <span>{{visaStatus }}</span>
+          </div> -->
+        
       </div>
     </div>
   `,

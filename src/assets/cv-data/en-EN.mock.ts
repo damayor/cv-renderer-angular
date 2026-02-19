@@ -1,4 +1,5 @@
 import { Contact, CvData } from "../../app/interfaces/CVData";
+import { environment } from '../../environments/environment';
 
 const contactDefault : Contact = {
   fullname: "David Mayorga",
@@ -17,6 +18,17 @@ const defaultSkills =  {
   "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
   "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
 }
+
+const appendedAboutMe = `
+    Berlin-based    
+    ${environment.cvScope === 'DE' ?
+      `with work authorization and relocation flexibility within Germany,`
+      : `with relocation flexibility within Europe,`
+    }
+    I am looking for innovative engineering teams,
+    not only through my technical expertise, 
+    but by helping colleagues grow so the 
+    entire group can advance together.`
 
 const languagesData = [
     { name: "English", level: 83 },
@@ -90,18 +102,14 @@ export const seniorfrontend: CvData = {
   colors: {
     primary: '#48011d',
   },
-  aboutme: `Frontend engineer with 5+ years of experience
+  aboutme: `Frontend engineer with 6+ years of experience
     building large-scale web platforms and applications
     specialized in Node.js, 
     TypeScript, and UI/UX solutions using 
     TailwindCSS, SCSS, and interactive experiences 
     with Three.js. I own a deep understanding of CI/CD practices 
     and SRE in international environments. 
-    Recently relocated to Berlin with full work authorization,  
-    I am looking for innovative engineering teams,
-    not only through my technical expertise, 
-    but by helping colleagues grow so the 
-    entire group can advance together.`,
+    ${appendedAboutMe}`,
   skills: defaultSkills,
   languages: languagesData,
   links: [
@@ -180,13 +188,9 @@ export const seniorSoftware: CvData = {
     Engineering practices, ensuring
     monitoring, performance and
     security.  
-    Recently relocated to Berlin with full work authorization,  
-    I am looking for innovative engineering teams,
-    not only through my technical expertise, 
-    but by helping colleagues grow so the 
-    entire group can advance together.`,
+    ${appendedAboutMe}`,
   skills: {
-    "Full-Stack": ["Node.js","Typescript", "Next.js", "Angular", "C++", "Python", "JS"],
+    "Full-Stack": ["Node.js","Typescript", "Next.js", "C++", "Python", "JS"],
     "Frontend": ["Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
     "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
@@ -254,12 +258,14 @@ export const fullStackEngineer: CvData = {
     Having worked for global brands like adidas, 
     I own a deep understanding of CI/CD practices 
     and SRE in international environments. 
-    Recently relocated to Berlin with full work authorization,  
-    I am looking for innovative engineering teams,
-    not only through my technical expertise, 
-    but by helping colleagues grow so the 
-    entire group can advance together.`,
-
+    ${appendedAboutMe}`,
+  skills: {
+    "Full-Stack": ["Typescript","C#","Node.js",".Net", "C++", "Python" ],
+    "Frontend": ["Angular", "React","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+    "Tools": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  },
 }
 
 export const graphicsEngineer: CvData = {
@@ -287,7 +293,7 @@ export const graphicsEngineer: CvData = {
       digital solutions that enhance
       user experience, particularly in
       industrial and web contexts.
-      Recently relocated to Berlin with full work authorization,  
+      Recently relocated to Berlin with work authorization,  
       I am looking for innovative engineering teams,
       not only through my technical expertise, 
       but by helping colleagues grow so the 
@@ -367,7 +373,7 @@ export const sre: CvData = {
     and monitoring. Skilled in CI/CD, 
     performance optimization, and
     ensuring scalable, resilient
-    systems. Recently relocated to Berlin with full work authorization, 
+    systems. Recently relocated to Berlin with work authorization, 
     and motivated to join teams where I can
     share knowledge, mentor others, and 
     help elevate the collective skills.`,
@@ -439,7 +445,7 @@ export const contentcreator: CvData = {
     Engineering practices, ensuring
     monitoring, performance and
     scalability. 
-    Recently relocated to Berlin with full work authorization,  
+    Recently relocated to Berlin with work authorization,  
     I am looking for innovative teams where I can
     share knowledge, mentor others, and 
     help elevate the collective skills.`,
@@ -533,17 +539,17 @@ export const supportAssistant: CvData = {
     Background as a software engineer 
     and model. 
     Reliable and adaptable with learning agibility. 
-    Recently relocated to Berlin with full work authorization,  
+    Recently relocated to Berlin with work authorization,  
     I am looking for innovative teams,
     not only through my technical expertise, 
     but by helping colleagues grow so the 
     entire group can advance together.`,
   skills: {
-    "Service": ["Customer service","Inventory management", "Network","Problem solving",],
+    "Service": ["Customer service","Inventory management", "Troubleshooting"],
     "Tech": [  
-        "macOS", "Linux", "Vibe coding"
+        "Social Networks", "Windows", "Linux", "Vibe coding"
     ],
-    "Soft Skills":['Teamwork', "Troubleshooting"]
+    "Soft Skills":["Easy Adaptable",'Teamwork', "Charisma"]
   },
   languages: languagesData,
   links: [
@@ -649,8 +655,8 @@ export const itSupport: CvData = {
     Strong interest in IT Support and Helpdesk roles, with a background
     in software engineering and a customer-focused mindset. Quick learner
     with strong communication skills. Recently relocated to Berlin with
-    full work authorization and motivated to support users and
-     contribute to a collaborative IT team.`,
+    work authorization and motivated to support users and
+    contribute to a collaborative IT team.`,
   skills: {
     "Service": ["Customer service","Inventory management", "Network","Problem solving",],
     "Tech": [  
@@ -693,8 +699,8 @@ export const itSupport: CvData = {
         dates: "Jun 2017 - Ago 2019",
         location: "Bogotá",
         tasks: [
+          "Responsible in charge of computer labs, and providing laptops and other perfiferical devices to students.",
           "Supporting demonstrations based on robotics & XR projects, <b>managing inventory</b> of the laboratory devices",
-          "Responsible in charge of computer labs, and providing laptops and other perfiferical devices to students."
         ]
       },
     ]},

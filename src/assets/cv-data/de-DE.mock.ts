@@ -1,4 +1,5 @@
 import { Contact, CvData } from "../../app/interfaces/CVData";
+import { environment } from '../../environments/environment';
 
 const contactDefault : Contact = {
   fullname: "David Mayorga",
@@ -17,6 +18,19 @@ const defaultSkills =  {
   "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
   "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
 }
+
+// Da ich innerhalb Deutschlands flexibel und umzugsbereit bin, 
+
+const appendedAboutMe = `
+    Ich bin vor Kurzem nach Berlin gezogen und
+    ${environment.cvScope === 'DE' ?
+      ` verfüge über eine Arbeitsgenehmigung. 
+        `
+      : `, da ich innerhalb Europas flexibel und umzugsbereit bin,`
+    }
+    Ich möchte meine internationale Erfahrung durch die hohen Qualitätstandards 
+    bereichern und mich aktiv an die lokalen Arbeitsweisen anpassen, 
+    um gemeinsam mit dem Team zu wachsen.`
 
 const languagesData =   [
     { name: "Englisch", level: 83 },
@@ -74,7 +88,7 @@ const defaultExtraCurricular = {
         dates: "Jun 2019 - Jul 2019",
         location: "Bogotá",
         tasks: [
-          "Einführung in Spiele- und Immersive-Entwicklung für Schüler, mit Themen wie Materialien, Humanoiden, Animationen und Script-Programmierung. Organisiert von der Universidad Nacional de Colombia und SENA."          
+          "Einführung in Spiele- und Immersive-Entwicklung für Schüler, mit Themen wie Materialien, Humanoiden, Animationen und Script-Programmierung in C#. Organisiert von der Universidad Nacional de Colombia und SENA."          
         ]
       },
     ]
@@ -96,11 +110,8 @@ export const seniorfrontend: CvData = {
    Ich bin spezialisiert auf NodeJS, TypeScript und UI/UX-Lösungen 
    mit TailwindCSS, SCSS sowie interaktive Erfahrungen u.a. mit Three.js. 
    Ich besitze ein tiefes Verständnis von CI/CD-Praktiken und SRE 
-   in internationalen Umgebungen. Da ich vor kurzem nach Berlin 
-   gezogen bin und über eine volle Arbeits-genehmigung verfüge, 
-   suche ich nach innovativen Engineering-Teams. Mein Ziel ist es, 
-   nicht nur meine technischen Kenntnisse einzubringen, sondern 
-   auch meine Kollegen zu fördern, damit die gesamte Gruppe gemeinsam wachsen kann.`,
+   in internationalen Umgebungen.
+   ${appendedAboutMe}`,
   skills: {
     "Frontend": [ "React","Angular","Storybook", "Three.JS", "R3F", "Vue.js", "SCSS","TailwindCSS" ],
     "Graphics": ["Unity", "Unreal", "XR", "UI/UX", "Figma"],
@@ -191,9 +202,7 @@ export const seniorSoftware: CvData = {
   interaktive 3D-Lösungen mit Unity, Three.js und Unreal. 
   Solide Kenntnisse in C++, Linux Bash und Site Reliability 
   Engineering (Monitoring, Performance, Skalierbarkeit).
-  Derzeit in Deutschland ansässig und motiviert, Teams 
-  beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
-   begleiten und die kollektiven Fähigkeiten stärken könnte.`,
+  ${appendedAboutMe}`,
   skills: defaultSkills,
   languages: languagesData,
   links: [
@@ -210,10 +219,10 @@ export const seniorSoftware: CvData = {
         dates: 'Mai 2021 - Jun 2025',
         role: 'Softwareingenieur',
         tasks: [
+          "Leitung der Entwicklung von <b>Anpassungsmodulen</b> für Sportbekleidung im PDP mit <b>Three.js, C#</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
           "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
           "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
-          "Leitung der Entwicklung von <b>Anpassungsmodulen</b> für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
-          "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten.",
+          // "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten.",
         ]
       },
       {
@@ -222,7 +231,7 @@ export const seniorSoftware: CvData = {
         dates: 'Sep 2020 - Dec 2020',
         role: 'Game Entwickler',
         tasks: [
-          "Entwickelte und pflegte Hyper-Casual-Mobile-Games mit <b>Unity</b> und <b>Unreal/C++</b>, wodurch die Nutzerbindung und das UI/UX-Erlebnis verbessert wurden.",
+          "Entwickelte und pflegte Hyper-Casual-Mobile-Games mit <b>Unity/C#</b> und <b>Unreal/C++</b>, wodurch die Nutzerbindung und das UI/UX-Erlebnis verbessert wurden.",
         ]
       },
       {
@@ -231,8 +240,8 @@ export const seniorSoftware: CvData = {
         dates: 'Jan 2020 - Sep 2020',
         role: 'Frontend Softwareentwickler',
         tasks: [
-            "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
-            "Entwicklung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
+          "Entwicklung von Hyper-Casual-Spielen in <b>Unity, C#</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung.",
+          "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
         ]
       }
     ]},
@@ -277,20 +286,24 @@ export const seniorSoftware: CvData = {
 export const fullStackIngenieur: CvData = {
   ...seniorSoftware,
   occupation: {
-    value: "Full Stack Ingenieur",
+    value: "Full-Stack-Ingenieur",
     acronym: 'FSE'
   },
   aboutme: 
   `Softwareingenieur mit 5 Jahren Erfahrung in 
   großskaligen Webplattformen bei einem multinationalen 
-  Unternehmen, spezialisiert auf NodeJS, TailwindCSS und 
-  interaktive 3D-Lösungen mit Unity, Three.js und Unreal. 
+  Unternehmen, spezialisiert auf NodeJS, C# und 
+  interaktive 3D-Lösungen mit Unity, Three.js. 
   Solide Kenntnisse in C++, Linux Bash und Site Reliability 
   Engineering (Monitoring, Performance, Skalierbarkeit).
-  Derzeit in Deutschland ansässig und motiviert, Teams 
-  beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
-   begleiten und die kollektiven Fähigkeiten stärken könnte.`,
-  skills: defaultSkills
+  ${appendedAboutMe}`,
+  skills: {
+    "Full-Stack": ["Typescript","C#","Node.js",".Net", "C++", "Python" ],
+    "Frontend": ["Angular", "React","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+    "Tools": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  },
 }
 
 export const gameEntwickler: CvData = {
