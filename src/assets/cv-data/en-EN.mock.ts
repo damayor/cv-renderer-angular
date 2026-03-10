@@ -12,9 +12,9 @@ const contactDefault : Contact = {
 
 const defaultSkills =  {
   "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
-  "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
-  "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-  "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+  "Full-Stack": ["Javascript","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
+  "Graphics": ["Unity","XR",'C#','C++',"Unreal","UI/UX", "Figma"],
+  "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
   "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
   "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
 }
@@ -31,9 +31,9 @@ const appendedAboutMe = `
     entire group can advance together.`
 
 const languagesData = [
-    { name: "English", level: 83 },
-    { name: "Spanish", level: 100 },
-    { name: "German", level: 67 }
+    { name: "English", level: 83, cefrLevel: 'C1' },
+    { name: "German", level: 67, cefrLevel: 'B2' },
+    { name: "Spanish", level: 100 , cefrLevel: 'C2'},
   ]
 
 const defaultCourses = [
@@ -51,7 +51,7 @@ const defaultEducation = {
           location: "Bogotá, Colombia",
           tasks: [
             "Research Internship in AG HCI and Computer Graphics at <b>Technical University of Kaiserslautern</b> during 2018",
-            "Role as research monitor focused on designing and developing a <b>VR & haptic-based</b> training simulator for trauma orthopedic surgery in <b>Unity</b> and <b>Oculus</b>, improving trainee performance during pilot tests."
+            "Role as research monitor focused on the <b>VR & haptic-based</b> training simulator for trauma orthopedic surgery in <b>Unity</b> and <b>Oculus</b>, improving trainee performance during pilot tests."
           ]
         },
         {
@@ -60,9 +60,10 @@ const defaultEducation = {
           dates: "2017",
           location: "Bogotá, Colombia",
           tasks: [
+            "Officially recognized by Anabin (ZAB) as <b>System- und Computertechnik</b> (Abschlussklasse A4).",
             "Academic option in Visual and Computing Interaction",
             "Research Monitor in IMAGINE group",
-            "Scholarship \"Quiero Estudiar\" given to the best national ICFES scores"
+            "Scholarship <b>\"Quiero Estudiar\"</b> given to the best national ICFES scores"
           ]
         },
         {
@@ -83,7 +84,7 @@ const defaultExtraCurricular = {
   entries: [
         {
           company: "SCIENCE AND TECHNOLOGY CLUBS",
-          role: "National Instructor in \"Virtual Reality in Unity\"",
+          role: "National Instructor of \"Virtual Reality in Unity\"",
           dates: "Jun 2019 - Jul 2019",
           location: "Bogotá",
           tasks: [
@@ -96,13 +97,13 @@ const defaultExtraCurricular = {
 export const seniorfrontend: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "Senior Frontend Engineer",
+    value: "Senior Frontend Engineer - Focused on Typescript and Node.js",
     acronym: 'SF'
   },
   colors: {
     primary: '#48011d',
   },
-  aboutme: `Frontend engineer with 6+ years of experience
+  aboutme: `Frontend engineer with 4+ years of experience
     building large-scale web platforms and applications
     specialized in Node.js, 
     TypeScript, and UI/UX solutions using 
@@ -110,7 +111,14 @@ export const seniorfrontend: CvData = {
     with Three.js. I own a deep understanding of CI/CD practices 
     and SRE in international environments. 
     ${appendedAboutMe}`,
-  skills: defaultSkills,
+  skills: {
+    "Frontend": ["Javascript","React","Three.JS","TailwindCSS", "Vue.js" ],
+    "Full-Stack": ["Typescript","Node.js","Angular","Next.js","bash", "Linux",],
+    "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  },
   languages: languagesData,
   links: [
     { label: "Portfolio", url: "https://mayinteractive.io/" },
@@ -119,17 +127,34 @@ export const seniorfrontend: CvData = {
   ],
   courses: defaultCourses,
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Work Experience", entries: [
+      {
+        company: 'Freelancer',
+        location: 'Berlin',
+        dates: 'Aug 2025 - present',
+        role: 'Full-Stack Engineer & Automation Specialist',
+        tasks: [
+          'Leveraged LLMs (Claude, Gemini, NotebookLM) and <b>Vibe Coding</b> methodologies to rapidly prototype and deploy automation tools.',
+          'Rendering complex 3D masterplans from Unreal Engine and 3Ds Max within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
+          // 'Built and deployed full-stack <b>Angular</b> application: a customizable CV generator with PDF export, using <b>RxJS</b> for reactive state management and dynamic rendering.',
+          // 'Developed custom scripts using <b>Google Apps Scripts</b> to automate projects work-hour tracking in Google Sheets, increasing personal productivity by 40%.',
+        ],
+        achievements: [
+          'Consolidated the adidas Tech Hub as a technology benchmark in Colombia by spearheading the adidas Campus Program, leading the technical mentorship and training of high-potential engineers'
+        ]
+      },
       {
         company: 'ADIDAS',
         location: 'Bogotá',
         dates: 'May 2021 - Jun 2025',
         role: 'Software Engineer',
         tasks: [
-          'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js, react-three/fiber</b> and <b>Unity</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
+          'Drove the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js, react-three/fiber</b> and <b>Unity</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
           'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, and <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
-          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+        ],
+         achievements: [
+          'Consolidated the adidas Tech Hub as a technology benchmark in Colombia by spearheading the adidas Campus Program, leading the technical mentorship and training of high-potential engineers'
         ]
       },
       {
@@ -140,6 +165,9 @@ export const seniorfrontend: CvData = {
         tasks: [
           'Created <b>immersive 3D applications</b> with <b>React</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector <i>PropTech</i>',
           'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.'
+        ],
+        achievements: [
+          'Pivoted the company’s core architecture to a "lite" version during the pandemic, achieving a breakthrough in rendering performance for mobile devices'
         ]
       }
     ]},
@@ -151,7 +179,7 @@ export const seniorfrontend: CvData = {
 export const frontend: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Frontend Engineer",
+    value: "Frontend Engineer - Focused on Typescript and Node.js",
     acronym: 'FE',
   }, 
 }
@@ -163,6 +191,28 @@ export const frontend3d: CvData = {
     acronym: 'F3D',
     
   },
+}
+
+export const softwareFreelancer: CvData = {
+  ...seniorfrontend,
+  experiences: {
+    ...seniorfrontend.experiences,
+    // Add university, oea experience [], y a ese si le agrega
+    // {
+    //   company: 'Freelancer',
+    //   location: 'Berlin',
+    //   dates: 'Aug 2025 - present',
+    //   role: 'Full-Stack Engineer & Automation Specialist',
+    //   tasks: [
+    //     'Developed custom scripts using <b>Google Apps Script</b> to automate project scheduling and work-hour tracking in Google Sheets, increasing personal productivity by 40%.',
+    //     'Leveraged LLMs (Claude, Gemini, NotebookLM) and <b>Vibe Coding</b> methodologies to rapidly prototype and deploy automation tools'
+    //   ]
+    // },
+  },
+  occupation: {
+    value: "Frontend Engineer - Focused on Javascript and Node.js",
+    acronym: 'FE',
+  }, 
 }
 
 //C++, full stack
@@ -192,7 +242,7 @@ export const seniorSoftware: CvData = {
   skills: {
     "Full-Stack": ["Node.js","Typescript", "Next.js", "C++", "Python", "JS"],
     "Frontend": ["Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
     "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
@@ -262,7 +312,7 @@ export const fullStackEngineer: CvData = {
   skills: {
     "Full-Stack": ["Typescript","C#","Node.js",".Net", "C++", "Python" ],
     "Frontend": ["Angular", "React","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
     "Tools": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
@@ -380,7 +430,7 @@ export const sre: CvData = {
   skills: {
     "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
     "CI/CD": ['Docker','Jenkins','K8',"YAML","Grafana","YAML"],
-    "Monitoring": ['AWS','Grafana','Instana','Kibana','Prometheus','Opsgenie'],
+    "Monitoring": ['AWS','Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
     "Tools": ['Linux','bash',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
@@ -511,7 +561,7 @@ export const contentcreator: CvData = {
         },
         {
           company: "SCIENCE AND TECHNOLOGY CLUBS",
-          role: "National Instructor in \"Virtual Reality in Unity\"",
+          role: "National Instructor of \"Virtual Reality in Unity\"",
           dates: "Jun 2019 - Jul 2019",
           location: "Bogotá",
           tasks: [

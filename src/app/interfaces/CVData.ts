@@ -11,6 +11,7 @@ export interface TimelineExperience {
   dates: string;
   role: string;
   tasks: string[];
+  achievements?: string[];
 }
 
 export interface Contact {
@@ -36,5 +37,6 @@ export interface CvData {
 
 export interface Language {
   name: string;
-  level: number; // Level as a percentage (0-100)
+  level: number;
+  cefrLevel?: string;
 } 

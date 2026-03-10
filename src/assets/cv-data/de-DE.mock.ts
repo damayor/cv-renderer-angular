@@ -14,7 +14,7 @@ const defaultSkills =  {
   "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
   "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
   "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-  "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+  "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
   "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
   "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
 }
@@ -22,9 +22,9 @@ const defaultSkills =  {
 // Da ich innerhalb Deutschlands flexibel und umzugsbereit bin, 
 
 const appendedAboutMe = `
-    Ich bin vor Kurzem nach Berlin gezogen und
+    Wohnhaft in Berlin
     ${environment.cvScope === 'DE' ?
-      ` verfüge über eine Arbeitsgenehmigung. 
+      `  mit Arbeitsgenehmigung und Umzugsbereitschaft innerhalb Deutschlands. 
         `
       : `, da ich innerhalb Europas flexibel und umzugsbereit bin,`
     }
@@ -33,9 +33,9 @@ const appendedAboutMe = `
     um gemeinsam mit dem Team zu wachsen.`
 
 const languagesData =   [
-    { name: "Englisch", level: 83 },
-    { name: "Spanisch", level: 100 },
-    { name: "Deutsch", level: 67 }
+    { name: "Englisch", level: 83 , cefrLevel: 'C1' },
+    { name: "Deutsch", level: 67 , cefrLevel: 'B2' },
+    { name: "Spanisch", level: 100 , cefrLevel: 'C2' },
   ]
 
 const defaultCourses = [
@@ -48,7 +48,7 @@ const defaultEducation =
       entries: [
         {
           company: "Universidad de los Andes",
-          role: "M.Sc. System- und Computertechnik",
+          role: "M.Sc. System- und Computing Engineering",
           dates: " 2019",
           location: "Bogotá, Kolumbien",
           tasks: [
@@ -58,13 +58,14 @@ const defaultEducation =
         },
         {
           company: "Universidad de los Andes",
-          role: "Bachelor on System- und Computertechnik",
+          role: "B.Sc. in System- und Computing Engineering",
           dates: "2017",
           location: "Bogotá, Kolumbien",
           "tasks": [
+            "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB) als <b>System- und Computertechnik</b> (Abschlussklasse A4).",
             "Akademische Vertiefung in Visual und Computing Interaction.",
             "Forschungsmonitor in der Gruppe IMAGINE.",
-            "Stipendium „Quiero Estudiar“ für die besten nationalen ICFES-Ergebnisse."
+            "Stipendium <b>„Quiero Estudiar“</b> für die besten nationalen ICFES-Ergebnisse."
           ]
         },
         {
@@ -98,7 +99,7 @@ const defaultExtraCurricular = {
 export const seniorfrontend: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "Senior Frontend Ingenieur",
+    value: "Senior Frontend Ingenieur  - Fokus auf Typescript and Node.js",
     acronym: 'SF'
   },
   colors: {
@@ -119,11 +120,7 @@ export const seniorfrontend: CvData = {
     "Tools": ["Git","Vite","Storybook", "ESLint", "Jest"],
     "CI/CD": ['Docker','Jenkins','Kubernetes', "Linux", "Docker",]
   },
-  languages: [
-    { name: "Deutsch", level: 67 },
-    { name: "Englisch", level: 83 },
-    { name: "Spanisch", level: 100 },
-  ],
+  languages: languagesData,
   links: [
     { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
@@ -133,12 +130,22 @@ export const seniorfrontend: CvData = {
   experiences: [
     {title: "Berufserfahrung", entries: [ 
       {
+        company: 'Freelancer',
+        location: 'Berlin',
+        dates: 'Aug 2025 - present',
+        role: 'Full-Stack Ingenieur & Automatisierungsspezialist',
+        tasks: [
+          'Nutzung von LLMs (Claude, Gemini, NotebookLM) und <b>Vibe-Coding</b>-Methoden zur schnellen Prototypisierung',
+          'Rendering komplexer 3D-Masterpläne aus Unreal Engine und 3ds Max in <b>R3F</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen' 
+        ]
+      },
+      {
         company: 'ADIDAS',
         location: 'Bogotá',
         dates: 'Mai 2021 - Jun 2025',
         role: 'Softwareingenieur ',
         tasks: [
-            "Leitung der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
+            "Treiben der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
             "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
             "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout-<b>Backends</b> durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
             "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten."
@@ -163,7 +170,7 @@ export const seniorfrontend: CvData = {
 export const frontend: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Frontend Ingenieur",
+    value: "Frontend Ingenieur - Fokus auf Typescript and Node.js",
     acronym: 'FE'
   },
 }
@@ -171,7 +178,7 @@ export const frontend: CvData = {
 export const frontend3d: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Softwareingenieur - Fokus auf Computer Graphics und 3D",
+    value: "Softwareingenieur - Fokus auf Web Computer Graphics",
     acronym: 'F3D',
     
   },
@@ -179,7 +186,7 @@ export const frontend3d: CvData = {
     "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
     "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
     "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
@@ -219,7 +226,7 @@ export const seniorSoftware: CvData = {
         dates: 'Mai 2021 - Jun 2025',
         role: 'Softwareingenieur',
         tasks: [
-          "Leitung der Entwicklung von <b>Anpassungsmodulen</b> für Sportbekleidung im PDP mit <b>Three.js, C#</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
+          "Treiben der Entwicklung von <b>Anpassungsmodulen</b> für Sportbekleidung im PDP mit <b>Three.js, C#</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
           "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
           "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
           // "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten.",
@@ -249,7 +256,7 @@ export const seniorSoftware: CvData = {
       entries: [
         {
           company: "Universidad de los Andes",
-          role: "M.Sc. System- und Computertechnik",
+          role: "M.Sc. System- und Computing Engineering",
           dates: " 2019",
           location: "Bogotá, Kolumbien",
           tasks: [
@@ -259,7 +266,7 @@ export const seniorSoftware: CvData = {
         },
         {
           company: "Universidad de los Andes",
-          role: "Bachelor on System- und Computertechnik",
+          role: "B.Sc. on System- und Computing Engineering",
           dates: "2017",
           location: "Bogotá, Kolumbien",
           "tasks": [
@@ -300,7 +307,7 @@ export const fullStackIngenieur: CvData = {
   skills: {
     "Full-Stack": ["Typescript","C#","Node.js",".Net", "C++", "Python" ],
     "Frontend": ["Angular", "React","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
     "Tools": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
@@ -406,7 +413,7 @@ export const sre: CvData = {
   skills: {
     "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
     "CI/CD": ['Docker','Jenkins','K8',"YAML","Grafana","YAML"],
-    "Monitoring": ['AWS','Grafana','Instana','Kibana','Prometheus','Opsgenie'],
+    "Monitoring": ['AWS','Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
     "Tools": ['Linux','bash',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },

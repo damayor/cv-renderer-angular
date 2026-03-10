@@ -13,7 +13,7 @@ const defaultSkills =  {
   "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
   "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
   "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-  "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Kibana"],
+  "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
   "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
   "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
 }

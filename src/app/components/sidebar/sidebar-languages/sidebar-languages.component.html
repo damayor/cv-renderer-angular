@@ -3,7 +3,10 @@
   <div class="sidebar-block-content flex flex-col gap-4 mb-2">
     @for (lang of languages(); track $index) {
       <div class="flex flex-col w-full">
-        <div class="h6-primary mb-1 languages-font">{{ lang.name }}</div>
+        <div class="w-full flex flex-row">
+          <div class="h6-primary mb-1 languages-font grow">{{ lang.name }}</div>
+          <div class="h5-primary mb-1 languages-font pr-1">{{ lang.cefrLevel }}</div>
+        </div>
         <div class="w-full h-3 rounded bg-[var(--clr-gray-900)] flex">
           <div
             class="h-3 rounded"
