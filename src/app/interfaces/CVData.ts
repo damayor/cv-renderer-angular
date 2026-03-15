@@ -21,6 +21,9 @@ export interface Contact {
   location: string;
   nationality: string;
   visaStatus?: string;
+  address?: string;
+  workStatus?:string;
+  titleRecongition?: string
 }
 
 export interface CvData {

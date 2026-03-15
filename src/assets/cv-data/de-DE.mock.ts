@@ -6,8 +6,11 @@ const contactDefault : Contact = {
   email: "dr.mayorga20@gmail.com",
   phone: "+49 1525 2198970",
   location: "Berlin, Deutschland",
+  address:"Otto-Suhr-Allee 106C, 10585, Berlin",
   nationality: "Kolumbien",
-  visaStatus: "Chancenkarte"
+  workStatus: "Vorhanden - Sofortiger Einstieg: 20h/Woche", // "Chancenkarte",
+  visaStatus: 'Wechsel zur Vollzeit nach Vertragsschluss möglich (ca. 6 Wochen Bearbeitungszeit, abhängig von den Antwortzeiten der Ausländerbehörde).',
+  titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)'
 }
 
 const defaultSkills =  {
@@ -62,7 +65,7 @@ const defaultEducation =
           dates: "2017",
           location: "Bogotá, Kolumbien",
           "tasks": [
-            "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB) als <b>System- und Computertechnik</b> (Abschlussklasse A4).",
+            "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB <b>H+</b>) als <b>System- und Computertechnik</b> (Abschlussklasse <b>A4</b>).",
             "Akademische Vertiefung in Visual und Computing Interaction.",
             "Forschungsmonitor in der Gruppe IMAGINE.",
             "Stipendium <b>„Quiero Estudiar“</b> für die besten nationalen ICFES-Ergebnisse."
@@ -163,7 +166,7 @@ export const seniorfrontend: CvData = {
       }
     ]},
     defaultEducation,
-    defaultExtraCurricular
+    // defaultExtraCurricular
   ],
 };
 
@@ -286,7 +289,7 @@ export const seniorSoftware: CvData = {
         }
       ]
     },
-     defaultExtraCurricular
+    //  defaultExtraCurricular
   ],
 };
 

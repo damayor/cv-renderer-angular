@@ -5,9 +5,12 @@ const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: "+49 1525 2198970",
-  location: "Berlin, Germany",
+  location: "10585, Berlin, Germany",
   nationality: "Colombian",
-  visaStatus: "Chancenkarte (Opportunity Card)"
+  address:"Otto-Suhr-Allee 106C, 10585, Berlin",
+  workStatus: "Available - Immediate start possible (20h/week).",
+  visaStatus: 'Transition to full-time available upon contract signing (approx. 6-week processing time, subject to Ausländerbehörde response times).',
+  titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)'
 }
 
 const defaultSkills =  {
@@ -23,7 +26,7 @@ const appendedAboutMe = `
     Berlin-based    
     ${environment.cvScope === 'DE' ?
       `with work authorization and relocation flexibility within Germany,`
-      : `with relocation flexibility within Europe,`
+      : `with immediate relocation availability within Europe,`
     }
     I am looking for innovative engineering teams,
     not only through my technical expertise, 
@@ -60,7 +63,7 @@ const defaultEducation = {
           dates: "2017",
           location: "Bogotá, Colombia",
           tasks: [
-            "Officially recognized by Anabin (ZAB) as <b>System- und Computertechnik</b> (Abschlussklasse A4).",
+            "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
             "Academic option in Visual and Computing Interaction",
             "Research Monitor in IMAGINE group",
             "Scholarship <b>\"Quiero Estudiar\"</b> given to the best national ICFES scores"

@@ -12,14 +12,6 @@ import { CVDataService } from 'src/app/services/cvData.service';
   imports: [SidebarComponent, MainPanelComponent, UserHeaderComponent],
   template: `
     <div #pdfContent class="w-[210mm] bg-white mx-auto">
-      <user-header
-        [fullname]="cvData().contact.fullname"
-        [role]="cvData().occupation.value"
-        [location]="cvData().contact.location"
-        [phone]="cvData().contact.phone"
-        [email]="cvData().contact.email"
-        [visaStatus]="cvData().contact.visaStatus" 
-      ></user-header>
       <div class="flex flex-row">
         <sidebar [cvData]="cvData()"></sidebar>
         <main-panel class="bg-white" [cvData]="cvData()" [contact]="cvData().contact" ></main-panel>

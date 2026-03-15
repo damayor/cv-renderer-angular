@@ -3,7 +3,7 @@
 @import "tailwindcss";
 @theme {
   --color-primary: #1e295f;
-  --color-secondary: #a28848;
+  --color-secondary:#a2a4a9;
   --text-tiny: 0.625rem;
 }
 
@@ -32,7 +32,9 @@
   --clr-primary: #1e295f;
 
   /* --clr-primary: #48011d; */
-  --clr-secondary: #a28848;
+  
+  --clr-secondary:#a2a4a9 ;
+  /* #a28848; */
 
   --clr-gray-900: rgb(188, 190, 192);
   --clr-gray-500: #aaa;
@@ -110,6 +112,7 @@
   font-size: 14.0252px;
   letter-spacing: 1px;
   margin-bottom: 0px;
+  font-weight: 500;
   color: var(--clr-secondary);
   text-transform: uppercase;
 }
