@@ -32,8 +32,8 @@ const appendedAboutMe = `
       : `, da ich innerhalb Europas flexibel und umzugsbereit bin,`
     }
     Ich möchte meine internationale Erfahrung durch die hohen Qualitätstandards 
-    bereichern und mich aktiv an die lokalen Arbeitsweisen anpassen, 
-    um gemeinsam mit dem Team zu wachsen.`
+    bereichern und mich aktiv an die lokalen Arbeitsweisen anpassen`
+    //  //um gemeinsam mit dem Team zu wachsen.`
 
 const languagesData =   [
     { name: "Englisch", level: 83 , cefrLevel: 'C1' },
@@ -102,7 +102,7 @@ const defaultExtraCurricular = {
 export const seniorfrontend: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "Senior Frontend Ingenieur  - Fokus auf Typescript and Node.js",
+    value: "Senior Frontend Ingenieur  - Fokus auf Typescript und Node.js",
     acronym: 'SF'
   },
   colors: {
@@ -117,11 +117,13 @@ export const seniorfrontend: CvData = {
    in internationalen Umgebungen.
    ${appendedAboutMe}`,
   skills: {
-    "Frontend": [ "React","Angular","Storybook", "Three.JS", "R3F", "Vue.js", "SCSS","TailwindCSS" ],
-    "Graphics": ["Unity", "Unreal", "XR", "UI/UX", "Figma"],
-    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash","C++", "C#", "Python"],
-    "Tools": ["Git","Vite","Storybook", "ESLint", "Jest"],
-    "CI/CD": ['Docker','Jenkins','Kubernetes', "Linux", "Docker",]
+    "Frontend": ["React","Three.JS","TailwindCSS", "Next.js", "Angular"],
+    // "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
+    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS" ],
+    "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "CI/CD": [/*'Linux',*/'Docker','Jenkins','Kubernetes',"YAML","Grafana"],
+    "Tools": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -173,7 +175,7 @@ export const seniorfrontend: CvData = {
 export const frontend: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Frontend Ingenieur - Fokus auf Typescript and Node.js",
+    value: "Frontend Ingenieur - Fokus auf Typescript und Node.js",
     acronym: 'FE'
   },
 }
@@ -186,15 +188,122 @@ export const frontend3d: CvData = {
     
   },
   skills: {
-    "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
-    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
-    "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "Frontend": ["React","Angular","Three.JS", /*"R3F",*/"SCSS","TailwindCSS","Next.js" ],
+    "Full-Stack": ["Node.js","Typescript", "Nest.js", "REST", "Python", "SQL"],
+    "Graphics": ["WebGL", 'C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"],
+    "Tools": ["Git","Vite","Storybook","MongoDB", "Jest", "Vibe coding"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   // aboutme: `Frontend engineer with 5+ experience
 }
+
+
+export const juniorfrontend: CvData = {
+  ...seniorfrontend,
+  occupation: {
+    value: "Softwareingenieur - Fokus auf Typescript und Node.js",
+    acronym: 'FJ'
+  },
+  contact: contactDefault,
+  colors: {
+    primary: '#48011d',
+  },
+  aboutme: `
+   Ich bin Softwareingenieur mit 4 Jahren Erfahrung in Kolumbien
+   in der Erstellung von Web-Plattformen und Anwendungen 
+   und suche gezielt nach einer Möglichkeit, meine Kenntnisse an deutsche Qualitätsstandards anzupassen.
+   Ich bin spezialisiert auf NodeJS, TypeScript und UI/UX-Lösungen 
+   mit TailwindCSS, SCSS sowie interaktive Erfahrungen u.a. mit Three.js. 
+   Wohnhaft in Berlin mit Arbeitsgenehmigung und Umzugsbereitschaft innerhalb Deutschlands.`,
+  skills: {
+    "Frontend": ["React","TailwindCSS", "Three.js", "JS", "Next.js"],
+    "Full-Stack": ["Node.js","Angular","Typescript","REST", "Python" /*"GraphQL",*/],
+    // "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    "Tools": ["Git","Vite","Storybook","Docker","ESLint", "Jest"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  },
+  languages: languagesData,
+  links: [
+    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
+    { label: "Github", url: "https://github.com/damayor" },
+  ],
+  courses: defaultCourses,
+  experiences: [
+    {title: "Berufserfahrung", entries: [ 
+      {
+        company: 'Freelancer',
+        location: 'Berlin',
+        dates: 'Aug 2025 - present',
+        role: 'Full-Stack Ingenieur & Automatisierungsspezialist',
+        tasks: [
+          'Nutzung von LLMs (Claude, Gemini, NotebookLM) und <b>Vibe-Coding</b>-Methoden zur schnellen Prototypisierung',
+          'Rendering komplexer 3D-Masterpläne aus Unreal Engine und 3ds Max in <b>R3F</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen' 
+        ]
+      },
+      {
+        company: 'ADIDAS',
+        location: 'Bogotá',
+        dates: 'Mai 2021 - Jun 2025',
+        role: 'Softwareingenieur ',
+        tasks: [
+            "Treiben der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
+            "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
+          ]
+      },
+      {
+        company: 'UMBRA 3D STUDIO - INTERACTIVE',
+        location: 'Bogotá',
+        dates: 'Jan 2020 - Sep 2020',
+        role: 'Frontend Softwareentwickler',
+        tasks: [
+            "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
+            "Entwicklung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
+          ]
+      },
+      // {
+      //     company: "Universidad de los Andes",
+      //     role: "Forschungsmonitor",
+      //     dates: "2018 - 2019",
+      //     location: "Bogotá, Kolumbien",
+      //     tasks: [
+      //       "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen.",
+      //       "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
+      //     ]
+      //   },
+    ]},
+    {title: "Ausbildung", 
+      entries: [
+        {
+          company: "Universidad de los Andes",
+          role: "B.Sc. in System- und Computing Engineering",
+          dates: "2017",
+          location: "Bogotá, Kolumbien",
+          "tasks": [
+            "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB <b>H+</b>) als <b>System- und Computertechnik</b> (Abschlussklasse <b>A4</b>).",
+            "Akademische Vertiefung in Visual und Computing Interaction.",
+            "Stipendium <b>„Quiero Estudiar“</b> für die besten nationalen ICFES-Ergebnisse.",
+           // "Forschungsmonitor in der Gruppe IMAGINE.",
+            "Forschungspraktikum in AG HCI und Computer Graphics an der <b>Technischen Universität Kaiserslautern</b>", // im Jahr 2018.",
+
+          ]
+        },
+        {
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
+          role: "Gymnasium",
+          dates: "2012",
+          location: "Bogotá, Kolumbien",
+          tasks: [
+            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+          ]
+        }
+      ]
+    }
+  ],
+}
+
 
 export const seniorSoftware: CvData = {
   contact: contactDefault,

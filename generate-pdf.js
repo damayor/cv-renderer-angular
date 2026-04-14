@@ -11,6 +11,7 @@ const { exec } = require('child_process');
     'frontend3d': 'F3D',
     'fullstackengineer': 'FSE',
     'seniorfrontend': 'SF',
+    'juniorfrontend': 'JF',
     'seniorsoftware': 'SE',
     'graphicsEngineer':'VC',
     'sre':'DO',
@@ -18,18 +19,20 @@ const { exec } = require('child_process');
     'itSupport':'ITS'
   };
   
-  const role = args[0]; // 'seniorsoftware';
+  const role = args[0]; 
   const lang = args[1] ?? 'EN';
   const envir = args[2] ?? 'dev';
+  const inEU = args[3] ?? '';
 
   console.log('role argument:', role);
   console.log('language argument:', lang);
 
   const url = `http://localhost:4200/?lang=${lang}&occupation=${role}` ;
 
-  const prefix = lang == 'EN' 
+  const prefix = lang == 'EN'
     ? 'CV' 
     : lang == 'DE' ? 'LL' : 'HV'
+  const allEU = inEU == 'EU' ? 'E': '' 
   const namepdf = 'DavidMayorga'+acronyms[role];
 
   const browser = await puppeteer.launch();
@@ -40,7 +43,7 @@ const { exec } = require('child_process');
 
   const dateSuffix = envir == 'prd' ? '' : `-${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}`;
 
-  const pdfFilename = `./buildCVs/${prefix}${pad(now.getMonth() + 1)}-${namepdf}${dateSuffix}.pdf`;
+  const pdfFilename = `${prefix}${allEU}${pad(now.getMonth() + 1)}-${namepdf}${dateSuffix}.pdf`;
 
   await page.goto(url, { waitUntil: 'networkidle0' });
 
@@ -48,20 +51,19 @@ const { exec } = require('child_process');
   await page.waitForSelector('sidebar');
   await page.waitForSelector('main-panel');
 
-  // const height = 2099 // await page.evaluate(() => document.body.scrollHeight); //1930
-  // console.log('height to print letter ', height)
+  await page.evaluate((name) => {
+    document.title = name;
+  }, pdfFilename);
 
   await page.pdf({
-    path: pdfFilename,
-    // Se puede pero deja un bottom border
-    width: '210mm',   // A4 width
+    path: `./buildCVs/${pdfFilename}`,
+    width: '210mm', 
     format: 'A4',
-    // height: `${height}px`, // full content height
     printBackground: true
   });
 
   await browser.close();
   console.log(`PDF generated: ${pdfFilename}`);
 
-    exec(`code ${pdfFilename}`);
+    exec(`code ./buildCVs/${pdfFilename}`);
 })();

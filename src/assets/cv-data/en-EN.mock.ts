@@ -23,14 +23,14 @@ const defaultSkills =  {
 }
 
 const appendedAboutMe = `
-    Berlin-based    
+    Berlin-based
     ${environment.cvScope === 'DE' ?
       `with work authorization and relocation flexibility within Germany,`
       : `with immediate relocation availability within Europe,`
     }
     I am looking for innovative engineering teams,
-    not only through my technical expertise, 
-    but by helping colleagues grow so the 
+    not only through my technical expertise,
+    but by helping colleagues grow so the
     entire group can advance together.`
 
 const languagesData = [
@@ -45,7 +45,7 @@ const defaultCourses = [
   ]
 
 const defaultEducation = {
-  title: "Education", 
+  title: "Education",
       entries: [
         {
           company: "Universidad de los Andes",
@@ -75,7 +75,7 @@ const defaultEducation = {
           dates: "2012",
           location: "Bogotá, Colombia",
           tasks: [
-            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"
           ]
         }
       ]
@@ -83,7 +83,7 @@ const defaultEducation = {
 
 
 const defaultExtraCurricular = {
-  title: "Extra-Curricular Activities", 
+  title: "Additional Experience",
   entries: [
         {
           company: "SCIENCE AND TECHNOLOGY CLUBS",
@@ -91,7 +91,7 @@ const defaultExtraCurricular = {
           dates: "Jun 2019 - Jul 2019",
           location: "Bogotá",
           tasks: [
-            "Introduction to games and immersive development for highschool students, touching topics about materials, humanoids, animations, and script programming. Led by Universidad Nacional de Colombia and SENA."          
+            "Introduction to games and immersive development for highschool students, touching topics about materials, humanoids, animations, and script programming. Led by Universidad Nacional de Colombia and SENA."
           ]
         },
       ]
@@ -108,18 +108,18 @@ export const seniorfrontend: CvData = {
   },
   aboutme: `Frontend engineer with 4+ years of experience
     building large-scale web platforms and applications
-    specialized in Node.js, 
-    TypeScript, and UI/UX solutions using 
-    TailwindCSS, SCSS, and interactive experiences 
-    with Three.js. I own a deep understanding of CI/CD practices 
-    and SRE in international environments. 
+    specialized in Node.js,
+    TypeScript, and UI/UX solutions using
+    TailwindCSS, SCSS, and interactive experiences
+    with Three.js. I own a deep understanding of CI/CD practices
+    and SRE in international environments.
     ${appendedAboutMe}`,
   skills: {
-    "Frontend": ["Javascript","React","Three.JS","TailwindCSS", "Vue.js" ],
-    "Full-Stack": ["Typescript","Node.js","Angular","Next.js","bash", "Linux",],
+    "Frontend": ["React","Three.JS","TailwindCSS", "Next.js", "Vue.js"],
+    "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "Tools": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
@@ -137,8 +137,8 @@ export const seniorfrontend: CvData = {
         dates: 'Aug 2025 - present',
         role: 'Full-Stack Engineer & Automation Specialist',
         tasks: [
-          'Leveraged LLMs (Claude, Gemini, NotebookLM) and <b>Vibe Coding</b> methodologies to rapidly prototype and deploy automation tools.',
           'Rendering complex 3D masterplans from Unreal Engine and 3Ds Max within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
+          'Leveraged <b> LLMs</b>  (Claude, Gemini, NotebookLM) and  Vibe Coding methodologies to rapidly prototype and deploy automation tools.',
           // 'Built and deployed full-stack <b>Angular</b> application: a customizable CV generator with PDF export, using <b>RxJS</b> for reactive state management and dynamic rendering.',
           // 'Developed custom scripts using <b>Google Apps Scripts</b> to automate projects work-hour tracking in Google Sheets, increasing personal productivity by 40%.',
         ],
@@ -176,7 +176,7 @@ export const seniorfrontend: CvData = {
     ]},
     defaultEducation,
     defaultExtraCurricular
-  ],
+    ]
 };
 
 export const frontend: CvData = {
@@ -184,17 +184,124 @@ export const frontend: CvData = {
   occupation: {
     value: "Frontend Engineer - Focused on Typescript and Node.js",
     acronym: 'FE',
-  }, 
+  },
 }
 
 export const frontend3d: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Frontend Engineer - Focused on Computer Graphics and 3D",
+    value: "Frontend Engineer - Focused on Computer Graphics",
     acronym: 'F3D',
-    
+
   },
 }
+
+export const juniorfrontend: CvData = {
+  ...seniorfrontend,
+  occupation: {
+    value: "Frontend Engineer - Focused on Typescript and Node.js",
+    acronym: 'FJ'
+  },
+  contact: contactDefault,
+  colors: {
+    primary: '#48011d',
+  },
+  aboutme: `
+    Frontend engineer with 4+ years of experience
+    building web platforms and applications
+    specialized in Node.js,
+    TypeScript, and UI/UX solutions using
+    TailwindCSS, SCSS, and interactive experiences
+    with Three.js. I own a deep understanding of CI/CD practices
+    and SRE environments.
+    Berlin-based with work authorization and relocation flexibility within Germany`,
+  skills: {
+    "Frontend": ["React","Node.JS","TailwindCSS", "Three.js", "JS", "TS"],
+    // "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
+    "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    "Tools": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
+    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  },
+  languages: languagesData,
+  links: [
+    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
+    { label: "Github", url: "https://github.com/damayor" },
+  ],
+  courses: defaultCourses,
+  experiences: [
+    {title: "Work Experience", entries: [
+      {
+        company: 'ADIDAS',
+        location: 'Bogotá',
+        dates: 'May 2021 - Jun 2025',
+        role: 'Software Engineer',
+        tasks: [
+          'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
+          'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, and <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+        ]
+      },
+      {
+        company: 'MADBRICKS',
+        location: 'Remote',
+        dates: 'Sep 2020 - Dec 2020',
+        role: 'Game Developer',
+        tasks: [
+          'Developed and maintained hyper-casual mobile games using <b>Unity, C#</b> and <b>Unreal/C++</b>, enhancing user engagement and UI/UX experience.'
+        ]
+      },
+      {
+        company: 'UMBRA 3D STUDIO - INTERACTIVE',
+        location: 'Bogotá',
+        dates: 'Jan 2020 - Sep 2020',
+        role: 'Frontend Software Developer',
+        tasks: [
+          'Created <b>immersive 3D applications</b> with <b>React, C#</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector (PropTech)',
+          'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.'
+        ]
+      }
+    ]},
+    {title: "Education", 
+      entries: [
+        // {
+        //   company: "Universidad de los Andes",
+        //   role: "M.Sc. System- und Computing Engineering",
+        //   dates: " 2019",
+        //   location: "Bogotá, Kolumbien",
+        //   tasks: [
+        //     "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
+        //     "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
+        //   ]
+        // },
+        {
+          company: "Universidad de los Andes",
+          role: "Bachelor on Systems and Computing Engineering",
+          dates: "2017",
+          location: "Bogotá, Colombia",
+          tasks: [
+            "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
+            "Academic option in Visual and Computing Interaction",
+            "Scholarship <b>\"Quiero Estudiar\"</b> given to the best national ICFES scores",
+            "Role as research monitor focused on the <b>VR & haptic-based</b> training simulator for trauma orthopedic surgery in <b>Unity</b> and <b>Oculus</b>"
+          ]
+        },
+        {
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
+          role: "Gymnasium",
+          dates: "2012",
+          location: "Bogotá, Kolumbien",
+          tasks: [
+            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+          ]
+        }
+      ]
+    }
+  ],
+}
+
 
 export const softwareFreelancer: CvData = {
   ...seniorfrontend,
@@ -215,7 +322,7 @@ export const softwareFreelancer: CvData = {
   occupation: {
     value: "Frontend Engineer - Focused on Javascript and Node.js",
     acronym: 'FE',
-  }, 
+  },
 }
 
 //C++, full stack
@@ -229,10 +336,10 @@ export const seniorSoftware: CvData = {
     primary: '#48011d',
     secondary: '#808183'
   },
-  aboutme: `Software Engineer with 7+ years of experience 
+  aboutme: `Software Engineer with 7+ years of experience
     in large-scale web platforms and applications
-    specialized in Node.js, 
-    TypeScript, 
+    specialized in Node.js,
+    TypeScript,
     UI/UX solutions using TailwindCSS, SCSS, and
     interactive 3D experiences with
     Unity, Three.js and Unreal. Strong
@@ -240,7 +347,7 @@ export const seniorSoftware: CvData = {
     managing Site Reliability
     Engineering practices, ensuring
     monitoring, performance and
-    security.  
+    security.
     ${appendedAboutMe}`,
   skills: {
     "Full-Stack": ["Node.js","Typescript", "Next.js", "C++", "Python", "JS"],
@@ -261,7 +368,7 @@ export const seniorSoftware: CvData = {
   ],
   courses: defaultCourses,
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Work Experience", entries: [
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -308,9 +415,9 @@ export const fullStackEngineer: CvData = {
   aboutme: `Software Engineer with 5+ years
     of experience, specializing in high-scale platforms
     and interactive solutions.
-    Having worked for global brands like adidas, 
-    I own a deep understanding of CI/CD practices 
-    and SRE in international environments. 
+    Having worked for global brands like adidas,
+    I own a deep understanding of CI/CD practices
+    and SRE in international environments.
     ${appendedAboutMe}`,
   skills: {
     "Full-Stack": ["Typescript","C#","Node.js",".Net", "C++", "Python" ],
@@ -338,7 +445,7 @@ export const graphicsEngineer: CvData = {
       Skilled in frontend technologies
       such as React and Three.js to
       create interactive 3D applications
-      and engaging user interfaces, 
+      and engaging user interfaces,
       mixed with REST endpoints using
       backend microservices. Strong
       foundations in C++/C#, and Linux bash
@@ -346,10 +453,10 @@ export const graphicsEngineer: CvData = {
       digital solutions that enhance
       user experience, particularly in
       industrial and web contexts.
-      Recently relocated to Berlin with work authorization,  
+      Recently relocated to Berlin with work authorization,
       I am looking for innovative engineering teams,
-      not only through my technical expertise, 
-      but by helping colleagues grow so the 
+      not only through my technical expertise,
+      but by helping colleagues grow so the
       entire group can advance together.`,
   skills: {...defaultSkills,
     "Graphics": ['C++',"Unity",'C#',"Unreal","XR", "UI/UX", "Figma"],
@@ -367,7 +474,7 @@ export const graphicsEngineer: CvData = {
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Work Experience", entries: [
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -422,13 +529,13 @@ export const sre: CvData = {
     Experienced in bridging
     software engineering with SRE
     practices to deliver reliable
-    solutions based on observability 
-    and monitoring. Skilled in CI/CD, 
+    solutions based on observability
+    and monitoring. Skilled in CI/CD,
     performance optimization, and
     ensuring scalable, resilient
-    systems. Recently relocated to Berlin with work authorization, 
+    systems. Recently relocated to Berlin with work authorization,
     and motivated to join teams where I can
-    share knowledge, mentor others, and 
+    share knowledge, mentor others, and
     help elevate the collective skills.`,
   skills: {
     "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
@@ -446,7 +553,7 @@ export const sre: CvData = {
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Work Experience", entries: [
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -458,7 +565,7 @@ export const sre: CvData = {
           production issues, ensuring <b>99.99%</b> microservice availability.`,
           `Refactored Jenkins pipelines and implemented CI/CD best
           practices for the Checkout service repository, cutting
-          deployment time from <b>15 minutes to under 6 minutes</b>`,        
+          deployment time from <b>15 minutes to under 6 minutes</b>`,
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
         ]
       },
@@ -497,10 +604,10 @@ export const contentcreator: CvData = {
     managing Site Reliability
     Engineering practices, ensuring
     monitoring, performance and
-    scalability. 
-    Recently relocated to Berlin with work authorization,  
+    scalability.
+    Recently relocated to Berlin with work authorization,
     I am looking for innovative teams where I can
-    share knowledge, mentor others, and 
+    share knowledge, mentor others, and
     help elevate the collective skills.`,
   skills: {
     "Service": ["Customer service","Inventory management", "Network","Problem solving",],
@@ -517,7 +624,7 @@ export const contentcreator: CvData = {
   ],
   courses: defaultCourses,
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Work Experience", entries: [
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -551,15 +658,17 @@ export const contentcreator: CvData = {
       }
     ]},
     defaultEducation,
-     {title: "Extra-Curricular Activities", 
+     {
+      title: "Additional Experience",
       entries: [
         {
           company: "Castel Magazine Models",
-          role: "Model",
+          role: "Fashion Model",
           dates: "Jun 2024 - Jun 2025",
           location: "Bogotá",
           tasks: [
-            "Fashion model focused on photography, performance and body expression.",
+            "Content creator developing authentic visual content and UGC for social media marketing",
+            "Commercial model specialised in posing photography, body expresion and events management.",
           ]
         },
         {
@@ -568,7 +677,7 @@ export const contentcreator: CvData = {
           dates: "Jun 2019 - Jul 2019",
           location: "Bogotá",
           tasks: [
-            "Teacher of games and immersive development for highschool students, touching topics about materials, humanoids, animations, and script programming. Led by Universidad Nacional de Colombia and SENA."          
+            "Teacher of games and immersive development for highschool students, touching topics about materials, humanoids, animations, and script programming. Led by Universidad Nacional de Colombia and SENA."
           ]
         },
       ]
@@ -576,7 +685,7 @@ export const contentcreator: CvData = {
   ],
 };
 
-export const supportAssistant: CvData = { 
+export const supportAssistant: CvData = {
   contact: contactDefault,
   occupation: {
     value: "Retail & Event Support Assistant",
@@ -585,21 +694,21 @@ export const supportAssistant: CvData = {
   colors: {
     primary: '#2c2e81'
   },
-  aboutme: `Detail-oriented professional 
+  aboutme: `Detail-oriented professional
     with experience supporting store
-    operations, logistics, and inventory 
-    processes during high-demand seasons. 
-    Background as a software engineer 
-    and model. 
-    Reliable and adaptable with learning agibility. 
-    Recently relocated to Berlin with work authorization,  
+    operations, logistics, and inventory
+    processes during high-demand seasons.
+    Background as a software engineer
+    and model.
+    Reliable and adaptable with learning agibility.
+    Recently relocated to Berlin with work authorization,
     I am looking for innovative teams,
-    not only through my technical expertise, 
-    but by helping colleagues grow so the 
+    not only through my technical expertise,
+    but by helping colleagues grow so the
     entire group can advance together.`,
   skills: {
     "Service": ["Customer service","Inventory management", "Troubleshooting"],
-    "Tech": [  
+    "Tech": [
         "Social Networks", "Windows", "Linux", "Vibe coding"
     ],
     "Soft Skills":["Easy Adaptable",'Teamwork', "Charisma"]
@@ -614,7 +723,7 @@ export const supportAssistant: CvData = {
   courses: [
   ],
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Work Experience", entries: [
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -647,7 +756,7 @@ export const supportAssistant: CvData = {
       },
 
     ]},
-    {title: "Education", 
+    {title: "Education",
       entries: [
         {
           company: "Universidad de los Andes",
@@ -664,12 +773,12 @@ export const supportAssistant: CvData = {
           dates: "2012",
           location: "Bogotá, Colombia",
           tasks: [
-            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"
           ]
         }
       ]
     },
-     {title: "Extra-Curricular Activities", 
+     {title: "Additional Experience",
       entries: [
         {
           company: "Castel Magazine Models",
@@ -686,7 +795,7 @@ export const supportAssistant: CvData = {
           dates: "Ene 2016 - Jun 2018",
           location: "Bogotá",
           tasks: [
-            "Participated in acting and theater plays, developing teamwork, improvisation, and communication skills."          
+            "Participated in acting and theater plays, developing teamwork, improvisation, and communication skills."
           ]
         },
       ]
@@ -694,7 +803,7 @@ export const supportAssistant: CvData = {
   ],
 };
 
-export const itSupport: CvData = { 
+export const itSupport: CvData = {
   contact: contactDefault,
   occupation: {
     value: "IT Support Agent",
@@ -712,7 +821,7 @@ export const itSupport: CvData = {
     contribute to a collaborative IT team.`,
   skills: {
     "Service": ["Customer service","Inventory management", "Network","Problem solving",],
-    "Tech": [  
+    "Tech": [
         "macOS", "Linux",
         "Windows","microsoft Office", "Vibe coding"
     ],
@@ -725,7 +834,7 @@ export const itSupport: CvData = {
   courses: [
   ],
   experiences: [
-    {title: "Work Experience", entries: [ 
+    {title: "Work Experience", entries: [
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -736,7 +845,7 @@ export const itSupport: CvData = {
           'Supported retail operations during high-consumption days such as Christmas and Black Friday, assisting with <b>sales, inventory organization</b>, and <b>warehouse management</b>.',
         ]
       },
-     
+
       {
         company: 'UMBRA 3D STUDIO - INTERACTIVE',
         location: 'Bogotá',
@@ -757,7 +866,7 @@ export const itSupport: CvData = {
         ]
       },
     ]},
-    {title: "Education", 
+    {title: "Education",
       entries: [
         {
           company: "Universidad de los Andes",
@@ -774,12 +883,12 @@ export const itSupport: CvData = {
           dates: "2012",
           location: "Bogotá, Colombia",
           tasks: [
-            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"
           ]
         }
       ]
     },
-     {title: "Extra-Curricular Activities", 
+     {title: "Additional Experience",
       entries: [
         {
           company: "Universidad de los Andes",
@@ -787,7 +896,7 @@ export const itSupport: CvData = {
           dates: "Ene 2016 - Jun 2018",
           location: "Bogotá",
           tasks: [
-            "Participated in acting and theater plays, developing teamwork, improvisation, and communication skills."          
+            "Participated in acting and theater plays, developing teamwork, improvisation, and communication skills."
           ]
         },
       ]
