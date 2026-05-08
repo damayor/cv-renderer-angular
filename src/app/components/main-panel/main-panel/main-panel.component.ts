@@ -20,7 +20,7 @@ import { Contact, CvData } from '@interfaces/CVData';
         <main-section-timeline [title]="section.title" [experiences]="section.entries"></main-section-timeline>
       }
       
-      @if (env.cvScope !== 'EU' ) {
+      @if (env.cvScope == 'DE' ) {
         <personal-details [cvPersonalDetailsData]="cvData().contact" ></personal-details>
       }
     </div>

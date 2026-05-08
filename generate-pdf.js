@@ -8,7 +8,7 @@ const { exec } = require('child_process');
 
   const acronyms = {
     'frontend': 'FE',
-    'frontend3d': 'F3D',
+    'frontend3d': 'FV',
     'fullstackengineer': 'FSE',
     'seniorfrontend': 'SF',
     'juniorfrontend': 'JF',
@@ -22,7 +22,7 @@ const { exec } = require('child_process');
   const role = args[0]; 
   const lang = args[1] ?? 'EN';
   const envir = args[2] ?? 'dev';
-  const inEU = args[3] ?? '';
+  const scope = args[3] ?? '';
 
   console.log('role argument:', role);
   console.log('language argument:', lang);
@@ -32,7 +32,7 @@ const { exec } = require('child_process');
   const prefix = lang == 'EN'
     ? 'CV' 
     : lang == 'DE' ? 'LL' : 'HV'
-  const allEU = inEU == 'EU' ? 'E': '' 
+  const country = scope == 'EU' ? 'E': scope =='ES' ? 'S':'' 
   const namepdf = 'DavidMayorga'+acronyms[role];
 
   const browser = await puppeteer.launch();
@@ -43,7 +43,7 @@ const { exec } = require('child_process');
 
   const dateSuffix = envir == 'prd' ? '' : `-${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}`;
 
-  const pdfFilename = `${prefix}${allEU}${pad(now.getMonth() + 1)}-${namepdf}${dateSuffix}.pdf`;
+  const pdfFilename = `${prefix}${country}${pad(now.getMonth() + 1)}-${namepdf}${dateSuffix}.pdf`;
 
   await page.goto(url, { waitUntil: 'networkidle0' });
 
@@ -65,5 +65,5 @@ const { exec } = require('child_process');
   await browser.close();
   console.log(`PDF generated: ${pdfFilename}`);
 
-    exec(`code ./buildCVs/${pdfFilename}`);
+    exec(`code buildCVs/${pdfFilename}`);
 })();

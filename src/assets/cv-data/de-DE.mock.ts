@@ -9,7 +9,7 @@ const contactDefault : Contact = {
   address:"Otto-Suhr-Allee 106C, 10585, Berlin",
   nationality: "Kolumbien",
   workStatus: "Vorhanden - Sofortiger Einstieg: 20h/Woche", // "Chancenkarte",
-  visaStatus: 'Wechsel zur Vollzeit nach Vertragsschluss möglich (ca. 6 Wochen Bearbeitungszeit, abhängig von den Antwortzeiten der Ausländerbehörde).',
+  visaStatus: 'Wechsel zur Vollzeit nach Vertragsschluss möglich (ca. 4 Wochen Bearbeitungszeit, abhängig von den Antwortzeiten der Ausländerbehörde).',
   titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)'
 }
 
@@ -32,7 +32,7 @@ const appendedAboutMe = `
       : `, da ich innerhalb Europas flexibel und umzugsbereit bin,`
     }
     Ich möchte meine internationale Erfahrung durch die hohen Qualitätstandards 
-    bereichern und mich aktiv an die lokalen Arbeitsweisen anpassen`
+    bereichern und mich aktiv an die lokalen Arbeitsweisen anpassen.`
     //  //um gemeinsam mit dem Team zu wachsen.`
 
 const languagesData =   [
@@ -83,6 +83,34 @@ const defaultEducation =
       ]
     }
 
+const ohneMasterEducation = {title: "Ausbildung", 
+      entries: [
+        {
+          company: "Universidad de los Andes",
+          role: "B.Sc. in System- und Computing Engineering",
+          dates: "2017",
+          location: "Bogotá, Kolumbien",
+          "tasks": [
+            "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB >H+) als >System- und Computertechnik (Abschlussklasse <b>A4).",
+            "Akademische Vertiefung in Visual und Computing Interaction.",
+            "Stipendium <b>„Quiero Estudiar“ für die besten nationalen ICFES-Ergebnisse.",
+           // "Forschungsmonitor in der Gruppe IMAGINE.",
+            "Forschungspraktikum in AG HCI und Computer Graphics an der <b>Technischen Universität Kaiserslautern", // im Jahr 2018.",
+
+          ]
+        },
+        {
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
+          role: "Gymnasium",
+          dates: "2012",
+          location: "Bogotá, Kolumbien",
+          tasks: [
+            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+          ]
+        }
+      ]
+    }
+
 const defaultExtraCurricular = {
   title: "Außerunterrichtliche Aktivitäten", 
   entries: [
@@ -98,6 +126,16 @@ const defaultExtraCurricular = {
     ]
   }
 
+const freelancerExperience = {
+    company: 'Freelancer',
+    location: 'Berlin',
+    dates: 'Aug 2025 - present',
+    role: 'Full-Stack Ingenieur & Automatisierungsspezialist',
+    tasks: [
+      'Nutzung von LLMs (Claude, Gemini, NotebookLM) und <b>Vibe-Coding-Methoden zur schnellen Prototypisierung',
+      'Rendering komplexer 3D-Masterpläne aus Unreal Engine und 3ds Max in <b>R3F</b> unter Einbindung von <b>WebAssembly</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen' 
+    ]
+  }
 
 export const seniorfrontend: CvData = {
   contact: contactDefault,
@@ -109,11 +147,10 @@ export const seniorfrontend: CvData = {
     primary: '#48011d',
   },
   aboutme: `
-   Ich bin Softwareingenieur mit 6+ Jahren Erfahrung
+   Ich bin Softwareingenieur mit 5 Jahren Erfahrung
    in der Erstellung von großen Web-Plattformen und Anwendungen. 
-   Ich bin spezialisiert auf NodeJS, TypeScript und UI/UX-Lösungen 
-   mit TailwindCSS, SCSS sowie interaktive Erfahrungen u.a. mit Three.js. 
-   Ich besitze ein tiefes Verständnis von CI/CD-Praktiken und SRE 
+   Ich bin spezialisiert auf NodeJS, TypeScript und interaktive Erfahrungen u.a. mit Three.js, und Unreal. 
+   Solide Kenntnisse in C++, Linux Bash und SRE 
    in internationalen Umgebungen.
    ${appendedAboutMe}`,
   skills: {
@@ -134,16 +171,7 @@ export const seniorfrontend: CvData = {
   courses: defaultCourses,
   experiences: [
     {title: "Berufserfahrung", entries: [ 
-      {
-        company: 'Freelancer',
-        location: 'Berlin',
-        dates: 'Aug 2025 - present',
-        role: 'Full-Stack Ingenieur & Automatisierungsspezialist',
-        tasks: [
-          'Nutzung von LLMs (Claude, Gemini, NotebookLM) und <b>Vibe-Coding</b>-Methoden zur schnellen Prototypisierung',
-          'Rendering komplexer 3D-Masterpläne aus Unreal Engine und 3ds Max in <b>R3F</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen' 
-        ]
-      },
+      freelancerExperience,
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -183,18 +211,26 @@ export const frontend: CvData = {
 export const frontend3d: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Softwareingenieur - Fokus auf Web Computer Graphics",
+    value: "Softwareingenieur - Fokus auf Computer Graphics und C++",
     acronym: 'F3D',
     
   },
   skills: {
-    "Frontend": ["React","Angular","Three.JS", /*"R3F",*/"SCSS","TailwindCSS","Next.js" ],
-    "Full-Stack": ["Node.js","Typescript", "Nest.js", "REST", "Python", "SQL"],
-    "Graphics": ["WebGL", 'C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"],
-    "Tools": ["Git","Vite","Storybook","MongoDB", "Jest", "Vibe coding"],
+    "Graphics": ["WebGL", "Three.js", "XR", "Unity", "Unreal", "C++", "Shaders"],
+    "Frontend": ["React", "TypeScript", "Next.js", "SCSS", "TailwindCSS"],
+    "Full-Stack": ["Node.js", "Nest.js", "REST", "Python", "JS", "C#"],
+    "CI/CD": ["Git", "Docker", "Jenkins", "Linux", "K8", "Grafana"],
+    "Tools": ["Blender","Vite", "Storybook", "Photoshop"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
+  // skills: {
+  //   "Frontend": ["React","Three.JS", /*"R3F",*/"SCSS","TailwindCSS","Next.js" ],
+  //   "Graphics": ['C++',"WebGL", "Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+  //   "Full-Stack": ["Node.js","Typescript", "Nest.js", "REST", "Python", "SQL"],
+  //   "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"],
+  //   "Tools": ["Git","Vite","Storybook","MongoDB", "Jest", "Vibe coding"],
+  //   "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  // },
   // aboutme: `Frontend engineer with 5+ experience
 }
 
@@ -233,16 +269,7 @@ export const juniorfrontend: CvData = {
   courses: defaultCourses,
   experiences: [
     {title: "Berufserfahrung", entries: [ 
-      {
-        company: 'Freelancer',
-        location: 'Berlin',
-        dates: 'Aug 2025 - present',
-        role: 'Full-Stack Ingenieur & Automatisierungsspezialist',
-        tasks: [
-          'Nutzung von LLMs (Claude, Gemini, NotebookLM) und <b>Vibe-Coding</b>-Methoden zur schnellen Prototypisierung',
-          'Rendering komplexer 3D-Masterpläne aus Unreal Engine und 3ds Max in <b>R3F</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen' 
-        ]
-      },
+      freelancerExperience,
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -274,33 +301,7 @@ export const juniorfrontend: CvData = {
       //     ]
       //   },
     ]},
-    {title: "Ausbildung", 
-      entries: [
-        {
-          company: "Universidad de los Andes",
-          role: "B.Sc. in System- und Computing Engineering",
-          dates: "2017",
-          location: "Bogotá, Kolumbien",
-          "tasks": [
-            "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB <b>H+</b>) als <b>System- und Computertechnik</b> (Abschlussklasse <b>A4</b>).",
-            "Akademische Vertiefung in Visual und Computing Interaction.",
-            "Stipendium <b>„Quiero Estudiar“</b> für die besten nationalen ICFES-Ergebnisse.",
-           // "Forschungsmonitor in der Gruppe IMAGINE.",
-            "Forschungspraktikum in AG HCI und Computer Graphics an der <b>Technischen Universität Kaiserslautern</b>", // im Jahr 2018.",
-
-          ]
-        },
-        {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
-          role: "Gymnasium",
-          dates: "2012",
-          location: "Bogotá, Kolumbien",
-          tasks: [
-            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
-          ]
-        }
-      ]
-    }
+    ohneMasterEducation
   ],
 }
 
@@ -501,14 +502,15 @@ export const gameEntwickler: CvData = {
   ],
 };
 
-export const sre: CvData = {
+export const sre: CvData = { 
   contact: contactDefault,
   occupation: {
-    value: "DevOps / Site Reliability Engineer",
+    value: "DevOps und Softwareingenieur",
     acronym: 'DO',
   },
   colors: {
-    primary: '#287848',
+    primary: '#286848',
+    secondary: '#999',
   },
   aboutme: `Softwareingenieur mit 5 Jahren Erfahrung 
     in großskaligen Plattformen bei einem multinationalen 
@@ -523,9 +525,9 @@ export const sre: CvData = {
     beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
     begleiten und die kollektiven Fähigkeiten stärken könnte.`,
   skills: {
-    "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
     "CI/CD": ['Docker','Jenkins','K8',"YAML","Grafana","YAML"],
     "Monitoring": ['AWS','Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
+    "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
     "Tools": ['Linux','bash',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
@@ -540,6 +542,7 @@ export const sre: CvData = {
   ],
   experiences: [
     {title: "Berufserfahrung", entries: [ 
+      freelancerExperience,
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -563,7 +566,7 @@ export const sre: CvData = {
         ]
       }
     ]},
-    defaultEducation,
-    defaultExtraCurricular
+    ohneMasterEducation,
+    // defaultExtraCurricular
   ]
 }

@@ -70,11 +70,25 @@
                 }
               ]
             },
+            "eu-es": {
+               "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.es.ts"
+                }
+              ]
+            },
             "de": {
               "localize": ["de"]
             },
             "es": {
-              "localize": ["es"]
+              "localize": ["es"],
+               "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.es.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -90,6 +104,9 @@
             },
             "eu": {
               "buildTarget": "cv-renderer:build:development,eu" 
+            },
+            "eu-es": {
+              "buildTarget": "cv-renderer:build:development,eu-es" 
             },
             "de": {
               "buildTarget": "cv-renderer:build:development,de" 

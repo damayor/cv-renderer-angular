@@ -8,9 +8,9 @@ import { Contact } from '@interfaces/CVData';
   standalone: true,
     imports: [CommonModule],
   template: `
-    <div class="flex items-center justify-between p-5 pb-0">
+    <div class="flex items-center justify-between p-5 pb-0 gap-2">
       <!-- Left: Name und Role -->
-      <div class="flex flex-col">
+      <div class="flex flex-col ">
         <div class="text-4xl  uppercase" style="color: var(--clr-primary)">{{userData().fullname }}</div>
         <div class="h3-occupation">{{role() }}</div>
       </div>

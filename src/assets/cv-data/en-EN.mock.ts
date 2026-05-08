@@ -23,15 +23,15 @@ const defaultSkills =  {
 }
 
 const appendedAboutMe = `
-    Berlin-based
-    ${environment.cvScope === 'DE' ?
-      `with work authorization and relocation flexibility within Germany,`
-      : `with immediate relocation availability within Europe,`
+   Berlin-based 
+    ${environment.cvScope === 'ES' 
+      ? `relocating to Spain in July 2026,` 
+      : environment.cvScope === 'DE' 
+        ? `with work authorization and relocation flexibility within Germany,` 
+        : `with immediate relocation availability within Europe,`
     }
-    I am looking for innovative engineering teams,
-    not only through my technical expertise,
-    but by helping colleagues grow so the
-    entire group can advance together.`
+    Dedicated to contributing my expertise gained at global leaders, such as adidas,
+    fostering collaboration through proactive engagement and empathetic leadership.`
 
 const languagesData = [
     { name: "English", level: 83, cefrLevel: 'C1' },
@@ -81,6 +81,23 @@ const defaultEducation = {
       ]
     }
 
+    
+  
+const freelancerExperience = {
+    company: 'Freelancer',
+    location: 'Berlin',
+    dates: 'Aug 2025 - present',
+    role: 'Full-Stack Engineer & Automation Specialist',
+    tasks: [
+      'Rendering complex 3D masterplans from Unreal Engine and 3Ds Max within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
+      'Leveraged <b> LLMs</b>  (Claude, Gemini, NotebookLM) and  Vibe Coding methodologies to rapidly prototype and deploy automation tools.',
+      'Built and deployed full-stack a customizable CV generator with <b>Angular</b>, <b>RxJS</b> for reactive state management and dynamic rendering.',
+      // 'Developed custom scripts using <b>Google Apps Scripts</b> to automate projects work-hour tracking in Google Sheets, increasing personal productivity by 40%.',
+    ],
+    achievements: [
+      'Consolidated the adidas Tech Hub as a technology benchmark in Colombia by spearheading the adidas Campus Program, leading the technical mentorship and training of high-potential engineers'
+    ]
+  }
 
 const defaultExtraCurricular = {
   title: "Additional Experience",
@@ -110,16 +127,15 @@ export const seniorfrontend: CvData = {
     building large-scale web platforms and applications
     specialized in Node.js,
     TypeScript, and UI/UX solutions using
-    TailwindCSS, SCSS, and interactive experiences
-    with Three.js. I own a deep understanding of CI/CD practices
+    TailwindCSS, SCSS, and interactive 2D and 3D experiences. I own a deep understanding of CI/CD practices
     and SRE in international environments.
     ${appendedAboutMe}`,
   skills: {
-    "Frontend": ["React","Three.JS","TailwindCSS", "Next.js", "Vue.js"],
-    "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
-    "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "Frontend": ["React","Three.JS","Canvas","TailwindCSS", /*"Next.js",*/ "Vue.js",],
+    "Full-Stack": ["Next.js","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
+    "Graphics": ['C++',"Unity", 'C#',"Unreal","WebAssembly", "UI/UX", "Figma"],
     "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
+    "Tools": ["Git","Photoshop","Storybook","Nest.js","ESLint", "Jest"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
@@ -131,21 +147,7 @@ export const seniorfrontend: CvData = {
   courses: defaultCourses,
   experiences: [
     {title: "Work Experience", entries: [
-      {
-        company: 'Freelancer',
-        location: 'Berlin',
-        dates: 'Aug 2025 - present',
-        role: 'Full-Stack Engineer & Automation Specialist',
-        tasks: [
-          'Rendering complex 3D masterplans from Unreal Engine and 3Ds Max within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
-          'Leveraged <b> LLMs</b>  (Claude, Gemini, NotebookLM) and  Vibe Coding methodologies to rapidly prototype and deploy automation tools.',
-          // 'Built and deployed full-stack <b>Angular</b> application: a customizable CV generator with PDF export, using <b>RxJS</b> for reactive state management and dynamic rendering.',
-          // 'Developed custom scripts using <b>Google Apps Scripts</b> to automate projects work-hour tracking in Google Sheets, increasing personal productivity by 40%.',
-        ],
-        achievements: [
-          'Consolidated the adidas Tech Hub as a technology benchmark in Colombia by spearheading the adidas Campus Program, leading the technical mentorship and training of high-potential engineers'
-        ]
-      },
+     freelancerExperience,
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -266,16 +268,6 @@ export const juniorfrontend: CvData = {
     ]},
     {title: "Education", 
       entries: [
-        // {
-        //   company: "Universidad de los Andes",
-        //   role: "M.Sc. System- und Computing Engineering",
-        //   dates: " 2019",
-        //   location: "Bogotá, Kolumbien",
-        //   tasks: [
-        //     "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
-        //     "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
-        //   ]
-        // },
         {
           company: "Universidad de los Andes",
           role: "Bachelor on Systems and Computing Engineering",
@@ -336,18 +328,13 @@ export const seniorSoftware: CvData = {
     primary: '#48011d',
     secondary: '#808183'
   },
-  aboutme: `Software Engineer with 7+ years of experience
+  aboutme: `Software Engineer with 5+ years of experience
     in large-scale web platforms and applications
-    specialized in Node.js,
-    TypeScript,
-    UI/UX solutions using TailwindCSS, SCSS, and
-    interactive 3D experiences with
-    Unity, Three.js and Unreal. Strong
-    foundations in C++/C#, and Linux bash
-    managing Site Reliability
-    Engineering practices, ensuring
-    monitoring, performance and
-    security.
+    specialized in Node.js, and
+    visual solutions of high performance using React, R3F and Angular.
+    Strong foundations in C++, Linux bash, LLMs
+    and SRE/DevOps practices, ensuring
+    monitoring, performance and scalability.
     ${appendedAboutMe}`,
   skills: {
     "Full-Stack": ["Node.js","Typescript", "Next.js", "C++", "Python", "JS"],
@@ -356,11 +343,7 @@ export const seniorSoftware: CvData = {
     "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
-  languages: [
-    { name: "English", level: 83 },
-    { name: "Spanish", level: 100 },
-    { name: "German", level: 67 },
-  ],
+  languages: languagesData,
   links: [
     { label: "Portfolio", url: "https://mayinteractive.io/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
@@ -369,6 +352,7 @@ export const seniorSoftware: CvData = {
   courses: defaultCourses,
   experiences: [
     {title: "Work Experience", entries: [
+      freelancerExperience,
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -515,7 +499,7 @@ export const graphicsEngineer: CvData = {
 export const sre: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "DevOps / Site Reliability Engineer",
+    value: "SRE and Software Engineer",
     acronym: 'DO',
   },
   colors: {
@@ -539,9 +523,9 @@ export const sre: CvData = {
     help elevate the collective skills.`,
   skills: {
     "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
-    "CI/CD": ['Docker','Jenkins','K8',"YAML","Grafana","YAML"],
-    "Monitoring": ['AWS','Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
-    "Tools": ['Linux','bash',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "CI/CD": ['Docker','Jenkins','K8',"Grafana","YAML", "IPv4"],
+    "Monitoring": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie', 'SQL'],
+    "Tools": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
     "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
@@ -554,6 +538,7 @@ export const sre: CvData = {
   ],
   experiences: [
     {title: "Work Experience", entries: [
+      freelancerExperience,
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -566,7 +551,7 @@ export const sre: CvData = {
           `Refactored Jenkins pipelines and implemented CI/CD best
           practices for the Checkout service repository, cutting
           deployment time from <b>15 minutes to under 6 minutes</b>`,
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Storybook</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
         ]
       },
       {
@@ -581,7 +566,7 @@ export const sre: CvData = {
       }
     ]},
     defaultEducation,
-    defaultExtraCurricular
+    // defaultExtraCurricular
   ],
 };
 
