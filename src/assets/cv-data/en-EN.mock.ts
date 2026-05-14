@@ -5,12 +5,12 @@ const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: "+49 1525 2198970",
-  location: "10585, Berlin, Germany",
+  location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (July 2026)",
   nationality: "Colombian",
-  address:"Otto-Suhr-Allee 106C, 10585, Berlin",
-  workStatus: "Available - Immediate start possible (20h/week).",
-  visaStatus: 'Transition to full-time available upon contract signing (approx. 6-week processing time, subject to Ausländerbehörde response times).',
-  titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)'
+  address:"Otto-Suhr-Allee 106C, 10585 Berlin",
+  workStatus: "Available 20h/week",
+  titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
+  visaStatus: 'Full-time available upon contract signing (approx. 6-week processing time, subject to Ausländerbehörde response times).',
 }
 
 const defaultSkills =  {
@@ -18,19 +18,19 @@ const defaultSkills =  {
   "Full-Stack": ["Javascript","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
   "Graphics": ["Unity","XR",'C#','C++',"Unreal","UI/UX", "Figma"],
   "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-  "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-  "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+  "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
 }
 
 const appendedAboutMe = `
    Berlin-based 
     ${environment.cvScope === 'ES' 
-      ? `relocating to Spain in July 2026,` 
+      ? `relocating to Spain in summer.` 
       : environment.cvScope === 'DE' 
-        ? `with work authorization and relocation flexibility within Germany,` 
-        : `with immediate relocation availability within Europe,`
+        ? `with work authorization and relocation flexibility within Germany.` 
+        : `with immediate relocation availability within Europe.`
     }
-    Dedicated to contributing my expertise gained at global leaders, such as adidas,
+    Dedicated to contributing my expertise gained at global leaders,
     fostering collaboration through proactive engagement and empathetic leadership.`
 
 const languagesData = [
@@ -40,7 +40,7 @@ const languagesData = [
   ]
 
 const defaultCourses = [
-    { name: "ANGULAR: FROM ZERO TO EXPERT - EDITION 2025", institution: "{D/T} DEVTALLES", date: "Jul 2025" },
+    { name: "ANGULAR: FROM ZERO TO EXPERT - EDITION 2025", institution: "{D/T} DevTalles", date: "Jul 2025" },
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ]
 
@@ -53,8 +53,18 @@ const defaultEducation = {
           dates: " 2019",
           location: "Bogotá, Colombia",
           tasks: [
-            "Research Internship in AG HCI and Computer Graphics at <b>Technical University of Kaiserslautern</b> during 2018",
-            "Role as research monitor focused on the <b>VR & haptic-based</b> training simulator for trauma orthopedic surgery in <b>Unity</b> and <b>Oculus</b>, improving trainee performance during pilot tests."
+            'GPA: 4.5/5.0',
+            "Deploy of a <b>VR & haptic-based</b> training simulator for trauma orthopedic surgery in <b>Unity</b>",
+            "Academic option in Visual and Computing Interaction"
+          ]
+        },
+        {
+          company: "TUK",
+          role: "Research Internship",
+          dates: " 2018",
+          location: "Kaiserslautern",
+          tasks: [
+            "Optimizing long-distance recognition in <b>AR</b> using <b>OpenCV</b> for Hololens within the AG HCI and Computer Graphics."
           ]
         },
         {
@@ -63,10 +73,10 @@ const defaultEducation = {
           dates: "2017",
           location: "Bogotá, Colombia",
           tasks: [
+            'GPA: 4.1/5.0',
             "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
-            "Academic option in Visual and Computing Interaction",
-            "Research Monitor in IMAGINE group",
-            "Scholarship <b>\"Quiero Estudiar\"</b> given to the best national ICFES scores"
+            // "Research Monitor in IMAGINE group",
+            // "Scholarship <b>\"Quiero Estudiar\"</b> given to the best national ICFES scores"
           ]
         },
         {
@@ -75,7 +85,7 @@ const defaultEducation = {
           dates: "2012",
           location: "Bogotá, Colombia",
           tasks: [
-            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"
+            "Sprachdiplom B2"
           ]
         }
       ]
@@ -132,11 +142,11 @@ export const seniorfrontend: CvData = {
     ${appendedAboutMe}`,
   skills: {
     "Frontend": ["React","Three.JS","Canvas","TailwindCSS", /*"Next.js",*/ "Vue.js",],
-    "Full-Stack": ["Next.js","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
-    "Graphics": ['C++',"Unity", 'C#',"Unreal","WebAssembly", "UI/UX", "Figma"],
+    "Full-Stack": ["Node.js","Angular","RxJs","Typescript","REST" /*"GraphQL",*/],
+    "Graphics": ['C++',"Unity", 'C#',"Unreal",/*"WebAssembly",*/ "UI/UX", "Figma"],
     "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Photoshop","Storybook","Nest.js","ESLint", "Jest"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ["Git","Storybook","Nest.js","ESLint", "Jest"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -154,9 +164,9 @@ export const seniorfrontend: CvData = {
         dates: 'May 2021 - Jun 2025',
         role: 'Software Engineer',
         tasks: [
-          'Drove the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js, react-three/fiber</b> and <b>Unity</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
-          'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, and <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Drove the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js, react-three/fiber</b> and <b>Unity</b>, with required end-to-end testing using <b>Jest</b> and <b>Cypress</b>.',
+          'Improved deployment duration of the adidas Checkout backend <b>microservice</b> by implementing CI/CD pipelines via <b>Jenkins</b>, <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
         ],
          achievements: [
           'Consolidated the adidas Tech Hub as a technology benchmark in Colombia by spearheading the adidas Campus Program, leading the technical mentorship and training of high-potential engineers'
@@ -169,7 +179,7 @@ export const seniorfrontend: CvData = {
         role: 'Frontend Software Developer',
         tasks: [
           'Created <b>immersive 3D applications</b> with <b>React</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector <i>PropTech</i>',
-          'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.'
+          'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations.'
         ],
         achievements: [
           'Pivoted the company’s core architecture to a "lite" version during the pandemic, achieving a breakthrough in rendering performance for mobile devices'
@@ -177,7 +187,7 @@ export const seniorfrontend: CvData = {
       }
     ]},
     defaultEducation,
-    defaultExtraCurricular
+    // defaultExtraCurricular
     ]
 };
 
@@ -222,8 +232,8 @@ export const juniorfrontend: CvData = {
     // "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -241,8 +251,8 @@ export const juniorfrontend: CvData = {
         role: 'Software Engineer',
         tasks: [
           'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
-          'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, and <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Improved deployment duration of the adidas Checkout backend <b>microservice</b> by implementing CI/CD pipelines via <b>Jenkins</b>, <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
           'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
         ]
       },
@@ -262,7 +272,7 @@ export const juniorfrontend: CvData = {
         role: 'Frontend Software Developer',
         tasks: [
           'Created <b>immersive 3D applications</b> with <b>React, C#</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector (PropTech)',
-          'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.'
+          'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations.'
         ]
       }
     ]},
@@ -326,7 +336,7 @@ export const seniorSoftware: CvData = {
   },
   colors: {
     primary: '#48011d',
-    secondary: '#808183'
+
   },
   aboutme: `Software Engineer with 5+ years of experience
     in large-scale web platforms and applications
@@ -340,8 +350,8 @@ export const seniorSoftware: CvData = {
     "Full-Stack": ["Node.js","Typescript", "Next.js", "C++", "Python", "JS"],
     "Frontend": ["Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -360,8 +370,8 @@ export const seniorSoftware: CvData = {
         role: 'Software Engineer',
         tasks: [
           'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
-          'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, and <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Improved deployment duration of the adidas Checkout backend <b>microservice</b> by implementing CI/CD pipelines via <b>Jenkins</b>, <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
           'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
         ]
       },
@@ -381,12 +391,12 @@ export const seniorSoftware: CvData = {
         role: 'Frontend Software Developer',
         tasks: [
           'Created <b>immersive 3D applications</b> with <b>React, C#</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector (PropTech)',
-          'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.'
+          'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations.'
         ]
       }
     ]},
     defaultEducation,
-    defaultExtraCurricular
+    // defaultExtraCurricular
   ],
 };
 
@@ -407,8 +417,8 @@ export const fullStackEngineer: CvData = {
     "Full-Stack": ["Typescript","C#","Node.js",".Net", "C++", "Python" ],
     "Frontend": ["Angular", "React","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
 }
 
@@ -420,7 +430,6 @@ export const graphicsEngineer: CvData = {
   },
   colors: {
     primary: '#2c2e81',
-    secondary: '#808183',
   },
   aboutme: `Visual computing engineer with
       experience in casual games and
@@ -466,8 +475,8 @@ export const graphicsEngineer: CvData = {
         role: 'Frontend Software Engineer',
         tasks: [
           'Led the development of 3D customisation for sportswear using <b>Three.js</b> and <b>Unity</b>, enhancing web user engagement.',
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
-          'Improved reliability and deployment speed of backend microservice by implementing <b>CI/CD</b> pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
+          'Improved deployment duration of backend microservice by implementing <b>CI/CD</b> pipelines via <b>Jenkins</b>, <b>Kubernetes</b>',
           'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
         ]
       },
@@ -486,7 +495,7 @@ export const graphicsEngineer: CvData = {
         dates: 'Jan 2020 - Sep 2020',
         role: 'Frontend Software Developer',
         tasks: [
-          'Developed hyper-casual games in <b>Unity</b> with <b>Virtual Reality</b> to support brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.',
+          'Developed hyper-casual games in <b>Unity</b> with <b>Virtual Reality</b> to support brand marketing campaigns and mall activations.',
           'Created <b>immersive 3D applications</b> with <b>Unreal</b> and <b>React</b> creating interactive masterplan visualisations for the real estate sector (PropTech)',
         ]
       }
@@ -517,16 +526,13 @@ export const sre: CvData = {
     and monitoring. Skilled in CI/CD,
     performance optimization, and
     ensuring scalable, resilient
-    systems. Recently relocated to Berlin with work authorization,
-    and motivated to join teams where I can
-    share knowledge, mentor others, and
-    help elevate the collective skills.`,
+    systems. ${appendedAboutMe}`,
   skills: {
     "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
     "CI/CD": ['Docker','Jenkins','K8',"Grafana","YAML", "IPv4"],
     "Monitoring": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie', 'SQL'],
-    "Tools": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -551,7 +557,7 @@ export const sre: CvData = {
           `Refactored Jenkins pipelines and implemented CI/CD best
           practices for the Checkout service repository, cutting
           deployment time from <b>15 minutes to under 6 minutes</b>`,
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Storybook</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Storybook</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
         ]
       },
       {
@@ -561,7 +567,7 @@ export const sre: CvData = {
         role: 'Frontend Software Developer',
         tasks: [
           'Created <b>immersive 3D applications</b> with <b>Unreal</b> and <b>React</b> creating interactive masterplan visualisations for the real estate sector (PropTech)',
-          'Developed hyper-casual games in <b>Unity</b> with <b>Virtual Reality</b> to support brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.',
+          'Developed hyper-casual games in <b>Unity</b> with <b>Virtual Reality</b> to support brand marketing campaigns and mall activations.',
         ]
       }
     ]},
@@ -617,8 +623,8 @@ export const contentcreator: CvData = {
         role: 'Software Engineer',
         tasks: [
           'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
-          'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, and <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Improved deployment duration of the adidas Checkout backend <b>microservice</b> by implementing CI/CD pipelines via <b>Jenkins</b>, <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
           'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
         ]
       },
@@ -638,7 +644,7 @@ export const contentcreator: CvData = {
         role: 'Frontend Software Developer',
         tasks: [
           'Created <b>immersive 3D applications</b> with <b>React</b> and <b>Unreal/C++</b> and interactive masterplan visualisations for the real estate sector (PropTech)',
-          'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.'
+          'Developed hyper-casual games in <b>Unity</b> and <b>Virtual Reality</b> to support brand marketing campaigns and mall activations.'
         ]
       }
     ]},
@@ -716,7 +722,7 @@ export const supportAssistant: CvData = {
         role: 'Software Engineer',
         tasks: [
           'Supported retail operations during high-consumption days such as Christmas and Black Friday, assisting with <b>sales, inventory organization</b>, and <b>warehouse management</b>.',
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
+          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
         ]
       },
       {
@@ -726,7 +732,7 @@ export const supportAssistant: CvData = {
         role: 'Frontend Software Developer',
         tasks: [
           'Systems engineer responsible for the development, maintenance, and <b>24/7 support</b> of company websites for two brands: Umbra3D.Studio and Umbra Interactive.',
-          'Created <b>immersive 3D applications</b> for the real estate sector (PropTech), brand marketing campaigns and mall activations, engaging audiences through interactive gameplay.',
+          'Created <b>immersive 3D applications</b> for the real estate sector (PropTech), brand marketing campaigns and mall activations.',
         ]
       },
       {
@@ -758,7 +764,7 @@ export const supportAssistant: CvData = {
           dates: "2012",
           location: "Bogotá, Colombia",
           tasks: [
-            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"
+            "Sprachdiplom B2"
           ]
         }
       ]
@@ -868,7 +874,7 @@ export const itSupport: CvData = {
           dates: "2012",
           location: "Bogotá, Colombia",
           tasks: [
-            "Sprachdiplommen: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"
+            "Sprachdiplom B2"
           ]
         }
       ]

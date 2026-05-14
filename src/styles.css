@@ -3,14 +3,9 @@
 @import "tailwindcss";
 @theme {
   --color-primary: #1e295f;
-  --color-secondary:#a2a4a9;
+  --color-secondary:aqua 
   --text-tiny: 0.625rem;
 }
-
-/* @plugin "daisyui" {
-  themes: aqua --default;
-  
-} */
 
 @font-face {
   /* ToDo se necesitan todos estos files? */
@@ -27,24 +22,21 @@
 
 :root {
   font-family: 'Ubuntu', sans-serif;
+  --clr-primary:#a2a4a9 ;
 
-   /* Game Develop color */
-  --clr-primary: #1e295f;
-
-  /* --clr-primary: #48011d; */
-  
-  --clr-secondary:#a2a4a9 ;
-  /* #a28848; */
-
-  --clr-gray-900: rgb(188, 190, 192);
+  /* ToDo quita esto y deje tailwind */
+  /* //esto no tien nada de 900 should be 400 */
+  --clr-gray-900: #364153;  
+  --clr-gray-800: #808183;
   --clr-gray-500: #aaa;
   --clr-white: #e6e7e8;
 
-  background-color: var(--clr-primary);
+  background-color: white ; 
+  /* //#f6f3f4; */
 }
 .h6-primary {
   font-family: 'Ubuntu', sans-serif;
-  color: var(--clr-gray-900);
+  /* color: var(--clr-gray-800); */
   font-size: 15px;
   text-transform: uppercase;
 }
@@ -113,7 +105,7 @@
   letter-spacing: 1px;
   margin-bottom: 0px;
   font-weight: 500;
-  color: var(--clr-secondary);
+  color: var(--clr-primary);
   text-transform: uppercase;
 }
 
@@ -121,7 +113,7 @@
   font-family: 'Ubuntu', sans-serif;
   font-size: 12.8564px;
   line-height: 1.33;
-  color: var(--clr-gray-500);
+  color: var(--clr-gray-800);
   position: relative;
   margin: 0px;
   padding: 0px;
@@ -131,7 +123,7 @@
 
 h2 {
   font-family: 'Ubuntu', sans-serif;
-  color: var(--clr-secondary);
+  color: var(--clr-primary);
   font-size: 18px;
   text-transform: uppercase;
 
@@ -143,7 +135,7 @@ h2 {
 }
 
 .h2--secondary {
-  color: var(--clr-secondary);
+  color: var(--clr-primary);
 }
 
 .border-b--primary {
@@ -228,7 +220,7 @@ body, html {
   font-family: Ubuntu, sans-serif;
   font-size: 18px;
   text-transform: uppercase;
-  color: var(--clr-secondary);
+  color: var(--clr-primary);
   margin-bottom: 18px;
   position: relative;
   word-break: break-word;
@@ -244,12 +236,11 @@ body, html {
   width: 100%;
   position: relative;
   padding: 0 !important;
-  margin-top: 21px;
+  /* margin-top: 21px; */
   box-sizing: border-box;
 }
 
 .about-me-font {
-  color: var(--clr-gray-900);
   word-break: break-word;
   font-size: 14px;
   line-height: 1.3;
@@ -267,7 +258,7 @@ body, html {
 
 .link-font {
   font-weight: 600;
-  color: var(--clr-gray-900);
+  color: var(--clr-gray-800);
   font-size: 14.0252px;
   /* line-height: 1.33; */
 }
@@ -284,7 +275,7 @@ body, html {
 }
 
 .course-font, .institution-font {
-  color: var(--clr-gray-900);
+  /* color: var(--clr-gray-900); */
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 800;
@@ -319,7 +310,7 @@ body, html {
 .experience__city-font, .experience__timeframe-font {
 
   line-height: 1.33;
-  color: #808183;
+  color: var(--clr-gray-800);;
   font-size: 12px;
   text-transform: capitalize;
 }
@@ -327,7 +318,7 @@ body, html {
 
 
   /* color: rgb(44, 58, 75); */
-    /* color: #808183; */
+    /* color: var(--clr-gray-800);; */
 
 .experience__role-font {
   /* font-family: Ubuntu ; */
@@ -342,7 +333,7 @@ body, html {
 .experience__tasks-font {
   font-size: 14.0252px;
   line-height: 1.33;
-  color: #808183;
+  color: var(--clr-gray-800);;
   position: relative;
   margin: 0px;
   padding: 0px;
@@ -362,7 +353,7 @@ body, html {
   border-radius: 5.84383px;
   left: -5.84383px;
   z-index: 10;
-  background: var(--clr-secondary) !important;
+  background: var(--clr-primary) !important;
   top: 0; 
 }
 
@@ -373,5 +364,5 @@ body, html {
   right: unset;
   bottom: 0px;
   width: 1.16877px;
-  background: var(--clr-secondary) !important;
+  background: var(--clr-primary) !important;
 }

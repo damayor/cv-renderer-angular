@@ -6,11 +6,12 @@ const contactDefault : Contact = {
   email: "dr.mayorga20@gmail.com",
   phone: "+49 1525 2198970",
   location: "Berlin, Deutschland",
-  address:"Otto-Suhr-Allee 106C, 10585, Berlin",
+  address:"Otto-Suhr-Allee 106C, 10585 Berlin",
   nationality: "Kolumbien",
   workStatus: "Vorhanden - Sofortiger Einstieg: 20h/Woche", // "Chancenkarte",
   visaStatus: 'Wechsel zur Vollzeit nach Vertragsschluss möglich (ca. 4 Wochen Bearbeitungszeit, abhängig von den Antwortzeiten der Ausländerbehörde).',
-  titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)'
+  titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
+  arbeitsErlaubnis: 'Im Rahmen von 20h/Woche vorhanden. Vollzeitanstellung nach Vertragsabschluss und Genehmigung durch die Ausländerbehörde möglich.'
 }
 
 const defaultSkills =  {
@@ -18,8 +19,8 @@ const defaultSkills =  {
   "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
   "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
   "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-  "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-  "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+  "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
 }
 
 // Da ich innerhalb Deutschlands flexibel und umzugsbereit bin, 
@@ -29,7 +30,7 @@ const appendedAboutMe = `
     ${environment.cvScope === 'DE' ?
       `  mit Arbeitsgenehmigung und Umzugsbereitschaft innerhalb Deutschlands. 
         `
-      : `, da ich innerhalb Europas flexibel und umzugsbereit bin,`
+      : `, da ich innerhalb Europas flexibel und umzugsbereit bin.`
     }
     Ich möchte meine internationale Erfahrung durch die hohen Qualitätstandards 
     bereichern und mich aktiv an die lokalen Arbeitsweisen anpassen.`
@@ -42,7 +43,7 @@ const languagesData =   [
   ]
 
 const defaultCourses = [
-    { "name": "ANGULAR: VON NULL ZUM EXPERTEN - AUSGABE 2025", "institution": "{D/T} DEVTALLES", "date": "Jul 2025" },
+    { "name": "ANGULAR: VON NULL ZUM EXPERTEN - AUSGABE 2025", "institution": "{D/T} DevTalles", "date": "Jul 2025" },
     { "name": "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
   ] 
 
@@ -55,8 +56,17 @@ const defaultEducation =
           dates: " 2019",
           location: "Bogotá, Kolumbien",
           tasks: [
-            "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
-            "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
+            'GPA: 4.5/5.0',
+            "Akademische Vertiefung in <b>Visual und Computing Interaction</b>",
+          ]
+        },
+        {
+          company: "TUK",
+          role: "Forschungspraktikum",
+          dates: " 2018",
+          location: "Kaiserslautern",
+          tasks: [
+            "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen",
           ]
         },
         {
@@ -65,10 +75,11 @@ const defaultEducation =
           dates: "2017",
           location: "Bogotá, Kolumbien",
           "tasks": [
+            'GPA: 4.1/5.0',
             "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB <b>H+</b>) als <b>System- und Computertechnik</b> (Abschlussklasse <b>A4</b>).",
-            "Akademische Vertiefung in Visual und Computing Interaction.",
-            "Forschungsmonitor in der Gruppe IMAGINE.",
-            "Stipendium <b>„Quiero Estudiar“</b> für die besten nationalen ICFES-Ergebnisse."
+            // "Akademische Vertiefung in Visual und Computing Interaction.",
+            // "Forschungsmonitor in der Gruppe IMAGINE.",
+            // "Stipendium <b>„Quiero Estudiar“</b> für die besten nationalen ICFES-Ergebnisse."
           ]
         },
         {
@@ -77,7 +88,7 @@ const defaultEducation =
           dates: "2012",
           location: "Bogotá, Kolumbien",
           tasks: [
-            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+            "Sprachdiplom B2"          
           ]
         }
       ]
@@ -93,9 +104,9 @@ const ohneMasterEducation = {title: "Ausbildung",
           "tasks": [
             "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB >H+) als >System- und Computertechnik (Abschlussklasse <b>A4).",
             "Akademische Vertiefung in Visual und Computing Interaction.",
-            "Stipendium <b>„Quiero Estudiar“ für die besten nationalen ICFES-Ergebnisse.",
+            // "Stipendium <b>„Quiero Estudiar“ für die besten nationalen ICFES-Ergebnisse.",
            // "Forschungsmonitor in der Gruppe IMAGINE.",
-            "Forschungspraktikum in AG HCI und Computer Graphics an der <b>Technischen Universität Kaiserslautern", // im Jahr 2018.",
+            // "Forschungspraktikum in AG HCI und Computer Graphics an der <b>Technischen Universität Kaiserslautern", // im Jahr 2018.",
 
           ]
         },
@@ -105,7 +116,7 @@ const ohneMasterEducation = {title: "Ausbildung",
           dates: "2012",
           location: "Bogotá, Kolumbien",
           tasks: [
-            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
+            "Sprachdiplom  B2"          
           ]
         }
       ]
@@ -120,7 +131,7 @@ const defaultExtraCurricular = {
         dates: "Jun 2019 - Jul 2019",
         location: "Bogotá",
         tasks: [
-          "Einführung in Spiele- und Immersive-Entwicklung für Schüler, mit Themen wie Materialien, Humanoiden, Animationen und Script-Programmierung in C#. Organisiert von der Universidad Nacional de Colombia und SENA."          
+          "Einführung in Spiele- und Immersive-Entwicklung für Schüler, mit Themen wie Materialien, Animationen und Script-Programmierung in C#. Organisiert von der Universidad Nacional de Colombia und SENA."          
         ]
       },
     ]
@@ -132,9 +143,8 @@ const freelancerExperience = {
     dates: 'Aug 2025 - present',
     role: 'Full-Stack Ingenieur & Automatisierungsspezialist',
     tasks: [
-      'Nutzung von LLMs (Claude, Gemini, NotebookLM) und <b>Vibe-Coding-Methoden zur schnellen Prototypisierung',
-      'Rendering komplexer 3D-Masterpläne aus Unreal Engine und 3ds Max in <b>R3F</b> unter Einbindung von <b>WebAssembly</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen' 
-    ]
+      'Nutzung von <b> LLMs</b>  (Claude, Gemini, NotebookLM) und Vibe-Coding-Methoden zur schnellen Prototypisierung',
+      'Rendering komplexer 3D-Masterpläne aus Unreal Engine und 3ds Max in <b>R3F</b> unter Einbindung von <b>WebAssembly</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen'  ]
   }
 
 export const seniorfrontend: CvData = {
@@ -147,7 +157,7 @@ export const seniorfrontend: CvData = {
     primary: '#48011d',
   },
   aboutme: `
-   Ich bin Softwareingenieur mit 5 Jahren Erfahrung
+   Softwareingenieur mit 5 Jahren Erfahrung
    in der Erstellung von großen Web-Plattformen und Anwendungen. 
    Ich bin spezialisiert auf NodeJS, TypeScript und interaktive Erfahrungen u.a. mit Three.js, und Unreal. 
    Solide Kenntnisse in C++, Linux Bash und SRE 
@@ -156,11 +166,11 @@ export const seniorfrontend: CvData = {
   skills: {
     "Frontend": ["React","Three.JS","TailwindCSS", "Next.js", "Angular"],
     // "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
-    "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS" ],
+    "Full-Stack": ["Node.js","Typescript","Java", "Spring", "Python"],
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-    "CI/CD": [/*'Linux',*/'Docker','Jenkins','Kubernetes',"YAML","Grafana"],
-    "Tools": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "CI/CD": ['Linux','Docker','Jenkins','Kubernetes',"YAML","Grafana"],
+    "Tooling": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -191,12 +201,12 @@ export const seniorfrontend: CvData = {
         role: 'Frontend Softwareentwickler',
         tasks: [
             "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
-            "Entwicklung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
+            "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
           ]
       }
     ]},
     defaultEducation,
-    // defaultExtraCurricular
+    defaultExtraCurricular
   ],
 };
 
@@ -211,25 +221,25 @@ export const frontend: CvData = {
 export const frontend3d: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Softwareingenieur - Fokus auf Computer Graphics und C++",
+    value: "Softwareingenieur - Fokus auf Typescript und Three.js",
     acronym: 'F3D',
     
   },
   skills: {
-    "Graphics": ["WebGL", "Three.js", "XR", "Unity", "Unreal", "C++", "Shaders"],
     "Frontend": ["React", "TypeScript", "Next.js", "SCSS", "TailwindCSS"],
-    "Full-Stack": ["Node.js", "Nest.js", "REST", "Python", "JS", "C#"],
+    "Graphics": ["Three.js", "WebGL","XR", "Unity", "Unreal", "C++", "Shaders"],
+    "Full-Stack": ["Node.js", "Nest.js", "REST", "PostgreSQL", "Microservices"],
     "CI/CD": ["Git", "Docker", "Jenkins", "Linux", "K8", "Grafana"],
-    "Tools": ["Blender","Vite", "Storybook", "Photoshop"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ["Blender","Vite", "Storybook", "Photoshop"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   // skills: {
   //   "Frontend": ["React","Three.JS", /*"R3F",*/"SCSS","TailwindCSS","Next.js" ],
   //   "Graphics": ['C++',"WebGL", "Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
   //   "Full-Stack": ["Node.js","Typescript", "Nest.js", "REST", "Python", "SQL"],
   //   "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"],
-  //   "Tools": ["Git","Vite","Storybook","MongoDB", "Jest", "Vibe coding"],
-  //   "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  //   "Tooling": ["Git","Vite","Storybook","MongoDB", "Jest", "Vibe coding"],
+  //   "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   // },
   // aboutme: `Frontend engineer with 5+ experience
 }
@@ -246,7 +256,7 @@ export const juniorfrontend: CvData = {
     primary: '#48011d',
   },
   aboutme: `
-   Ich bin Softwareingenieur mit 4 Jahren Erfahrung in Kolumbien
+   Softwareingenieur mit 4 Jahren Erfahrung in Kolumbien
    in der Erstellung von Web-Plattformen und Anwendungen 
    und suche gezielt nach einer Möglichkeit, meine Kenntnisse an deutsche Qualitätsstandards anzupassen.
    Ich bin spezialisiert auf NodeJS, TypeScript und UI/UX-Lösungen 
@@ -257,8 +267,8 @@ export const juniorfrontend: CvData = {
     "Full-Stack": ["Node.js","Angular","Typescript","REST", "Python" /*"GraphQL",*/],
     // "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Vite","Storybook","Docker","ESLint", "Jest"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ["Git","Vite","Storybook","Docker","ESLint", "Jest"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -287,7 +297,7 @@ export const juniorfrontend: CvData = {
         role: 'Frontend Softwareentwickler',
         tasks: [
             "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
-            "Entwicklung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
+            "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen"
           ]
       },
       // {
@@ -314,7 +324,6 @@ export const seniorSoftware: CvData = {
   },
   colors: {
     primary: '#48011d',
-    secondary: '#808183'
   },
   aboutme: `Softwareingenieur mit 7 Jahren Erfahrung in 
   großskaligen Webplattformen bei einem multinationalen 
@@ -333,6 +342,7 @@ export const seniorSoftware: CvData = {
   courses: defaultCourses,
   experiences: [
     {title: "Berufserfahrung", entries: [ 
+      freelancerExperience,
       {
         company: 'ADIDAS',
         location: 'Bogotá',
@@ -345,61 +355,28 @@ export const seniorSoftware: CvData = {
           // "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten.",
         ]
       },
-      {
-        company: 'MADBRICKS',
-        location: 'Remote',
-        dates: 'Sep 2020 - Dec 2020',
-        role: 'Game Entwickler',
-        tasks: [
-          "Entwickelte und pflegte Hyper-Casual-Mobile-Games mit <b>Unity/C#</b> und <b>Unreal/C++</b>, wodurch die Nutzerbindung und das UI/UX-Erlebnis verbessert wurden.",
-        ]
-      },
+      // {
+      //   company: 'MADBRICKS',
+      //   location: 'Remote',
+      //   dates: 'Sep 2020 - Dec 2020',
+      //   role: 'Game Entwickler',
+      //   tasks: [
+      //     "Entwickelte und pflegte Hyper-Casual-Mobile-Games mit <b>Unity/C#</b> und <b>Unreal/C++</b>, wodurch die Nutzerbindung und das UI/UX-Erlebnis verbessert wurden.",
+      //   ]
+      // },
       {
         company: 'UMBRA 3D STUDIO - INTERACTIVE',
         location: 'Bogotá',
         dates: 'Jan 2020 - Sep 2020',
         role: 'Frontend Softwareentwickler',
         tasks: [
-          "Entwicklung von Hyper-Casual-Spielen in <b>Unity, C#</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung.",
+          "Programmierung von Hyper-Casual-Spielen in <b>Unity, C#</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung.",
           "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
         ]
       }
     ]},
-    {title: "Ausbildung", 
-      entries: [
-        {
-          company: "Universidad de los Andes",
-          role: "M.Sc. System- und Computing Engineering",
-          dates: " 2019",
-          location: "Bogotá, Kolumbien",
-          tasks: [
-            "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
-            "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen."
-          ]
-        },
-        {
-          company: "Universidad de los Andes",
-          role: "B.Sc. on System- und Computing Engineering",
-          dates: "2017",
-          location: "Bogotá, Kolumbien",
-          "tasks": [
-            "Akademische Vertiefung in Visual und Computing Interaction.",
-            "Forschungsmonitor in der Gruppe IMAGINE.",
-            "Stipendium „Quiero Estudiar“ für die besten nationalen ICFES-Ergebnisse."
-          ]
-        },
-        {
-          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
-          role: "Gymnasium",
-          dates: "2012",
-          location: "Bogotá, Kolumbien",
-          tasks: [
-            "Sprachdiplome: \n Hören C1, Lesen C1, Schreiben B2, Sprechen B2"          
-          ]
-        }
-      ]
-    },
-    //  defaultExtraCurricular
+    defaultEducation,
+     defaultExtraCurricular
   ],
 };
 
@@ -412,17 +389,17 @@ export const fullStackIngenieur: CvData = {
   aboutme: 
   `Softwareingenieur mit 5 Jahren Erfahrung in 
   großskaligen Webplattformen bei einem multinationalen 
-  Unternehmen, spezialisiert auf NodeJS, C# und 
+  Unternehmen, spezialisiert auf NodeJS, Java und 
   interaktive 3D-Lösungen mit Unity, Three.js. 
   Solide Kenntnisse in C++, Linux Bash und Site Reliability 
   Engineering (Monitoring, Performance, Skalierbarkeit).
   ${appendedAboutMe}`,
   skills: {
-    "Full-Stack": ["Typescript","C#","Node.js",".Net", "C++", "Python" ],
-    "Frontend": ["Angular", "React","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
+    "Full-Stack": ["Typescript","Node.js","Java", "Spring", "Python" ],
+    "Frontend": ["React","Three.JS","Angular", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
 }
 
@@ -434,7 +411,6 @@ export const gameEntwickler: CvData = {
   },
   colors: {
     primary: '#2c2e81',
-    secondary: '#808183',
   },
   aboutme: `Visual-Computing-Entwickler mit Erfahrung 
     in Casual Games und Serious Simulators,
@@ -493,7 +469,7 @@ export const gameEntwickler: CvData = {
         role: 'Frontend Softwareentwickler',
         tasks: [
             "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
-            "Entwicklung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
+            "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
           ]
       }
     ]},
@@ -510,7 +486,6 @@ export const sre: CvData = {
   },
   colors: {
     primary: '#286848',
-    secondary: '#999',
   },
   aboutme: `Softwareingenieur mit 5 Jahren Erfahrung 
     in großskaligen Plattformen bei einem multinationalen 
@@ -528,8 +503,8 @@ export const sre: CvData = {
     "CI/CD": ['Docker','Jenkins','K8',"YAML","Grafana","YAML"],
     "Monitoring": ['AWS','Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
     "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
-    "Tools": ['Linux','bash',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ['Linux','bash',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -562,7 +537,7 @@ export const sre: CvData = {
         role: 'Frontend Softwareentwickler',
         tasks: [
           "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
-          "Entwicklung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
+          "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
         ]
       }
     ]},

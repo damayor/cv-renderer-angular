@@ -4,7 +4,7 @@
     <body>
       <trans-unit id="personalDetailsTitle" datatype="html">
         <source>Personal Details</source>
-        <target>Personalien</target>
+        <target>Info zu Aufenthaltstatus</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/main-panel/personal-details/personal-details.component.html</context>
           <context context-type="linenumber">2,3</context>
@@ -68,8 +68,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="skillsTitle" datatype="html">
-        <source>SKILLS</source>
-        <target>Kompetenzen</target>
+        <source>Tech Stack</source>
+        <target>Technologien</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sidebar/sidebar-skills/sidebar-skills.component.html</context>
           <context context-type="linenumber">2,3</context>

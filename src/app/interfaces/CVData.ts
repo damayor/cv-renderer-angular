@@ -24,6 +24,7 @@ export interface Contact {
   address?: string;
   workStatus?:string;
   titleRecongition?: string
+  arbeitsErlaubnis?:string
 }
 
 export interface CvData {

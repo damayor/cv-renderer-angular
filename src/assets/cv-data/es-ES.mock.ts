@@ -4,26 +4,25 @@ const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: "+49 1525 2198970",
-  location: "Berlin, Alemania", //ToDo Spain? Talk with Carlos
+  location: "Berlin -> España (Julio 2026)",
   nationality: "Colombiano",
   // workStatus: "Transición a España desde Julio de 2026.",
   // visaStatus: 'Transicion a España desde Agosto 2026.',
   // titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)'
 }
 
-const defaultSkills =  {
-  "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
-  "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
-  "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-  "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-  "Tools": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-  "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
-}
+const defaultSkills = {
+    "Frontend": ["React","Next.js","Three.JS","TailwindCSS",  "Vue.js",],
+    "Full-Stack": ["Angular","Node.js","Typescript","REST", "Python"],
+    "Graphics": ['C++','C#',"Unreal","WebAssembly","Unity", "UI/UX", "Figma"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    "Tooling": ["Git","Storybook","Nest.js","ESLint","Photoshop","Jest"],
+    "AI & LLMs": ["Claude","NotebookLM","Gemini","Copilot"],
+  }
 
 const appendedAboutMe = 
     `Actualmente radicado en Alemania y en proceso de
-     relocalización a España, con disponibilidad total a partir 
-     de julio de 2026. 
+     relocalización a España. 
      Mi objetivo es aportar mi experiencia en equipos multinacionales 
      líderes como adidas, bajo una comunicación empática y proactiva.` 
     //  facilitando mi contratación mediante el proceso de Profesional Altamente Cualificado (PAC)
@@ -35,7 +34,7 @@ const languagesData = [
   ]
 
 const defaultCourses = [
-    { name: "ANGULAR: DE CERO A EXPERTO - EDICION 2025", institution: "{D/T} DEVTALLES", date: "Jul 2025" },
+    { name: "ANGULAR: DE CERO A EXPERTO - EDICION 2025", institution: "{D/T} DevTalles", date: "Jul 2025" },
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
 ]
 
@@ -48,8 +47,18 @@ const defaultEducation = {
           dates: " 2019",
           location: "Bogotá, Colombia",
           tasks: [
-            'Pasantía en el grupo AG HCI and Computer Graphics en la Universidad Técnica de <b>Kaiserslautern</b> durante 2018.',
-            'Monitor de investigación enfocado en el diseño y desarrollo de un simulador de entrenamiento basado en <b>RV</b> e <b>interaccion háptica</b> para cirugía de trauma ortopédico en Unity y Oculus, mejorando el desempeño motriz de los aprendices.'
+            'GPA: 4.5/5.0',
+            'Opción académica en Computación Visual e Interactiva.',
+            // 'Monitor de investigación encargado del diseño y desarrollo del simulador de entrenamiento en <b>RV</b> e <b>interaccion háptica</b> para cirugías de trauma ortopédico.'
+          ]
+        },
+        {
+          company: "Teknische Universität KL",
+          role: "Pasantia de Investigación",
+          dates: " 2018",
+          location: "Kaiserslautern",
+          tasks: [
+            'Optimización de reconocimiento distante en realidad aumentada con OpenCV para Hololens en el grupo AG HCI and Computer Graphics',
           ]
         },
         {
@@ -58,20 +67,18 @@ const defaultEducation = {
           dates: "2017",
           location: "Bogotá, Colombia",
           tasks: [
+            'GPA: 4.1/5.0',
             'Reconocimiento por la entidad federal alemana Anabin (ZAB) como carrera equivalente a <b>System- und Computertechnik</b> (Abschlussklasse A4/H+)',
-            'Opción académica en Computación Visual e Interactiva.',
-            'Monitor de investigación del grupo I+D+I IMAGINE.',
             'Beca "Quiero Estudiar" otorgada a los mejores puntajes nacionales del ICFES.',
           ]
         },
         {
           company: "COLEGIO ANDINO",
-          role: "Bachillerato",
+          role: "Bachillerato Colegio Alemán",
           dates: "2012",
           location: "Bogotá, Colombia",
           tasks: [
-            "Colegio Alemán de Bogota",
-            "Sprachdiplom: \n Auditiva C1, Lectura C1, Escrita B2, Oral B2"          
+            "Sprachdiplom: B2"          
           ]
         }
       ]
@@ -108,10 +115,10 @@ const freelancerExperience = {
     dates: 'Ago 2025 - present',
     role: 'Ingeniero Full-Stack & Especialista en Automatización',
     tasks: [
-      'Renderizado de maquetas 3D desde Unreal y 3Ds Max dentro de entornos <b>React-three-fiber</b> para lograr resultados web de alto desempeño en móviles.',
-      'Uso de <b>LLMs</b> (Claude, Gemini, NotebookLM) y metodologías de Spec Driven Development para prototipar rápidamente desplegando skills de automatización.',
+      'Renderizado de maquetas 3D desde Unreal y 3Ds Max dentro de entornos <b>Three.js</b> para lograr resultados web de alto desempeño en móviles.',
+      'Uso de <b>LLMs</b> (Claude, Gemini, NotebookLM) y metodologías de Spec Driven Development para prototipar rápidamente.',
       'Arquitectura de visores multi-sensor para el dataset nuScenes, integrando <b>FastAPI (Python)</b> y R3F para la visualización 3D de nubes de puntos <b>LiDAR</b>.',
-      'Desarrollo full-stack de un generador de CVs en <b>Angular</b>, utilizando <b>RxJS</b> para la gestión de estado reactivo, renderizado dinámico y exportación a PDF.'
+      // 'Desarrollo full-stack de un generador de CVs en <b>Angular</b>, utilizando <b>RxJS</b> para la gestión de estado reactivo, renderizado dinámico y exportación a PDF.'
     ],
     achievements: [
       'Consolidé el adidas Tech Hub como referente tecnológico en Colombia al encabezar el Programa Campus de adidas, liderando la mentoría técnica y capacitación de ingenieros de alto potencial'
@@ -128,18 +135,18 @@ export const seniorfrontend: CvData = {
   colors: {
     primary: '#48011d',
   }, 
-  aboutme: `Ingeniero de Software con amplia trayectoria
+  aboutme: `Ingeniero de Software con 5+ años de trayectoria
   en proyectos web de gran escala, especializado en el ecosistema NodeJS y
   soluciones visuales de alto rendimiento con React, R3F y Angular. 
-  Bases sólidas en SRE/DevOps, garantizando la observabilidad, trazabilidad 
+  Bases sólidas en C++, bash y SRE/DevOps, garantizando la observabilidad, trazabilidad 
   y escalabilidad de arquitecturas críticas. ${appendedAboutMe}`,
   skills: {
-    "Frontend": ["React","Three.JS",/*"Canvas",*/"TailwindCSS", "Next.js", "Vue.js",],
+    "Frontend": ["React","Next.js","Three.JS",/*"Canvas",*/"TailwindCSS",  "Vue.js",],
     "Full-Stack": ["Angular","Node.js","Typescript","REST", "Python" /*"GraphQL",*/],
-    "Graphics": ['C++',"Unity",'C#',"Unreal",/*"WebAssembly",*/ "UI/UX", "Figma"],
-    "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Storybook","Nest.js","ESLint","Photoshop","Jest"],
-    "LLMs": ["Claude","NotebookLM","Gemini","Copilot",],
+    "Graphics": ['C++','C#',"Unreal","WebAssembly","Unity", "UI/UX", "Figma"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    "Tooling": ["Git","Storybook","Nest.js","ESLint","Photoshop","Jest"],
+    "AI & LLMs": ["Claude","NotebookLM","Gemini","Copilot",],
   },
   languages: languagesData,
   links: [
@@ -157,10 +164,10 @@ export const seniorfrontend: CvData = {
         dates: 'May 2021 - Jun 2025',
         role: 'Software Engineer',
         tasks: [
-          'Desarrollo y mantenimiento de componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+ mercados internacionales</b>.',
-          'Liderzgo del desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, mejorando la interacción del usuario y su QA con <b>Jest</b> y <b>Cypress</b>.',
-          'Mejora de la confiabilidad y la velocidad de despliegue del microservicio <b>backend de Checkout</b> de adidas mediante la implementación de pipelines de CI/CD y automatización de infraestructura con <b>Jenkins</b>, <b>Kubernetes</b> y <b>Grafana</b>, soportando transacciones diarias en <b>30+ países</b>.',
-          'Contribución a la arquitectura frontend del <b>portal de e-commerce Yeezy</b>, reconocido por su diseño minimalista y el uso de <b>programación funcional en Typescript</b>, logrando una mejora en el desempeño y tiempo de carga.',
+          'Desarrollo y mantenimiento de componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+</b> mercados internacionales.',
+          'Liderzago del desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, sus pruebas con <b>Jest</b> y <b>Cypress</b>.',
+          'Refactor del microservicio <b>backend de Checkout</b> de adidas mediante la implementación de pipelines de CI/CD y automatización de infraestructura con <b>Jenkins</b>, <b>Kubernetes</b> y <b>Grafana</b>, soportando transacciones diarias en <b>30+ países</b>.',
+          'Contribución a la arquitectura frontend del portal web <b>Yeezy</b> mediante <b>programación funcional</b> en Typescript, logrando una mejora en el desempeño.',
         ],
       },
       {
@@ -170,12 +177,12 @@ export const seniorfrontend: CvData = {
         role: 'Desarrollador Frontend',
         tasks: [
           'Creación de <b>aplicaciones 3D inmersivas</b> con <b>React</b> y <b>Unreal/C++</b>, así como visualizaciones interactivas de masterplans para el sector inmobiliario (PropTech).',  
-          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing de marca y activaciones en centros comerciales, involucrando audiencias mediante gameplay interactivo.',
+          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing en centros comerciales.',
         ]
       }
     ]},
     defaultEducation,
-    defaultExtraCurricular
+    // defaultExtraCurricular
   ],
 };
 
@@ -190,9 +197,39 @@ export const frontend: CvData = {
 export const frontend3d: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Ingeniero Frontend - Enfoque en Computacion Visual",
+    value: "Ingeniero de Software - Enfoque en C++",
+    // value: "Ingeniero Frontend - Enfoque en Computacion Visual y C++",
     acronym: 'FV',
   },
+  skills: {
+    "Graphics": ['C++',"WebGL", "Unreal","XR","Unity", "UI/UX", "Figma"],
+    "Frontend": ["React","Three.JS", /*"R3F",*/"SCSS","TailwindCSS","Next.js" ],
+    "Full-Stack": ["Node.js","SQL","Typescript", "Nest.js", "REST", "Python", "SQL"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"],
+    "Tooling": ["Git","Vite","Storybook","MongoDB", "Jest", "Vibe coding"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  },
+
+  //C++
+  aboutme: 
+    `Ingeniero de Software con amplia trayectoria en proyectos web de gran escala, con bases solidas en C++, Linux bash y
+      SRE, asegurando monitoreo, trazabilidad 
+      y visualización. Tambien especializado en el ecosistema NodeJS, y React, y soluciones interactivas 
+      con Three.JS y Unity. Actualmente radicado 
+      en Alemania, caracterizando 
+      un rol de apoyo constante al equipo y a la vez, con comunicación 
+      empática en las relaciones interpersonales. `,
+  //web graphics 
+  // aboutme: 
+  // `Ingeniero de Software con amplia trayectoria en proyectos web de gran escala, especializado en el ecosistema NodeJS, y React, y soluciones interactivas 
+  //   con Three.JS y Unity. 
+  //   Tambien con bases solidas en C++, Linux bash y
+  //   SRE, asegurando monitoreo, trazabilidad 
+  //   y visualización. Tambien 
+  //   Actualmente radicado 
+  //   en Alemania, caracterizando 
+  //   un rol de apoyo constante al equipo y a la vez, con comunicación 
+  //   empática en las relaciones interpersonales. `,
 }
 
 //todo
@@ -219,8 +256,8 @@ export const juniorfrontend: CvData = {
     // "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tools": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -259,7 +296,7 @@ export const juniorfrontend: CvData = {
         role: 'Desarrollador Frontend',
         tasks: [
           'Creación de <b>aplicaciones 3D inmersivas</b> con <b>React</b> y <b>Unreal/C++</b>, así como visualizaciones interactivas de masterplans para el sector inmobiliario (PropTech).',  
-          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing de marca y activaciones en centros comerciales, involucrando audiencias mediante gameplay interactivo.',
+          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing en centros comerciales.',
         ]
       }
     ]},
@@ -285,7 +322,7 @@ export const juniorfrontend: CvData = {
           location: "Bogotá, Colombia",
           tasks: [
             "Colegio Aleman en Bogota",
-            "Sprachdiplom: \n Auditiva C1, Lectura C1, Escrita B2, Oral B2"          
+            "Sprachdiplom B2"          
           ]
         }
       ]
@@ -303,7 +340,6 @@ export const seniorSoftware: CvData = {
   },
   colors: {
     primary: '#48011d',
-    secondary: '#808183'
   },
   aboutme: 
     `Ingeniero de Sistemas y Computacion 
@@ -334,11 +370,11 @@ export const seniorSoftware: CvData = {
         dates: 'May 2021 - Jun 2025',
         role: 'Software Engineer',
         tasks: [
-          'Liderzgo del desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, mejorando la interacción del usuario y sus pruebas end-to-end con <b>Jest</b> y <b>Cypress</b>.',
+          'Liderzago del desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, mejorando la interacción del usuario y sus pruebas end-to-end con <b>Jest</b> y <b>Cypress</b>.',
     
           'Mejora de la confiabilidad y la velocidad de despliegue del microservicio <b>backend de Checkout</b> de adidas mediante la implementación de pipelines de CI/CD y automatización de infraestructura con <b>Jenkins</b>, <b>Kubernetes</b> y <b>Grafana</b>, soportando transacciones diarias en <b>30+ países</b>.',
           
-          'Desarrollo y mantenimiento de componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+ mercados internacionales</b>.',
+          'Desarrollo y mantenimiento de componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+</b> mercados internacionales.',
           
           'Contribución a la arquitectura frontend del <b>portal de e-commerce Yeezy</b>, reconocido por su diseño minimalista y el uso de <b>programación funcional en Typescript</b>, logrando una mejora en el desempeño y tiempo de carga.',
 
@@ -360,7 +396,7 @@ export const seniorSoftware: CvData = {
         role: 'Desarrollador Frontend',
         tasks: [
           'Creación de <b>aplicaciones 3D inmersivas</b> con <b>React</b> y <b>Unreal/C++</b>, así como visualizaciones interactivas de masterplans para el sector inmobiliario (PropTech).',  
-          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing de marca y activaciones en centros comerciales, involucrando audiencias mediante gameplay interactivo.',
+          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing en centros comerciales.',
         ]
       }
     ]},
@@ -372,7 +408,7 @@ export const seniorSoftware: CvData = {
 export const ingenieroFullStack: CvData = {
   ...seniorSoftware,
   occupation: {
-    value: "Ingeniero Full Stack",
+    value: "Ingeniero de Software",
     acronym: 'FSE'
   },
   aboutme: `Ingeniero de Sistemas y Computacion (M. Eng.) 
@@ -382,10 +418,7 @@ export const ingenieroFullStack: CvData = {
       ReactJS, NodeJS, y soluciones interactivas 
       con Three.JS y Unity. Bases solidas en C++, Linux bash, LLMs y
       SRE asegurando monitoreo, trazabilidad 
-      y visualizacion. Actualmente radicado 
-      en Alemania, caracterizando 
-      un rol de  apoyo constante al equipo y a la vez, con comunicación 
-      empática en las relaciones interpersonales. `,
+      y visualizacion. ${appendedAboutMe}`,
   skills: defaultSkills,
 }
 
@@ -398,7 +431,6 @@ export const graphicsEngineer: CvData = {
   },
   colors: {
     primary: '#2c2e81',
-    secondary: '#808183',
   },
   aboutme: `Ingeniero de Computación Visual con
       experiencia en juegos casuales y
@@ -457,7 +489,7 @@ export const graphicsEngineer: CvData = {
         role: 'Desarrollador Frontend',
         tasks: [
           'Creación de <b>aplicaciones 3D inmersivas</b> con <b>React</b> y <b>Unreal/C++</b>, así como visualizaciones interactivas de masterplans para el sector inmobiliario (PropTech).',  
-          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing de marca y activaciones en centros comerciales, involucrando audiencias mediante gameplay interactivo.',
+          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing en centros comerciales.',
         ]
       }
     ]},
@@ -489,11 +521,11 @@ export const sre: CvData = {
     de SRE para entregar soluciones
     confiables. ${appendedAboutMe}`,
   skills: {
-    "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
     "CI/CD": ['Docker','Jenkins','K8',"YAML","Grafana","YAML"],
-    "Monitoring": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie', 'SQL'],
-    "Tools": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-    "LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python"],
+    "Observabilidad": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
+    "Tooling": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest", 'SQL'],
+    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -518,7 +550,7 @@ export const sre: CvData = {
           `Refactoricé pipelines de Jenkins e implementé las mejores
           prácticas de CI/CD para el repositorio del servicio de Checkout, reduciendo
           el tiempo de despliegue de <b>15 minutos a menos de 6 minutos</b>`,        
-          'Desarrollé y mantuve componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+ mercados internacionales</b>.',
+          'Desarrollé y mantuve componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+</b> mercados internacionales.',
         ]
       },
       {
@@ -528,7 +560,7 @@ export const sre: CvData = {
         role: 'Desarrollador Frontend',
         tasks: [
           'Creación de <b>aplicaciones 3D inmersivas</b> con <b>React</b> y <b>Unreal/C++</b>, así como visualizaciones interactivas de masterplans para el sector inmobiliario (PropTech).',  
-          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing de marca y activaciones en centros comerciales, involucrando audiencias mediante gameplay interactivo.',
+          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing en centros comerciales.',
         ]
       }
     ]},
@@ -580,7 +612,7 @@ export const contentcreator: CvData = {
         tasks: [
           'Lideré el desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, mejorando la interacción del usuario y sus pruebas end-to-end con <b>Jest</b> y <b>Cypress</b>.',
           'Mejoré la confiabilidad y velocidad de despliegue del microservicio <b>backend de Checkout</b> de adidas implementando pipelines de CI/CD y automatización de infraestructura mediante <b>Jenkins</b>, <b>Kubernetes</b> y <b>Grafana</b>, soportando transacciones diarias en <b>30+ países</b>.',
-          'Desarrollé y mantuve componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+ mercados internacionales</b>.',
+          'Desarrollé y mantuve componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+</b> mercados internacionales.',
           'Contribuí a la arquitectura frontend del <b>portal de e-commerce Yeezy</b>, aclamado por su diseño minimalista y <b>programación funcional en Typescript</b>, resultando en un tiempo de carga más rápido.'
         ]
       },
@@ -600,7 +632,7 @@ export const contentcreator: CvData = {
         role: 'Desarrollador Frontend',
         tasks: [
           'Creación de <b>aplicaciones 3D inmersivas</b> con <b>React</b> y <b>Unreal/C++</b>, así como visualizaciones interactivas de masterplans para el sector inmobiliario (PropTech).',  
-          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing de marca y activaciones en centros comerciales, involucrando audiencias mediante gameplay interactivo.',
+          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing en centros comerciales.',
         ]
       }
     ]},

@@ -4,13 +4,13 @@
     @for (lang of languages(); track $index) {
       <div class="flex flex-col w-full">
         <div class="w-full flex flex-row">
-          <div class="h6-primary mb-1 languages-font grow">{{ lang.name }}</div>
-          <div class="h5-primary mb-1 languages-font pr-1">{{ lang.cefrLevel }}</div>
+          <div class="h6-primary mb-1 languages-font grow" style="color: var(--clr-gray-800)">{{ lang.name }}</div>
+          <div class="h5-primary mb-1 languages-font pr-1" style="color: var(--clr-gray-800)">{{ lang.cefrLevel }}</div>
         </div>
         <div class="w-full h-3 rounded bg-white flex">
           <div
             class="h-3 rounded"
-            [ngStyle]="{ width: lang.level + '%', background: 'var(--clr-secondary)' }"
+            [ngStyle]="{ width: lang.level + '%', background: 'var(--clr-primary)' }"
           ></div>
         </div>
       </div>

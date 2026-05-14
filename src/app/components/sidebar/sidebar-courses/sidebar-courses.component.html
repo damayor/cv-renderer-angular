@@ -3,9 +3,9 @@
     <div class="sidebar-block-content">
       <ul>
         @for (course of courses; track $index) {
-          <li class="course-item">
-            <div class="course-font">{{ course.name }}</div>
-            <div class="course-meta">{{ course.institution }} &mdash; {{ course.date }}</div>
+          <li>
+            <div class="text-sm mb-1 languages-font font-medium grow text-gray-800">{{ course.name }}</div>
+            <div class="text-xs font-thin mb-2" style="color: var(--clr-gray-800)">{{ course.institution }} &mdash; {{ course.date }}</div>
           </li>
         }
       </ul>

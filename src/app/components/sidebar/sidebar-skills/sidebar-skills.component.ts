@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
   selector: 'sidebar-skills',
   standalone: true,
   imports: [CommonModule],
-  styleUrls: ['./sidebar-skills.component.css'],
   templateUrl: './sidebar-skills.component.html'
 })
 export class SidebarSkillsComponent {

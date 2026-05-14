@@ -1,0 +1,76 @@
+<div
+    [attr.aria-label]="'Profile links'"
+    role="list"
+    class="flex flex-wrap gap-1.5"
+>
+    <a
+        *ngFor="let link of links; let i = index"
+        [href]="link.href"
+        target="_blank"
+        rel="noopener noreferrer"
+        role="listitem"
+        [attr.aria-label]="link.label"
+        [attr.title]="link.label"
+        [style.transition-delay]="i * 40 + 'ms'"
+        class="inline-flex items-center border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-600 gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 no-underline transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400"
+    >
+    <span>
+        <ng-container>
+        @switch (link.icon) {
+        @case ( 'portfolio') {
+
+            <svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88"/>
+            </svg>
+        }
+        @case ( 'linkedin') {
+            
+            <svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+            </svg>
+
+        }
+
+        @case ( 'github') {
+            <svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+        }
+
+        @case ( 'behance') {
+            <svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 6h6.5a3.5 3.5 0 0 1 0 7H1V6z"/>
+                <path d="M1 13h7.5a3.5 3.5 0 0 1 0 7H1v-7z"/>
+                <path d="M14 6h8"/>
+                <path d="M22 14H14a4 4 0 1 1 4-4"/>
+            </svg>
+        }
+
+        @case ( 'stackshare') {
+            <svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 12l10 5 10-5"/>
+                <path d="M2 17l10 5 10-5"/>
+            </svg>
+
+        }
+
+    }
+        </ng-container>
+    </span>
+    <span>{{ link.label }}</span>
+    </a>
+</div>
