@@ -1,30 +1,28 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
- 
-export interface LinkItem {
-  label: string;
-  href: string;
-  icon: 'portfolio' | 'linkedin' | 'github' | 'behance' | 'stackshare';
-}
- 
-export type Variant = 'badge';
+import { CvData } from '@interfaces/CVData';
+
+export type LinkItem = CvData['links'][number];
+export type Icon = 'portfolio' | 'linkedin' | 'github' | 'behance' | 'stackshare' | 'instagram' | 'link';
+
+const URL_ICON_MAP: { pattern: RegExp; icon: Icon }[] = [
+  { pattern: /mayinteractive/,  icon: 'portfolio'   },
+  { pattern: /linkedin/,   icon: 'linkedin'    },
+  { pattern: /github/,     icon: 'github'      },
+  { pattern: /behance/,    icon: 'behance'     },
+  { pattern: /stackshare/,  icon: 'stackshare'  },
+  { pattern: /instagram/,  icon: 'instagram'   },
+];
+
 @Component({
   selector: 'header-links',
   imports: [CommonModule],
   templateUrl: './header-links.html',
 })
+export class HeaderLinks {
+  @Input() links: LinkItem[] = [];
 
-export class HeaderLinks implements OnInit {
-  // @Input() variant: Variant = 'badge';
- 
-  @Input() links: LinkItem[] = [
-    { label: 'Portfolio',   href: '#', icon: 'portfolio'  },
-    { label: 'LinkedIn',    href: '#', icon: 'linkedin'   },
-    { label: 'GitHub',      href: '#', icon: 'github'     },
-    { label: 'Behance',     href: '#', icon: 'behance'    },
-    { label: 'Stackshare',  href: '#', icon: 'stackshare' },
-  ];
- 
-  ngOnInit(): void {}
- 
+  resolveIcon(url: string): Icon {
+    return URL_ICON_MAP.find(({ pattern }) => pattern.test(url))?.icon ?? 'link';
+  }
 }

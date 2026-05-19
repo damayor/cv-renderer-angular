@@ -57,7 +57,8 @@ const defaultEducation =
           location: "Bogotá, Kolumbien",
           tasks: [
             'GPA: 4.5/5.0',
-            "Akademische Vertiefung in <b>Visual und Computing Interaction</b>",
+            "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen",
+            // "Akademische Vertiefung in <b>Visual und Computing Interaction</b>",
           ]
         },
         {
@@ -66,7 +67,7 @@ const defaultEducation =
           dates: " 2018",
           location: "Kaiserslautern",
           tasks: [
-            "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen",
+            'Optimierung der Distanzerkennung in <b>AR</b> mittels <b>OpenCV</b> für Hololens innerhalb der Arbeitsgruppe HCI and Computer Graphics.'
           ]
         },
         {
@@ -143,8 +144,11 @@ const freelancerExperience = {
     dates: 'Aug 2025 - present',
     role: 'Full-Stack Ingenieur & Automatisierungsspezialist',
     tasks: [
-      'Nutzung von <b> LLMs</b>  (Claude, Gemini, NotebookLM) und Vibe-Coding-Methoden zur schnellen Prototypisierung',
-      'Rendering komplexer 3D-Masterpläne aus Unreal Engine und 3ds Max in <b>R3F</b> unter Einbindung von <b>WebAssembly</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen'  ]
+      'Rendering komplexer 3D-Masterpläne aus Unreal Engine und 3ds Max in <b>R3F</b> unter Einbindung von <b>WebAssembly</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen.',
+      "Multi-Sensor-Viewer für das nuScenes-Dataset unter Integration von <b>FastAPI</b> (Python) und R3F zur 3D-Visualisierung von <b>LiDAR-Punktwolken</b>.",
+      // 'Nutzung von <b> LLMs</b>  (Claude, Gemini, NotebookLM) und Vibe-Coding-Methoden zur schnellen Prototypisierung.',
+    ]
+      
   }
 
 export const seniorfrontend: CvData = {
@@ -157,7 +161,7 @@ export const seniorfrontend: CvData = {
     primary: '#48011d',
   },
   aboutme: `
-   Softwareingenieur mit 5 Jahren Erfahrung
+   Softwareingenieur mit 5+ Jahren Erfahrung
    in der Erstellung von großen Web-Plattformen und Anwendungen. 
    Ich bin spezialisiert auf NodeJS, TypeScript und interaktive Erfahrungen u.a. mit Three.js, und Unreal. 
    Solide Kenntnisse in C++, Linux Bash und SRE 
@@ -188,10 +192,10 @@ export const seniorfrontend: CvData = {
         dates: 'Mai 2021 - Jun 2025',
         role: 'Softwareingenieur ',
         tasks: [
-            "Treiben der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
-            "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
-            "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout-<b>Backends</b> durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
-            "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten."
+            "Treiben der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
+            // "Entwicklung und Pflege skalierbarer Frontend-Komponenten für die GTS Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
+            "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout-<b>Backends</b> durch CI/CD-Pipelines Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
+            "Beitrag zur Frontend-Architektur des <b>Yeezy</b>, E-Commerce bekannt für minimalistisches Design und <b>funktionale Programmierung</b> mit schnelleren Ladezeiten."
           ]
       },
       {
@@ -201,12 +205,12 @@ export const seniorfrontend: CvData = {
         role: 'Frontend Softwareentwickler',
         tasks: [
             "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
-            "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
+            "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen in Einkaufszentren"
           ]
       }
     ]},
     defaultEducation,
-    defaultExtraCurricular
+    // defaultExtraCurricular
   ],
 };
 
@@ -221,7 +225,7 @@ export const frontend: CvData = {
 export const frontend3d: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Softwareingenieur - Fokus auf Typescript und Three.js",
+    value: "Softwareingenieur - Fokus auf Typescript und Graphics",
     acronym: 'F3D',
     
   },
@@ -287,7 +291,7 @@ export const juniorfrontend: CvData = {
         role: 'Softwareingenieur ',
         tasks: [
             "Treiben der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
-            "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
+            "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die GTS Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
           ]
       },
       {
@@ -351,7 +355,7 @@ export const seniorSoftware: CvData = {
         tasks: [
           "Treiben der Entwicklung von <b>Anpassungsmodulen</b> für Sportbekleidung im PDP mit <b>Three.js, C#</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
           "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
-          "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
+          "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die GTS Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
           // "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten.",
         ]
       },
@@ -370,32 +374,32 @@ export const seniorSoftware: CvData = {
         dates: 'Jan 2020 - Sep 2020',
         role: 'Frontend Softwareentwickler',
         tasks: [
-          "Programmierung von Hyper-Casual-Spielen in <b>Unity, C#</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung.",
+          "Programmierung von Hyper-Casual-Spielen in <b>Unity, C#</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen",
           "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
         ]
       }
     ]},
     defaultEducation,
-     defaultExtraCurricular
+    //  defaultExtraCurricular
   ],
 };
 
 export const fullStackIngenieur: CvData = {
   ...seniorSoftware,
   occupation: {
-    value: "Full-Stack-Ingenieur",
+    value: "Full-Stack-Ingenieur & SRE",
     acronym: 'FSE'
   },
   aboutme: 
-  `Softwareingenieur mit 5 Jahren Erfahrung in 
+  `Softwareingenieur mit 5+ Jahren Erfahrung in 
   großskaligen Webplattformen bei einem multinationalen 
-  Unternehmen, spezialisiert auf NodeJS, Java und 
+  Unternehmen, spezialisiert auf NodeJS, React und 
   interaktive 3D-Lösungen mit Unity, Three.js. 
   Solide Kenntnisse in C++, Linux Bash und Site Reliability 
   Engineering (Monitoring, Performance, Skalierbarkeit).
   ${appendedAboutMe}`,
   skills: {
-    "Full-Stack": ["Typescript","Node.js","Java", "Spring", "Python" ],
+    "Full-Stack": ["Typescript","Node.js","C++", "Java", "Python" ],
     "Frontend": ["React","Three.JS","Angular", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
@@ -449,8 +453,8 @@ export const gameEntwickler: CvData = {
         role: 'Frontend Softwareingenieur',
         tasks: [
           "Leitete die Entwicklung der 3D-Anpassungsfunktionen für Sportbekleidung mit <b>Three.js</b> und <b>Unity</b>, um die Web-User-Interaktion zu steigern.",
-          "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug.",
-          "Trug zur Frontend-Architektur des <b>Yeezy E-Commerce-Portals</b> bei, das für sein minimalistisches Design und die <b>funktionale Programmierung in Typescript</b> bekannt ist und kürzere Ladezeiten ermöglichte."
+          "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die GTS Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug.",
+          "Trug zur Frontend-Architektur des <b>Yeezy E-Commerce-Portals</b> bei, das für sein minimalistisches Design und die <b>funktionale</b> Programmierung in Typescript bekannt ist und kürzere Ladezeiten ermöglichte."
         ],
       },
       {
@@ -469,7 +473,7 @@ export const gameEntwickler: CvData = {
         role: 'Frontend Softwareentwickler',
         tasks: [
             "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
-            "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
+            "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen"
           ]
       }
     ]},
@@ -527,7 +531,7 @@ export const sre: CvData = {
           "Verbesserte die Zuverlässigkeit des Checkout-Backend-Mikroservice durch Observability mit <b>Grafana</b> und Alerting-Integrationen, um tägliche Transaktionen in <b>30+ Ländern</b> ohne Unterbrechung zu unterstützen.",
           "Beteiligte sich an On-Call-Rotationen zur Fehleranalyse und -behebung in der Produktion, um eine <b>99,99%</b>-Verfügbarkeit der Microservices sicherzustellen.",
           "Refaktorierte Jenkins-Pipelines und implementierte CI/CD-Best Practices für das Checkout-Service-Repository, wodurch die Deployment-Zeit von <b>15 Minuten auf unter 6 Minuten</b> reduziert wurde.",
-          "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die Global Team Sports Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug."
+          "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die GTS Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug."
         ]
       },
       {
@@ -537,7 +541,7 @@ export const sre: CvData = {
         role: 'Frontend Softwareentwickler',
         tasks: [
           "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
-          "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen, mit spielerischer Interaktion zur Publikumsbindung."
+          "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen"
         ]
       }
     ]},

@@ -5,7 +5,7 @@
 >
     <a
         *ngFor="let link of links; let i = index"
-        [href]="link.href"
+        [href]="link.url"
         target="_blank"
         rel="noopener noreferrer"
         role="listitem"
@@ -14,20 +14,21 @@
         [style.transition-delay]="i * 40 + 'ms'"
         class="inline-flex items-center border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-600 gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 no-underline transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400"
     >
-    <span>
+    <span style="color: var(--clr-primary)">
         <ng-container>
-        @switch (link.icon) {
-        @case ( 'portfolio') {
-
-            <svg width="16" height="16" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="1.6"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"/>
-                <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88"/>
+        @switch (resolveIcon(link.url)) {
+        @case ('portfolio') {
+            <svg width="16" height="16" viewBox="10 17 103 79" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M64 19 L55 30 L73 30 Z" fill="currentColor"/>
+                <path d="M62.5 30 h3 V67 h-3 Z" fill="currentColor"/>
+                <line x1="65" y1="66" x2="108.5" y2="66" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                <path d="M23.155 64.6q-.75.375-1.613.675-.825.3-1.8.487.975.226 1.8.525.863.263 1.613.675l16.838 8.513q.75.375 1.05.863.3.487.3 1.087v4.8L12.355 67.15v-2.775l28.988-15.038V54.1q0 .637-.3 1.125-.3.45-1.05.825z" fill="currentColor"/>
+                <path d="M56.265 91.788q-.487 1.312-1.537 1.95-1.012.636-2.1.637h-2.812l11.27-28.07 6.4-2.6-11.27 28.07z" fill="currentColor"/>
+                <path d="M112.639 64.375v2.775L83.652 82.225v-4.8q0-.6.3-1.087.3-.488 1.05-.863l16.837-8.512a9 9 0 0 1 1.575-.675 19 19 0 0 1 1.8-.525q-1.912-.413-3.375-1.163l-16.837-8.55q-.75-.375-1.05-.825-.3-.488-.3-1.125v-4.763z" fill="currentColor"/>
+                <path d="M47 87 L50.5 95.5 L59 92 Z" fill="currentColor"/>
             </svg>
         }
-        @case ( 'linkedin') {
-            
+        @case ('linkedin') {
             <svg width="16" height="16" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="1.6"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -35,18 +36,15 @@
                 <rect x="2" y="9" width="4" height="12"/>
                 <circle cx="4" cy="4" r="2"/>
             </svg>
-
         }
-
-        @case ( 'github') {
+        @case ('github') {
             <svg width="16" height="16" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="1.6"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
             </svg>
         }
-
-        @case ( 'behance') {
+        @case ('behance') {
             <svg width="16" height="16" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="1.6"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -56,8 +54,7 @@
                 <path d="M22 14H14a4 4 0 1 1 4-4"/>
             </svg>
         }
-
-        @case ( 'stackshare') {
+        @case ('stackshare') {
             <svg width="16" height="16" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="1.6"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -65,10 +62,25 @@
                 <path d="M2 12l10 5 10-5"/>
                 <path d="M2 17l10 5 10-5"/>
             </svg>
-
         }
-
-    }
+        @case ('instagram') {
+            <svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+        }
+        @default {
+            <svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+        }
+        }
         </ng-container>
     </span>
     <span>{{ link.label }}</span>

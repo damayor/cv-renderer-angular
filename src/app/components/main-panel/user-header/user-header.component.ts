@@ -2,7 +2,7 @@ import { Component, computed, input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { environment } from '../../../../environments/environment';
 import { Contact } from '@interfaces/CVData';
-import { HeaderLinks } from "../header-links/header-links.component";
+import { HeaderLinks, LinkItem } from "../header-links/header-links.component";
 
 @Component({
   selector: 'user-header',
@@ -30,17 +30,20 @@ import { HeaderLinks } from "../header-links/header-links.component";
           <span style="color: var(--clr-primary);"> <span class="icon-location2"></span></span>
           <span>{{location() }}</span>
         </div>
-        
+
       </div>
 
     </div>
-    <!-- <header-links variant="pill"></header-links> -->
+    <div class="px-5 pt-1">
+      <header-links [links]="links()"></header-links>
+    </div>
   `,
   styles: [``]
 })
 export class UserHeaderComponent {
   userData = input.required<Contact>({});
   role = input.required<string>({});
+  links = input<LinkItem[]>([]);
 
   location = computed(() =>  environment.cvScope === 'DE' ? this.userData().address : this.userData().location )
 

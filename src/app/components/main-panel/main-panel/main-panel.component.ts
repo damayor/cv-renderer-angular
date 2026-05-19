@@ -14,6 +14,7 @@ import { Contact, CvData } from '@interfaces/CVData';
       <user-header
         [role]="cvData().occupation.value"
         [userData]="contact()"
+        [links]="cvData().links"
       ></user-header>
       
       @for (section of cvData().experiences; track $index) {
