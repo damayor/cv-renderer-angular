@@ -34,7 +34,7 @@ import { HeaderLinks, LinkItem } from "../header-links/header-links.component";
       </div>
 
     </div>
-    <div class="px-5 pt-1">
+    <div class="px-5 pt-3">
       <header-links [links]="links()"></header-links>
     </div>
   `,

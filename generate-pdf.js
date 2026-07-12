@@ -15,8 +15,9 @@ const { exec } = require('child_process');
     'seniorsoftware': 'SE',
     'graphicsEngineer':'VC',
     'sre':'DO',
-    'supportAssistant': 'SA',
-    'itSupport':'ITS'
+    'salesAssistant': 'SA',
+    'itSupport':'ITS',
+    'contentcreator':'CC'
   };
   
   const role = args[0]; 
@@ -32,7 +33,7 @@ const { exec } = require('child_process');
   const prefix = lang == 'EN'
     ? 'CV' 
     : lang == 'DE' ? 'LL' : 'HV'
-  const country = scope == 'EU' ? 'E': scope =='ES' ? 'S':'' 
+  const country = scope == 'EU' ? 'E': scope =='ES' ? 'S': scope == 'CO' ? 'A' : ''; 
   const namepdf = 'DavidMayorga'+acronyms[role];
 
   const browser = await puppeteer.launch();

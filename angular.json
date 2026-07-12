@@ -89,6 +89,14 @@
                   "with": "src/environments/environment.es.ts"
                 }
               ]
+            },
+            "co": {
+               "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.co.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -113,6 +121,9 @@
             },
             "es": {
               "buildTarget": "cv-renderer:build:development,es"
+            },
+            "co": {
+              "buildTarget": "cv-renderer:build:development,co"
             }
           },
           "defaultConfiguration": "development"

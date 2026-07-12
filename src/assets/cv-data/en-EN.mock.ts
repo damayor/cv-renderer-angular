@@ -4,13 +4,15 @@ import { environment } from '../../environments/environment';
 const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
-  phone: "+49 1525 2198970",
-  location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (July 2026)",
+  phone: environment.cvScope == 'CO' ? "+57 312 3344936": "+49 1525 2198970",
+  // location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (July 2026)",
+  location: environment.cvScope == 'CO' ? "Berlin -> Bogota (Ago 2026)" : "10585 Berlin, Germany",
   nationality: "Colombian",
   address:"Otto-Suhr-Allee 106C, 10585 Berlin",
   workStatus: "Available 20h/week",
   titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
   visaStatus: 'Full-time available upon contract signing (approx. 6-week processing time, subject to Ausländerbehörde response times).',
+  arbeitsErlaubnis: 'Available for up 20h/Week. Full-time employment is possible following the signing contract and approval by Ausländerbehörde',
 }
 
 const defaultSkills =  {
@@ -18,14 +20,14 @@ const defaultSkills =  {
   "Full-Stack": ["Javascript","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
   "Graphics": ["Unity","XR",'C#','C++',"Unreal","UI/UX", "Figma"],
   "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-  "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-  "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "SDD"],
+  "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
 }
 
 const appendedAboutMe = `
    Berlin-based 
-    ${environment.cvScope === 'ES' 
-      ? `relocating to Spain in summer.` 
+    ${environment.cvScope === 'CO' 
+      ? `relocating to Colombia in summer.` 
       : environment.cvScope === 'DE' 
         ? `with work authorization and relocation flexibility within Germany.` 
         : `with immediate relocation availability within Europe.`
@@ -40,6 +42,7 @@ const languagesData = [
   ]
 
 const defaultCourses = [
+    { "name": "Claude Code in Action", "institution": "Anthropic", "date": "Jun 2026" },
     { name: "ANGULAR: FROM ZERO TO EXPERT - EDITION 2025", institution: "{D/T} DevTalles", date: "Jul 2025" },
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ]
@@ -99,9 +102,10 @@ const freelancerExperience = {
     dates: 'Aug 2025 - present',
     role: 'Full-Stack Engineer & Automation Specialist',
     tasks: [
-      'Rendering complex 3D masterplans from Unreal Engine and 3Ds Max within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
-      'Leveraged <b> LLMs</b>  (Claude, Gemini, NotebookLM) and  Vibe Coding methodologies to rapidly prototype and deploy automation tools.',
-      'Built and deployed full-stack a customizable CV generator with <b>Angular</b>, <b>RxJS</b> for reactive state management and dynamic rendering.',
+      'Rendering complex 3D masterplans from 3ds Max und <b>Blender</b> within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
+      'Multi-sensor viewer for the nuScenes dataset, integrating <b>FastAPI</b> (Python) and R3F for <b>LiDAR point clouds</b>.',
+      'Leveraged <b> LLMs</b>  (Claude, Gemini, NotebookLM) and vibe coding methodologies to rapidly prototype and deploy automation tools and web applications.',
+      // 'Built and deployed full-stack a customizable CV generator with <b>Angular</b>, <b>RxJS</b> for reactive state management and dynamic rendering.',
       // 'Developed custom scripts using <b>Google Apps Scripts</b> to automate projects work-hour tracking in Google Sheets, increasing personal productivity by 40%.',
     ],
     achievements: [
@@ -133,20 +137,20 @@ export const seniorfrontend: CvData = {
   colors: {
     primary: '#48011d',
   },
-  aboutme: `Frontend engineer with 4+ years of experience
+  aboutme: `Frontend engineer with 6+ years of experience
     building large-scale web platforms and applications
     specialized in Node.js,
-    TypeScript, and UI/UX solutions using
-    TailwindCSS, SCSS, and interactive 2D and 3D experiences. I own a deep understanding of CI/CD practices
+    TypeScript, and UI/UX solutions using Storybook
+    TailwindCSS, and interactive 2D or 3D experiences. I own a deep experience of CI/CD practices
     and SRE in international environments.
     ${appendedAboutMe}`,
   skills: {
-    "Frontend": ["React","Three.JS","Canvas","TailwindCSS", /*"Next.js",*/ "Vue.js",],
-    "Full-Stack": ["Node.js","Angular","RxJs","Typescript","REST" /*"GraphQL",*/],
-    "Graphics": ['C++',"Unity", 'C#',"Unreal",/*"WebAssembly",*/ "UI/UX", "Figma"],
-    "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tooling": ["Git","Storybook","Nest.js","ESLint", "Jest"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Frontend": ["React","Three.JS","TailwindCSS", "Next.js", "Angular"],
+    "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
+    "Graphics": ['C++','WASM', "Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "CI/CD": ['Linux','Docker','Jenkins','Kubernetes',"YAML","Grafana"],
+    "Tooling": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -204,7 +208,14 @@ export const frontend3d: CvData = {
   occupation: {
     value: "Frontend Engineer - Focused on Computer Graphics",
     acronym: 'F3D',
-
+  },
+  skills: {
+    "Frontend": ["React", "TypeScript", "Next.js", "SCSS", "TailwindCSS"],
+    "Graphics": ["Three.js", "WebGL","XR", "Unity", "Unreal", "C++", "Shaders"],
+    "Full-Stack": ["Node.js", "Nest.js", "REST", "PostgreSQL", "Microservices"],
+    "CI/CD": ["Git", "Docker", "Jenkins", "Linux", "K8", "Grafana"],
+    "Tooling": ["Blender","Vite", "Storybook", "Photoshop"],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
 }
 
@@ -233,7 +244,7 @@ export const juniorfrontend: CvData = {
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -338,20 +349,29 @@ export const seniorSoftware: CvData = {
     primary: '#48011d',
 
   },
-  aboutme: `Software Engineer with 5+ years of experience
-    in large-scale web platforms and applications
-    specialized in Node.js, and
-    visual solutions of high performance using React, R3F and Angular.
-    Strong foundations in C++, Linux bash, LLMs
-    and SRE/DevOps practices, ensuring
-    monitoring, performance and scalability.
+  aboutme: 
+    // `Software Engineer with 6+ years of experience
+    // in large-scale web platforms and applications
+    // specialized in Node.js, and
+    // visual solutions of high performance using React, R3F and Angular.
+    // Strong foundations in C++, Linux bash, LLMs
+    // and SRE/DevOps practices, ensuring
+    // monitoring, performance and scalability.
+
+    `Software Engineer (M.Sc.) specializing in scalable systems 
+    and full-stack development, with over 6 years of experience 
+    building large-scale platforms. 
+    Expert in Node.js, TypeScript, and Microservices, 
+    with a proven track record of managing global-scale 
+    deployments at adidas with SRE/DevOps practices.
     ${appendedAboutMe}`,
   skills: {
-    "Full-Stack": ["Node.js","Typescript", "Next.js", "C++", "Python", "JS"],
-    "Frontend": ["Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
+    "Full-Stack": ["Node.js","Typescript", "Next.js", "C++", "REST"],
+    'Architecture': ['SOLID','Microservices', 'Event-Driven Systems', 'Design patterns'],
+    "Frontend": ["React", "Vue.js", "Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ["Git","bash","PostgreSQL","Microservices", "Jest", "SDD"],
+    "AI & LLMs": ["Copilot","Claude Code","NotebookLM","Gemini","CursorAI",]
   },
   languages: languagesData,
   links: [
@@ -406,54 +426,47 @@ export const fullStackEngineer: CvData = {
     value: "Full Stack Engineer",
     acronym: 'FSE'
   },
-  aboutme: `Software Engineer with 5+ years
+  aboutme: `Software Engineer with 6+ years
     of experience, specializing in high-scale platforms
     and interactive solutions.
     Having worked for global brands like adidas,
     I own a deep understanding of CI/CD practices
     and SRE in international environments.
     ${appendedAboutMe}`,
-  skills: {
-    "Full-Stack": ["Typescript","C#","Node.js",".Net", "C++", "Python" ],
-    "Frontend": ["Angular", "React","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tooling": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+   skills: {
+    "Full-Stack": ["Typescript","Node.js","C++", "Java", "Python" ],
+    "Frontend": ["React","Angular", "Three.JS","SCSS","TailwindCSS", "Figma", "UI/UX" ],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"/*,"Elasticsearch"*/],
+    "Tooling": ["Git",'AWS','Vite',"PostgreSQL","Storybook","ESLint", "Jest"],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
 }
 
 export const graphicsEngineer: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "Graphics Software Engineer",
+    value: "3D & Graphics Engineer",
     acronym: 'VC',
   },
   colors: {
-    primary: '#2c2e81',
+    primary: '#1a1a2e', // dark navy, evoca NVIDIA/tech industrial
   },
-  aboutme: `Visual computing engineer with
-      experience in casual games and
-      serious simulators, most of the
-      time with Unity and VR/AR.
-      Skilled in frontend technologies
-      such as React and Three.js to
-      create interactive 3D applications
-      and engaging user interfaces,
-      mixed with REST endpoints using
-      backend microservices. Strong
-      foundations in C++/C#, and Linux bash
-      focused on delivering immersive
-      digital solutions that enhance
-      user experience, particularly in
-      industrial and web contexts.
-      Recently relocated to Berlin with work authorization,
-      I am looking for innovative engineering teams,
-      not only through my technical expertise,
-      but by helping colleagues grow so the
-      entire group can advance together.`,
-  skills: {...defaultSkills,
-    "Graphics": ['C++',"Unity",'C#',"Unreal","XR", "UI/UX", "Figma"],
-    "Frontend": ["React","Angular","Three.JS", "SCSS","TailwindCSS" ],
+  aboutme: `Visual computing engineer with 5+ years
+      building real-time 3D applications, simulations
+      and interactive experiences across web and
+      native platforms. Proficient in Unreal Engine,
+      Unity, Three.js and React Three Fiber, with
+      hands-on experience integrating sensor data (LiDAR) into 3D viewers.
+      Strong foundations in C++, Python and TypeScript,
+      applied across R&D prototypes and production systems in AR and XR.
+      ${appendedAboutMe}`,
+  skills: {
+    "Graphics": ['C++', 'Unreal', 'Unity', 'C#', 'Three.JS','Blender', 'OpenCV', 'Godot'],
+    "Full-Stack": ['Python', 'FastAPI', 'Node.js', 'TypeScript', 'JavaScript', 'Next.js'],
+    "Frontend": ['React', 'Angular', 'TailwindCSS', 'SCSS'],
+    "CI/CD": ['Linux', 'Docker', 'Jenkins', 'K8', 'YAML', 'Grafana'],
+    "Tooling": ['Git', 'Vite', 'Storybook', 'Jest', 'Figma'],
+    "AI & LLMs": ['Copilot', 'Claude Code', 'NotebookLM', 'Gemini', 'GPT'],
   },
   languages: languagesData,
   links: [
@@ -463,21 +476,31 @@ export const graphicsEngineer: CvData = {
     { label: "Behance", url: "https://www.behance.net/may_interactive" }
   ],
   courses: [
+    { name: "C++ Programming - From Beginner to Beyond", institution: "Udemy", date: "May 2025" },
     { name: "Game Development with Unreal Engine 4", institution: "Udemy", date: "Jan 2020" },
-    { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
     {title: "Work Experience", entries: [
+      freelancerExperience,
       {
         company: 'ADIDAS',
         location: 'Bogotá',
         dates: 'May 2021 - Jun 2025',
-        role: 'Frontend Software Engineer',
+        role: 'Software Engineer — 3D & Frontend',
         tasks: [
-          'Led the development of 3D customisation for sportswear using <b>Three.js</b> and <b>Unity</b>, enhancing web user engagement.',
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
-          'Improved deployment duration of backend microservice by implementing <b>CI/CD</b> pipelines via <b>Jenkins</b>, <b>Kubernetes</b>',
-          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+          'Led 3D customisation module development for sportswear PDPs using <b>Three.js</b> and <b>Unity</b>, optimizing <b>rendering performance</b> and real-time interaction across <b>20+ international markets</b>.',
+          'Contributed to frontend architecture with <b>React</b> and <b>Next.js</b>, applying functional programming patterns and achieving load time improvements on high-traffic e-commerce platforms (i.e. Yeezy).',
+          'Improved deployment reliability of backend microservices via <b>CI/CD pipelines</b> with <b>Jenkins</b> and <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
+        ]
+      },
+      {
+        company: 'UMBRA INTERACTIVE - 3D STUDIO',
+        location: 'Bogotá',
+        dates: 'Jan 2020 - Sep 2020',
+        role: 'Frontend & 3D Developer',
+        tasks: [
+          'Developed <b>immersive 3D applications</b> and interactive masterplan visualisations for the real estate sector using <b>Unreal/C++</b> and <b>React</b>, applying simulation and microservices for PropTech clients.',
+          'Built hyper-casual games and <b>VR experiences</b> in <b>Unity</b> for brand marketing campaigns, focusing on real-time interaction.'
         ]
       },
       {
@@ -486,19 +509,9 @@ export const graphicsEngineer: CvData = {
         dates: 'Sep 2020 - Dec 2020',
         role: 'Game Developer',
         tasks: [
-          'Developed and maintained hyper-casual mobile games using <b>Unity</b> and <b>Unreal/C++</b>, enhancing user engagement and UI/UX experience.'
+          'Developed and shipped hyper-casual mobile games using <b>Unity</b> and <b>Unreal/C++</b>, with focus on performance optimization and UI/UX in real-time 3D environments.',
         ]
       },
-      {
-        company: 'UMBRA INTERACTIVE - 3D STUDIO',
-        location: 'Bogotá',
-        dates: 'Jan 2020 - Sep 2020',
-        role: 'Frontend Software Developer',
-        tasks: [
-          'Developed hyper-casual games in <b>Unity</b> with <b>Virtual Reality</b> to support brand marketing campaigns and mall activations.',
-          'Created <b>immersive 3D applications</b> with <b>Unreal</b> and <b>React</b> creating interactive masterplan visualisations for the real estate sector (PropTech)',
-        ]
-      }
     ]},
     defaultEducation,
     defaultExtraCurricular
@@ -524,15 +537,15 @@ export const sre: CvData = {
     practices to deliver reliable
     solutions based on observability
     and monitoring. Skilled in CI/CD,
-    performance optimization, and
     ensuring scalable, resilient
-    systems. ${appendedAboutMe}`,
+    systems. Proficient in AI-powered engineering using LLMs, and spec-driven development.
+    ${appendedAboutMe}`,
   skills: {
-    "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
-    "CI/CD": ['Docker','Jenkins','K8',"Grafana","YAML", "IPv4"],
+    "CI/CD": ['Docker','Jenkins','Kubernetes',"YAML","Helm", 'Groovy'],
     "Monitoring": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie', 'SQL'],
-    "Tooling": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
+    "Tooling": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest"],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -540,6 +553,7 @@ export const sre: CvData = {
     { label: "Stackshare", url: "https://stackshare.io/damayor/software-engineer" },
   ],
   courses: [
+    { "name": "Claude Code in Action", "institution": "Anthropic", "date": "Jun 2026" },
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
@@ -552,11 +566,12 @@ export const sre: CvData = {
         role: 'Software Engineer',
         tasks: [
           'Enhanced reliability of the Checkout backend microservice by observability with <b>Grafana</b> and alerting integrations, supporting uninterrupted daily transactions across <b>30+ countries.</b>',
-          `Participated in on-call rotations to troubleshoot and resolve
-          production issues, ensuring <b>99.99%</b> microservice availability.`,
+         
           `Refactored Jenkins pipelines and implemented CI/CD best
-          practices for the Checkout service repository, cutting
-          deployment time from <b>15 minutes to under 6 minutes</b>`,
+          practices, cutting
+          deployment time from <b>15 minutes to under 7 minutes</b>`,
+           `Participated in on-call rotations to troubleshoot and resolve
+          production issues, ensuring <b>99.99%</b> microservice availability.`,
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Storybook</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
         ]
       },
@@ -571,7 +586,52 @@ export const sre: CvData = {
         ]
       }
     ]},
-    defaultEducation,
+    {
+  title: "Education",
+      entries: [
+        {
+          company: "Universidad de los Andes",
+          role: "M.Sc. Systems and Computing Engineering",
+          dates: " 2019",
+          location: "Bogotá, Colombia",
+          tasks: [
+            'GPA: 4.5/5.0',
+            // "Deploy of a <b>VR & haptic-based</b> training simulator for trauma orthopedic surgery in <b>Unity</b>",
+            // "Academic option in Visual and Computing Interaction"
+          ]
+        },
+        // {
+        //   company: "TUK",
+        //   role: "Research Internship",
+        //   dates: " 2018",
+        //   location: "Kaiserslautern",
+        //   tasks: [
+        //     "Optimizing long-distance recognition in <b>AR</b> using <b>OpenCV</b> for Hololens within the AG HCI and Computer Graphics."
+        //   ]
+        // },
+        {
+          company: "Universidad de los Andes",
+          role: "Bachelor on Systems and Computing Engineering",
+          dates: "2017",
+          location: "Bogotá, Colombia",
+          tasks: [
+            'GPA: 4.1/5.0',
+            "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
+            // "Research Monitor in IMAGINE group",
+            // "Scholarship <b>\"Quiero Estudiar\"</b> given to the best national ICFES scores"
+          ]
+        },
+        {
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
+          role: "High School Diploma",
+          dates: "2012",
+          location: "Bogotá, Colombia",
+          tasks: [
+            "Sprachdiplom B2"
+          ]
+        }
+      ]
+    },
     // defaultExtraCurricular
   ],
 };
@@ -700,7 +760,7 @@ export const supportAssistant: CvData = {
   skills: {
     "Service": ["Customer service","Inventory management", "Troubleshooting"],
     "Tech": [
-        "Social Networks", "Windows", "Linux", "Vibe coding"
+        "Social Networks", "Windows", "Linux", "SDD"
     ],
     "Soft Skills":["Easy Adaptable",'Teamwork', "Charisma"]
   },
@@ -814,7 +874,7 @@ export const itSupport: CvData = {
     "Service": ["Customer service","Inventory management", "Network","Problem solving",],
     "Tech": [
         "macOS", "Linux",
-        "Windows","microsoft Office", "Vibe coding"
+        "Windows","microsoft Office", "SDD"
     ],
     "Soft Skills":['Teamwork', "Troubleshooting"]
   },

@@ -19,8 +19,8 @@ const defaultSkills =  {
   "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
   "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
   "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-  "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-  "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+  "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "SDD"],
+  "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
 }
 
 // Da ich innerhalb Deutschlands flexibel und umzugsbereit bin, 
@@ -28,13 +28,15 @@ const defaultSkills =  {
 const appendedAboutMe = `
     Wohnhaft in Berlin
     ${environment.cvScope === 'DE' ?
-      `  mit Arbeitsgenehmigung und Umzugsbereitschaft innerhalb Deutschlands. 
+      `  mit Arbeitsgenehmigung und Umzugsbereitschaft. 
+ 
         `
       : `, da ich innerhalb Europas flexibel und umzugsbereit bin.`
     }
     Ich möchte meine internationale Erfahrung durch die hohen Qualitätstandards 
     bereichern und mich aktiv an die lokalen Arbeitsweisen anpassen.`
     //  //um gemeinsam mit dem Team zu wachsen.`
+         // innerhalb Deutschlands. 
 
 const languagesData =   [
     { name: "Englisch", level: 83 , cefrLevel: 'C1' },
@@ -43,8 +45,9 @@ const languagesData =   [
   ]
 
 const defaultCourses = [
+    { "name": "Claude Code in Action", "institution": "Anthropic", "date": "Jun 2026" },
     { "name": "ANGULAR: VON NULL ZUM EXPERTEN - AUSGABE 2025", "institution": "{D/T} DevTalles", "date": "Jul 2025" },
-    { "name": "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
+    { "name": "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Jul 2025" },
   ] 
 
 const defaultEducation = 
@@ -144,9 +147,10 @@ const freelancerExperience = {
     dates: 'Aug 2025 - present',
     role: 'Full-Stack Ingenieur & Automatisierungsspezialist',
     tasks: [
-      'Rendering komplexer 3D-Masterpläne aus Unreal Engine und 3ds Max in <b>R3F</b> unter Einbindung von <b>WebAssembly</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen.',
+      // 'Rendering 3D-Masterpläne aus Unreal und 3ds Max in <b>R3F</b> unter Einbindung von <b>WebAssembly</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen.',
+      'Rendering 3D-Masterpläne aus 3ds Max und <b>Blender</b> in <b>R3F</b> um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen.',
       "Multi-Sensor-Viewer für das nuScenes-Dataset unter Integration von <b>FastAPI</b> (Python) und R3F zur 3D-Visualisierung von <b>LiDAR-Punktwolken</b>.",
-      // 'Nutzung von <b> LLMs</b>  (Claude, Gemini, NotebookLM) und Vibe-Coding-Methoden zur schnellen Prototypisierung.',
+      'Nutzung von <b> LLMs</b> (Claude Code, Gemini, NotebookLM) und Vibe-Coding-Methoden zur schnellen Prototypisierung.',
     ]
       
   }
@@ -161,11 +165,12 @@ export const seniorfrontend: CvData = {
     primary: '#48011d',
   },
   aboutme: `
-   Softwareingenieur mit 5+ Jahren Erfahrung
+   Softwareingenieur mit 6+ Jahren Erfahrung
    in der Erstellung von großen Web-Plattformen und Anwendungen. 
    Ich bin spezialisiert auf NodeJS, TypeScript und interaktive Erfahrungen u.a. mit Three.js, und Unreal. 
    Solide Kenntnisse in C++, Linux Bash und SRE 
    in internationalen Umgebungen.
+    Versiert im KI-gestützten Engineering mit Claude Code, LLMs und Spec-Driven Development.
    ${appendedAboutMe}`,
   skills: {
     "Frontend": ["React","Three.JS","TailwindCSS", "Next.js", "Angular"],
@@ -174,7 +179,7 @@ export const seniorfrontend: CvData = {
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     "CI/CD": ['Linux','Docker','Jenkins','Kubernetes',"YAML","Grafana"],
     "Tooling": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -235,17 +240,8 @@ export const frontend3d: CvData = {
     "Full-Stack": ["Node.js", "Nest.js", "REST", "PostgreSQL", "Microservices"],
     "CI/CD": ["Git", "Docker", "Jenkins", "Linux", "K8", "Grafana"],
     "Tooling": ["Blender","Vite", "Storybook", "Photoshop"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
-  // skills: {
-  //   "Frontend": ["React","Three.JS", /*"R3F",*/"SCSS","TailwindCSS","Next.js" ],
-  //   "Graphics": ['C++',"WebGL", "Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-  //   "Full-Stack": ["Node.js","Typescript", "Nest.js", "REST", "Python", "SQL"],
-  //   "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"],
-  //   "Tooling": ["Git","Vite","Storybook","MongoDB", "Jest", "Vibe coding"],
-  //   "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
-  // },
-  // aboutme: `Frontend engineer with 5+ experience
 }
 
 
@@ -272,7 +268,7 @@ export const juniorfrontend: CvData = {
     // "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","Storybook","Docker","ESLint", "Jest"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -333,8 +329,9 @@ export const seniorSoftware: CvData = {
   großskaligen Webplattformen bei einem multinationalen 
   Unternehmen, spezialisiert auf ReactJS, NodeJS und 
   interaktive 3D-Lösungen mit Unity, Three.js und Unreal. 
-  Solide Kenntnisse in C++, Linux Bash und Site Reliability 
+  Solide Kenntnisse in C++ und Site Reliability 
   Engineering (Monitoring, Performance, Skalierbarkeit).
+  Versiert im KI-gestützten Engineering mit Claude Code, LLMs und Spec-Driven Development.
   ${appendedAboutMe}`,
   skills: defaultSkills,
   languages: languagesData,
@@ -384,30 +381,30 @@ export const seniorSoftware: CvData = {
   ],
 };
 
-export const fullStackIngenieur: CvData = {
+export const fullStackIngenieur: CvData = { //kof kof, AI - Engineer
   ...seniorSoftware,
   occupation: {
-    value: "Full-Stack-Ingenieur & SRE",
+    value: "Full-Stack und KI-Ingenieur",
     acronym: 'FSE'
   },
   aboutme: 
-  `Softwareingenieur mit 5+ Jahren Erfahrung in 
+  `Softwareingenieur mit 6+ Jahren Erfahrung in 
   großskaligen Webplattformen bei einem multinationalen 
   Unternehmen, spezialisiert auf NodeJS, React und 
   interaktive 3D-Lösungen mit Unity, Three.js. 
-  Solide Kenntnisse in C++, Linux Bash und Site Reliability 
-  Engineering (Monitoring, Performance, Skalierbarkeit).
+  Versiert im KI-gestützten Engineering mit Claude Code, LLMs und Spec-Driven Development.
+  Solide Kenntnisse in C++, Linux Bash und SRE (Monitoring, Performance, Skalierbarkeit).
   ${appendedAboutMe}`,
   skills: {
     "Full-Stack": ["Typescript","Node.js","C++", "Java", "Python" ],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
     "Frontend": ["React","Three.JS","Angular", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tooling": ["Git","Vite","ESLint", "Jest", "Vibe coding"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"],
+    "Tooling": ["Git","Vite","ESLint", "Jest", "Rest", "PostgreSQL"],
   },
 }
 
-export const gameEntwickler: CvData = {
+export const graphicsEntwickler: CvData = {
   contact: contactDefault,
   occupation: {
     value: "Game Entwickler",
@@ -491,7 +488,7 @@ export const sre: CvData = {
   colors: {
     primary: '#286848',
   },
-  aboutme: `Softwareingenieur mit 5 Jahren Erfahrung 
+  aboutme: `Softwareingenieur mit 6+ Jahren Erfahrung 
     in großskaligen Plattformen bei einem multinationalen 
     Unternehmen. Verfügt über solide Kenntnisse in
     Linux Bash und Automatisierung.     
@@ -500,15 +497,13 @@ export const sre: CvData = {
     basierend auf Monitoring und Beobachtbarkeit.  
     Erfahren in CI/CD, Performance-Optimierung 
     und dem Aufbau skalierbarer, robuster Systeme.
-    Derzeit in Deutschland ansässig und motiviert, Teams 
-    beizutreten, in denen ich Wissen weitergeben, Kolleg*innen
-    begleiten und die kollektiven Fähigkeiten stärken könnte.`,
+     ${appendedAboutMe}`,
   skills: {
-    "CI/CD": ['Docker','Jenkins','K8',"YAML","Grafana","YAML"],
-    "Monitoring": ['AWS','Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
-    "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
-    "Tooling": ['Linux','bash',"Git","Vite","Storybook","ESLint", "Jest", "Vibe coding"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "CI/CD": ['Docker','Jenkins','K8',"YAML","Helm", 'Groovy'],
+    "Monitoring": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
+    "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
+    "Tooling": ['Linux','AWS',"Git","PostgreSQL","Terraform","Storybook","ESLint", "Jest"],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -548,4 +543,119 @@ export const sre: CvData = {
     ohneMasterEducation,
     // defaultExtraCurricular
   ]
+}
+
+export const salesAssistant: CvData = { 
+  contact: contactDefault,
+  occupation: {
+    value: "Verkäufer in Kreativmarkt & Kundenberatung",
+    acronym: 'SA'
+  },
+  colors: {
+    primary: '#286848',
+  },
+  aboutme: `
+    Offene und kommunikative Persönlichkeit mit Erfahrung 
+    im Einzelhandel, Kundenservice und kreativen Projekten.
+    Bei Adidas unterstützte ich Retail-Prozesse während 
+    umsatzstarker Kampagnen, von Kassentätigkeiten bis 
+    zur Warenverräumung. Ich begeistere mich persönlich 
+    für Kreativität, Gestaltung und DIY, und bringe diese 
+    Leidenschaft gerne in die Beratung ein.
+    Wohnhaft in Berlin-Charlottenburg, in der Nähe 
+    der Filiale. Flexibel, zuverlässig und teamorientiert.`,
+    // ${appendedAboutMe}
+    // `,
+
+  skills: {
+    "Kundenservice": ["Kundenberatung", "Kassentätigkeiten", "Serviceorientierung", "Kommunikation"],
+    "Lager & Waren": ["Warenverräumung", "Inventur", "Wareneingang"],
+    "Soft Skills": ["Teamfähigkeit", "Zuverlässigkeit", "Flexibilität", "Eigeninitiative"],
+    "Kreativität": ["Digitales Design", "UI/UX","Photoshop", "Figma"],
+    "Digital": ["Social Media", "Content Creation", "Microsoft Office", "Linux"],
+  },
+  languages: languagesData,
+  links: [
+    { label: "Instagram", url: "https://www.instagram.com/davidmay___/" },
+    { label: "May Interactive", url: "https://www.instagram.com/may.interactive/" },
+  ],
+  courses: [
+    // { "name": "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
+  ],
+ experiences: [
+  {title: "Berufserfahrung", entries: [
+    {
+      company: 'ADIDAS',
+      location: 'Bogotá',
+      dates: 'Mai 2021 - Jun 2025',
+      role: 'Mitarbeiter im Einzelhandel & Softwareentwicklung',
+      tasks: [
+        'Unterstützung des <b>Retail-Betriebs</b> an umsatzstarken Tagen wie Weihnachten und Black Friday – inklusive <b>Kundenberatung, Warenverräumung</b> und <b>Lagerverwaltung</b>.',
+        'Enge Zusammenarbeit mit internationalen Teams zur Sicherstellung einer reibungslosen <b>Produktpräsentation</b> und positiven Kundenerfahrung in <b>20+ Märkten</b>.',
+      ]
+    },
+    {
+      company: 'UMBRA 3D STUDIO - INTERACTIVE',
+      location: 'Bogotá',
+      dates: 'Jan 2020 - Sep 2020',
+      role: 'Projektmitarbeiter & Kundenbetreuung',
+      tasks: [
+        'Betreuung und Support von Kundenprojekten mit hoher Serviceorientierung und <b>24/7-Verfügbarkeit</b> für zwei Marken.',
+        'Gestaltung kreativer <b>Markenerlebnisse</b> für Einkaufszentren und Marketingkampagnen – direkter Kontakt mit Endkunden und Partnern.',
+      ]
+    },
+    {
+      company: "COLIVRI Lab – Universidad de los Andes",
+      role: "Wissenschaftlicher Monitor",
+      dates: "Jun 2017 - Aug 2019",
+      location: "Bogotá",
+      tasks: [
+        "<b>Inventarverwaltung</b> von Laborgeräten sowie Koordination und Unterstützung von Demonstrationen für Besucher und Studierende.",
+        "Forschungspraktikum an der Technischen Universität <b>Kaiserslautern</b> (2018) – Arbeit in einem internationalen Umfeld.",
+      ]
+    },
+  ]},
+
+  {title: "Ausbildung", entries: [
+    {
+      company: "Universidad de los Andes",
+      role: "Bachelor in System- und Computertechnik",
+      dates: "2017",
+      location: "Bogotá, Kolumbien",
+      tasks: [
+        "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB <b>H+</b>) als <b>System- und Computertechnik</b> (Abschlussklasse <b>A4</b>).",
+      ]
+    },
+    {
+      company: "COLEGIO ANDINO – DEUTSCHE SCHULE",
+      role: "Abitur / Hochschulreife",
+      dates: "2012",
+      location: "Bogotá, Kolumbien",
+      tasks: [
+        "Sprachdiplom Deutsch B2"
+      ]
+    }
+  ]},
+
+  {title: "Weitere Erfahrung", entries: [
+    {
+      company: "Castel Magazine Models",
+      role: "Fashion Model & Content Creator",
+      dates: "Jun 2024 - Jun 2025",
+      location: "Bogotá",
+      tasks: [
+        "Erstellung von visuellem Content und UGC für <b>Social-Media-Kampagnen</b> mit Fokus auf Markenkommunikation und Eventmanagement.",
+      ]
+    },
+    {
+      company: "Universidad de los Andes",
+      role: "Theatermitglied",
+      dates: "Jan 2016 - Jun 2018",
+      location: "Bogotá",
+      tasks: [
+        "Mitwirkung in Theaterproduktionen – Stärkung von <b>Teamarbeit, Improvisation und Kommunikationsfähigkeiten</b> im direkten Publikumskontakt.",
+      ]
+    },
+  ]},
+],
 }

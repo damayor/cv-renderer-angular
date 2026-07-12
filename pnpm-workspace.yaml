@@ -1,0 +1,8 @@
+allowBuilds:
+  '@parcel/watcher': false
+  '@tailwindcss/oxide': false
+  core-js: false
+  esbuild: true
+  lmdb: false
+  msgpackr-extract: false
+  puppeteer: true

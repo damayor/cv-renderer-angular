@@ -1,10 +1,11 @@
 import { Contact, CvData } from "../../app/interfaces/CVData";
+import { environment } from '../../environments/environment';
 
 const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
-  phone: "+49 1525 2198970",
-  location: "Berlin -> España (Julio 2026)",
+  phone: environment.cvScope == 'CO' ? "+57 3123344936": "+49 1525 2198970",
+  location: environment.cvScope !== 'ES' ? "Berlin -> Colombia (Agosto 2026)": "Berlin -> España (Agosto 2026)",
   nationality: "Colombiano",
   // workStatus: "Transición a España desde Julio de 2026.",
   // visaStatus: 'Transicion a España desde Agosto 2026.',
@@ -34,6 +35,7 @@ const languagesData = [
   ]
 
 const defaultCourses = [
+    { "name": "Claude Code in Action", "institution": "Anthropic", "date": "Jun 2026" },
     { name: "ANGULAR: DE CERO A EXPERTO - EDICION 2025", institution: "{D/T} DevTalles", date: "Jul 2025" },
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
 ]
@@ -116,7 +118,7 @@ const freelancerExperience = {
     role: 'Ingeniero Full-Stack & Especialista en Automatización',
     tasks: [
       'Renderizado de maquetas 3D desde Unreal y 3Ds Max dentro de entornos <b>Three.js</b> para lograr resultados web de alto desempeño en móviles.',
-      'Uso de <b>LLMs</b> (Claude, Gemini, NotebookLM) y metodologías de Spec Driven Development para prototipar rápidamente.',
+      'Uso de <b>LLMs</b> (Claude Code, Gemini, NotebookLM) y metodologías de Spec Driven Development para prototipar rápidamente.',
       'Arquitectura de visores multi-sensor para el dataset nuScenes, integrando <b>FastAPI (Python)</b> y R3F para la visualización 3D de nubes de puntos <b>LiDAR</b>.',
       // 'Desarrollo full-stack de un generador de CVs en <b>Angular</b>, utilizando <b>RxJS</b> para la gestión de estado reactivo, renderizado dinámico y exportación a PDF.'
     ],
@@ -197,17 +199,17 @@ export const frontend: CvData = {
 export const frontend3d: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Ingeniero de Software - Enfoque en C++",
+    value: "Ingeniero de Software - Experiencia en Typescript y Three.js",
     // value: "Ingeniero Frontend - Enfoque en Computacion Visual y C++",
     acronym: 'FV',
   },
   skills: {
-    "Graphics": ['C++',"WebGL", "Unreal","XR","Unity", "UI/UX", "Figma"],
     "Frontend": ["React","Three.JS", /*"R3F",*/"SCSS","TailwindCSS","Next.js" ],
+    "Graphics": ['C++',"WebGL", "Unreal","XR","Unity", "UI/UX", "Figma"],
     "Full-Stack": ["Node.js","SQL","Typescript", "Nest.js", "REST", "Python", "SQL"],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"],
-    "Tooling": ["Git","Vite","Storybook","MongoDB", "Jest", "Vibe coding"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "Tooling": ["Git","Vite","Storybook","MongoDB", "Jest", "SDD"],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
 
   //C++
@@ -257,7 +259,7 @@ export const juniorfrontend: CvData = {
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -401,7 +403,7 @@ export const seniorSoftware: CvData = {
       }
     ]},
     defaultEducation,
-    defaultExtraCurricular
+    // defaultExtraCurricular
   ],
 };
 
@@ -521,11 +523,11 @@ export const sre: CvData = {
     de SRE para entregar soluciones
     confiables. ${appendedAboutMe}`,
   skills: {
-    "CI/CD": ['Docker','Jenkins','K8',"YAML","Grafana","YAML"],
-    "Full-Stack": ["React","Angular","Node.js","Typescript", "Next.js", "bash", "Python"],
-    "Observabilidad": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
-    "Tooling": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest", 'SQL'],
-    "AI & LLMs": ["Copilot","Claude","NotebookLM","Gemini","GPT",],
+    "CI/CD": ['Docker','Jenkins','K8',"YAML","Groovy","Helm"],
+    "Monitoring": ['Grafana','Instana','AWS','Elasticsearch','Prometheus','Opsgenie'],
+    "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
+    "Tooling": ['Linux','AWS',"Git","PostgreSQL","Terraform","Storybook","ESLint", "Jest"],
+    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
@@ -674,7 +676,7 @@ export const itSupport: CvData = {
     "Servicio": ["Servicio al cliente","Gestión de inventario", "Red","Resolución de problemas",],
     "Tech": [
         "macOS", "Linux",
-        "Windows","Microsoft Office", "Vibe coding"
+        "Windows","Microsoft Office", "SDD"
     ],
     "Habilidades Blandas":["Trabajo en equipo", "Solución de problemas"]
   },
