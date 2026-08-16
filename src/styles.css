@@ -3,8 +3,9 @@
 @import "tailwindcss";
 @theme {
   --color-primary: #1e295f;
-  --color-secondary:aqua 
+  --color-secondary:aqua
   --text-tiny: 0.625rem;
+  --color-sidebar-divider: rgb(128, 129, 131);
 }
 
 @font-face {
@@ -181,64 +182,6 @@ body, html {
 }
 /* You can add global styles to this file, und also import other style files */
 
-
-.sidebar-block {
-  display: block;
-  break-inside: avoid;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-}
-.sidebar-block::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background-color: rgb(128, 129, 131);
-}
-
-/* .sidebar-block:first {
-
-  padding-top: 0;
-
-} */
-
-.sidebar-block--courses::after {
-  height: 0px;
-  display: none;
-}
-
-.sidebar-heading {
-  position: relative;
-  width: 100%;
-  cursor: default;
-
-  font-family: Ubuntu, sans-serif;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: var(--clr-primary);
-  margin-bottom: 18px;
-  position: relative;
-  word-break: break-word;
-  break-inside: avoid;
-  padding: 0;
-  white-space: normal;
-}
-
-.sidebar-block-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  position: relative;
-  padding: 0 !important;
-  /* margin-top: 21px; */
-  box-sizing: border-box;
-}
 
 .about-me-font {
   word-break: break-word;

@@ -11,7 +11,7 @@ const contactDefault : Contact = {
   workStatus: "Vorhanden - Sofortiger Einstieg: 20h/Woche", // "Chancenkarte",
   visaStatus: 'Wechsel zur Vollzeit nach Vertragsschluss möglich (ca. 4 Wochen Bearbeitungszeit, abhängig von den Antwortzeiten der Ausländerbehörde).',
   titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
-  arbeitsErlaubnis: 'Im Rahmen von 20h/Woche vorhanden. Vollzeitanstellung nach Vertragsabschluss und Genehmigung durch die Ausländerbehörde möglich.'
+  arbeitsErlaubnis: 'Im Rahmen von 20h/Woche oder Minijob vorhanden. Vollzeitanstellung nach Vertragsabschluss und Genehmigung durch die Ausländerbehörde möglich.'
 }
 
 const defaultSkills =  {
@@ -106,7 +106,7 @@ const ohneMasterEducation = {title: "Ausbildung",
           dates: "2017",
           location: "Bogotá, Kolumbien",
           "tasks": [
-            "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB >H+) als >System- und Computertechnik (Abschlussklasse <b>A4).",
+            "Offiziell anerkannter Hochschulabschluss (Anabin/ZAB H+) als System- und Computertechnik (Abschlussklasse A4).",
             "Akademische Vertiefung in Visual und Computing Interaction.",
             // "Stipendium <b>„Quiero Estudiar“ für die besten nationalen ICFES-Ergebnisse.",
            // "Forschungsmonitor in der Gruppe IMAGINE.",
@@ -129,7 +129,25 @@ const ohneMasterEducation = {title: "Ausbildung",
 const defaultExtraCurricular = {
   title: "Außerunterrichtliche Aktivitäten", 
   entries: [
-  {
+    // {
+    //   company: "KOLUMBIANISCHE BOTSCHAFT IN DEUTSCHLAND",
+    //   role: "Referent",
+    //   dates: "Jul 2026",
+    //   location: "Berlin",
+    //   tasks: [
+    //     "\"Spec Driven Development: Von losen Prompts zu einer echten Softwareentwicklungsmethode\" beim AI-Gipfel der kolumbianischen Diaspora in Deutschland"
+    //   ]
+    // },
+    {
+      company: "WE ARE DEVELOPERS",
+      role: "Freiwilliger Helfer",
+      dates: "Jul 2026",
+      location: "Berlin",
+      tasks: [
+        "Unterstützung der Konferenzbesucher in zugewiesenen Schichten beim We Are Developers <b>World Congress</b>."
+      ]
+    },
+    {
         company: "SCIENCE und TECHNOLOGY CLUBS",
         role: "Nationaler Dozent für „Virtual Reality in Unity“",
         dates: "Jun 2019 - Jul 2019",
@@ -173,9 +191,9 @@ export const seniorfrontend: CvData = {
     Versiert im KI-gestützten Engineering mit Claude Code, LLMs und Spec-Driven Development.
    ${appendedAboutMe}`,
   skills: {
-    "Frontend": ["React","Three.JS","TailwindCSS", "Next.js", "Angular"],
+    "Frontend": ["React","Vue.js", "Three.JS","TailwindCSS", "Next.js", "Angular"],
     // "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
-    "Full-Stack": ["Node.js","Typescript","Java", "Spring", "Python"],
+    "Full-Stack": ["Node.js","Typescript","NestJs", "Java", /*"Spring",*/ "Python"],
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     "CI/CD": ['Linux','Docker','Jenkins','Kubernetes',"YAML","Grafana"],
     "Tooling": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
@@ -215,7 +233,7 @@ export const seniorfrontend: CvData = {
       }
     ]},
     defaultEducation,
-    // defaultExtraCurricular
+    defaultExtraCurricular
   ],
 };
 
@@ -248,7 +266,7 @@ export const frontend3d: CvData = {
 export const juniorfrontend: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Softwareingenieur - Fokus auf Typescript und Node.js",
+    value: "Softwareentwickler - Fokus auf Typescript und Node.js",
     acronym: 'FJ'
   },
   contact: contactDefault,
@@ -256,15 +274,15 @@ export const juniorfrontend: CvData = {
     primary: '#48011d',
   },
   aboutme: `
-   Softwareingenieur mit 4 Jahren Erfahrung in Kolumbien
-   in der Erstellung von Web-Plattformen und Anwendungen 
-   und suche gezielt nach einer Möglichkeit, meine Kenntnisse an deutsche Qualitätsstandards anzupassen.
-   Ich bin spezialisiert auf NodeJS, TypeScript und UI/UX-Lösungen 
-   mit TailwindCSS, SCSS sowie interaktive Erfahrungen u.a. mit Three.js. 
-   Wohnhaft in Berlin mit Arbeitsgenehmigung und Umzugsbereitschaft innerhalb Deutschlands.`,
+    Softwareentwickler mit praktischer Erfahrung in der Erstellung von
+   Web-Plattformen und Anwendungen, aktuell auf der Suche nach einer
+   Teilzeit- oder Minijob-Stelle. Kenntnisse in NodeJS,
+   TypeScript und UI/UX-Lösungen mit TailwindCSS, SCSS sowie
+   interaktiven Erfahrungen u.a. mit Three.js. Flexibel, lernbereit
+   und sofort einsatzbereit. Arbeitsgenehmigung und Umzugsbereitschaft vorhanden.`,
   skills: {
-    "Frontend": ["React","TailwindCSS", "Three.js", "JS", "Next.js"],
-    "Full-Stack": ["Node.js","Angular","Typescript","REST", "Python" /*"GraphQL",*/],
+    "Frontend": ["React","Vue.js","TailwindCSS", "Three.js", "JS", "Next.js"],
+    "Full-Stack": ["Node.js","Typescript","REST", "NestJS", "Python" /*'Angular', "GraphQL",*/],
     // "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","Storybook","Docker","ESLint", "Jest"],
@@ -276,18 +294,29 @@ export const juniorfrontend: CvData = {
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
-  courses: defaultCourses,
+  courses: [
+    { "name": "Claude Code in Action", "institution": "Anthropic", "date": "Jun 2026" },
+  ],
   experiences: [
-    {title: "Berufserfahrung", entries: [ 
-      freelancerExperience,
+    {title: "Berufserfahrung", entries: [
+      {
+        company: 'FREELANCER',
+        location: 'Berlin',
+        dates: 'Aug 2025 - Present',
+        role: 'KI-Output-Bewertung & Automatisierung',
+        tasks: [
+          "Bewertung und Qualitätsprüfung von <b>KI-generierten Outputs</b> (Claude, NotebookLM) im Rahmen von Prototyping-Projekten.",
+          "Sorgfältige Prüfung 3D Daten (Proptech, LiDAR-Punktwolken) auf Genauigkeit und Konsistenz.",
+        ]
+      },
       {
         company: 'ADIDAS',
         location: 'Bogotá',
         dates: 'Mai 2021 - Jun 2025',
-        role: 'Softwareingenieur ',
+        role: 'Softwareentwickler',
         tasks: [
-            "Treiben der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Steigerung der User-Interaktion und End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
-            "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die GTS Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
+            "Entwicklung von Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die GTS Plattform.",
+            "Mitarbeit an <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, inklusive End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
           ]
       },
       {
@@ -297,19 +326,9 @@ export const juniorfrontend: CvData = {
         role: 'Frontend Softwareentwickler',
         tasks: [
             "Entwicklung <b>immersiver 3D-Anwendungen</b> mit <b>React</b> und <b>Unreal/C++</b> sowie interaktiver Masterplan-Visualisierungen für die Immobilienbranche (<i>PropTech</i>).",
-            "Programmierung von Hyper-Casual-Spielen in <b>Unity</b> und <b>Virtual Reality</b> zur Unterstützung von Marketingkampagnen und Shopping-Mall-Aktivierungen"
+            "Programmierung von Hyper-Casual-Spielen in <b>Unity</b>"
           ]
       },
-      // {
-      //     company: "Universidad de los Andes",
-      //     role: "Forschungsmonitor",
-      //     dates: "2018 - 2019",
-      //     location: "Bogotá, Kolumbien",
-      //     tasks: [
-      //       "Design und Entwicklung eines <b>VR- und haptikbasierten</b> Trainingssimulators für orthopädische Traumatologie-Operationen in Unity und Oculus, Verbesserung der Leistung von Trainees während Pilotversuchen.",
-      //       "Forschungspraktikum in AG HCI und Computer Graphics an der Technischen Universität Kaiserslautern im Jahr 2018.",
-      //     ]
-      //   },
     ]},
     ohneMasterEducation
   ],
@@ -659,3 +678,162 @@ export const salesAssistant: CvData = {
   ]},
 ],
 }
+
+// ============ QA TESTER & DATA ANNOTATION (nicho fusionado) ============
+export const qaDataAnnotation: CvData = {
+  contact: contactDefault,
+  occupation: {
+    value: "QA Tester & Data Annotation Specialist",
+    acronym: 'QA'
+  },
+  colors: {
+    primary: '#1b4b3a'
+  },
+  aboutme: `
+    Detailorientierte Fachkraft mit praktischer Erfahrung in Software-Testing
+    (Jest, Cypress) und Qualitätskontrolle digitaler Produkte. Zuverlässig,
+    strukturiert und geduldig bei repetitiven Prüfaufgaben. Interesse an
+    Data Annotation und Bewertung von KI-Trainingsdaten. Wohnhaft in Berlin
+    mit Arbeitsgenehmigung, sofort verfügbar für Teilzeit oder Minijob.`,
+  skills: {
+    "Daten & KI": ["Data Annotation", "Datenqualität", "Prompt-Bewertung"],
+    "Testing": ["Jest", "Cypress", "Manuelles Testing", "Bug Tracking"],
+    "Tools": ["Jira", "Git", "Excel"],
+    "Soft Skills": ["Genauigkeit", "Geduld", "Teamarbeit"]
+  },
+  languages: languagesData,
+  links: [
+    // { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
+  ],
+  courses: [],
+  experiences: [
+    {title: "Berufserfahrung", entries: [
+      {
+        company: 'ADIDAS',
+        location: 'Bogotá',
+        dates: 'Mai 2021 - Jun 2025',
+        role: 'Softwareentwickler (Testing-Fokus)',
+        tasks: [
+          "Durchführung von <b>End-to-End-Tests</b> mit <b>Jest</b> und <b>Cypress</b> zur Sicherstellung der Funktionalität von Frontend-Modulen.",
+          "Identifikation und Dokumentation von Bugs, enge Zusammenarbeit mit dem QA-Team zur Verbesserung der Produktqualität.",
+        ]
+      },
+      {
+        company: 'FREELANCER',
+        location: 'Berlin',
+        dates: 'Aug 2025 - Present',
+        role: 'KI-Output-Bewertung & Automatisierung',
+        tasks: [
+          "Bewertung und Qualitätsprüfung von <b>KI-generierten Outputs</b> (Claude, NotebookLM) im Rahmen von Prototyping-Projekten.",
+          "Sorgfältige Prüfung technischer Daten (3D, LiDAR-Punktwolken) auf Genauigkeit und Konsistenz.",
+        ]
+      },
+    ]},
+    {title: "Ausbildung", entries: [
+      {
+        company: "Universidad de los Andes",
+        role: "B.Sc. System- und Computing Engineering",
+        dates: "2017",
+        location: "Bogotá, Kolumbien",
+        tasks: ["Anabin/ZAB anerkannt (H+/A4) als System- und Computertechnik"]
+      }
+    ]}
+  ],
+};
+
+
+export const itSupport: CvData = {
+ contact: contactDefault,
+  occupation: {
+    value: "IT Support Mitarbeiter",
+    acronym: 'ITS'
+  },
+  colors: {
+    primary: '#2c2e81'
+  },
+  aboutme: `Zuverlässige und detailorientierte Person mit praktischer
+    Erfahrung im Support von IT-Ausstattung, Inventarverwaltung und
+    täglichem Betrieb. Starkes Interesse an IT-Support und Helpdesk-
+    Aufgaben, kundenorientierte Denkweise und schnelle Auffassungsgabe.
+    Kürzlich nach Berlin gezogen, mit Arbeitsgenehmigung und sofort
+    verfügbar für Teilzeit oder Minijob.`,
+  skills: {
+    "Service": ["Kundenservice","Inventarverwaltung", "Netzwerk-Grundlagen","Problemlösung",],
+    "Tech": [
+        "macOS", "Linux",
+        "Windows","Microsoft Office", "Ticketsysteme"
+    ],
+    "Soft Skills":['Teamarbeit', "Troubleshooting", "Geduld"]
+  },
+  languages: languagesData,
+  courses: [
+      { "name": "Claude Code in Action", "institution": "Anthropic", "date": "Jun 2026" },
+  ],
+  links: [
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
+  ],
+  experiences: [
+    {title: "Berufserfahrung", entries: [
+      {
+        company: 'FREELANCER',
+        location: 'Berlin',
+        dates: 'Aug 2025 - Present',
+        role: 'Technische Qualitätsprüfung & Datenvisualisierung',
+        tasks: [
+          "Prüfung und Validierung von <b>3D-Masterplänen</b> und Renderings auf Genauigkeit, Konsistenz und technische Fehler vor Auslieferung.",
+        ]
+      },
+      {
+        company: 'ADIDAS',
+        location: 'Bogotá',
+        dates: 'Mai 2021 - Jun 2025',
+        role: 'IT-Mitarbeiter',
+        tasks: [
+          'Unterstützung des Einzelhandelsbetriebs an umsatzstarken Tagen (Weihnachten, Black Friday) im Bereich <b>Verkauf, Inventarorganisation</b> und <b>Lagerverwaltung</b>.',
+          'Technische Unterstützung interner Systeme und Zusammenarbeit mit dem IT-Team bei alltäglichen Anfragen.',
+        ]
+      },
+      {
+        company: 'UMBRA 3D STUDIO - INTERACTIVE',
+        location: 'Bogotá',
+        dates: 'Jan 2020 - Sep 2020',
+        role: 'IT-Support',
+        tasks: [
+          'Verantwortlich für Wartung und <b>24/7-Support</b> von Firmenwebsites zweier Marken, inklusive Serverbetreuung (FTP, WordPress).',
+        ]
+      },
+      {
+        company: "COLIVRI Lab - Universidad de los Andes",
+        role: "Laborassistent",
+        dates: "Jun 2017 - Aug 2019",
+        location: "Bogotá",
+        tasks: [
+          "Verantwortlich für Computerlabore, Ausgabe von Laptops und weiteren Geräten an Studierende.",
+          "Unterstützung bei Robotik- und XR-Demonstrationen, <b>Inventarverwaltung</b> der Laborgeräte.",
+        ]
+      },
+    ]},
+    {title: "Ausbildung",
+      entries: [
+        {
+          company: "Universidad de los Andes",
+          role: "B.Sc. System- und Computing Engineering",
+          dates: "2017",
+          location: "Bogotá, Kolumbien",
+          tasks: [
+            "Stipendium \"Quiero Estudiar\" für die besten nationalen ICFES-Ergebnisse"
+          ]
+        },
+        {
+          company: "COLEGIO ANDINO - DEUTSCHE SCHULE",
+          role: "Abitur",
+          dates: "2012",
+          location: "Bogotá, Kolumbien",
+          tasks: [
+            "Sprachdiplom B2"
+          ]
+        }
+      ]
+    },
+  ],
+};

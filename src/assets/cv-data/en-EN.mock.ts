@@ -5,14 +5,16 @@ const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: environment.cvScope == 'CO' ? "+57 312 3344936": "+49 1525 2198970",
-  // location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (July 2026)",
-  location: environment.cvScope == 'CO' ? "Berlin -> Bogota (Ago 2026)" : "10585 Berlin, Germany",
+  location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (Aug 2026)",
+  // location: environment.cvScope == 'CO' ? "Berlin -> Bogota (Ago 2026)" : "10585 Berlin, Germany",
   nationality: "Colombian",
   address:"Otto-Suhr-Allee 106C, 10585 Berlin",
   workStatus: "Available 20h/week",
   titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
   visaStatus: 'Full-time available upon contract signing (approx. 6-week processing time, subject to Ausländerbehörde response times).',
-  arbeitsErlaubnis: 'Available for up 20h/Week. Full-time employment is possible following the signing contract and approval by Ausländerbehörde',
+  arbeitsErlaubnis: environment.cvScope == 'EU'
+    ? 'Visa sponsorship required to work outside Germany. Able to coordinate documentation and timelines to support the process.'
+    : 'Available for up to 20 hours per week. Full-time employment is possible upon contract signature and approval by the Ausländerbehörde.'
 }
 
 const defaultSkills =  {
@@ -25,12 +27,11 @@ const defaultSkills =  {
 }
 
 const appendedAboutMe = `
-   Berlin-based 
     ${environment.cvScope === 'CO' 
-      ? `relocating to Colombia in summer.` 
+      ? `Berlin-based relocating to Colombia in summer.` 
       : environment.cvScope === 'DE' 
-        ? `with work authorization and relocation flexibility within Germany.` 
-        : `with immediate relocation availability within Europe.`
+        ? `Berlin-based with work authorization and relocation flexibility within Germany.` 
+        : `Immediate relocation availability within Europe.`
     }
     Dedicated to contributing my expertise gained at global leaders,
     fostering collaboration through proactive engagement and empathetic leadership.`
@@ -114,19 +115,28 @@ const freelancerExperience = {
   }
 
 const defaultExtraCurricular = {
-  title: "Additional Experience",
+  title: "Industry Contributions", // was "Additional Experience" — flag if you'd rather keep the original
   entries: [
-        {
-          company: "SCIENCE AND TECHNOLOGY CLUBS",
-          role: "National Instructor of \"Virtual Reality in Unity\"",
-          dates: "Jun 2019 - Jul 2019",
-          location: "Bogotá",
-          tasks: [
-            "Introduction to games and immersive development for highschool students, touching topics about materials, humanoids, animations, and script programming. Led by Universidad Nacional de Colombia and SENA."
-          ]
-        },
+    {
+      company: "COLOMBIAN EMBASSY IN GERMANY",
+      role: "Speaker",
+      dates: "Jul 2026",
+      location: "Berlin",
+      tasks: [
+        "\"Spec Driven Development: From Loose Prompts to a real Software Engineering Method\" at the AI Summit of the Colombian Diaspora in Germany" 
       ]
-    }
+    },
+    {
+      company: "WE ARE DEVELOPERS",
+      role: "Volunteer",
+      dates: "Jul 2026",
+      location: "Berlin",
+      tasks: [
+        "Supported conference visitors across assigned shifts at We Are Developers <b>World Congress<b>."
+      ]
+    },
+  ]
+}
 
 export const seniorfrontend: CvData = {
   contact: contactDefault,
@@ -191,7 +201,7 @@ export const seniorfrontend: CvData = {
       }
     ]},
     defaultEducation,
-    // defaultExtraCurricular
+    defaultExtraCurricular
     ]
 };
 
@@ -211,7 +221,7 @@ export const frontend3d: CvData = {
   },
   skills: {
     "Frontend": ["React", "TypeScript", "Next.js", "SCSS", "TailwindCSS"],
-    "Graphics": ["Three.js", "WebGL","XR", "Unity", "Unreal", "C++", "Shaders"],
+    "Graphics": ["C++", "Three.js", "WebGL","XR", "Unity", "Unreal", "Shaders"],
     "Full-Stack": ["Node.js", "Nest.js", "REST", "PostgreSQL", "Microservices"],
     "CI/CD": ["Git", "Docker", "Jenkins", "Linux", "K8", "Grafana"],
     "Tooling": ["Blender","Vite", "Storybook", "Photoshop"],
@@ -358,20 +368,19 @@ export const seniorSoftware: CvData = {
     // and SRE/DevOps practices, ensuring
     // monitoring, performance and scalability.
 
-    `Software Engineer (M.Sc.) specializing in scalable systems 
-    and full-stack development, with over 6 years of experience 
-    building large-scale platforms. 
-    Expert in Node.js, TypeScript, and Microservices, 
+    `Software Engineer (M.Sc.) specialized in high-scale platforms
+    and interactive solutions since 2020.
+    Expert in Node.js, TypeScript, and microservices, 
     with a proven track record of managing global-scale 
     deployments at adidas with SRE/DevOps practices.
     ${appendedAboutMe}`,
   skills: {
-    "Full-Stack": ["Node.js","Typescript", "Next.js", "C++", "REST"],
-    'Architecture': ['SOLID','Microservices', 'Event-Driven Systems', 'Design patterns'],
-    "Frontend": ["React", "Vue.js", "Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
+    "Full-Stack": ["Node.js","Typescript", "NestJS", "C++", "REST", 'Python'],
+    // 'Architecture': ['SOLID','Microservices', 'Event-Driven Systems', 'Design patterns'],
+    "Frontend": ["React", "Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
-    "Tooling": ["Git","bash","PostgreSQL","Microservices", "Jest", "SDD"],
-    "AI & LLMs": ["Copilot","Claude Code","NotebookLM","Gemini","CursorAI",]
+    "Tooling": ["Git","bash","PostgreSQL","Microservices", "Jest"],
+    "AI & LLMs": ["Claude Code","NotebookLM","Gemini", "Agents", "SDD"]
   },
   languages: languagesData,
   links: [
@@ -395,15 +404,15 @@ export const seniorSoftware: CvData = {
           'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
         ]
       },
-      {
-        company: 'MADBRICKS',
-        location: 'Remote',
-        dates: 'Sep 2020 - Dec 2020',
-        role: 'Game Developer',
-        tasks: [
-          'Developed and maintained hyper-casual mobile games using <b>Unity, C#</b> and <b>Unreal/C++</b>, enhancing user engagement and UI/UX experience.'
-        ]
-      },
+      // {
+      //   company: 'MADBRICKS',
+      //   location: 'Remote',
+      //   dates: 'Sep 2020 - Dec 2020',
+      //   role: 'Game Developer',
+      //   tasks: [
+      //     'Developed and maintained hyper-casual mobile games using <b>Unity, C#</b> and <b>Unreal/C++</b>, enhancing user engagement and UI/UX experience.'
+      //   ]
+      // },
       {
         company: 'UMBRA 3D STUDIO - INTERACTIVE',
         location: 'Bogotá',
@@ -416,7 +425,7 @@ export const seniorSoftware: CvData = {
       }
     ]},
     defaultEducation,
-    // defaultExtraCurricular
+    defaultExtraCurricular
   ],
 };
 
@@ -426,19 +435,18 @@ export const fullStackEngineer: CvData = {
     value: "Full Stack Engineer",
     acronym: 'FSE'
   },
-  aboutme: `Software Engineer with 6+ years
-    of experience, specializing in high-scale platforms
-    and interactive solutions.
-    Having worked for global brands like adidas,
-    I own a deep understanding of CI/CD practices
-    and SRE in international environments.
+  aboutme: `Software Engineer (M.Sc.) specialized in high-scale platforms
+    and interactive solutions since 2020.
+    Expert in Node.js, TypeScript, and microservices, 
+    with a proven track record of managing global-scale 
+    deployments at adidas with SRE/DevOps practices.
     ${appendedAboutMe}`,
    skills: {
-    "Full-Stack": ["Typescript","Node.js","C++", "Java", "Python" ],
+    "Full-Stack": ["Typescript","Node.js","C++", "NestJS", "Python" ],
     "Frontend": ["React","Angular", "Three.JS","SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"/*,"Elasticsearch"*/],
     "Tooling": ["Git",'AWS','Vite',"PostgreSQL","Storybook","ESLint", "Jest"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code","NotebookLM","Gemini","SDD",],
   },
 }
 
@@ -451,10 +459,10 @@ export const graphicsEngineer: CvData = {
   colors: {
     primary: '#1a1a2e', // dark navy, evoca NVIDIA/tech industrial
   },
-  aboutme: `Visual computing engineer with 5+ years
+  aboutme: `Visual computing engineer
       building real-time 3D applications, simulations
       and interactive experiences across web and
-      native platforms. Proficient in Unreal Engine,
+      native platforms since 2018. Proficient in Unreal Engine,
       Unity, Three.js and React Three Fiber, with
       hands-on experience integrating sensor data (LiDAR) into 3D viewers.
       Strong foundations in C++, Python and TypeScript,
@@ -462,8 +470,8 @@ export const graphicsEngineer: CvData = {
       ${appendedAboutMe}`,
   skills: {
     "Graphics": ['C++', 'Unreal', 'Unity', 'C#', 'Three.JS','Blender', 'OpenCV', 'Godot'],
-    "Full-Stack": ['Python', 'FastAPI', 'Node.js', 'TypeScript', 'JavaScript', 'Next.js'],
     "Frontend": ['React', 'Angular', 'TailwindCSS', 'SCSS'],
+    "Full-Stack": ['Python', 'FastAPI', 'Node.js', 'TypeScript', 'JS', 'Next.js'],
     "CI/CD": ['Linux', 'Docker', 'Jenkins', 'K8', 'YAML', 'Grafana'],
     "Tooling": ['Git', 'Vite', 'Storybook', 'Jest', 'Figma'],
     "AI & LLMs": ['Copilot', 'Claude Code', 'NotebookLM', 'Gemini', 'GPT'],
@@ -476,6 +484,7 @@ export const graphicsEngineer: CvData = {
     { label: "Behance", url: "https://www.behance.net/may_interactive" }
   ],
   courses: [
+    { "name": "Claude Code in Action", "institution": "Anthropic", "date": "Jun 2026" },
     { name: "C++ Programming - From Beginner to Beyond", institution: "Udemy", date: "May 2025" },
     { name: "Game Development with Unreal Engine 4", institution: "Udemy", date: "Jan 2020" },
   ],
@@ -857,26 +866,37 @@ export const supportAssistant: CvData = {
 export const itSupport: CvData = {
   contact: contactDefault,
   occupation: {
-    value: "IT Support Agent",
+    value: "Junior IT Administrator",
     acronym: 'ITS'
   },
   colors: {
     primary: '#2c2e81'
   },
-  aboutme: `Reliable and detail-oriented professional with hands-on
-    experience supporting IT equipment, inventory, and daily operations.
-    Strong interest in IT Support and Helpdesk roles, with a background
-    in software engineering and a customer-focused mindset. Quick learner
-    with strong communication skills. Recently relocated to Berlin with
-    work authorization and motivated to support users and
-    contribute to a collaborative IT team.`,
+  aboutme: `Reliable and detail-oriented IT professional with hands-on
+    experience supporting IT equipment, inventory, and daily operations,
+    plus a software engineering background that brings solid scripting
+    (Bash, Python, PowerShell) and Linux command-line fluency to
+    troubleshooting and automation. Comfortable working across Windows,
+    macOS, and Linux environments, with basic networking knowledge (DNS,
+    FTP, VLANs). Quick learner with a methodical approach
+    under pressure and strong communication skills for supporting
+    non-technical users. Based in Berlin with work authorization,
+    eager to grow into a broader IT administration role with guidance
+    from senior team members.`,
+  //  skills: {
+  //   "Service": ["Customer service","Inventory management", "Network","Problem solving",],
+  //   "Tech": [
+  //       "macOS", "Linux",
+  //       "Windows","microsoft Office", "SDD"
+  //   ],
+  //   "Soft Skills":['Teamwork', "Troubleshooting"]
+  // },, "MDM basics (Jamf/Intune)", , "User account management (LDAP)"
   skills: {
-    "Service": ["Customer service","Inventory management", "Network","Problem solving",],
-    "Tech": [
-        "macOS", "Linux",
-        "Windows","microsoft Office", "SDD"
-    ],
-    "Soft Skills":['Teamwork', "Troubleshooting"]
+    "IT Support": ["Helpdesk / first-line support", "Asset & inventory management", "Troubleshooting"],
+    "Systems": ["Windows", "macOS", "Linux"],
+    "Networking": ["DNS", "FTP", "VLANs"],
+    "Scripting": ["Bash", "PowerShell","Node.js", "Python", ],
+    "Soft Skills": ['Teamwork', "Clear communication", "Calm under pressure"]
   },
   languages: languagesData,
   links: [
@@ -892,18 +912,18 @@ export const itSupport: CvData = {
         dates: 'May 2021 - Jun 2025',
         role: 'Software Developer',
         tasks: [
+          'Wrote <b>Bash</b> and <b>Python</b> scripts to support CI/CD pipelines and internal tooling, automating repetitive tasks across the development workflow.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience.',
           'Supported retail operations during high-consumption days such as Christmas and Black Friday, assisting with <b>sales, inventory organization</b>, and <b>warehouse management</b>.',
         ]
       },
-
       {
         company: 'UMBRA 3D STUDIO - INTERACTIVE',
         location: 'Bogotá',
         dates: 'Jan 2020 - Sep 2020',
         role: 'Software Developer',
         tasks: [
-          'Systems engineer responsible for the development, maintenance, and <b>24/7 support</b> of company websites for two brands and their deployments mounted in FTP servers or Wordpress',
+          'Systems engineer responsible for the development, maintenance, and <b>24/7 support</b> of company websites for two brands, including <b>Linux server administration</b> and deployments on FTP servers and Wordpress.',
         ]
       },
       {
@@ -912,8 +932,8 @@ export const itSupport: CvData = {
         dates: "Jun 2017 - Ago 2019",
         location: "Bogotá",
         tasks: [
-          "Responsible in charge of computer labs, and providing laptops and other perfiferical devices to students.",
-          "Supporting demonstrations based on robotics & XR projects, <b>managing inventory</b> of the laboratory devices",
+          "Responsible for computer labs, providing and maintaining laptops and other peripheral devices for students.",
+          "Supported demonstrations based on robotics & XR projects, <b>managing inventory</b> and basic <b>network connectivity</b> of laboratory devices.",
         ]
       },
     ]},
@@ -942,15 +962,16 @@ export const itSupport: CvData = {
      {title: "Additional Experience",
       entries: [
         {
-          company: "Universidad de los Andes",
-          role: "Theatre Group Member",
-          dates: "Ene 2016 - Jun 2018",
-          location: "Bogotá",
+          company: "WE ARE DEVELOPERS",
+          role: "Volunteer",
+          dates: "Jul 2026",
+          location: "Berlin",
           tasks: [
-            "Participated in acting and theater plays, developing teamwork, improvisation, and communication skills."
+            "Supported conference visitors across assigned shifts at We Are Developers <b>World Congress</b>."
           ]
         },
       ]
     }
   ],
 };
+

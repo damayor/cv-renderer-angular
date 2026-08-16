@@ -1,7 +1,7 @@
 <ng-container>
-  <div i18n="@@skillsTitle" class="sidebar-heading">SKILLS</div>
+  <div i18n="@@skillsTitle" class="relative w-full mb-[18px] text-lg uppercase text-primary cursor-default break-inside-avoid">SKILLS</div>
   @for (group of skillGroups; track group[0]) {
-    <div class="my-3">
+    <div class="my-2">
       <div class="flex flex-wrap items-center w-full relative p-0 m-0">
         <span class="text-xs font-normal uppercase text-primary mb-1 pr-1">{{ group[0] }}</span>
         @for (skill of group[1]; track skill) {

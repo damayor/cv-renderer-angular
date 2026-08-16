@@ -17,13 +17,14 @@ const { exec } = require('child_process');
     'sre':'DO',
     'salesAssistant': 'SA',
     'itSupport':'ITS',
-    'contentcreator':'CC'
+    'contentcreator':'CC',
+    'qaDataAnnotation': 'DA'
   };
   
   const role = args[0]; 
   const lang = args[1] ?? 'EN';
   const envir = args[2] ?? 'dev';
-  const scope = args[3] ?? '';
+  const scope = args[3] ?? ''; //EU, ES, CO
 
   console.log('role argument:', role);
   console.log('language argument:', lang);
@@ -51,6 +52,7 @@ const { exec } = require('child_process');
   await page.waitForSelector('user-header');
   await page.waitForSelector('sidebar');
   await page.waitForSelector('main-panel');
+  // const height = await page.evaluate(() => document.body.scrollHeight) + 20; //1930
 
   await page.evaluate((name) => {
     document.title = name;
@@ -60,6 +62,7 @@ const { exec } = require('child_process');
     path: `./buildCVs/${pdfFilename}`,
     width: '210mm', 
     format: 'A4',
+    // height:  `${height}px`, 
     printBackground: true
   });
 

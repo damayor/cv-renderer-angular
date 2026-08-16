@@ -10,6 +10,7 @@ const contactDefault : Contact = {
   // workStatus: "Transición a España desde Julio de 2026.",
   // visaStatus: 'Transicion a España desde Agosto 2026.',
   // titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)'
+  arbeitsErlaubnis: 'Se requiere patrocinio de visado para trabajar fuera de Alemania. Disponible para coordinar la documentación y los plazos necesarios para el proceso.'
 }
 
 const defaultSkills = {

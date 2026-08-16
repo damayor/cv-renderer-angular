@@ -1,4 +1,5 @@
 export const environment = {
   lang: 'es',
-  cvScope: 'CO'
+  cvScope: 'CO',
+  showArbeitserlaubnis: false,
 };
