@@ -1,5 +1,16 @@
-import { Contact, CvData } from "../../app/interfaces/CVData";
+import { Contact, CvData, SectionTitles } from "../../app/interfaces/CVData";
 import { environment } from '../../environments/environment';
+
+const sectionTitles: SectionTitles = {
+  aboutMe: "Profil",
+  skills: "Kenntnisse",
+  languages: "Sprachen",
+  links: "Links",
+  courses: "Kurse",
+  personalDetails: "Persönliche Daten",
+  workAuthorization: "Arbeitserlaubnis",
+  visaStatus: "Visastatus",
+}
 
 const contactDefault : Contact = {
   fullname: "David Mayorga",
@@ -174,6 +185,7 @@ const freelancerExperience = {
   }
 
 export const seniorfrontend: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Senior Frontend Ingenieur  - Fokus auf Typescript und Node.js",
@@ -336,6 +348,7 @@ export const juniorfrontend: CvData = {
 
 
 export const seniorSoftware: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Senior Softwareingenieur ",
@@ -424,6 +437,7 @@ export const fullStackIngenieur: CvData = { //kof kof, AI - Engineer
 }
 
 export const graphicsEntwickler: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Game Entwickler",
@@ -499,6 +513,7 @@ export const graphicsEntwickler: CvData = {
 };
 
 export const sre: CvData = { 
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "DevOps und Softwareingenieur",
@@ -565,6 +580,7 @@ export const sre: CvData = {
 }
 
 export const salesAssistant: CvData = { 
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Verkäufer in Kreativmarkt & Kundenberatung",
@@ -681,6 +697,7 @@ export const salesAssistant: CvData = {
 
 // ============ QA TESTER & DATA ANNOTATION (nicho fusionado) ============
 export const qaDataAnnotation: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "QA Tester & Data Annotation Specialist",
@@ -743,6 +760,7 @@ export const qaDataAnnotation: CvData = {
 
 
 export const itSupport: CvData = {
+  sectionTitles,
  contact: contactDefault,
   occupation: {
     value: "IT Support Mitarbeiter",

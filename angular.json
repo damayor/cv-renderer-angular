@@ -9,17 +9,6 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "de": { 
-            "translation": "src/locale/messages.de.xlf"
-          },
-          "es": { 
-            "translation": "src/locale/messages.es.xlf"
-          }
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -36,9 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "polyfills": [
-              "@angular/localize/init"
-            ]
+            "polyfills": []
           },
           "configurations": {
             "production": {
@@ -54,8 +41,7 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all",
-              "localize": true
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
@@ -78,11 +64,8 @@
                 }
               ]
             },
-            "de": {
-              "localize": ["de"]
-            },
+            "de": {},
             "es": {
-              "localize": ["es"],
                "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -128,9 +111,6 @@
           },
           "defaultConfiguration": "development"
         },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
-        },
         "test": {
           "builder": "@angular/build:karma",
           "options": {
@@ -144,9 +124,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "polyfills": [
-              "@angular/localize/init"
-            ]
+            "polyfills": []
           }
         }
       }

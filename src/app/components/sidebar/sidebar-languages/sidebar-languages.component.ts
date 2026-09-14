@@ -10,4 +10,5 @@ import { Language } from '@interfaces/CVData';
 })
 export class SidebarLanguagesComponent {
   languages = input.required<Language[]>();
+  title = input<string>('');
 }

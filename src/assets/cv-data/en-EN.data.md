@@ -422,7 +422,7 @@ Recognized by Anabin (ZAB) as equivalent to the German System- und Computertechn
 
 Academic option in Visual and Computing Interaction.
 
-Scholarship "Quiero Estudiar" given to the best national ICFES scores.
+Scholarship "Quiero Estudiar" awarded for the best national ICFES scores.
 
 Role as research monitor focused on the VR & haptic-based training simulator for trauma orthopedic surgery in Unity and Oculus.
 
@@ -1045,7 +1045,7 @@ Dates:
 2017
 
 Details:
-Scholarship "Quiero Estudiar" given to the best national ICFES scores.
+Scholarship "Quiero Estudiar" awarded for the best national ICFES scores.
 
 ### Education 2
 
@@ -1210,7 +1210,7 @@ Dates:
 2017
 
 Details:
-Scholarship "Quiero Estudiar" given to the best national ICFES scores.
+Scholarship "Quiero Estudiar" awarded for the best national ICFES scores.
 
 ### Education 2
 

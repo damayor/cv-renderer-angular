@@ -1,18 +1,29 @@
-import { Contact, CvData } from "../../app/interfaces/CVData";
+import { Contact, CvData, SectionTitles } from "../../app/interfaces/CVData";
 import { environment } from '../../environments/environment';
+
+const sectionTitles: SectionTitles = {
+  aboutMe: "Profile",
+  skills: "Skills",
+  languages: "Languages",
+  links: "Links",
+  courses: "Courses",
+  personalDetails: "Personal Details",
+  workAuthorization: "Work Authorization",
+  visaStatus: "Visa status",
+}
 
 const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: environment.cvScope == 'CO' ? "+57 312 3344936": "+49 1525 2198970",
-  location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (Aug 2026)",
-  // location: environment.cvScope == 'CO' ? "Berlin -> Bogota (Ago 2026)" : "10585 Berlin, Germany",
+  location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (Nov 2026)",
+  // location: environment.cvScope == 'CO' ? "Berlin -> Bogota (Nov 2026)" : "10585 Berlin, Germany",
   nationality: "Colombian",
   address:"Otto-Suhr-Allee 106C, 10585 Berlin",
   workStatus: "Available 20h/week",
   titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
   visaStatus: 'Full-time available upon contract signing (approx. 6-week processing time, subject to Ausländerbehörde response times).',
-  arbeitsErlaubnis: environment.cvScope == 'EU'
+  arbeitsErlaubnis: environment.cvScope == 'EU' || environment.cvScope == 'ES'
     ? 'Visa sponsorship required to work outside Germany. Able to coordinate documentation and timelines to support the process.'
     : 'Available for up to 20 hours per week. Full-time employment is possible upon contract signature and approval by the Ausländerbehörde.'
 }
@@ -103,11 +114,12 @@ const freelancerExperience = {
     dates: 'Aug 2025 - present',
     role: 'Full-Stack Engineer & Automation Specialist',
     tasks: [
-      'Rendering complex 3D masterplans from 3ds Max und <b>Blender</b> within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
+      // 'Rendering complex 3D masterplans from 3ds Max und <b>Blender</b> within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
+      // 'Engineered a self-service automation tool using Google Apps Script to standardize <b>work-hour tracking</b> across projects, cutting manual overhead by 40%.',
+      'Designed and deployed a custom Telegram bot as the interface layer for an work-hour tracking pipeline (<b>Google Apps Script</b> + Sheets), cutting manual overhead by 40%.',
       'Multi-sensor viewer for the nuScenes dataset, integrating <b>FastAPI</b> (Python) and R3F for <b>LiDAR point clouds</b>.',
       'Leveraged <b> LLMs</b>  (Claude, Gemini, NotebookLM) and vibe coding methodologies to rapidly prototype and deploy automation tools and web applications.',
       // 'Built and deployed full-stack a customizable CV generator with <b>Angular</b>, <b>RxJS</b> for reactive state management and dynamic rendering.',
-      // 'Developed custom scripts using <b>Google Apps Scripts</b> to automate projects work-hour tracking in Google Sheets, increasing personal productivity by 40%.',
     ],
     achievements: [
       'Consolidated the adidas Tech Hub as a technology benchmark in Colombia by spearheading the adidas Campus Program, leading the technical mentorship and training of high-potential engineers'
@@ -139,6 +151,7 @@ const defaultExtraCurricular = {
 }
 
 export const seniorfrontend: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Senior Frontend Engineer - Focused on Typescript and Node.js",
@@ -147,16 +160,16 @@ export const seniorfrontend: CvData = {
   colors: {
     primary: '#48011d',
   },
-  aboutme: `Frontend engineer with 6+ years of experience
-    building large-scale web platforms and applications
+  aboutme: `Frontend engineer 
+    building large-scale web platforms and applications since 2020,
     specialized in Node.js,
     TypeScript, and UI/UX solutions using Storybook
     TailwindCSS, and interactive 2D or 3D experiences. I own a deep experience of CI/CD practices
     and SRE in international environments.
     ${appendedAboutMe}`,
   skills: {
-    "Frontend": ["React","Three.JS","TailwindCSS", "Next.js", "Angular"],
-    "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
+    "Frontend": ["React","Three.JS","TailwindCSS", "Next.js", ],
+    "Full-Stack": ["Node.js","Angular","Typescript","Java","REST" /*"GraphQL",*/],
     "Graphics": ['C++','WASM', "Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     "CI/CD": ['Linux','Docker','Jenkins','Kubernetes',"YAML","Grafana"],
     "Tooling": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
@@ -271,7 +284,7 @@ export const juniorfrontend: CvData = {
         dates: 'May 2021 - Jun 2025',
         role: 'Software Engineer',
         tasks: [
-          'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
+          'Drove the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
           'Improved deployment duration of the adidas Checkout backend <b>microservice</b> by implementing CI/CD pipelines via <b>Jenkins</b>, <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
           'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
@@ -350,6 +363,7 @@ export const softwareFreelancer: CvData = {
 
 //C++, full stack
 export const seniorSoftware: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Senior Software Engineer",
@@ -375,7 +389,7 @@ export const seniorSoftware: CvData = {
     deployments at adidas with SRE/DevOps practices.
     ${appendedAboutMe}`,
   skills: {
-    "Full-Stack": ["Node.js","Typescript", "NestJS", "C++", "REST", 'Python'],
+    "Full-Stack": ["Node.js","Typescript", "Java", "C++", "REST", 'Python'],
     // 'Architecture': ['SOLID','Microservices', 'Event-Driven Systems', 'Design patterns'],
     "Frontend": ["React", "Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
@@ -398,7 +412,7 @@ export const seniorSoftware: CvData = {
         dates: 'May 2021 - Jun 2025',
         role: 'Software Engineer',
         tasks: [
-          'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
+          'Drove the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
           'Improved deployment duration of the adidas Checkout backend <b>microservice</b> by implementing CI/CD pipelines via <b>Jenkins</b>, <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
           'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
@@ -451,6 +465,7 @@ export const fullStackEngineer: CvData = {
 }
 
 export const graphicsEngineer: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "3D & Graphics Engineer",
@@ -528,6 +543,7 @@ export const graphicsEngineer: CvData = {
 };
 
 export const sre: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "SRE and Software Engineer",
@@ -552,7 +568,8 @@ export const sre: CvData = {
   skills: {
     "CI/CD": ['Docker','Jenkins','Kubernetes',"YAML","Helm", 'Groovy'],
     "Monitoring": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie', 'SQL'],
-    "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
+    // "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
+    "Full-Stack": ["bash", "Python", "Node.js","Typescript","React",],
     "Tooling": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest"],
     "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
@@ -646,6 +663,7 @@ export const sre: CvData = {
 };
 
 export const contentcreator: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Senior Software Engineer",
@@ -746,6 +764,7 @@ export const contentcreator: CvData = {
 };
 
 export const supportAssistant: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Retail & Event Support Assistant",
@@ -864,6 +883,7 @@ export const supportAssistant: CvData = {
 };
 
 export const itSupport: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Junior IT Administrator",

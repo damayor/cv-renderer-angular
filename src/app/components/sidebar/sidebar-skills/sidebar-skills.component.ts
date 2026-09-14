@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 })
 export class SidebarSkillsComponent {
   @Input() skills: Record<string, string[]> = {};
+  @Input() title = '';
 
   get skillGroups(): [string, string[]][] {
     return Object.entries(this.skills);

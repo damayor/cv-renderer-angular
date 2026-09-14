@@ -27,9 +27,25 @@ export interface Contact {
   arbeitsErlaubnis?:string
 }
 
+/**
+ * Titles of the fixed CV blocks. They live in the mock data files so that the
+ * language is driven solely by the `lang` query param, with no separate i18n build.
+ */
+export interface SectionTitles {
+  aboutMe: string;
+  skills: string;
+  languages: string;
+  links: string;
+  courses: string;
+  personalDetails: string;
+  workAuthorization: string;
+  visaStatus: string;
+}
+
 export interface CvData {
   contact: Contact;
   occupation: { value: string; acronym?: string };
+  sectionTitles: SectionTitles;
   aboutme: string;
   colors: Record<string, string>;
   skills: Record<string, string[]>;

@@ -1,5 +1,5 @@
   <ng-container>
-    <div i18n="@@coursesTitle" class="relative w-full mb-[18px] text-lg uppercase text-primary cursor-default break-inside-avoid">Courses</div>
+    <div class="relative w-full mb-[18px] text-lg uppercase text-primary cursor-default break-inside-avoid">{{ title }}</div>
     <div class="flex flex-wrap items-center w-full relative p-0">
       <ul>
         @for (course of courses; track $index) {

@@ -1,16 +1,27 @@
-import { Contact, CvData } from "../../app/interfaces/CVData";
+import { Contact, CvData, SectionTitles } from "../../app/interfaces/CVData";
 import { environment } from '../../environments/environment';
+
+const sectionTitles: SectionTitles = {
+  aboutMe: "Perfil Profesional",
+  skills: "Habilidades",
+  languages: "Idiomas",
+  links: "Links",
+  courses: "Cursos",
+  personalDetails: "Datos Personales",
+  workAuthorization: "Autorización laboral",
+  visaStatus: "Visado",
+}
 
 const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: environment.cvScope == 'CO' ? "+57 3123344936": "+49 1525 2198970",
-  location: environment.cvScope !== 'ES' ? "Berlin -> Colombia (Agosto 2026)": "Berlin -> España (Agosto 2026)",
+  location: environment.cvScope !== 'ES' ? "Berlin -> Colombia (Nov 2026)": "Berlin -> España (Nov 2026)",
   nationality: "Colombiano",
   // workStatus: "Transición a España desde Julio de 2026.",
   // visaStatus: 'Transicion a España desde Agosto 2026.',
   // titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)'
-  arbeitsErlaubnis: 'Se requiere patrocinio de visado para trabajar fuera de Alemania. Disponible para coordinar la documentación y los plazos necesarios para el proceso.'
+  arbeitsErlaubnis: 'Se requiere patrocinio de visado para trabajar fuera de Alemania. Disponible a tiempo completo para coordinar el proceso requerido.'
 }
 
 const defaultSkills = {
@@ -23,8 +34,8 @@ const defaultSkills = {
   }
 
 const appendedAboutMe = 
-    `Actualmente radicado en Alemania y en proceso de
-     relocalización a España. 
+    `Radicado en Alemania, en proceso de
+     relocalización. 
      Mi objetivo es aportar mi experiencia en equipos multinacionales 
      líderes como adidas, bajo una comunicación empática y proactiva.` 
     //  facilitando mi contratación mediante el proceso de Profesional Altamente Cualificado (PAC)
@@ -130,6 +141,7 @@ const freelancerExperience = {
 
 //CHK
 export const seniorfrontend: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Ingeniro Frontend Senior",
@@ -336,6 +348,7 @@ export const juniorfrontend: CvData = {
 
 //C++, full stack
 export const seniorSoftware: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Ingeniero Software Senior",
@@ -373,25 +386,25 @@ export const seniorSoftware: CvData = {
         dates: 'May 2021 - Jun 2025',
         role: 'Software Engineer',
         tasks: [
-          'Liderzago del desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, mejorando la interacción del usuario y sus pruebas end-to-end con <b>Jest</b> y <b>Cypress</b>.',
+          'Liderzago del desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, contribuyendo a una experiencia de personalización para <b>20+</b> mercados internacionales.',
     
           'Mejora de la confiabilidad y la velocidad de despliegue del microservicio <b>backend de Checkout</b> de adidas mediante la implementación de pipelines de CI/CD y automatización de infraestructura con <b>Jenkins</b>, <b>Kubernetes</b> y <b>Grafana</b>, soportando transacciones diarias en <b>30+ países</b>.',
           
-          'Desarrollo y mantenimiento de componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+</b> mercados internacionales.',
+          // 'Desarrollo y mantenimiento de componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de personalización para <b>20+</b> mercados internacionales.',
           
           'Contribución a la arquitectura frontend del <b>portal de e-commerce Yeezy</b>, reconocido por su diseño minimalista y el uso de <b>programación funcional en Typescript</b>, logrando una mejora en el desempeño y tiempo de carga.',
 
         ]
       },
-      {
-        company: 'MADBRICKS',
-        location: 'Remote',
-        dates: 'Sep 2020 - Dec 2020',
-        role: 'Desarrollador de Videojuegos',
-        tasks: [
-          'Desarrollo y mantenimiento de videojuegos móviles hyper-casual utilizando <b>Unity</b> y <b>Unreal/C++</b>, mejorando el engagement del usuario y el desarrollo UI/UX.',
-        ]
-      },
+      // {
+      //   company: 'MADBRICKS',
+      //   location: 'Remote',
+      //   dates: 'Sep 2020 - Dec 2020',
+      //   role: 'Desarrollador de Videojuegos',
+      //   tasks: [
+      //     'Desarrollo y mantenimiento de videojuegos móviles hyper-casual utilizando <b>Unity</b> y <b>Unreal/C++</b>, mejorando el engagement del usuario y el desarrollo UI/UX.',
+      //   ]
+      // },
       {
         company: 'UMBRA 3D STUDIO - INTERACTIVE',
         location: 'Bogotá',
@@ -399,7 +412,7 @@ export const seniorSoftware: CvData = {
         role: 'Desarrollador Frontend',
         tasks: [
           'Creación de <b>aplicaciones 3D inmersivas</b> con <b>React</b> y <b>Unreal/C++</b>, así como visualizaciones interactivas de masterplans para el sector inmobiliario (PropTech).',  
-          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing en centros comerciales.',
+          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para campañas de marketing en centros comerciales y concesionarios como <b>Volvo</b> o <b>Jeep.</b>',
         ]
       }
     ]},
@@ -427,6 +440,7 @@ export const ingenieroFullStack: CvData = {
 
 //ToDo
 export const graphicsEngineer: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Desarrollado de Vieojuegos",
@@ -492,17 +506,18 @@ export const graphicsEngineer: CvData = {
         role: 'Desarrollador Frontend',
         tasks: [
           'Creación de <b>aplicaciones 3D inmersivas</b> con <b>React</b> y <b>Unreal/C++</b>, así como visualizaciones interactivas de masterplans para el sector inmobiliario (PropTech).',  
-          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing en centros comerciales.',
+          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing en centros comerciales y concesionarios como Volvo o Jeep.',
         ]
       }
     ]},
     defaultEducation,
-    defaultExtraCurricular
+    // defaultExtraCurricular
   ],
 };
 
 //ToDo
 export const sre: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Ingeniero de Software / SRE",
@@ -572,6 +587,7 @@ export const sre: CvData = {
 };
 
 export const contentcreator: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Ingeniero de Software Senior",
@@ -660,6 +676,7 @@ export const contentcreator: CvData = {
 
 
 export const itSupport: CvData = {
+  sectionTitles,
   contact: contactDefault,
   occupation: {
     value: "Agente de Soporte TI",

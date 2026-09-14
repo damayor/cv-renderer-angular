@@ -8,4 +8,5 @@ import { Course } from '@interfaces/CVData';
 })
 export class SidebarCoursesComponent {
   @Input() courses: Course[] = [];
+  @Input() title = '';
 }

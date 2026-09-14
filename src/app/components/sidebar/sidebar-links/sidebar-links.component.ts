@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SidebarLinksComponent {
   @Input() links: { label: string, url: string }[] = [];
+  @Input() title = '';
 }

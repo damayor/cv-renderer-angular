@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Contact } from '@interfaces/CVData';
+import { Contact, SectionTitles } from '@interfaces/CVData';
 
 @Component({
   selector: 'sidebar-personal-details',
@@ -9,5 +9,6 @@ import { Contact } from '@interfaces/CVData';
 export class SidebarPersonalDetailsComponent {
 
   cvPersonalDetailsData = input.required<Contact>();
+  titles = input.required<SectionTitles>();
 
 }
