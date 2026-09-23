@@ -21,9 +21,9 @@ import { Contact, CvData } from '@interfaces/CVData';
         <main-section-timeline [title]="section.title" [experiences]="section.entries"></main-section-timeline>
       }
       
-      @if (env.showArbeitserlaubnis ) {
+      <!-- @if (env.showArbeitserlaubnis ) {
         <personal-details [cvPersonalDetailsData]="cvData().contact" [titles]="cvData().sectionTitles" ></personal-details>
-      }
+      } -->
     </div>
   `
 })

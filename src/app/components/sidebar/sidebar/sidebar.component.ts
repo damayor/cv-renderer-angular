@@ -24,9 +24,9 @@ import { CvData } from '@interfaces/CVData';
           [title]="titles().courses"
           [courses]="cvData().courses"></sidebar-courses>
       }
-      <!-- @if (env.showArbeitserlaubnis ) {
+      @if (env.showArbeitserlaubnis ) {
         <sidebar-personal-details [class]="blockClass" [cvPersonalDetailsData]="cvData().contact" [titles]="titles()"></sidebar-personal-details>
-      } -->
+      }
     </div>
   `
 })

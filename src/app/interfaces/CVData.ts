@@ -23,7 +23,7 @@ export interface Contact {
   visaStatus?: string;
   address?: string;
   workStatus?:string;
-  titleRecongition?: string
+  titleRecognition?: string
   arbeitsErlaubnis?:string
 }
 
@@ -40,6 +40,7 @@ export interface SectionTitles {
   personalDetails: string;
   workAuthorization: string;
   visaStatus: string;
+  titleRecognition?: string
 }
 
 export interface CvData {

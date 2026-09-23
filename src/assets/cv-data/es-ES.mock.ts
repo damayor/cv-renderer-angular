@@ -10,6 +10,7 @@ const sectionTitles: SectionTitles = {
   personalDetails: "Datos Personales",
   workAuthorization: "Autorización laboral",
   visaStatus: "Visado",
+  titleRecognition:"Reconocimiento académico"
 }
 
 const contactDefault : Contact = {
@@ -20,8 +21,8 @@ const contactDefault : Contact = {
   nationality: "Colombiano",
   // workStatus: "Transición a España desde Julio de 2026.",
   // visaStatus: 'Transicion a España desde Agosto 2026.',
-  // titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)'
-  arbeitsErlaubnis: 'Se requiere patrocinio de visado para trabajar fuera de Alemania. Disponible a tiempo completo para coordinar el proceso requerido.'
+  titleRecognition: 'Equivalencia a Grado universitario (NARIC-España, RD 889/2022)',
+  arbeitsErlaubnis: 'Se requiere patrocinio de visado para trabajar fuera de Alemania.'
 }
 
 const defaultSkills = {
@@ -82,7 +83,8 @@ const defaultEducation = {
           location: "Bogotá, Colombia",
           tasks: [
             'GPA: 4.1/5.0',
-            'Reconocimiento por la entidad federal alemana Anabin (ZAB) como carrera equivalente a <b>System- und Computertechnik</b> (Abschlussklasse A4/H+)',
+            // 'Reconocimiento por la entidad federal alemana Anabin (ZAB) como carrera equivalente a <b>System- und Computertechnik</b> (Abschlussklasse A4/H+)',
+            "Reconocido por el Ministerio de Ciencia, Innovación y Universidades (NARIC-España) como equivalente al nivel académico de <b>Grado universitario</b> (RD 889/2022).",
             'Beca "Quiero Estudiar" otorgada a los mejores puntajes nacionales del ICFES.',
           ]
         },

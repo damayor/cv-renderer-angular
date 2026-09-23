@@ -3,7 +3,23 @@ const { exec } = require('child_process');
 
 
 (async () => {
-  const args = process.argv.slice(2);
+  const rawArgs = process.argv.slice(2);
+
+  // Pull `--suffix <value>` (or `--suffix=<value>`) out before reading the
+  // positional args, so the flag can sit anywhere in the command line.
+  let customSuffix = '';
+  const args = [];
+  for (let i = 0; i < rawArgs.length; i++) {
+    const arg = rawArgs[i];
+    if (arg === '--suffix') {
+      customSuffix = rawArgs[++i] ?? '';
+    } else if (arg.startsWith('--suffix=')) {
+      customSuffix = arg.slice('--suffix='.length);
+    } else {
+      args.push(arg);
+    }
+  }
+
   console.log('All args:', args);
 
   const acronyms = {
@@ -44,8 +60,10 @@ const { exec } = require('child_process');
   const pad = n => n.toString().padStart(2, '0');
 
   const dateSuffix = envir == 'prd' ? '' : `-${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}`;
+  // Both --suffix adidas and --suffix=adidas work. 
+  const extraSuffix = customSuffix ? `-${customSuffix}` : '';
 
-  const pdfFilename = `${prefix}${country}${pad(now.getMonth() + 1)}-${namepdf}${dateSuffix}.pdf`;
+  const pdfFilename = `${prefix}${country}${pad(now.getMonth() + 1)}-${namepdf}${dateSuffix}${extraSuffix}.pdf`;
 
   await page.goto(url, { waitUntil: 'networkidle0' });
 

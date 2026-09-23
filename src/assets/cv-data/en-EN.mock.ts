@@ -10,6 +10,7 @@ const sectionTitles: SectionTitles = {
   personalDetails: "Personal Details",
   workAuthorization: "Work Authorization",
   visaStatus: "Visa status",
+  titleRecognition:"Title Recognition"
 }
 
 const contactDefault : Contact = {
@@ -21,11 +22,13 @@ const contactDefault : Contact = {
   nationality: "Colombian",
   address:"Otto-Suhr-Allee 106C, 10585 Berlin",
   workStatus: "Available 20h/week",
-  titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
+  titleRecognition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
   visaStatus: 'Full-time available upon contract signing (approx. 6-week processing time, subject to Ausländerbehörde response times).',
-  arbeitsErlaubnis: environment.cvScope == 'EU' || environment.cvScope == 'ES'
+  arbeitsErlaubnis: environment.cvScope == 'EU' 
     ? 'Visa sponsorship required to work outside Germany. Able to coordinate documentation and timelines to support the process.'
-    : 'Available for up to 20 hours per week. Full-time employment is possible upon contract signature and approval by the Ausländerbehörde.'
+    : environment.cvScope == 'ES' 
+      ? "Bachelor's Degree level recognized already by NARIC-Spain. Visa sponsorship required to work outside Germany. "
+      : 'Available for up to 20 hours per week. Full-time employment is possible upon contract signature and approval by the Ausländerbehörde.'
 }
 
 const defaultSkills =  {
@@ -89,9 +92,11 @@ const defaultEducation = {
           location: "Bogotá, Colombia",
           tasks: [
             'GPA: 4.1/5.0',
-            "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
-            // "Research Monitor in IMAGINE group",
             // "Scholarship <b>\"Quiero Estudiar\"</b> given to the best national ICFES scores"
+            environment.cvScope == 'ES' 
+            ? "Recognized by NARIC-Spain as equivalent to a Spanish <b>Bachelor's Degree</b> (Grado universitario) level (RD 889/2022)."
+            : "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
+        
           ]
         },
         {
@@ -114,11 +119,10 @@ const freelancerExperience = {
     dates: 'Aug 2025 - present',
     role: 'Full-Stack Engineer & Automation Specialist',
     tasks: [
-      // 'Rendering complex 3D masterplans from 3ds Max und <b>Blender</b> within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
-      // 'Engineered a self-service automation tool using Google Apps Script to standardize <b>work-hour tracking</b> across projects, cutting manual overhead by 40%.',
-      'Designed and deployed a custom Telegram bot as the interface layer for an work-hour tracking pipeline (<b>Google Apps Script</b> + Sheets), cutting manual overhead by 40%.',
+      'Rendering complex 3D masterplans from 3ds Max und <b>Blender</b> within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
+      // 'Designed and deployed a custom AI Agent as the interface layer for an work-hour tracking pipeline (<b>Google Apps Script</b> + Sheets), cutting manual overhead by 40%.',
       'Multi-sensor viewer for the nuScenes dataset, integrating <b>FastAPI</b> (Python) and R3F for <b>LiDAR point clouds</b>.',
-      'Leveraged <b> LLMs</b>  (Claude, Gemini, NotebookLM) and vibe coding methodologies to rapidly prototype and deploy automation tools and web applications.',
+      'Leveraged <b> LLMs</b> (Claude Cide, Cursor) and vibe coding methodologies to rapidly prototype and deploy automation tools and web applications.',
       // 'Built and deployed full-stack a customizable CV generator with <b>Angular</b>, <b>RxJS</b> for reactive state management and dynamic rendering.',
     ],
     achievements: [
@@ -168,12 +172,13 @@ export const seniorfrontend: CvData = {
     and SRE in international environments.
     ${appendedAboutMe}`,
   skills: {
-    "Frontend": ["React","Three.JS","TailwindCSS", "Next.js", ],
+    "Frontend": ["React","Three.JS","TailwindCSS", "Next.js","SCSS" ],
     "Full-Stack": ["Node.js","Angular","Typescript","Java","REST" /*"GraphQL",*/],
-    "Graphics": ['C++','WASM', "Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "Graphics": ['SPA','C++','WASM',"Unreal","Figma"],
+    // "Graphics": ['C++','WASM', "Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
+    "Tooling": ["Vite","Storybook","Gradle","Webpack","Lint", "Jest"],
     "CI/CD": ['Linux','Docker','Jenkins','Kubernetes',"YAML","Grafana"],
-    "Tooling": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Cursor","Notebook","Agents","GPT",],
   },
   languages: languagesData,
   links: [
@@ -456,7 +461,7 @@ export const fullStackEngineer: CvData = {
     deployments at adidas with SRE/DevOps practices.
     ${appendedAboutMe}`,
    skills: {
-    "Full-Stack": ["Typescript","Node.js","C++", "NestJS", "Python" ],
+    "Full-Stack": ["Typescript","Node.js","C++", "Next.JS", "Python" ],
     "Frontend": ["React","Angular", "Three.JS","SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"/*,"Elasticsearch"*/],
     "Tooling": ["Git",'AWS','Vite',"PostgreSQL","Storybook","ESLint", "Jest"],
@@ -568,8 +573,8 @@ export const sre: CvData = {
   skills: {
     "CI/CD": ['Docker','Jenkins','Kubernetes',"YAML","Helm", 'Groovy'],
     "Monitoring": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie', 'SQL'],
-    // "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
-    "Full-Stack": ["bash", "Python", "Node.js","Typescript","React",],
+    "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
+    // "Full-Stack": ["bash", "Python", "Node.js","Typescript","React",],
     "Tooling": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest"],
     "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },

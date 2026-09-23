@@ -10,6 +10,7 @@ const sectionTitles: SectionTitles = {
   personalDetails: "Persönliche Daten",
   workAuthorization: "Arbeitserlaubnis",
   visaStatus: "Visastatus",
+  titleRecognition:"Anerkennung des Abschlusses"
 }
 
 const contactDefault : Contact = {
@@ -21,7 +22,7 @@ const contactDefault : Contact = {
   nationality: "Kolumbien",
   workStatus: "Vorhanden - Sofortiger Einstieg: 20h/Woche", // "Chancenkarte",
   visaStatus: 'Wechsel zur Vollzeit nach Vertragsschluss möglich (ca. 4 Wochen Bearbeitungszeit, abhängig von den Antwortzeiten der Ausländerbehörde).',
-  titleRecongition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
+  titleRecognition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
   arbeitsErlaubnis: 'Im Rahmen von 20h/Woche oder Minijob vorhanden. Vollzeitanstellung nach Vertragsabschluss und Genehmigung durch die Ausländerbehörde möglich.'
 }
 
