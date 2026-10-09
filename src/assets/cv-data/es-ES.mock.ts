@@ -29,7 +29,7 @@ const defaultSkills = {
     "Frontend": ["React","Next.js","Three.JS","TailwindCSS",  "Vue.js",],
     "Full-Stack": ["Angular","Node.js","Typescript","REST", "Python"],
     "Graphics": ['C++','C#',"Unreal","WebAssembly","Unity", "UI/UX", "Figma"],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Storybook","Nest.js","ESLint","Photoshop","Jest"],
     "AI & LLMs": ["Claude","NotebookLM","Gemini","Copilot"],
   }
@@ -161,13 +161,13 @@ export const seniorfrontend: CvData = {
     "Frontend": ["React","Next.js","Three.JS",/*"Canvas",*/"TailwindCSS",  "Vue.js",],
     "Full-Stack": ["Angular","Node.js","Typescript","REST", "Python" /*"GraphQL",*/],
     "Graphics": ['C++','C#',"Unreal","WebAssembly","Unity", "UI/UX", "Figma"],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Storybook","Nest.js","ESLint","Photoshop","Jest"],
     "AI & LLMs": ["Claude","NotebookLM","Gemini","Copilot",],
   },
   languages: languagesData,
   links: [
-    { label: "Portafolio", url: "https://mayinteractive.io/" },
+    { label: "Portafolio", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -222,7 +222,7 @@ export const frontend3d: CvData = {
     "Frontend": ["React","Three.JS", /*"R3F",*/"SCSS","TailwindCSS","Next.js" ],
     "Graphics": ['C++',"WebGL", "Unreal","XR","Unity", "UI/UX", "Figma"],
     "Full-Stack": ["Node.js","SQL","Typescript", "Nest.js", "REST", "Python", "SQL"],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana"],
     "Tooling": ["Git","Vite","Storybook","MongoDB", "Jest", "SDD"],
     "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
@@ -272,13 +272,13 @@ export const juniorfrontend: CvData = {
     "Frontend": ["React","Node.JS","TailwindCSS", "Three.js", "JS", "TS"],
     // "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-    // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
     "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
-    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
+    { label: "Arbeitsmappe", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -374,7 +374,7 @@ export const seniorSoftware: CvData = {
   skills: defaultSkills,
   languages: languagesData,
   links: [
-    { label: "Portafolio", url: "https://mayinteractive.io/" },
+    { label: "Portafolio", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -470,7 +470,7 @@ export const graphicsEngineer: CvData = {
   skills: defaultSkills,
   languages: languagesData,
   links: [
-    { label: "Portafolio", url: "https://mayinteractive.io/" },
+    { label: "Portafolio", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "GitHub", url: "https://github.com/damayor" },
     { label: "Behance", url: "https://www.behance.net/may_interactive" }
@@ -541,7 +541,7 @@ export const sre: CvData = {
     de SRE para entregar soluciones
     confiables. ${appendedAboutMe}`,
   skills: {
-    "CI/CD": ['Docker','Jenkins','K8',"YAML","Groovy","Helm"],
+    "CI/CD": ['Docker','Jenkins','K8s',"YAML","Groovy","Helm"],
     "Monitoring": ['Grafana','Instana','AWS','Elasticsearch','Prometheus','Opsgenie'],
     "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
     "Tooling": ['Linux','AWS',"Git","PostgreSQL","Terraform","Storybook","ESLint", "Jest"],

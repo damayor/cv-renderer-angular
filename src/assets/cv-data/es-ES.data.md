@@ -203,7 +203,7 @@ C++ PROGRAMMING - FROM BEGINNER TO BEYOND, Udemy, May 2025
 ### Enlaces — Por Defecto (compartido)
 
 Portafolio:
-https://mayinteractive.io/
+https://mayit.dev/
 
 LinkedIn:
 https://www.linkedin.com/in/davidmayorga-software/
@@ -363,7 +363,7 @@ Tooling: Git, Vite, Storybook, Nest.js, Docker, Kubernetes
 AI & LLMs: Claude, Copilot, NotebookLM, Gemini, GPT
 
 Enlaces:
-Arbeitsmappe: https://mayinteractive.io/
+Arbeitsmappe: https://mayit.dev/
 LinkedIn: https://www.linkedin.com/in/davidmayorga-software/
 Github: https://github.com/damayor
 
@@ -544,7 +544,7 @@ Actualmente radicado en Alemania y ansioso por contribuir a equipos innovadores 
 Habilidades: Por Defecto (ver Datos Comunes)
 
 Enlaces:
-Portafolio: https://mayinteractive.io/
+Portafolio: https://mayit.dev/
 LinkedIn: https://www.linkedin.com/in/davidmayorga-software/
 GitHub: https://github.com/damayor
 Behance: https://www.behance.net/may_interactive

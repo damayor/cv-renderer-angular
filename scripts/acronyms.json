@@ -1,0 +1,38 @@
+{
+  "EN": {
+    "frontend": "FE",
+    "seniorfrontend": "SF",
+    "frontend3d": "F3D",
+    "fullstackengineer": "FSE",
+    "graphicsEngineer": "VC",
+    "seniorsoftware": "SE",
+    "sre": "DO",
+    "contentcreator": "SE",
+    "supportAssistant": "SA",
+    "itSupport": "ITS",
+    "juniorfrontend": "FJ",
+    "toolsDevOpsUnity": "TDU"
+  },
+  "DE": {
+    "frontend": "FE",
+    "frontend3d": "F3D",
+    "seniorfrontend": "SF",
+    "graphicsEngineer": "VC",
+    "fullstackengineer": "FSE",
+    "seniorsoftware": "SE",
+    "sre": "DO",
+    "juniorfrontend": "FJ",
+    "salesAssistant": "SA",
+    "itSupport": "ITS",
+    "qaDataAnnotation": "QA"
+  },
+  "ES": {
+    "frontend": "FE",
+    "seniorfrontend": "SF",
+    "frontend3d": "FV",
+    "fullstackengineer": "FSE",
+    "seniorsoftware": "SE",
+    "sre": "DO",
+    "juniorfrontend": "FJ"
+  }
+}

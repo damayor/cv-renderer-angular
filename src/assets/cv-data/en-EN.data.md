@@ -190,7 +190,7 @@ C++ Programming - From Beginner to Beyond, Udemy, May 2025
 ### Links — Default (shared)
 
 Portfolio:
-https://mayinteractive.io/
+https://mayit.dev/
 
 LinkedIn:
 https://www.linkedin.com/in/davidmayorga-software/
@@ -329,7 +329,7 @@ Tooling: Git, Vite, Storybook, Nest.js, Docker, Kubernetes
 AI & LLMs: Claude, Copilot, NotebookLM, Gemini, GPT
 
 Links:
-Arbeitsmappe: https://mayinteractive.io/
+Arbeitsmappe: https://mayit.dev/
 LinkedIn: https://www.linkedin.com/in/davidmayorga-software/
 GitHub: https://github.com/damayor
 
@@ -588,7 +588,7 @@ Tooling: Git, Vite, Storybook, Jest, Figma
 AI & LLMs: Copilot, Claude Code, NotebookLM, Gemini, GPT
 
 Links:
-Portfolio: https://mayinteractive.io/
+Portfolio: https://mayit.dev/
 LinkedIn: https://www.linkedin.com/in/davidmayorga-software/
 GitHub: https://github.com/damayor
 Behance: https://www.behance.net/may_interactive

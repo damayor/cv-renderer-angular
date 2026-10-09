@@ -22,23 +22,11 @@ const { exec } = require('child_process');
 
   console.log('All args:', args);
 
-  const acronyms = {
-    'frontend': 'FE',
-    'frontend3d': 'FV',
-    'fullstackengineer': 'FSE',
-    'seniorfrontend': 'SF',
-    'juniorfrontend': 'JF',
-    'seniorsoftware': 'SE',
-    'graphicsEngineer':'VC',
-    'sre':'DO',
-    'salesAssistant': 'SA',
-    'itSupport':'ITS',
-    'contentcreator':'CC',
-    'qaDataAnnotation': 'DA'
-  };
-  
-  const role = args[0]; 
+  const role = args[0];
   const lang = args[1] ?? 'EN';
+
+  // Generated from the mock files: `npm run acronyms`
+  const acronyms = require('./scripts/acronyms.json')[lang] ?? {};
   const envir = args[2] ?? 'dev';
   const scope = args[3] ?? ''; //EU, ES, CO
 
@@ -51,7 +39,7 @@ const { exec } = require('child_process');
     ? 'CV' 
     : lang == 'DE' ? 'LL' : 'HV'
   const country = scope == 'EU' ? 'E': scope =='ES' ? 'S': scope == 'CO' ? 'A' : ''; 
-  const namepdf = 'DavidMayorga'+acronyms[role];
+  const namepdf = 'DavidMayorga'+(acronyms[role] ?? role);
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();

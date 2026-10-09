@@ -35,7 +35,7 @@ const defaultSkills =  {
   "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
   "Full-Stack": ["Javascript","Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
   "Graphics": ["Unity","XR",'C#','C++',"Unreal","UI/UX", "Figma"],
-  "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+  "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
   "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "SDD"],
   "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
 }
@@ -120,7 +120,7 @@ const freelancerExperience = {
     role: 'Full-Stack Engineer & Automation Specialist',
     tasks: [
       'Rendering complex 3D masterplans from 3ds Max und <b>Blender</b> within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
-      // 'Designed and deployed a custom AI Agent as the interface layer for an work-hour tracking pipeline (<b>Google Apps Script</b> + Sheets), cutting manual overhead by 40%.',
+      'Designed and deployed a custom AI Agent as the interface layer for an work-hour tracking pipeline (<b>Google Apps Script</b> + Sheets), cutting manual overhead by 40%.',
       'Multi-sensor viewer for the nuScenes dataset, integrating <b>FastAPI</b> (Python) and R3F for <b>LiDAR point clouds</b>.',
       'Leveraged <b> LLMs</b> (Claude Cide, Cursor) and vibe coding methodologies to rapidly prototype and deploy automation tools and web applications.',
       // 'Built and deployed full-stack a customizable CV generator with <b>Angular</b>, <b>RxJS</b> for reactive state management and dynamic rendering.',
@@ -182,7 +182,7 @@ export const seniorfrontend: CvData = {
   },
   languages: languagesData,
   links: [
-    { label: "Portfolio", url: "https://mayinteractive.io/" },
+    { label: "Portfolio", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -270,13 +270,13 @@ export const juniorfrontend: CvData = {
     "Frontend": ["React","Node.JS","TailwindCSS", "Three.js", "JS", "TS"],
     // "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-    // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
     "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
-    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
+    { label: "Arbeitsmappe", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -397,13 +397,13 @@ export const seniorSoftware: CvData = {
     "Full-Stack": ["Node.js","Typescript", "Java", "C++", "REST", 'Python'],
     // 'Architecture': ['SOLID','Microservices', 'Event-Driven Systems', 'Design patterns'],
     "Frontend": ["React", "Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","bash","PostgreSQL","Microservices", "Jest"],
     "AI & LLMs": ["Claude Code","NotebookLM","Gemini", "Agents", "SDD"]
   },
   languages: languagesData,
   links: [
-    { label: "Portfolio", url: "https://mayinteractive.io/" },
+    { label: "Portfolio", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -463,7 +463,7 @@ export const fullStackEngineer: CvData = {
    skills: {
     "Full-Stack": ["Typescript","Node.js","C++", "Next.JS", "Python" ],
     "Frontend": ["React","Angular", "Three.JS","SCSS","TailwindCSS", "Figma", "UI/UX" ],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"/*,"Elasticsearch"*/],
+    "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana"/*,"Elasticsearch"*/],
     "Tooling": ["Git",'AWS','Vite',"PostgreSQL","Storybook","ESLint", "Jest"],
     "AI & LLMs": ["Claude Code","NotebookLM","Gemini","SDD",],
   },
@@ -492,13 +492,13 @@ export const graphicsEngineer: CvData = {
     "Graphics": ['C++', 'Unreal', 'Unity', 'C#', 'Three.JS','Blender', 'OpenCV', 'Godot'],
     "Frontend": ['React', 'Angular', 'TailwindCSS', 'SCSS'],
     "Full-Stack": ['Python', 'FastAPI', 'Node.js', 'TypeScript', 'JS', 'Next.js'],
-    "CI/CD": ['Linux', 'Docker', 'Jenkins', 'K8', 'YAML', 'Grafana'],
+    "CI/CD": ['Linux', 'Docker', 'Jenkins', 'K8s', 'YAML', 'Grafana'],
     "Tooling": ['Git', 'Vite', 'Storybook', 'Jest', 'Figma'],
     "AI & LLMs": ['Copilot', 'Claude Code', 'NotebookLM', 'Gemini', 'GPT'],
   },
   languages: languagesData,
   links: [
-    { label: "Portfolio", url: "https://mayinteractive.io/" },
+    { label: "Portfolio", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "GitHub", url: "https://github.com/damayor" },
     { label: "Behance", url: "https://www.behance.net/may_interactive" }
@@ -515,7 +515,7 @@ export const graphicsEngineer: CvData = {
         company: 'ADIDAS',
         location: 'Bogotá',
         dates: 'May 2021 - Jun 2025',
-        role: 'Software Engineer — 3D & Frontend',
+        role: 'Software Engineer — SRE & Frontend ',
         tasks: [
           'Led 3D customisation module development for sportswear PDPs using <b>Three.js</b> and <b>Unity</b>, optimizing <b>rendering performance</b> and real-time interaction across <b>20+ international markets</b>.',
           'Contributed to frontend architecture with <b>React</b> and <b>Next.js</b>, applying functional programming patterns and achieving load time improvements on high-traffic e-commerce platforms (i.e. Yeezy).',
@@ -526,7 +526,7 @@ export const graphicsEngineer: CvData = {
         company: 'UMBRA INTERACTIVE - 3D STUDIO',
         location: 'Bogotá',
         dates: 'Jan 2020 - Sep 2020',
-        role: 'Frontend & 3D Developer',
+        role: 'Full Stack Developer',
         tasks: [
           'Developed <b>immersive 3D applications</b> and interactive masterplan visualisations for the real estate sector using <b>Unreal/C++</b> and <b>React</b>, applying simulation and microservices for PropTech clients.',
           'Built hyper-casual games and <b>VR experiences</b> in <b>Unity</b> for brand marketing campaigns, focusing on real-time interaction.'
@@ -539,6 +539,7 @@ export const graphicsEngineer: CvData = {
         role: 'Game Developer',
         tasks: [
           'Developed and shipped hyper-casual mobile games using <b>Unity</b> and <b>Unreal/C++</b>, with focus on performance optimization and UI/UX in real-time 3D environments.',
+          'Built custom <b>Unity Editor tools</b> in <b>C#</b> (inspectors, editor windows) to streamline level and content setup for the team.'
         ]
       },
     ]},
@@ -546,6 +547,29 @@ export const graphicsEngineer: CvData = {
     defaultExtraCurricular
   ],
 };
+
+// Torpor Games - Tools Programmer / IT (C#, Unity tooling, DevOps)
+export const toolsDevOpsUnity: CvData = {
+  ...graphicsEngineer,
+  occupation: {
+    value: "IT Programmer - Full-Stack, DevOps & Graphics",
+    acronym: 'TDU'
+  },
+  aboutme: `Software Engineer (M.Sc.) with 5+ years building and maintaining
+    tools and platforms others depend on daily.
+    Full-stack with C#, Node.js/TypeScript and SQL, plus Unity experience
+    and CI/CD, Docker and Kubernetes practices from global-scale
+    deployments at adidas, with a strong ownership mindset and daily use of AI-assisted workflows.
+    ${appendedAboutMe}`,
+  skills: {
+    "Full-Stack": [ "Node.js", "Typescript", "C++","PostgreSQL", "REST", "Python"],
+    "Graphics": ["C#", "Unity",  "Blender", "Shaders", "Unreal"],
+    "CI/CD & DevOps": ["Docker", "Jenkins", "K8s", "AWS", "Linux", "YAML", "Grafana", "bash"],
+    "Frontend": ["React", "Angular", "TailwindCSS"],
+    "Tooling": ["Git", "Jest", "ESLint", "Vite"],
+    "AI & LLMs": ["Claude Code", "Agents", "NotebookLM", "SDD"],
+  },
+}
 
 export const sre: CvData = {
   sectionTitles,

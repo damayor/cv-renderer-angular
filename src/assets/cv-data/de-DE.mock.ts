@@ -30,7 +30,7 @@ const defaultSkills =  {
   "Frontend": ["React","Angular","Three.JS", "R3F", "Vue.js", "CSS", "SCSS","TailwindCSS" ],
   "Full-Stack": ["Node.js","Typescript", "Next.js", "bash", "Python", "JS"],
   "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-  "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+  "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
   "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "SDD"],
   "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
 }
@@ -214,7 +214,7 @@ export const seniorfrontend: CvData = {
   },
   languages: languagesData,
   links: [
-    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
+    { label: "Arbeitsmappe", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -297,13 +297,13 @@ export const juniorfrontend: CvData = {
     "Frontend": ["React","Vue.js","TailwindCSS", "Three.js", "JS", "Next.js"],
     "Full-Stack": ["Node.js","Typescript","REST", "NestJS", "Python" /*'Angular', "GraphQL",*/],
     // "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
-    // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8',"YAML","Grafana","Elasticsearch"],
+    // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","Storybook","Docker","ESLint", "Jest"],
     "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
-    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
+    { label: "Arbeitsmappe", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -369,7 +369,7 @@ export const seniorSoftware: CvData = {
   skills: defaultSkills,
   languages: languagesData,
   links: [
-    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
+    { label: "Arbeitsmappe", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
@@ -432,7 +432,7 @@ export const fullStackIngenieur: CvData = { //kof kof, AI - Engineer
     "Full-Stack": ["Typescript","Node.js","C++", "Java", "Python" ],
     "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
     "Frontend": ["React","Three.JS","Angular", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
-    "CI/CD": ['Linux','Docker','Jenkins','K8',"YAML","Grafana"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana"],
     "Tooling": ["Git","Vite","ESLint", "Jest", "Rest", "PostgreSQL"],
   },
 }
@@ -466,7 +466,7 @@ export const graphicsEntwickler: CvData = {
   },
   languages: languagesData,
   links: [
-    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
+    { label: "Arbeitsmappe", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "GitHub", url: "https://github.com/damayor" },
     { label: "Behance", url: "https://www.behance.net/may_interactive" }
@@ -523,10 +523,10 @@ export const sre: CvData = {
   colors: {
     primary: '#286848',
   },
-  aboutme: `Softwareingenieur mit 6+ Jahren Erfahrung 
+  aboutme: `Softwareingenieur mit Erfahrung 
     in großskaligen Plattformen bei einem multinationalen 
     Unternehmen. Verfügt über solide Kenntnisse in
-    Linux Bash und Automatisierung.     
+    Linux Bash, AWS und Automatisierung.     
     Ich bringe Softwareentwicklung und SRE-Praktiken zusammen, 
     um zuverlässige Lösungen zu liefern 
     basierend auf Monitoring und Beobachtbarkeit.  
@@ -534,17 +534,17 @@ export const sre: CvData = {
     und dem Aufbau skalierbarer, robuster Systeme.
      ${appendedAboutMe}`,
   skills: {
-    "CI/CD": ['Docker','Jenkins','K8',"YAML","Helm", 'Groovy'],
+    "CI/CD": ['Kubernetes','Docker','Jenkins',"YAML",'Groovy'],
+    "Tooling": ['Linux','AWS',"Git","PostgreSQL","Terraform","Storybook","ESLint", "Jest"],
     "Monitoring": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
     "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
-    "Tooling": ['Linux','AWS',"Git","PostgreSQL","Terraform","Storybook","ESLint", "Jest"],
     "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
   },
   languages: languagesData,
   links: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
     { label: "Stackshare", url: "https://stackshare.io/damayor/software-engineer" },
-    { label: "Arbeitsmappe", url: "https://mayinteractive.io/" },
+    { label: "Arbeitsmappe", url: "https://mayit.dev/" },
   ],
   courses: [
     { "name": "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
