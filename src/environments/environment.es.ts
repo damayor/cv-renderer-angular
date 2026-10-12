@@ -1,5 +1,6 @@
 export const environment = {
   lang: 'es',
   showArbeitserlaubnis: true,
-  cvScope: 'ES'
+  cvScope: 'ES',
+  showPicture: true
 };

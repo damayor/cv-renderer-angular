@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  mockDataFile: 'graphicsEngineer'
+  mockDataFile: 'graphicsEngineer',
+  showPicture: true
 };

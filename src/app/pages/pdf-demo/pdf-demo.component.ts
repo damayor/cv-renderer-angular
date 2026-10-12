@@ -4,17 +4,25 @@ import { MainPanelComponent } from '../../components/main-panel/main-panel/main-
 import { CvData } from '@interfaces/CVData';
 import { loadMockData } from 'src/app/services/loadMockCVData';
 import { ActivatedRoute } from '@angular/router';
-// import { UserHeaderComponent } from 'src/app/components/main-panel/user-header/user-header.component';
+import { UserHeaderComponent } from 'src/app/components/main-panel/user-header/user-header.component';
+import { environment } from '../../../environments/environment';
 import { CVDataService } from 'src/app/services/cvData.service';
 
 @Component({
   selector: 'pdf-demo',
-  imports: [SidebarComponent, MainPanelComponent],
+  imports: [SidebarComponent, MainPanelComponent, UserHeaderComponent],
   template: `
     <div #pdfContent class="w-[210mm] h-full bg-white mx-auto">
+      @if (!env.showPicture && cvData().occupation) {
+        <user-header
+          [role]="cvData().occupation.value"
+          [userData]="cvData().contact"
+          [links]="cvData().links"
+        ></user-header>
+      }
       <div class="flex flex-row">
         <sidebar [cvData]="cvData()"></sidebar>
-        <main-panel class="bg-white" [cvData]="cvData()" [contact]="cvData().contact" ></main-panel>
+        <main-panel class="bg-white" [showHeader]="env.showPicture" [cvData]="cvData()" [contact]="cvData().contact" ></main-panel>
       </div>
      
     </div>
@@ -22,6 +30,7 @@ import { CVDataService } from 'src/app/services/cvData.service';
   styles: [``]
 })
 export class PdfDemoComponent {
+  readonly env = environment;
 
   constructor(
     private CVDataService: CVDataService

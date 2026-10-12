@@ -11,11 +11,13 @@ import { Contact, CvData } from '@interfaces/CVData';
   imports: [MainSectionTimelineComponent, UserHeaderComponent, PersonalDetailsComponent],
   template: `
     <div class="flex flex-col bg-white min-h-screen">
-      <user-header
-        [role]="cvData().occupation.value"
-        [userData]="contact()"
-        [links]="cvData().links"
-      ></user-header>
+      @if (showHeader()) {
+        <user-header
+          [role]="cvData().occupation.value"
+          [userData]="contact()"
+          [links]="cvData().links"
+        ></user-header>
+      }
       
       @for (section of cvData().experiences; track $index) {
         <main-section-timeline [title]="section.title" [experiences]="section.entries"></main-section-timeline>
@@ -29,6 +31,7 @@ import { Contact, CvData } from '@interfaces/CVData';
 })
 export class MainPanelComponent {
   cvData =  input.required<CvData>();
+  showHeader = input(true);
   contact = input() as any; //input.required<Contact>
 
   readonly env = environment;

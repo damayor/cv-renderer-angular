@@ -13,7 +13,9 @@ import { CvData } from '@interfaces/CVData';
   imports: [SidebarSkillsComponent, SidebarLanguagesComponent, SidebarCoursesComponent, SidebarAboutMeComponent, SidebarPersonalDetailsComponent],
   template: `
     <div class="flex flex-col items-center h-full w-64 px-6 pb-12 bg-gray-100" style="color: var(--clr-gray-900);">
-      <img src="./assets/images/profile_sunrise.jpg" alt="Profile" class="rounded-full w-40 h-40 mt-4 mb-2" />
+      @if (env.showPicture) {
+        <img src="./assets/images/profile_sunrise.jpg" alt="Profile" class="rounded-full w-40 h-40 mt-4 mb-2" />
+      }
       <sidebar-about-me [class]="blockClass" [aboutMeText]="cvData().aboutme"></sidebar-about-me>
       <sidebar-skills [class]="blockClass" [skills]="cvData().skills" [title]="titles().skills"></sidebar-skills>
       <sidebar-languages [class]="blockClass" [languages]="cvData().languages" [title]="titles().languages"></sidebar-languages>

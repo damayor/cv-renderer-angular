@@ -13,11 +13,13 @@ const sectionTitles: SectionTitles = {
   titleRecognition:"Reconocimiento académico"
 }
 
+const isLatam = environment.cvScope == 'CO' || environment.cvScope == 'AM';
+
 const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
-  phone: environment.cvScope == 'CO' ? "+57 3123344936": "+49 1525 2198970",
-  location: environment.cvScope !== 'ES' ? "Berlin -> Colombia (Nov 2026)": "Berlin -> España (Nov 2026)",
+  phone: isLatam ? "+57 3123344936": "+49 1525 2198970",
+  location: isLatam ? 'Bogota, Colombia' : "Berlin -> España (Nov 2026)",
   nationality: "Colombiano",
   // workStatus: "Transición a España desde Julio de 2026.",
   // visaStatus: 'Transicion a España desde Agosto 2026.',
@@ -35,10 +37,11 @@ const defaultSkills = {
   }
 
 const appendedAboutMe = 
-    `Radicado en Alemania, en proceso de
-     relocalización. 
-     Mi objetivo es aportar mi experiencia en equipos multinacionales 
-     líderes como adidas, bajo una comunicación empática y proactiva.` 
+    `${isLatam ? '' :
+      'Radicado en Alemania, en proceso de relocalización.'
+    }
+    Caracterizando un rol de apoyo constante a equipos multiculturales, 
+    bajo una comunicación empática y proactiva.` 
     //  facilitando mi contratación mediante el proceso de Profesional Altamente Cualificado (PAC)
 
 const languagesData = [
@@ -84,8 +87,10 @@ const defaultEducation = {
           tasks: [
             'GPA: 4.1/5.0',
             // 'Reconocimiento por la entidad federal alemana Anabin (ZAB) como carrera equivalente a <b>System- und Computertechnik</b> (Abschlussklasse A4/H+)',
-            "Reconocido por el Ministerio de Ciencia, Innovación y Universidades (NARIC-España) como equivalente al nivel académico de <b>Grado universitario</b> (RD 889/2022).",
-            'Beca "Quiero Estudiar" otorgada a los mejores puntajes nacionales del ICFES.',
+            isLatam
+              ? 'Beca <b>"Quiero Estudiar"</b> otorgada a los mejores puntajes nacionales del ICFES.'
+              : "Reconocido por el Ministerio de Ciencia, Innovación y Universidades (NARIC-España) como equivalente al nivel académico de <b>Grado universitario</b> (RD 889/2022).",
+            
           ]
         },
         {
@@ -232,10 +237,7 @@ export const frontend3d: CvData = {
     `Ingeniero de Software con amplia trayectoria en proyectos web de gran escala, con bases solidas en C++, Linux bash y
       SRE, asegurando monitoreo, trazabilidad 
       y visualización. Tambien especializado en el ecosistema NodeJS, y React, y soluciones interactivas 
-      con Three.JS y Unity. Actualmente radicado 
-      en Alemania, caracterizando 
-      un rol de apoyo constante al equipo y a la vez, con comunicación 
-      empática en las relaciones interpersonales. `,
+      con Three.JS y Unity. ${appendedAboutMe}`,
   //web graphics 
   // aboutme: 
   // `Ingeniero de Software con amplia trayectoria en proyectos web de gran escala, especializado en el ecosistema NodeJS, y React, y soluciones interactivas 
@@ -367,10 +369,7 @@ export const seniorSoftware: CvData = {
       ReactJS, NodeJS, y soluciones interactivas 
       con Three.JS y Unity. Bases solidas en C++, Linux bash y
       SRE, asegurando monitoreo, trazabilidad 
-      y visualización. Actualmente radicado 
-      en Alemania, caracterizando 
-      un rol de apoyo constante al equipo y a la vez, con comunicación 
-      empática en las relaciones interpersonales. `,
+      y visualización. ${appendedAboutMe}`,
   skills: defaultSkills,
   languages: languagesData,
   links: [
@@ -463,10 +462,7 @@ export const graphicsEngineer: CvData = {
       soluciones digitales inmersivas que mejoren
       la experiencia del usuario, particularmente en
       contextos industriales y web.
-      Actualmente radicado en Alemania y
-      ansioso por contribuir a equipos
-      innovadores mientras continúo creciendo
-      en mi experiencia`,
+      ${appendedAboutMe}`,
   skills: defaultSkills,
   languages: languagesData,
   links: [

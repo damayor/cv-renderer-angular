@@ -13,12 +13,14 @@ const sectionTitles: SectionTitles = {
   titleRecognition:"Title Recognition"
 }
 
+const isLatam = environment.cvScope == 'CO' || environment.cvScope == 'AM';
+
 const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
-  phone: environment.cvScope == 'CO' ? "+57 312 3344936": "+49 1525 2198970",
-  location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (Nov 2026)",
-  // location: environment.cvScope == 'CO' ? "Berlin -> Bogota (Nov 2026)" : "10585 Berlin, Germany",
+  phone: isLatam ? "+57 312 3344936": "+49 1525 2198970",
+  // location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (Nov 2026)",
+  location: isLatam ? "Bogotá, Colombia" : "10585 Berlin, Germany",
   nationality: "Colombian",
   address:"Otto-Suhr-Allee 106C, 10585 Berlin",
   workStatus: "Available 20h/week",
@@ -41,11 +43,13 @@ const defaultSkills =  {
 }
 
 const appendedAboutMe = `
-    ${environment.cvScope === 'CO' 
-      ? `Berlin-based relocating to Colombia in summer.` 
+    ${environment.cvScope === 'AM'
+      ? `Bogota-based, available to work remotely across the Americas and Latin America.`
+      : environment.cvScope === 'CO' 
+      ? `` 
       : environment.cvScope === 'DE' 
         ? `Berlin-based with work authorization and relocation flexibility within Germany.` 
-        : `Immediate relocation availability within Europe.`
+        : `Immediate relocation availability within Europe.` //ES, EU
     }
     Dedicated to contributing my expertise gained at global leaders,
     fostering collaboration through proactive engagement and empathetic leadership.`
@@ -92,10 +96,12 @@ const defaultEducation = {
           location: "Bogotá, Colombia",
           tasks: [
             'GPA: 4.1/5.0',
-            // "Scholarship <b>\"Quiero Estudiar\"</b> given to the best national ICFES scores"
+            isLatam
+            ? '': "Scholarship <b>Quiero Estudiar</b> given to the best national ICFES scores"
+            ,
             environment.cvScope == 'ES' 
-            ? "Recognized by NARIC-Spain as equivalent to a Spanish <b>Bachelor's Degree</b> (Grado universitario) level (RD 889/2022)."
-            : "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
+              ? "Recognized by NARIC-Spain as equivalent to a Spanish <b>Bachelor's Degree</b> (Grado universitario) level (RD 889/2022)."
+              : "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
         
           ]
         },
