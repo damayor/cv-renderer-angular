@@ -6,7 +6,7 @@ export type LinkItem = CvData['links'][number];
 export type Icon = 'portfolio' | 'linkedin' | 'github' | 'behance' | 'stackshare' | 'instagram' | 'link';
 
 const URL_ICON_MAP: { pattern: RegExp; icon: Icon }[] = [
-  { pattern: /mayinteractive/,  icon: 'portfolio'   },
+  { pattern: /mayit/,  icon: 'portfolio'   },
   { pattern: /linkedin/,   icon: 'linkedin'    },
   { pattern: /github/,     icon: 'github'      },
   { pattern: /behance/,    icon: 'behance'     },
@@ -21,6 +21,12 @@ const URL_ICON_MAP: { pattern: RegExp; icon: Icon }[] = [
 })
 export class HeaderLinks {
   @Input() links: LinkItem[] = [];
+  /** true: pills show the label and the URLs are listed as text below. false: pills show the URL. */
+  @Input() separateUrlLine = false;
+
+  displayUrl(url: string): string {
+    return url.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '');
+  }
 
   resolveIcon(url: string): Icon {
     return URL_ICON_MAP.find(({ pattern }) => pattern.test(url))?.icon ?? 'link';

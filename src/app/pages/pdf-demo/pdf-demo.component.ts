@@ -14,23 +14,37 @@ import { CVDataService } from 'src/app/services/cvData.service';
   template: `
     <div #pdfContent class="w-[210mm] h-full bg-white mx-auto">
       @if (!env.showPicture && cvData().occupation) {
-        <user-header
-          [role]="cvData().occupation.value"
-          [userData]="cvData().contact"
-          [links]="cvData().links"
-        ></user-header>
+        <!-- Float, so it is painted before the floats below -->
+        <div class="flow-root">
+          <user-header
+            class="float-left w-full"
+            [role]="cvData().occupation.value"
+            [userData]="cvData().contact"
+            [links]="cvData().links"
+          ></user-header>
+        </div>
       }
-      <div class="flex flex-row">
-        <sidebar [cvData]="cvData()"></sidebar>
-        <main-panel class="bg-white" [showHeader]="env.showPicture" [cvData]="cvData()" [contact]="cvData().contact" ></main-panel>
+      <div class="flow-root" [class]="dividerClass">
+        @if (env.showPicture && cvData().occupation) {
+          <user-header
+            class="float-right clear-right w-[calc(100%-16rem)]"
+            [role]="cvData().occupation.value"
+            [userData]="cvData().contact"
+            [links]="cvData().links"
+          ></user-header>
+        }
+        <sidebar class="float-left clear-left" part="top" [cvData]="cvData()"></sidebar>
+        <main-panel class="float-right clear-right w-[calc(100%-16rem)] bg-white" [cvData]="cvData()"></main-panel>
+        <sidebar class="float-left clear-left" part="bottom" [cvData]="cvData()"></sidebar>
       </div>
-     
     </div>
   `,
   styles: [``]
 })
 export class PdfDemoComponent {
   readonly env = environment;
+  // Vertical sidebar divider as a background (no positioned element needed): 1px wide, 90% high, at the right edge of the 16rem sidebar.
+  readonly dividerClass = '[background:linear-gradient(var(--color-sidebar-divider),var(--color-sidebar-divider))_calc(16rem-1px)_1rem/1px_90%_no-repeat]';
 
   constructor(
     private CVDataService: CVDataService

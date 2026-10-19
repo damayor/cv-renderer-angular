@@ -5,8 +5,7 @@ import { PdfDemoComponent } from "./pages/pdf-demo/pdf-demo.component";
 @Component({
   selector: 'app-root',
   imports: [PdfDemoComponent, RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  templateUrl: './app.html'
 })
 export class App {
   protected readonly title = signal('cv-renderer');

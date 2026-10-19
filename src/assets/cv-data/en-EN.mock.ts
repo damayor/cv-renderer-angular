@@ -127,7 +127,7 @@ const freelancerExperience = {
       'Rendering complex 3D masterplans from 3ds Max und <b>Blender</b> within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
       'Designed and deployed a custom AI Agent as the interface layer for an work-hour tracking pipeline (<b>Google Apps Script</b> + Sheets), cutting manual overhead by 40%.',
       'Multi-sensor viewer for the nuScenes dataset, integrating <b>FastAPI</b> (Python) and R3F for <b>LiDAR point clouds</b>.',
-      'Leveraged <b> LLMs</b> (Claude Cide, Cursor) and vibe coding methodologies to rapidly prototype and deploy automation tools and web applications.',
+      'Leveraged <b> LLMs</b> (Claude Code, Cursor) and vibe coding methodologies to rapidly prototype and deploy automation tools and web applications.',
       // 'Built and deployed full-stack a customizable CV generator with <b>Angular</b>, <b>RxJS</b> for reactive state management and dynamic rendering.',
     ],
     achievements: [

@@ -12,32 +12,36 @@ import { CvData } from '@interfaces/CVData';
   standalone: true,
   imports: [SidebarSkillsComponent, SidebarLanguagesComponent, SidebarCoursesComponent, SidebarAboutMeComponent, SidebarPersonalDetailsComponent],
   template: `
-    <div class="flex flex-col items-center h-full w-64 px-6 pb-12" [class]="containerClass" style="color: var(--clr-gray-900);">
-      @if (env.showPicture) {
-        <img src="./assets/images/profile_sunrise.jpg" alt="Profile" class="rounded-full w-40 h-40 mt-4 mb-2" />
-      }
-      <sidebar-about-me [class]="blockClass" [aboutMeText]="cvData().aboutme"></sidebar-about-me>
-      <sidebar-skills [class]="blockClass" [skills]="cvData().skills" [title]="titles().skills"></sidebar-skills>
-      <sidebar-languages [class]="blockClass" [languages]="cvData().languages" [title]="titles().languages"></sidebar-languages>
-      @if (cvData().courses.length > 0 ) {
-        <sidebar-courses
-          [class]="blockClass"
-          [class.after:hidden]="!(env.showArbeitserlaubnis)"
-          [title]="titles().courses"
-          [courses]="cvData().courses"></sidebar-courses>
-      }
-      @if (env.showArbeitserlaubnis ) {
-        <sidebar-personal-details [class]="blockClass" [cvPersonalDetailsData]="cvData().contact" [titles]="titles()"></sidebar-personal-details>
+    <div class="flex flex-col items-center w-64 px-6" [class.pb-12]="part() === 'bottom'" style="color: var(--clr-gray-900);">
+      @if (part() === 'top') {
+        @if (env.showPicture) {
+          <img src="./assets/images/profile_sunrise.jpg" alt="Profile" class="rounded-full w-40 h-40 mt-4 mb-2" />
+        }
+        <sidebar-about-me class="border-b" [class]="blockClass" [aboutMeText]="cvData().aboutme"></sidebar-about-me>
+        <sidebar-skills class="border-b" [class]="blockClass" [skills]="cvData().skills" [title]="titles().skills"></sidebar-skills>
+      } @else {
+        <sidebar-languages class="border-b" [class]="blockClass" [languages]="cvData().languages" [title]="titles().languages"></sidebar-languages>
+        @if (cvData().courses.length > 0 ) {
+          <sidebar-courses
+            [class]="blockClass"
+            [class.border-b]="env.showArbeitserlaubnis"
+            [title]="titles().courses"
+            [courses]="cvData().courses"></sidebar-courses>
+        }
+        @if (env.showArbeitserlaubnis ) {
+          <sidebar-personal-details class="border-b" [class]="blockClass" [cvPersonalDetailsData]="cvData().contact" [titles]="titles()"></sidebar-personal-details>
+        }
       }
     </div>
   `
 })
 export class SidebarComponent {
   cvData = input.required<CvData>();
+  // `top`: photo, about me, skills. `bottom`: languages, courses, personal details.
+  part = input<'top' | 'bottom'>('top');
 
   titles = computed(() => this.cvData().sectionTitles);
 
   readonly env = environment;
-  readonly containerClass = 'relative bg-white after:content-[\'\'] after:absolute after:right-0 after:top-4 after:h-9/10 after:w-px after:bg-sidebar-divider';
-  readonly blockClass = 'block break-inside-avoid py-6 relative w-full box-border after:content-[\'\'] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-px after:bg-sidebar-divider';
+  readonly blockClass = 'block break-inside-avoid py-6 w-full box-border border-sidebar-divider';
 }

@@ -1,6 +1,6 @@
 <ng-container>
-  <div class="relative w-full mb-[18px] text-lg uppercase text-primary cursor-default break-inside-avoid text-left">{{ title() }}</div>
-  <div class="flex flex-wrap items-center w-full relative p-0 flex-col gap-4 mb-2">
+  <div class="w-full mb-[18px] text-lg uppercase text-primary cursor-default break-inside-avoid break-after-avoid text-left">{{ title() }}</div>
+  <div class="flex flex-wrap items-center w-full p-0 flex-col gap-4 mb-2">
     @for (lang of languages(); track $index) {
       <div class="flex flex-col w-full">
         <div class="w-full flex flex-row">

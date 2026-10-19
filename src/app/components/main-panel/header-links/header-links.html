@@ -1,7 +1,8 @@
+<div class="flex flex-col items-center gap-1.5">
 <div
     [attr.aria-label]="'Profile links'"
     role="list"
-    class="flex flex-wrap gap-2.5"
+    class="flex flex-wrap gap-2"
 >
     <a
         *ngFor="let link of links; let i = index"
@@ -12,7 +13,7 @@
         [attr.aria-label]="link.label"
         [attr.title]="link.label"
         [style.transition-delay]="i * 40 + 'ms'"
-        class="inline-flex items-center border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-600 gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 no-underline transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400"
+        class="inline-flex items-center border bg-white dark:bg-neutral-900 border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-600 gap-1.5 px-2 py-1 rounded-md text-[11px] font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 no-underline transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400"
     >
     <span style="color: var(--clr-primary)">
         <ng-container>
@@ -90,6 +91,14 @@
         }
         </ng-container>
     </span>
-    <span>{{ link.label }}</span>
+    <span>{{ separateUrlLine ? link.label : displayUrl(link.url) }}</span>
     </a>
+</div>
+@if (separateUrlLine) {
+    <p class="m-0 text-center text-[10px] text-neutral-400">
+        @for (link of links; track link.url; let last = $last) {
+            <span>{{ displayUrl(link.url) }}</span>@if (!last) { <span> · </span> }
+        }
+    </p>
+}
 </div>
