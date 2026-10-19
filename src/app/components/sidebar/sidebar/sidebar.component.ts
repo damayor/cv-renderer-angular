@@ -12,7 +12,7 @@ import { CvData } from '@interfaces/CVData';
   standalone: true,
   imports: [SidebarSkillsComponent, SidebarLanguagesComponent, SidebarCoursesComponent, SidebarAboutMeComponent, SidebarPersonalDetailsComponent],
   template: `
-    <div class="flex flex-col items-center h-full w-64 px-6 pb-12 bg-gray-100" style="color: var(--clr-gray-900);">
+    <div class="flex flex-col items-center h-full w-64 px-6 pb-12" [class]="containerClass" style="color: var(--clr-gray-900);">
       @if (env.showPicture) {
         <img src="./assets/images/profile_sunrise.jpg" alt="Profile" class="rounded-full w-40 h-40 mt-4 mb-2" />
       }
@@ -38,5 +38,6 @@ export class SidebarComponent {
   titles = computed(() => this.cvData().sectionTitles);
 
   readonly env = environment;
+  readonly containerClass = 'relative bg-white after:content-[\'\'] after:absolute after:right-0 after:top-4 after:h-9/10 after:w-px after:bg-sidebar-divider';
   readonly blockClass = 'block break-inside-avoid py-6 relative w-full box-border after:content-[\'\'] after:absolute after:left-0 after:right-0 after:bottom-0 after:h-px after:bg-sidebar-divider';
 }

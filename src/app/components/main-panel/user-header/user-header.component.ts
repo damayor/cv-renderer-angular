@@ -9,14 +9,14 @@ import { HeaderLinks, LinkItem } from "../header-links/header-links.component";
   standalone: true,
   imports: [CommonModule, HeaderLinks],
   template: `
-    <div class="flex items-center justify-between p-5 pb-0 gap-x-2">
+    <div class="flex items-center p-5 pb-0 gap-x-2" [class]="env.showPicture ? 'justify-between' : 'justify-around'">
       <!-- Left: Name und Role -->
       <div class="flex flex-col ">
         <div class="text-4xl  uppercase" style="color: var(--clr-primary)">{{userData().fullname }}</div>
         <div class="h3-occupation">{{role() }}</div>
       </div>
       <!-- Right: Contact Info -->
-      <div class="flex flex-col flex-[44%] gap-2 user-header__contact-info ">
+      <div class="flex flex-col gap-2 user-header__contact-info" [class.flex-[44%]]="env.showPicture">
       
         <div class="flex items-center gap-2 ">
           <span style="color: var(--clr-primary);"> <span class="icon-phone"></span></span>
@@ -34,7 +34,7 @@ import { HeaderLinks, LinkItem } from "../header-links/header-links.component";
       </div>
 
     </div>
-    <div class="px-5 pt-3">
+    <div class="px-5 pt-3 flex justify-center">
       <header-links [links]="links()"></header-links>
     </div>
   `,
@@ -44,6 +44,8 @@ export class UserHeaderComponent {
   userData = input.required<Contact>({});
   role = input.required<string>({});
   links = input<LinkItem[]>([]);
+
+  readonly env = environment;
 
   location = computed(() =>  environment.cvScope === 'DE' ? this.userData().address : this.userData().location )
 

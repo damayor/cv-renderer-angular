@@ -72,7 +72,9 @@ The CV is a fixed `210mm` wide `<div>` (A4) composed of two side-by-side compone
 
 ### Environment / build configurations
 
-`angular.json` defines named build configurations (`eu`, `eu-es`, `de`, `es`) that replace `src/environments/environment.ts` with the appropriate file. The `environment.cvScope` property drives conditional rendering (e.g. the DE-specific personal details block). The `environment.lang` / `localize` settings control Angular's i18n compilation.
+`angular.json` defines named build configurations (`eu`, `eu-es`, `de`, `es`, `co`, `am`) that replace `src/environments/environment.ts` with the appropriate file. The `environment.cvScope` property drives conditional rendering (e.g. the DE-specific personal details block). The `environment.lang` / `localize` settings control Angular's i18n compilation.
+
+`environment.showPicture` (boolean, set in every `environment.*.ts`) toggles the profile photo. When `true`, the layout is the classic one: grey sidebar with the photo, and `<user-header>` inside `<main-panel>`. When `false` (e.g. `am`), the photo is not rendered and `<user-header>` spans the full width of the A4 page (rendered by `PdfDemoComponent` above the row); `<sidebar>` and `<main-panel>` then start below it side by side, and the sidebar has a white background with a vertical divider (80% height) instead of grey. The `am` scope (`cvScope: 'AM'`) targets remote work across the Americas/LatAm and shares CO's phone and education text; location is set in the mock files (`isLatam` helper).
 
 ### Theming
 

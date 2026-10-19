@@ -5,7 +5,8 @@
   --color-primary: #1e295f;
   --color-secondary:aqua
   --text-tiny: 0.625rem;
-  --color-sidebar-divider: rgb(128, 129, 131);
+  --color-sidebar-divider: #ddd; 
+  /* //rgb(128, 129, 131); */
 }
 
 @font-face {

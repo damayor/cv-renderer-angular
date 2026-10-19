@@ -410,7 +410,7 @@ export const seniorSoftware: CvData = {
       }
     ]},
     defaultEducation,
-    //  defaultExtraCurricular
+     defaultExtraCurricular
   ],
 };
 
@@ -517,7 +517,7 @@ export const sre: CvData = {
   sectionTitles,
   contact: contactDefault,
   occupation: {
-    value: "DevOps und Softwareingenieur",
+    value: "Softwareingenieur und DevOps",
     acronym: 'DO',
   },
   colors: {
@@ -547,6 +547,7 @@ export const sre: CvData = {
     { label: "Arbeitsmappe", url: "https://mayit.dev/" },
   ],
   courses: [
+    { "name": "Claude Code in Action", "institution": "Anthropic", "date": "Jun 2026" },
     { "name": "C++ PROGRAMMIERUNG - VON ANFÄNGER BIS FORTGESCHRITTEN", "institution": "Udemy", "date": "Mai 2025" }
   ],
   experiences: [
@@ -576,7 +577,7 @@ export const sre: CvData = {
       }
     ]},
     ohneMasterEducation,
-    // defaultExtraCurricular
+    defaultExtraCurricular
   ]
 }
 

@@ -28,7 +28,7 @@ const { exec } = require('child_process');
   // Generated from the mock files: `npm run acronyms`
   const acronyms = require('./scripts/acronyms.json')[lang] ?? {};
   const envir = args[2] ?? 'dev';
-  const scope = args[3] ?? ''; //EU, ES, CO
+  const scope = args[3] ?? ''; //EU, ES, CO, AM
 
   console.log('role argument:', role);
   console.log('language argument:', lang);
@@ -38,7 +38,7 @@ const { exec } = require('child_process');
   const prefix = lang == 'EN'
     ? 'CV' 
     : lang == 'DE' ? 'LL' : 'HV'
-  const country = scope == 'EU' ? 'E': scope =='ES' ? 'S': scope == 'CO' ? 'A' : ''; 
+  const country = scope == 'EU' ? 'E': scope =='ES' ? 'S': (scope == 'CO' || scope == 'AM') ? 'A' : ''; 
   const namepdf = 'DavidMayorga'+(acronyms[role] ?? role);
 
   const browser = await puppeteer.launch();

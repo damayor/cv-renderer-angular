@@ -97,9 +97,8 @@ const defaultEducation = {
           tasks: [
             'GPA: 4.1/5.0',
             isLatam
-            ? '': "Scholarship <b>Quiero Estudiar</b> given to the best national ICFES scores"
-            ,
-            environment.cvScope == 'ES' 
+            ?  "Scholarship <b>Quiero Estudiar</b> given to the best national ICFES scores"
+            : environment.cvScope == 'ES' 
               ? "Recognized by NARIC-Spain as equivalent to a Spanish <b>Bachelor's Degree</b> (Grado universitario) level (RD 889/2022)."
               : "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
         
