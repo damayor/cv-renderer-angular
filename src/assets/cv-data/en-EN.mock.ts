@@ -44,7 +44,7 @@ const defaultSkills =  {
 
 const appendedAboutMe = `
     ${environment.cvScope === 'AM'
-      ? `Bogota-based, available to work remotely across the Americas and Latin America.`
+      ? `Bogotá-based, available to work remotely across the Americas and Latin America.`
       : environment.cvScope === 'CO' 
       ? `` 
       : environment.cvScope === 'DE' 
@@ -124,15 +124,13 @@ const freelancerExperience = {
     dates: 'Aug 2025 - present',
     role: 'Full-Stack Engineer & Automation Specialist',
     tasks: [
-      'Rendering complex 3D masterplans from 3ds Max und <b>Blender</b> within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
-      'Designed and deployed a custom AI Agent as the interface layer for an work-hour tracking pipeline (<b>Google Apps Script</b> + Sheets), cutting manual overhead by 40%.',
+      'Rendering complex 3D masterplans from 3ds Max and <b>Blender</b> within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
+      'Designed and deployed a custom AI Agent as the interface layer for a work-hour tracking pipeline (<b>Google Apps Script</b> + Sheets), cutting manual overhead by 40%.',
       'Multi-sensor viewer for the nuScenes dataset, integrating <b>FastAPI</b> (Python) and R3F for <b>LiDAR point clouds</b>.',
       'Leveraged <b> LLMs</b> (Claude Code, Cursor) and vibe coding methodologies to rapidly prototype and deploy automation tools and web applications.',
       // 'Built and deployed full-stack a customizable CV generator with <b>Angular</b>, <b>RxJS</b> for reactive state management and dynamic rendering.',
     ],
-    achievements: [
-      'Consolidated the adidas Tech Hub as a technology benchmark in Colombia by spearheading the adidas Campus Program, leading the technical mentorship and training of high-potential engineers'
-    ]
+    achievements: [ ]
   }
 
 const defaultExtraCurricular = {
@@ -205,8 +203,8 @@ export const seniorfrontend: CvData = {
           'Improved deployment duration of the adidas Checkout backend <b>microservice</b> by implementing CI/CD pipelines via <b>Jenkins</b>, <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
         ],
-         achievements: [
-          'Consolidated the adidas Tech Hub as a technology benchmark in Colombia by spearheading the adidas Campus Program, leading the technical mentorship and training of high-potential engineers'
+        achievements: [
+          'Consolidated the Tech Hub as a technology benchmark in Colombia by mentoring <b>14</b> career changers through the Campus Program, from programming fundamentals to <b>TypeScript</b> and <b>ReactJS</b>.'
         ]
       },
       {
@@ -297,7 +295,10 @@ export const juniorfrontend: CvData = {
           'Drove the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
           'Improved deployment duration of the adidas Checkout backend <b>microservice</b> by implementing CI/CD pipelines via <b>Jenkins</b>, <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
-          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+          // 'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+        ],
+        achievements: [
+          'Trained and mentored <b>14</b> career changers in the Campus Program, from programming fundamentals to <b>TypeScript</b> and <b>ReactJS</b>.'
         ]
       },
       {
@@ -425,7 +426,10 @@ export const seniorSoftware: CvData = {
           'Drove the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
           'Improved deployment duration of the adidas Checkout backend <b>microservice</b> by implementing CI/CD pipelines via <b>Jenkins</b>, <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
-          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+          // 'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+        ],
+        achievements: [
+          'Trained and mentored <b>14</b> career changers in the Campus Program, from programming fundamentals to <b>TypeScript</b> and <b>ReactJS</b>.'
         ]
       },
       // {
@@ -523,8 +527,11 @@ export const graphicsEngineer: CvData = {
         role: 'Software Engineer — SRE & Frontend ',
         tasks: [
           'Led 3D customisation module development for sportswear PDPs using <b>Three.js</b> and <b>Unity</b>, optimizing <b>rendering performance</b> and real-time interaction across <b>20+ international markets</b>.',
-          'Contributed to frontend architecture with <b>React</b> and <b>Next.js</b>, applying functional programming patterns and achieving load time improvements on high-traffic e-commerce platforms (i.e. Yeezy).',
+          // 'Contributed to frontend architecture with <b>React</b> and <b>Next.js</b>, applying functional programming patterns and achieving load time improvements on high-traffic e-commerce platforms (e.g. Yeezy).',
           'Improved deployment reliability of backend microservices via <b>CI/CD pipelines</b> with <b>Jenkins</b> and <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
+        ],
+        achievements: [
+          'Trained and mentored <b>14</b> career changers in the Campus Program, from programming fundamentals to <b>TypeScript</b> and <b>ReactJS</b>.'
         ]
       },
       {
@@ -633,6 +640,9 @@ export const sre: CvData = {
            `Participated in on-call rotations to troubleshoot and resolve
           production issues, ensuring <b>99.99%</b> microservice availability.`,
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Storybook</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
+        ],
+        achievements: [
+          'Trained and mentored <b>14</b> career changers in the Campus Program, from programming fundamentals to <b>TypeScript</b> and <b>ReactJS</b>.'
         ]
       },
       {
@@ -746,7 +756,10 @@ export const contentcreator: CvData = {
           'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
           'Improved deployment duration of the adidas Checkout backend <b>microservice</b> by implementing CI/CD pipelines via <b>Jenkins</b>, <b>Kubernetes</b>, supporting daily transactions across <b>30+ countries</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
-          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+          // 'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+        ],
+        achievements: [
+          'Trained and mentored <b>14</b> career changers in the Campus Program, from programming fundamentals to <b>TypeScript</b> and <b>ReactJS</b>.'
         ]
       },
       {
@@ -845,6 +858,9 @@ export const supportAssistant: CvData = {
         tasks: [
           'Supported retail operations during high-consumption days such as Christmas and Black Friday, assisting with <b>sales, inventory organization</b>, and <b>warehouse management</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
+        ],
+        achievements: [
+          'Trained and mentored <b>14</b> career changers in the Campus Program, from programming fundamentals to <b>TypeScript</b> and <b>ReactJS</b>.'
         ]
       },
       {
@@ -969,6 +985,9 @@ export const itSupport: CvData = {
           'Wrote <b>Bash</b> and <b>Python</b> scripts to support CI/CD pipelines and internal tooling, automating repetitive tasks across the development workflow.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience.',
           'Supported retail operations during high-consumption days such as Christmas and Black Friday, assisting with <b>sales, inventory organization</b>, and <b>warehouse management</b>.',
+        ],
+        achievements: [
+          'Trained and mentored <b>14</b> career changers in the Campus Program, from programming fundamentals to <b>TypeScript</b> and <b>ReactJS</b>.'
         ]
       },
       {

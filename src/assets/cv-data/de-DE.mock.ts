@@ -231,8 +231,11 @@ export const seniorfrontend: CvData = {
             "Treiben der Entwicklung von <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
             // "Entwicklung und Pflege skalierbarer Frontend-Komponenten für die GTS Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
             "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout-<b>Backends</b> durch CI/CD-Pipelines Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
-            "Beitrag zur Frontend-Architektur des <b>Yeezy</b>, E-Commerce bekannt für minimalistisches Design und <b>funktionale Programmierung</b> mit schnelleren Ladezeiten."
-          ]
+            // "Beitrag zur Frontend-Architektur des <b>Yeezy</b>, E-Commerce bekannt für minimalistisches Design und <b>funktionale Programmierung</b> mit schnelleren Ladezeiten."
+          ],
+        achievements: [
+          "Ausbildung und Begleitung von <b>14</b> Quereinsteigern im Campus Program, von Programmiergrundlagen bis <b>TypeScript</b> und <b>React</b>."
+        ]
       },
       {
         company: 'UMBRA 3D STUDIO - INTERACTIVE',
@@ -330,7 +333,10 @@ export const juniorfrontend: CvData = {
         tasks: [
             "Entwicklung von Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die GTS Plattform.",
             "Mitarbeit an <b>Anpassungsmodulen</b> (Frontend und 3D) für Sportbekleidung im PDP mit <b>Three.js</b> und <b>Unity</b>, inklusive End-to-End-Tests mit <b>Jest</b> und <b>Cypress</b>.",
-          ]
+          ],
+        achievements: [
+          "Ausbildung und Begleitung von <b>14</b> Quereinsteigern im Campus Program, von Programmiergrundlagen bis <b>TypeScript</b> und <b>React</b>."
+        ]
       },
       {
         company: 'UMBRA 3D STUDIO - INTERACTIVE',
@@ -387,6 +393,9 @@ export const seniorSoftware: CvData = {
           "Verbesserung der Zuverlässigkeit und Deployment-Geschwindigkeit des adidas Checkout durch CI/CD-Pipelines und Infrastrukturautomatisierung mit <b>Jenkins</b>, <b>Kubernetes</b> und <b>Grafana</b>, Unterstützung täglicher Transaktionen in <b>30+ Ländern</b>.",
           "Entwicklung und Pflege skalierbarer Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die GTS Plattform, Beitrag zu einer personalisierten User Experience in <b>20+ internationalen Märkten</b>.",
           // "Beitrag zur Frontend-Architektur des <b>Yeezy E-Commerce Portals</b>, bekannt für minimalistisches Design und <b>funktionale Programmierung in Typescript</b>, mit schnelleren Ladezeiten.",
+        ],
+        achievements: [
+          "Ausbildung und Begleitung von <b>14</b> Quereinsteigern im Campus Program, von Programmiergrundlagen bis <b>TypeScript</b> und <b>React</b>."
         ]
       },
       // {
@@ -485,8 +494,11 @@ export const graphicsEntwickler: CvData = {
         tasks: [
           "Leitete die Entwicklung der 3D-Anpassungsfunktionen für Sportbekleidung mit <b>Three.js</b> und <b>Unity</b>, um die Web-User-Interaktion zu steigern.",
           "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die GTS Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug.",
-          "Trug zur Frontend-Architektur des <b>Yeezy E-Commerce-Portals</b> bei, das für sein minimalistisches Design und die <b>funktionale</b> Programmierung in Typescript bekannt ist und kürzere Ladezeiten ermöglichte."
+          // "Trug zur Frontend-Architektur des <b>Yeezy E-Commerce-Portals</b> bei, das für sein minimalistisches Design und die <b>funktionale</b> Programmierung in Typescript bekannt ist und kürzere Ladezeiten ermöglichte."
         ],
+        achievements: [
+          "Ausbildung und Begleitung von <b>14</b> Quereinsteigern im Campus Program, von Programmiergrundlagen bis <b>TypeScript</b> und <b>React</b>."
+        ]
       },
       {
         company: 'MADBRICKS',
@@ -563,6 +575,9 @@ export const sre: CvData = {
           "Beteiligte sich an On-Call-Rotationen zur Fehleranalyse und -behebung in der Produktion, um eine <b>99,99%</b>-Verfügbarkeit der Microservices sicherzustellen.",
           "Refaktorierte Jenkins-Pipelines und implementierte CI/CD-Best Practices für das Checkout-Service-Repository, wodurch die Deployment-Zeit von <b>15 Minuten auf unter 6 Minuten</b> reduziert wurde.",
           "Entwickelte und pflegte skalierbare Frontend-Komponenten mit <b>ReactJS</b> und <b>Next.js</b> für die GTS Plattform, was zu einer personalisierten Benutzererfahrung in <b>20+ internationalen Märkten</b> beitrug."
+        ],
+        achievements: [
+          "Ausbildung und Begleitung von <b>14</b> Quereinsteigern im Campus Program, von Programmiergrundlagen bis <b>TypeScript</b> und <b>React</b>."
         ]
       },
       {
@@ -629,6 +644,9 @@ export const salesAssistant: CvData = {
       tasks: [
         'Unterstützung des <b>Retail-Betriebs</b> an umsatzstarken Tagen wie Weihnachten und Black Friday – inklusive <b>Kundenberatung, Warenverräumung</b> und <b>Lagerverwaltung</b>.',
         'Enge Zusammenarbeit mit internationalen Teams zur Sicherstellung einer reibungslosen <b>Produktpräsentation</b> und positiven Kundenerfahrung in <b>20+ Märkten</b>.',
+      ],
+      achievements: [
+        "Ausbildung und Begleitung von <b>14</b> Quereinsteigern im Campus Program, von Programmiergrundlagen bis <b>TypeScript</b> und <b>React</b>."
       ]
     },
     {
@@ -735,6 +753,9 @@ export const qaDataAnnotation: CvData = {
         tasks: [
           "Durchführung von <b>End-to-End-Tests</b> mit <b>Jest</b> und <b>Cypress</b> zur Sicherstellung der Funktionalität von Frontend-Modulen.",
           "Identifikation und Dokumentation von Bugs, enge Zusammenarbeit mit dem QA-Team zur Verbesserung der Produktqualität.",
+        ],
+        achievements: [
+          "Ausbildung und Begleitung von <b>14</b> Quereinsteigern im Campus Program, von Programmiergrundlagen bis <b>TypeScript</b> und <b>React</b>."
         ]
       },
       {
@@ -811,6 +832,9 @@ export const itSupport: CvData = {
         tasks: [
           'Unterstützung des Einzelhandelsbetriebs an umsatzstarken Tagen (Weihnachten, Black Friday) im Bereich <b>Verkauf, Inventarorganisation</b> und <b>Lagerverwaltung</b>.',
           'Technische Unterstützung interner Systeme und Zusammenarbeit mit dem IT-Team bei alltäglichen Anfragen.',
+        ],
+        achievements: [
+          "Ausbildung und Begleitung von <b>14</b> Quereinsteigern im Campus Program, von Programmiergrundlagen bis <b>TypeScript</b> und <b>React</b>."
         ]
       },
       {

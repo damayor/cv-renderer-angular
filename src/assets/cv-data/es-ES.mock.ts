@@ -141,9 +141,7 @@ const freelancerExperience = {
       'Arquitectura de visores multi-sensor para el dataset nuScenes, integrando <b>FastAPI (Python)</b> y R3F para la visualización 3D de nubes de puntos <b>LiDAR</b>.',
       // 'Desarrollo full-stack de un generador de CVs en <b>Angular</b>, utilizando <b>RxJS</b> para la gestión de estado reactivo, renderizado dinámico y exportación a PDF.'
     ],
-    achievements: [
-      'Consolidé el adidas Tech Hub como referente tecnológico en Colombia al encabezar el Programa Campus de adidas, liderando la mentoría técnica y capacitación de ingenieros de alto potencial'
-    ]
+    achievements: [ ]
   }
 
 //CHK
@@ -189,8 +187,11 @@ export const seniorfrontend: CvData = {
           'Desarrollo y mantenimiento de componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+</b> mercados internacionales.',
           'Liderzago del desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, sus pruebas con <b>Jest</b> y <b>Cypress</b>.',
           'Refactor del microservicio <b>backend de Checkout</b> de adidas mediante la implementación de pipelines de CI/CD y automatización de infraestructura con <b>Jenkins</b>, <b>Kubernetes</b> y <b>Grafana</b>, soportando transacciones diarias en <b>30+ países</b>.',
-          'Contribución a la arquitectura frontend del portal web <b>Yeezy</b> mediante <b>programación funcional</b> en Typescript, logrando una mejora en el desempeño.',
+          // 'Contribución a la arquitectura frontend del portal web <b>Yeezy</b> mediante <b>programación funcional</b> en Typescript, logrando una mejora en el desempeño.',
         ],
+        achievements: [
+          'Formación y acompañamiento de 14 profesionales en transición de carrera en el Campus Program, desde fundamentos de programación hasta <b>TypeScript</b> y <b>ReactJS</b>.'
+        ]
       },
       {
         company: 'UMBRA 3D STUDIO - INTERACTIVE',
@@ -296,7 +297,10 @@ export const juniorfrontend: CvData = {
           'Led the development of <b>customization modules</b> (frontend and 3D) for sportswear’s PDP using <b>Three.js</b> and <b>Unity/C#</b>, enhancing user engagement and its end-to-end testing with <b>Jest</b> and <b>Cypress</b>.',
           'Improved reliability and deployment speed of the adidas Checkout <b>backend</b> microservice by implementing CI/CD pipelines and infrastructure automation via <b>Jenkins</b>, <b>Kubernetes</b>, and <b>Grafana</b>, supporting daily transactions across <b>30+ countries</b>.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
-          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+          // 'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+        ],
+        achievements: [
+          'Formación y acompañamiento de 14 profesionales en transición de carrera en el Campus Program, desde fundamentos de programación hasta <b>TypeScript</b> y <b>ReactJS</b>.'
         ]
       },
       {
@@ -389,12 +393,15 @@ export const seniorSoftware: CvData = {
         tasks: [
           'Liderzago del desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, contribuyendo a una experiencia de personalización para <b>20+</b> mercados internacionales.',
     
-          'Mejora de la confiabilidad y la velocidad de despliegue del microservicio <b>backend de Checkout</b> de adidas mediante la implementación de pipelines de CI/CD y automatización de infraestructura con <b>Jenkins</b>, <b>Kubernetes</b> y <b>Grafana</b>, soportando transacciones diarias en <b>30+ países</b>.',
+          'Mejora del despliegue del microservicio <b>backend de Checkout</b> de adidas mediante la implementación de pipelines de CI/CD y automatización de infraestructura con <b>Jenkins</b>, <b>Kubernetes</b> y <b>Grafana</b>, soportando transacciones diarias en <b>30+ países</b>.',
           
           // 'Desarrollo y mantenimiento de componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de personalización para <b>20+</b> mercados internacionales.',
           
-          'Contribución a la arquitectura frontend del <b>portal de e-commerce Yeezy</b>, reconocido por su diseño minimalista y el uso de <b>programación funcional en Typescript</b>, logrando una mejora en el desempeño y tiempo de carga.',
+          // 'Contribución a la arquitectura frontend del <b>portal de e-commerce Yeezy</b>, reconocido por su diseño minimalista y el uso de <b>programación funcional en Typescript</b>, logrando una mejora en el desempeño y tiempo de carga.',
 
+        ],
+        achievements: [
+          'Formación y acompañamiento de 14 profesionales en transición de carrera en el Campus Program, desde fundamentos de programación hasta <b>TypeScript</b> y <b>ReactJS</b>.'
         ]
       },
       // {
@@ -485,7 +492,10 @@ export const graphicsEngineer: CvData = {
         tasks: [
           'Led the development of 3D customisation for sportswear using <b>Three.js</b> and <b>Unity</b>, enhancing web user engagement.',
           'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Next.js</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ international markets</b>.',
-          'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+          // 'Contributed to the front-end architecture of the <b>Yeezy e-commerce portal</b>, acclaimed for its minimalist design and <b>functional programming in Typescript</b>, resulting in a faster load time.'
+        ],
+        achievements: [
+          'Formación y acompañamiento de 14 profesionales en transición de carrera en el Campus Program, desde fundamentos de programación hasta <b>TypeScript</b> y <b>ReactJS</b>.'
         ]
       },
       {
@@ -567,6 +577,9 @@ export const sre: CvData = {
           prácticas de CI/CD para el repositorio del servicio de Checkout, reduciendo
           el tiempo de despliegue de <b>15 minutos a menos de 6 minutos</b>`,        
           'Desarrollé y mantuve componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+</b> mercados internacionales.',
+        ],
+        achievements: [
+          'Formación y acompañamiento de 14 profesionales en transición de carrera en el Campus Program, desde fundamentos de programación hasta <b>TypeScript</b> y <b>ReactJS</b>.'
         ]
       },
       {
@@ -630,7 +643,10 @@ export const contentcreator: CvData = {
           'Lideré el desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, mejorando la interacción del usuario y sus pruebas end-to-end con <b>Jest</b> y <b>Cypress</b>.',
           'Mejoré la confiabilidad y velocidad de despliegue del microservicio <b>backend de Checkout</b> de adidas implementando pipelines de CI/CD y automatización de infraestructura mediante <b>Jenkins</b>, <b>Kubernetes</b> y <b>Grafana</b>, soportando transacciones diarias en <b>30+ países</b>.',
           'Desarrollé y mantuve componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+</b> mercados internacionales.',
-          'Contribuí a la arquitectura frontend del <b>portal de e-commerce Yeezy</b>, aclamado por su diseño minimalista y <b>programación funcional en Typescript</b>, resultando en un tiempo de carga más rápido.'
+          // 'Contribuí a la arquitectura frontend del <b>portal de e-commerce Yeezy</b>, aclamado por su diseño minimalista y <b>programación funcional en Typescript</b>, resultando en un tiempo de carga más rápido.'
+        ],
+        achievements: [
+          'Formación y acompañamiento de 14 profesionales en transición de carrera en el Campus Program, desde fundamentos de programación hasta <b>TypeScript</b> y <b>ReactJS</b>.'
         ]
       },
       {
@@ -712,6 +728,9 @@ export const itSupport: CvData = {
         tasks: [
           'Desarrollé y mantuve componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada.',
           'Apoyé operaciones de retail durante días de alto consumo como Navidad y Black Friday, asistiendo con <b>ventas, organización de inventario</b> y <b>gestión de almacén</b>.',
+        ],
+        achievements: [
+          'Formación y acompañamiento de 14 profesionales en transición de carrera en el Campus Program, desde fundamentos de programación hasta <b>TypeScript</b> y <b>ReactJS</b>.'
         ]
       },
 

@@ -9,7 +9,7 @@ import { HeaderLinks, LinkItem } from "../header-links/header-links.component";
   standalone: true,
   imports: [CommonModule, HeaderLinks],
   template: `
-    <div class="flex items-center p-5 pb-0 gap-x-2" [class]="env.showPicture ? 'justify-between' : 'justify-around'">
+    <div class="flex items-center p-5 pb-0 gap-x-2 justify-between">
       <!-- Left: Name und Role -->
       <div class="flex flex-col ">
         <div class="text-4xl  uppercase" style="color: var(--clr-primary)">{{userData().fullname }}</div>

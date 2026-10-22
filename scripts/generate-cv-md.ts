@@ -2,13 +2,15 @@
  * Generates <lang>.data.md from <lang>.mock.ts: a plain-text mirror of the CV
  * data (no <b>/<i> tags) meant for copy-pasting into application forms.
  *
- * Approach: parse the mock file's AST to find which intermediate variables
- * (freelancerExperience, defaultEducation, ...) are reused across more than
- * one exported CvData — those become "Common Data", referenced by name from
- * each role section instead of repeated. Everything else is printed inline.
- * The actual values are obtained by transpiling the file and evaluating it
- * with Node's `vm`, using the real environment.ts (cvScope 'DE' is the
- * fallback branch in every conditional field).
+ * Usage: npx tsx scripts/generate-cv-md.ts <lang>      e.g. en-EN, de-DE, es-ES
+ *
+ * Approach: transpile the mock file and evaluate it with Node's `vm`, using
+ * the real environment.ts. Every exported object with an `occupation` is a
+ * role (CvData). Each block of a role (contact, languages, links, courses and
+ * every timeline entry) is rendered to text; blocks whose text is identical in
+ * two or more roles are written once under "Common Data" and only referenced
+ * from the roles. Comparison is by value, so roles built with
+ * `{...seniorfrontend, ...}` share what they inherit without any naming rules.
  */
 import * as ts from 'typescript';
 import * as fs from 'fs';
@@ -18,123 +20,46 @@ import * as vm from 'vm';
 const REPO_ROOT = path.resolve(__dirname, '..');
 const MOCK_DIR = path.join(REPO_ROOT, 'src/assets/cv-data');
 
-const stripTags = (s: string) => s.replace(/<\/?[bi]>/g, '');
+const stripTags = (s: unknown) =>
+  String(s ?? '')
+    .replace(/<\/?[a-z][^>]*>/gi, '')
+    .replace(/[ \t]+/g, ' ')
+    .trim();
 
-interface RoleInfo {
-  varName: string;
+type SectionKind = 'work' | 'education' | 'other';
+
+interface Role {
   exportName: string;
   data: any;
-  // maps property path (e.g. "contact", "courses", "experiences[0].entries[0]") to
-  // the shared variable name it was sourced from, if any.
-  sourceVar: Map<string, string>;
 }
 
-function findSharedVarName(node: ts.Expression): string | undefined {
-  if (ts.isIdentifier(node)) return node.text;
-  return undefined;
-}
-
-function parseMockFile(filePath: string) {
-  const sourceText = fs.readFileSync(filePath, 'utf8');
-  const sourceFile = ts.createSourceFile(filePath, sourceText, ts.ScriptTarget.ES2022, true);
-
-  const roles: RoleInfo[] = [];
-  const varUsageCount = new Map<string, number>();
-
-  const bumpUsage = (name: string) => varUsageCount.set(name, (varUsageCount.get(name) ?? 0) + 1);
-
-  const walkObjectForSources = (
-    obj: ts.Expression,
-    prefix: string,
-    sourceVar: Map<string, string>
-  ) => {
-    if (ts.isIdentifier(obj)) {
-      sourceVar.set(prefix, obj.text);
-      bumpUsage(obj.text);
-      return;
-    }
-    if (!ts.isObjectLiteralExpression(obj)) return;
-    for (const prop of obj.properties) {
-      if (ts.isSpreadAssignment(prop)) {
-        const name = findSharedVarName(prop.expression);
-        if (name) {
-          sourceVar.set(prefix ? `${prefix}.<spread>` : '<spread>', name);
-          bumpUsage(name);
-        }
-        continue;
-      }
-      if (!ts.isPropertyAssignment(prop)) continue;
-      const key = prop.name.getText(sourceFile).replace(/^["']|["']$/g, '');
-      const path_ = prefix ? `${prefix}.${key}` : key;
-      const value = prop.initializer;
-
-      if (ts.isIdentifier(value)) {
-        sourceVar.set(path_, value.text);
-        bumpUsage(value.text);
-      } else if (ts.isArrayLiteralExpression(value)) {
-        value.elements.forEach((el, i) => {
-          const elPath = `${path_}[${i}]`;
-          if (ts.isIdentifier(el)) {
-            sourceVar.set(elPath, el.text);
-            bumpUsage(el.text);
-          } else if (ts.isObjectLiteralExpression(el)) {
-            walkObjectForSources(el, elPath, sourceVar);
-          }
-        });
-      } else if (ts.isObjectLiteralExpression(value)) {
-        walkObjectForSources(value, path_, sourceVar);
-      }
-    }
-  };
-
-  ts.forEachChild(sourceFile, (node) => {
-    if (!ts.isVariableStatement(node)) return;
-    const isExported = node.modifiers?.some((m) => m.kind === ts.SyntaxKind.ExportKeyword);
-    for (const decl of node.declarationList.declarations) {
-      if (!ts.isIdentifier(decl.name) || !decl.initializer) continue;
-      const varName = decl.name.text;
-      if (!isExported) continue;
-      // Only CvData-typed exports (role objects) — identified by having an
-      // ObjectLiteralExpression initializer with an "occupation" property.
-      if (!ts.isObjectLiteralExpression(decl.initializer)) continue;
-      const hasOccupation = decl.initializer.properties.some(
-        (p) => ts.isPropertyAssignment(p) && p.name.getText(sourceFile).replace(/["']/g, '') === 'occupation'
-      );
-      if (!hasOccupation) continue;
-
-      const sourceVar = new Map<string, string>();
-      walkObjectForSources(decl.initializer, '', sourceVar);
-      roles.push({ varName, exportName: varName, data: undefined, sourceVar });
-    }
-  });
-
-  return { roles, varUsageCount, sourceText };
+/** A renderable block of a role, identified by `key` (its rendered text). */
+interface Block {
+  kind: string; // "Contact", "Languages", "Links", "Courses" or "<section> entry"
+  label: string;
+  text: string;
 }
 
 function evaluateModule(filePath: string): Record<string, any> {
-  const sourceText = fs.readFileSync(filePath, 'utf8');
-  const transpiled = ts.transpileModule(sourceText, {
-    compilerOptions: {
-      module: ts.ModuleKind.CommonJS,
-      target: ts.ScriptTarget.ES2022,
-      esModuleInterop: true,
-    },
+  const compilerOptions = {
+    module: ts.ModuleKind.CommonJS,
+    target: ts.ScriptTarget.ES2022,
+    esModuleInterop: true,
+  };
+  const transpiled = ts.transpileModule(fs.readFileSync(filePath, 'utf8'), {
+    compilerOptions,
     fileName: filePath,
   });
 
-  const envPath = path.join(REPO_ROOT, 'src/environments/environment.ts');
-  const envSource = fs.readFileSync(envPath, 'utf8');
-  const envTranspiled = ts.transpileModule(envSource, {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
-  });
+  const envSource = fs.readFileSync(path.join(REPO_ROOT, 'src/environments/environment.ts'), 'utf8');
+  const envTranspiled = ts.transpileModule(envSource, { compilerOptions });
   const envModule = { exports: {} as any };
-  const envRequire = (id: string) => {
-    throw new Error(`unexpected require('${id}') from environment.ts`);
-  };
   vm.runInNewContext(envTranspiled.outputText, {
     module: envModule,
     exports: envModule.exports,
-    require: envRequire,
+    require: (id: string) => {
+      throw new Error(`unexpected require('${id}') from environment.ts`);
+    },
   });
 
   const cvDataModule = { exports: {} as any };
@@ -148,162 +73,211 @@ function evaluateModule(filePath: string): Record<string, any> {
     exports: cvDataModule.exports,
     require: fakeRequire,
   });
-
   return cvDataModule.exports;
 }
 
-function fmtDetails(tasks: string[] | undefined): string {
-  if (!tasks || tasks.length === 0) return '';
-  return tasks.map(stripTags).join('\n\n');
+function loadRoles(filePath: string): Role[] {
+  const evaluated = evaluateModule(filePath);
+  return Object.entries(evaluated)
+    .filter(([, v]) => v && typeof v === 'object' && (v as any).occupation && (v as any).experiences)
+    .map(([exportName, data]) => ({ exportName, data }));
 }
 
-function renderExperienceEntry(lines: string[], entry: any) {
-  lines.push('Job Title:', stripTags(entry.role), '');
-  lines.push('Company:', stripTags(entry.company), '');
-  lines.push('Location:', stripTags(entry.location), '');
-  const [from, to] = String(entry.dates).split(' - ').map((s: string) => s.trim());
-  lines.push('From:', from ?? '', '');
-  lines.push('To:', to ?? '', '');
-  lines.push('Role Description:', fmtDetails(entry.tasks), '');
-  if (entry.achievements?.length) {
-    lines.push('Achievements:', fmtDetails(entry.achievements), '');
+// ---------- rendering of single blocks ----------
+
+const field = (label: string, value: unknown) => `${label}:\n${stripTags(value)}\n`;
+
+function renderContact(c: any): string {
+  const out = [
+    field('Full name', c.fullname),
+    field('Email', c.email),
+    field('Phone', c.phone),
+    field('Location', c.location),
+  ];
+  if (c.address) out.push(field('Address', c.address));
+  out.push(field('Nationality', c.nationality));
+  if (c.workStatus) out.push(field('Work status', c.workStatus));
+  if (c.visaStatus) out.push(field('Visa status', c.visaStatus));
+  if (c.arbeitsErlaubnis) out.push(field('Work authorization', c.arbeitsErlaubnis));
+  if (c.titleRecognition) out.push(field('Title recognition', c.titleRecognition));
+  return out.join('\n');
+}
+
+const renderLanguages = (langs: any[]) =>
+  langs.map((l) => field(stripTags(l.name), l.cefrLevel ?? l.level)).join('\n');
+
+const renderLinks = (links: any[]) => links.map((l) => field(stripTags(l.label), l.url)).join('\n');
+
+const renderCourses = (courses: any[]) =>
+  courses.map((c) => `${stripTags(c.name)}, ${stripTags(c.institution)}, ${stripTags(c.date)}`).join('\n') + '\n';
+
+const taskList = (tasks: string[] | undefined) => (tasks ?? []).map(stripTags).join('\n\n');
+
+const EDUCATION_TITLE = /educa|ausbild|formaci|studi/i;
+
+function sectionKind(section: { title: string; entries: any[] }): SectionKind {
+  if (EDUCATION_TITLE.test(section.title)) return 'education';
+  const hasRange = section.entries.some((e) => / [-–] /.test(String(e.dates)));
+  return hasRange ? 'work' : 'other';
+}
+
+function renderEntry(kind: SectionKind, e: any): string {
+  const out: string[] = [];
+  if (kind === 'work') {
+    const [from, to] = String(e.dates).split(/ [-–] /).map((s) => s.trim());
+    out.push(field('Job Title', e.role), field('Company', e.company), field('Location', e.location));
+    out.push(field('From', from), field('To', to));
+    out.push(field('Role Description', taskList(e.tasks)));
+    if (e.achievements?.length) out.push(field('Achievements', taskList(e.achievements)));
+  } else {
+    const [org, title] = kind === 'education' ? ['Institution', 'Degree'] : ['Organization', 'Role'];
+    out.push(field(org, e.company), field(title, e.role), field('Location', e.location));
+    out.push(field('Dates', e.dates), field('Details', taskList(e.tasks)));
+  }
+  return out.join('\n');
+}
+
+// ---------- block collection and deduplication ----------
+
+function blocksOf(role: Role): { fixed: Block[]; sections: { title: string; kind: SectionKind; entries: Block[] }[] } {
+  const d = role.data;
+  const fixed: Block[] = [
+    { kind: 'Contact', label: 'Contact', text: renderContact(d.contact) },
+    { kind: 'Languages', label: 'Languages', text: renderLanguages(d.languages) },
+    { kind: 'Links', label: 'Links', text: renderLinks(d.links) },
+    { kind: 'Courses', label: 'Courses', text: renderCourses(d.courses) },
+  ].filter((b) => b.text.trim());
+  // softwareFreelancer spreads the array into an object ({...seniorfrontend.experiences}).
+  const experiences: { title: string; entries: any[] }[] = Array.isArray(d.experiences)
+    ? d.experiences
+    : Object.values(d.experiences);
+  const sections = experiences.map((s) => {
+    const kind = sectionKind(s);
+    return {
+      title: s.title,
+      kind,
+      entries: s.entries.map((e) => ({
+        kind: s.title,
+        label: `${stripTags(e.company)} — ${stripTags(e.role)}`,
+        text: renderEntry(kind, e),
+      })),
+    };
+  });
+  return { fixed, sections };
+}
+
+/** Registry of distinct block texts per (kind, label); tracks which roles use each. */
+class Registry {
+  private byText = new Map<string, { block: Block; roles: Set<number> }>();
+
+  add(block: Block, roleIdx: number) {
+    const key = `${block.kind}\u0000${block.text}`;
+    const hit = this.byText.get(key);
+    if (hit) hit.roles.add(roleIdx);
+    else this.byText.set(key, { block, roles: new Set([roleIdx]) });
+  }
+
+  /** Shared blocks (used by 2+ roles) with unique display names. */
+  shared() {
+    const list = [...this.byText.entries()].filter(([, v]) => v.roles.size >= 2);
+    const perLabel = new Map<string, number>();
+    for (const [, v] of this.byText) {
+      if (v.roles.size < 2) continue;
+      const k = `${v.block.kind}\u0000${v.block.label}`;
+      perLabel.set(k, (perLabel.get(k) ?? 0) + 1);
+    }
+    const seen = new Map<string, number>();
+    return list.map(([key, v]) => {
+      const lk = `${v.block.kind}\u0000${v.block.label}`;
+      const n = (seen.get(lk) ?? 0) + 1;
+      seen.set(lk, n);
+      const name = perLabel.get(lk)! > 1 ? `${v.block.label} (variant ${n})` : v.block.label;
+      return { key, name, ...v };
+    });
   }
 }
 
-function renderEducationEntry(lines: string[], entry: any, heading?: string) {
-  if (heading) lines.push(heading, '');
-  lines.push('Institution:', stripTags(entry.company), '');
-  lines.push('Degree:', stripTags(entry.role), '');
-  lines.push('Location:', stripTags(entry.location), '');
-  lines.push('Dates:', String(entry.dates).trim(), '');
-  lines.push('Details:', fmtDetails(entry.tasks), '');
-}
+function generateMd(lang: string, roles: Role[]): string {
+  const registry = new Registry();
+  const perRole = roles.map((r, i) => {
+    const b = blocksOf(r);
+    b.fixed.forEach((x) => registry.add(x, i));
+    b.sections.forEach((s) => s.entries.forEach((x) => registry.add(x, i)));
+    return b;
+  });
+  const shared = registry.shared();
+  const nameOf = new Map(shared.map((s) => [s.key, s.name]));
+  const keyOf = (b: Block) => `${b.kind}\u0000${b.text}`;
 
-function generateMd(lang: string, roleVarNames: string[]) {
-  const filePath = path.join(MOCK_DIR, `${lang}.mock.ts`);
-  const { roles, varUsageCount } = parseMockFile(filePath);
-  const evaluated = evaluateModule(filePath);
-
-  const sharedVars = new Set(
-    [...varUsageCount.entries()].filter(([, count]) => count >= 2).map(([name]) => name)
-  );
-
-  const roleByVar = new Map(roles.map((r) => [r.varName, r]));
-
+  const roleTitle = (i: number) => `${i + 1}. ${roles[i].exportName}`;
   const lines: string[] = [];
-  lines.push(`# CV Data - Application Reference (${lang.split('-')[0].toUpperCase()})`);
-  lines.push('');
-  lines.push(
-    `This file mirrors [${lang}.mock.ts](${lang}.mock.ts) in plain text, meant for copy-pasting into`
-  );
-  lines.push('application forms field by field. No HTML tags, no leading quotes, one value per line.');
-  lines.push('');
-  lines.push(
-    'Shared blocks (contact info, freelance experience, education, languages, courses, industry'
-  );
-  lines.push(
-    'contributions) are written once in Common Data and only referenced by name in each role'
-  );
-  lines.push('section below, to avoid repeating the same lines over and over.');
-  lines.push('');
-  lines.push('---');
-  lines.push('');
-  lines.push('## Common Data');
-  lines.push('');
+  lines.push(`# CV Data - Application Reference (${lang.split('-')[0].toUpperCase()})`, '');
+  lines.push(`This file mirrors [${lang}.mock.ts](${lang}.mock.ts) in plain text, meant for copy-pasting into`);
+  lines.push('application forms field by field. No HTML tags, no leading quotes, one value per line.', '');
+  lines.push('Blocks that are identical in two or more roles (contact info, languages, links, courses,');
+  lines.push('education, shared jobs, ...) are written once in Common Data and only referenced by name in');
+  lines.push('each role section below. Generated by scripts/generate-cv-md.ts, do not edit by hand.', '');
+  lines.push('---', '', '## Common Data', '');
 
-  // Render each shared variable once, generically, based on its evaluated shape.
-  for (const varName of sharedVars) {
-    const anyRole = roles.find((r) => [...r.sourceVar.values()].includes(varName));
-    if (!anyRole) continue;
-    const value = evaluated[varName];
-    if (value === undefined) continue;
-
-    if (varName.toLowerCase().includes('contact')) {
-      lines.push('### Contact', '');
-      lines.push('Full name:', stripTags(value.fullname), '');
-      lines.push('Email:', stripTags(value.email), '');
-      lines.push('Phone:', stripTags(value.phone), '');
-      lines.push('Location:', stripTags(value.location), '');
-      if (value.address) lines.push('Address:', stripTags(value.address), '');
-      lines.push('Nationality:', stripTags(value.nationality), '');
-      if (value.workStatus) lines.push('Work status:', stripTags(value.workStatus), '');
-    } else if (varName.toLowerCase().includes('language')) {
-      lines.push('### Languages', '');
-      for (const l of value as any[]) {
-        lines.push(`${stripTags(l.name)}:`, stripTags(l.cefrLevel ?? String(l.level)), '');
-      }
-    } else if (varName === 'freelancerExperience') {
-      lines.push('### Work Experience — Freelancer (shared)', '');
-      renderExperienceEntry(lines, value);
-    } else if (varName.toLowerCase().includes('education')) {
-      lines.push('### Education — Default (shared)', '');
-      (value.entries as any[]).forEach((entry, i) => {
-        renderEducationEntry(lines, entry, `#### Education ${i + 1}`);
-      });
-    } else if (varName.toLowerCase().includes('extracurricular') || varName.toLowerCase().includes('contribution')) {
-      lines.push('### Industry Contributions (shared)', '');
-      (value.entries as any[]).forEach((entry, i) => {
-        lines.push(`#### Contribution ${i + 1}`, '');
-        lines.push('Organization:', stripTags(entry.company), '');
-        lines.push('Role:', stripTags(entry.role), '');
-        lines.push('Location:', stripTags(entry.location), '');
-        lines.push('Dates:', String(entry.dates).trim(), '');
-        lines.push('Details:', fmtDetails(entry.tasks), '');
-      });
-    } else if (varName.toLowerCase().includes('course')) {
-      lines.push('### Courses — Default (shared)', '');
-      for (const c of value as any[]) {
-        lines.push(`${stripTags(c.name)}, ${stripTags(c.institution)}, ${c.date}`);
-      }
-      lines.push('');
-    } else if (varName.toLowerCase().includes('link')) {
-      lines.push('### Links — Default (shared)', '');
-      for (const l of value as any[]) {
-        lines.push(`${stripTags(l.label)}:`, l.url, '');
-      }
-    } else {
-      // Fallback: generic named work-experience block.
-      lines.push(`### ${varName} (shared)`, '');
-      if (value.role) renderExperienceEntry(lines, value);
+  const order = ['Contact', 'Languages', 'Links', 'Courses'];
+  const kinds = [...new Set(shared.map((s) => s.block.kind))].sort((a, b) => {
+    const ia = order.indexOf(a), ib = order.indexOf(b);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+  });
+  for (const kind of kinds) {
+    for (const s of shared.filter((x) => x.block.kind === kind)) {
+      const isFixed = order.includes(kind);
+      lines.push(`### ${isFixed ? s.name : `${kind}: ${s.name}`}`, '');
+      lines.push(`Used by: ${[...s.roles].map(roleTitle).join('; ')}`, '');
+      lines.push(s.block.text.trimEnd(), '');
     }
   }
-
   lines.push('---', '');
 
-  // Render each role.
-  roleVarNames.forEach((varName, idx) => {
-    const role = roleByVar.get(varName);
-    const value = evaluated[varName];
-    if (!role || !value) return;
+  roles.forEach((role, i) => {
+    const d = role.data;
+    const b = perRole[i];
+    lines.push(`## ${roleTitle(i)}`, '');
+    lines.push(field('Occupation', d.occupation.value));
+    const about = stripTags(String(d.aboutme).replace(/\s+/g, ' '));
+    const skills = Object.entries(d.skills as Record<string, string[]>)
+      .map(([g, items]) => `${g}: ${items.map(stripTags).join(', ')}`)
+      .join('\n');
 
-    lines.push(`## ${idx + 1}. ${stripTags(value.occupation.value.split(' - ')[0])}`, '');
-    lines.push('Occupation:', stripTags(value.occupation.value), '');
-    lines.push('About Me:', stripTags(String(value.aboutme).replace(/\s+/g, ' ').trim()), '');
+    const sameAbout = roles.findIndex((r, j) => j < i && stripTags(String(r.data.aboutme).replace(/\s+/g, ' ')) === about);
+    lines.push(sameAbout >= 0 ? `About Me: same as ${roleTitle(sameAbout)}\n` : field('About Me', about));
+    const sameSkills = roles.findIndex(
+      (r, j) =>
+        j < i &&
+        Object.entries(r.data.skills as Record<string, string[]>)
+          .map(([g, items]) => `${g}: ${items.map(stripTags).join(', ')}`)
+          .join('\n') === skills
+    );
+    lines.push(sameSkills >= 0 ? `Skills: same as ${roleTitle(sameSkills)}\n` : `Skills:\n${skills}\n`);
 
-    lines.push('Skills:');
-    for (const [group, items] of Object.entries(value.skills as Record<string, string[]>)) {
-      lines.push(`${group}: ${(items as string[]).map(stripTags).join(', ')}`);
+    const ref = (blk: Block) => {
+      const n = nameOf.get(keyOf(blk));
+      return n ? `${n.startsWith(blk.kind) ? n : `${blk.kind}: ${n}`}: see Common Data` : undefined;
+    };
+
+    for (const blk of b.fixed) {
+      const r = ref(blk);
+      if (r) lines.push(r, '');
+      else lines.push(`### ${blk.kind}`, '', blk.text.trimEnd(), '');
     }
-    lines.push('');
 
-    lines.push('Work Experience:');
-    const experiencesArr: any[] = Array.isArray(value.experiences)
-      ? value.experiences
-      : Object.values(value.experiences ?? {});
-    const workBlock = experiencesArr.find((e) => e.title === 'Work Experience');
-    workBlock?.entries.forEach((entry: any, i: number) => {
-      const path_ = `experiences.<work>[${i}]`;
-      const from = role.sourceVar.get(path_);
-      if (from) {
-        lines.push(`${i + 1}. ${from} (see Common Data)`);
-      } else {
-        lines.push(`${i + 1}. ${stripTags(entry.company)} — ${stripTags(entry.role)}`);
-      }
-    });
-    lines.push('');
-
-    lines.push('Education, Contact, Languages, Courses, Links: see Common Data unless noted below.');
-    lines.push('');
+    for (const sec of b.sections) {
+      lines.push(`### ${sec.title}`, '');
+      sec.entries.forEach((e, j) => {
+        const n = nameOf.get(keyOf(e));
+        if (n) lines.push(`${j + 1}. ${n} — see Common Data`);
+      });
+      sec.entries.forEach((e, j) => {
+        if (nameOf.has(keyOf(e))) return;
+        lines.push('', `#### ${sec.title} ${j + 1}: ${e.label}`, '', e.text.trimEnd());
+      });
+      lines.push('');
+    }
     lines.push('---', '');
   });
 
@@ -311,27 +285,20 @@ function generateMd(lang: string, roleVarNames: string[]) {
 }
 
 function main() {
-  const langArg = process.argv[2];
-  const configs: Record<string, string[]> = {
-    'en-EN': [
-      'seniorfrontend', 'frontend', 'frontend3d', 'juniorfrontend', 'softwareFreelancer',
-      'seniorSoftware', 'fullStackEngineer', 'graphicsEngineer', 'sre', 'contentcreator',
-      'supportAssistant', 'itSupport',
-    ],
-  };
-
-  const langs = langArg ? [langArg] : Object.keys(configs);
-  for (const lang of langs) {
-    const roleVarNames = configs[lang];
-    if (!roleVarNames) {
-      console.error(`No role list configured for ${lang}`);
-      process.exit(1);
-    }
-    const md = generateMd(lang, roleVarNames);
-    const outPath = path.join(MOCK_DIR, `${lang}.data.md`);
-    fs.writeFileSync(outPath, md);
-    console.log(`Wrote ${outPath}`);
+  const lang = process.argv[2];
+  if (!lang) {
+    console.error('Usage: npx tsx scripts/generate-cv-md.ts <lang>   (e.g. en-EN, de-DE, es-ES)');
+    process.exit(1);
   }
+  const mockPath = path.join(MOCK_DIR, `${lang}.mock.ts`);
+  if (!fs.existsSync(mockPath)) {
+    console.error(`No mock file found: ${mockPath}`);
+    process.exit(1);
+  }
+  const roles = loadRoles(mockPath);
+  const outPath = path.join(MOCK_DIR, `${lang}.data.md`);
+  fs.writeFileSync(outPath, generateMd(lang, roles));
+  console.log(`Wrote ${outPath} (${roles.length} roles)`);
 }
 
 main();

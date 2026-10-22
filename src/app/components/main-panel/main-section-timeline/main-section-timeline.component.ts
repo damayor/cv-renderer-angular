@@ -20,7 +20,7 @@ import { TimelineExperience } from '@interfaces/CVData';
           </div>
           <div class="col-start-2 row-start-2 pl-6 pb-8 experience__tasks-font">
             <ul>
-            @for (item of exp.tasks; track $index) {
+            @for (item of itemsOf(exp); track $index) {
               <li class="pt-2" [innerHTML]="item"></li>
             }</ul>
           </div>
@@ -38,4 +38,8 @@ import { TimelineExperience } from '@interfaces/CVData';
 export class MainSectionTimelineComponent {
   @Input() experiences: TimelineExperience[] = [];
   @Input() title: string = '';
+
+  itemsOf(exp: TimelineExperience): string[] {
+    return [...(exp.achievements ?? []), ...(exp.tasks ?? [])];
+  }
 }
