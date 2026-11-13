@@ -19,7 +19,7 @@ const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: isLatam ? "+57 3123344936": "+49 1525 2198970",
-  location: isLatam ? 'Bogota, Colombia' : "Berlin -> España (Nov 2026)",
+  location: isLatam ? 'Berlin -> Bogota (Nov 2026)' : "Berlin -> España (2027)",
   nationality: "Colombiano",
   // workStatus: "Transición a España desde Julio de 2026.",
   // visaStatus: 'Transicion a España desde Agosto 2026.',
@@ -32,8 +32,8 @@ const defaultSkills = {
     "Full-Stack": ["Angular","Node.js","Typescript","REST", "Python"],
     "Graphics": ['C++','C#',"Unreal","WebAssembly","Unity", "UI/UX", "Figma"],
     "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
-    "Tooling": ["Git","Storybook","Nest.js","ESLint","Photoshop","Jest"],
-    "AI & LLMs": ["Claude","NotebookLM","Gemini","Copilot"],
+    "Tooling": ["Git","Storybook","Nest.js","ESLint","Jest"],
+    "AI & LLMs": ["Claude Code","Gemini Notebook","Codex"],
   }
 
 const appendedAboutMe = 
@@ -106,28 +106,27 @@ const defaultEducation = {
 }
 
 const defaultExtraCurricular = {
-    title: "Actividades Extra-Curriculares", 
-      entries: [
-        {
-          company: "Castel Magazine Models",
-          role: "Modelaje",
-          dates: "Jun 2024 - Jun 2025",
-          location: " ",
-          tasks: [
-            "Modelo comercial especializado en expresión corporal, gestión de eventos y UGC.",
-            // "Creador de contenido desarrollando contenido visual auténtico y UGC para marketing en redes sociales",
-          ]
-        },
-        {
-          company: "Universidad de los Andes",
-          role: "Miembro del Grupo de Teatro",
-          dates: "Ene 2016 - Jun 2018",
-          location: " ",
-          tasks: [
-            "Participación en actuaciones, desarrollando habilidades de trabajo en equipo, improvisación y comunicación."
-          ]
-        },
+  title: "Contribuciones a la Industria",
+  entries: [
+    {
+      company: "EMBAJADA DE COLOMBIA EN ALEMANIA",
+      role: "Ponente",
+      dates: "Jul 2026",
+      location: "Berlín",
+      tasks: [
+        "\"Spec Driven Development: De prompts sin contexto a un verdadero método de Ingeniería de Software\" en la Primera Cumbre de IA de la Diáspora Colombiana en Alemania."
       ]
+    },
+    {
+      company: "WE ARE DEVELOPERS",
+      role: "Voluntario",
+      dates: "Jul 2026",
+      location: "Berlín",
+      tasks: [
+        "Atención a los asistentes durante los turnos asignados en el <b>World Congress</b> de We Are Developers."
+      ]
+    },
+  ]
 }
 
 const freelancerExperience = {
@@ -136,9 +135,10 @@ const freelancerExperience = {
     dates: 'Ago 2025 - present',
     role: 'Ingeniero Full-Stack & Especialista en Automatización',
     tasks: [
+      'Desarrollo de un seguimiento de horas por tarea integrando <b>Google Sheets</b> mediante servidores <b>MCP</b> con Claude, que permite al equipo cumplir <b>38</b> horas semanales, ahorrando tiempo de gestión de proyectos.',
+      'Arquitectura de visores multi-sensor para el dataset nuScenes, integrando Gemini Notebook, <b>FastAPI (Python)</b> y R3F para la visualización 3D de nubes de puntos <b>LiDAR</b>.',
       'Renderizado de maquetas 3D desde Unreal y 3Ds Max dentro de entornos <b>Three.js</b> para lograr resultados web de alto desempeño en móviles.',
-      'Uso de <b>LLMs</b> (Claude Code, Gemini, NotebookLM) y metodologías de Spec Driven Development para prototipar rápidamente.',
-      'Arquitectura de visores multi-sensor para el dataset nuScenes, integrando <b>FastAPI (Python)</b> y R3F para la visualización 3D de nubes de puntos <b>LiDAR</b>.',
+      
       // 'Desarrollo full-stack de un generador de CVs en <b>Angular</b>, utilizando <b>RxJS</b> para la gestión de estado reactivo, renderizado dinámico y exportación a PDF.'
     ],
     achievements: [ ]
@@ -165,8 +165,8 @@ export const seniorfrontend: CvData = {
     "Full-Stack": ["Angular","Node.js","Typescript","REST", "Python" /*"GraphQL",*/],
     "Graphics": ['C++','C#',"Unreal","WebAssembly","Unity", "UI/UX", "Figma"],
     "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
-    "Tooling": ["Git","Storybook","Nest.js","ESLint","Photoshop","Jest"],
-    "AI & LLMs": ["Claude","NotebookLM","Gemini","Copilot",],
+    "Tooling": ["Git","Storybook","Nest.js","ESLint","Jest"],
+    "AI & LLMs": ["Claude Code","Gemini Notebook","Codex","MCPs"],
   },
   languages: languagesData,
   links: [
@@ -184,13 +184,13 @@ export const seniorfrontend: CvData = {
         dates: 'May 2021 - Jun 2025',
         role: 'Software Engineer',
         tasks: [
-          'Desarrollo y mantenimiento de componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+</b> mercados internacionales.',
+          // 'Desarrollo y mantenimiento de componentes frontend escalables usando <b>ReactJS</b> y <b>Next.js</b> para la plataforma Global Team Sports, contribuyendo a una experiencia de usuario personalizada para <b>20+</b> mercados internacionales.',
           'Liderzago del desarrollo de <b>módulos de personalización</b> (frontend y 3D) para PDP de ropa deportiva utilizando <b>Three.js</b> y <b>Unity</b>, sus pruebas con <b>Jest</b> y <b>Cypress</b>.',
           'Refactor del microservicio <b>backend de Checkout</b> de adidas mediante la implementación de pipelines de CI/CD y automatización de infraestructura con <b>Jenkins</b>, <b>Kubernetes</b> y <b>Grafana</b>, soportando transacciones diarias en <b>30+ países</b>.',
           // 'Contribución a la arquitectura frontend del portal web <b>Yeezy</b> mediante <b>programación funcional</b> en Typescript, logrando una mejora en el desempeño.',
         ],
         achievements: [
-          'Formación y acompañamiento de 14 profesionales en transición de carrera en el Campus Program, desde fundamentos de programación hasta <b>TypeScript</b> y <b>ReactJS</b>.'
+          'Formación y acompañamiento de <b>14</b> profesionales en transición de carrera en el Campus Program, desde fundamentos de programación hasta <b>TypeScript</b> y <b>ReactJS</b>.'
         ]
       },
       {
@@ -205,7 +205,7 @@ export const seniorfrontend: CvData = {
       }
     ]},
     defaultEducation,
-    // defaultExtraCurricular
+    defaultExtraCurricular
   ],
 };
 
@@ -220,17 +220,17 @@ export const frontend: CvData = {
 export const frontend3d: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Ingeniero de Software - Experiencia en Typescript y Three.js",
+    value: "Ingeniero de Software - Enfoque en Computacion Visual",
     // value: "Ingeniero Frontend - Enfoque en Computacion Visual y C++",
     acronym: 'FV',
   },
   skills: {
     "Frontend": ["React","Three.JS", /*"R3F",*/"SCSS","TailwindCSS","Next.js" ],
     "Graphics": ['C++',"WebGL", "Unreal","XR","Unity", "UI/UX", "Figma"],
-    "Full-Stack": ["Node.js","SQL","Typescript", "Nest.js", "REST", "Python", "SQL"],
+    "Full-Stack": ["Node.js","SQL","Typescript", "REST", "Python"],
     "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana"],
     "Tooling": ["Git","Vite","Storybook","MongoDB", "Jest", "SDD"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Codex","Gemini Notebook","MCPs",],
   },
 
   //C++
@@ -277,7 +277,7 @@ export const juniorfrontend: CvData = {
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Codex","Gemini Notebook","MCPs",],
   },
   languages: languagesData,
   links: [
@@ -353,8 +353,6 @@ export const juniorfrontend: CvData = {
   ],
 }
 
-
-//C++, full stack
 export const seniorSoftware: CvData = {
   sectionTitles,
   contact: contactDefault,
@@ -425,7 +423,7 @@ export const seniorSoftware: CvData = {
       }
     ]},
     defaultEducation,
-    // defaultExtraCurricular
+    defaultExtraCurricular
   ],
 };
 
@@ -444,6 +442,28 @@ export const ingenieroFullStack: CvData = {
       SRE asegurando monitoreo, trazabilidad 
       y visualizacion. ${appendedAboutMe}`,
   skills: defaultSkills,
+}
+
+export const ingenieroAI: CvData = {
+  ...ingenieroFullStack,
+  occupation: {
+    value: "AI Full Stack Engineer",
+    acronym: 'AIFS'
+  },
+  aboutme: `Ingeniero de Sistemas y Computación (M. Eng.)
+      con 6 años de experiencia construyendo aplicaciones full stack
+      con TypeScript, React, Angular y Node.js,
+      y backends en Python y C#. Desarrollo diario asistido por IA
+      (Claude Code, Codex) con metodologías de Spec Driven Development,
+      MCPs, skills y context engineering. Bases sólidas en Docker, Kubernetes, CI/CD y
+      observabilidad para llevar soluciones a producción. ${appendedAboutMe}`,
+  skills: {
+    "Frontend": ["React","Next.js","Angular","Typescript","TailwindCSS"],
+    "Backend": ["Node.js","Nest.js","Python","FastAPI","REST"],
+    "AI & LLMs": ["Claude Code","Codex","Gemini Notebook","MCP","Spec Driven Dev"],
+    "DevOps & Cloud": ['Docker','K8s','Jenkins','CI/CD','Linux','Grafana','Elasticsearch'],
+    "Testing": ["Jest","Cypress","Git","ESLint"],
+  },
 }
 
 //ToDo
@@ -519,7 +539,7 @@ export const graphicsEngineer: CvData = {
       }
     ]},
     defaultEducation,
-    // defaultExtraCurricular
+    defaultExtraCurricular
   ],
 };
 
@@ -551,7 +571,7 @@ export const sre: CvData = {
     "Monitoring": ['Grafana','Instana','AWS','Elasticsearch','Prometheus','Opsgenie'],
     "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
     "Tooling": ['Linux','AWS',"Git","PostgreSQL","Terraform","Storybook","ESLint", "Jest"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code","Codex","Gemini Notebook","MCPs",],
   },
   languages: languagesData,
   links: [

@@ -4,14 +4,14 @@
     "seniorfrontend": "SF",
     "frontend3d": "F3D",
     "fullstackengineer": "FSE",
+    "aifullstack": "AIFS",
     "graphicsEngineer": "VC",
     "seniorsoftware": "SE",
     "sre": "DO",
     "contentcreator": "SE",
     "supportAssistant": "SA",
     "itSupport": "ITS",
-    "juniorfrontend": "FJ",
-    "toolsDevOpsUnity": "TDU"
+    "juniorfrontend": "FJ"
   },
   "DE": {
     "frontend": "FE",
@@ -31,6 +31,7 @@
     "seniorfrontend": "SF",
     "frontend3d": "FV",
     "fullstackengineer": "FSE",
+    "aifullstack": "AIFS",
     "seniorsoftware": "SE",
     "sre": "DO",
     "juniorfrontend": "FJ"

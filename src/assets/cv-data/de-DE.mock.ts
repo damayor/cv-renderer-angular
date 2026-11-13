@@ -32,7 +32,7 @@ const defaultSkills =  {
   "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
   "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
   "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "SDD"],
-  "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+  "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
 }
 
 // Da ich innerhalb Deutschlands flexibel und umzugsbereit bin, 
@@ -210,7 +210,7 @@ export const seniorfrontend: CvData = {
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     "CI/CD": ['Linux','Docker','Jenkins','Kubernetes',"YAML","Grafana"],
     "Tooling": ["Git","Vite","Storybook","Nest.js","ESLint", "Jest"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
   },
   languages: languagesData,
   links: [
@@ -274,7 +274,7 @@ export const frontend3d: CvData = {
     "Full-Stack": ["Node.js", "Nest.js", "REST", "PostgreSQL", "Microservices"],
     "CI/CD": ["Git", "Docker", "Jenkins", "Linux", "K8", "Grafana"],
     "Tooling": ["Blender","Vite", "Storybook", "Photoshop"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
   },
 }
 
@@ -302,7 +302,7 @@ export const juniorfrontend: CvData = {
     // "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","Storybook","Docker","ESLint", "Jest"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
   },
   languages: languagesData,
   links: [
@@ -439,7 +439,7 @@ export const fullStackIngenieur: CvData = { //kof kof, AI - Engineer
   ${appendedAboutMe}`,
   skills: {
     "Full-Stack": ["Typescript","Node.js","C++", "Java", "Python" ],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
     "Frontend": ["React","Three.JS","Angular", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana"],
     "Tooling": ["Git","Vite","ESLint", "Jest", "Rest", "PostgreSQL"],
@@ -550,7 +550,7 @@ export const sre: CvData = {
     "Tooling": ['Linux','AWS',"Git","PostgreSQL","Terraform","Storybook","ESLint", "Jest"],
     "Monitoring": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
     "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
   },
   languages: languagesData,
   links: [

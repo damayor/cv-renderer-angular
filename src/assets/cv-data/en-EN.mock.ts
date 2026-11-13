@@ -20,7 +20,7 @@ const contactDefault : Contact = {
   email: "dr.mayorga20@gmail.com",
   phone: isLatam ? "+57 312 3344936": "+49 1525 2198970",
   // location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (Nov 2026)",
-  location: isLatam ? "Bogotá, Colombia" : "10585 Berlin, Germany",
+  location: isLatam ? "Berlin -> Bogotá (Nov 2026)" : "10585 Berlin, Germany",
   nationality: "Colombian",
   address:"Otto-Suhr-Allee 106C, 10585 Berlin",
   workStatus: "Available 20h/week",
@@ -39,12 +39,13 @@ const defaultSkills =  {
   "Graphics": ["Unity","XR",'C#','C++',"Unreal","UI/UX", "Figma"],
   "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
   "Tooling": ["Git","Vite","Storybook","ESLint", "Jest", "SDD"],
-  "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+  "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
 }
 
 const appendedAboutMe = `
     ${environment.cvScope === 'AM'
-      ? `Bogotá-based, available to work remotely across the Americas and Latin America.`
+      // ? `Bogotá-based, available to work remotely across the Americas and Latin America.`
+      ? `Available to work remotely.`
       : environment.cvScope === 'CO' 
       ? `` 
       : environment.cvScope === 'DE' 
@@ -124,10 +125,11 @@ const freelancerExperience = {
     dates: 'Aug 2025 - present',
     role: 'Full-Stack Engineer & Automation Specialist',
     tasks: [
+      'Developed a per-task time tracker integrating <b>Google Sheets</b> through <b>MCP</b> servers with Claude, enabling the team to meet <b>38</b> weekly hours and saving project management time.',
       'Rendering complex 3D masterplans from 3ds Max and <b>Blender</b> within <b>R3F</b> environments to achieve high-performance outcomes for mobiles.',
-      'Designed and deployed a custom AI Agent as the interface layer for a work-hour tracking pipeline (<b>Google Apps Script</b> + Sheets), cutting manual overhead by 40%.',
+      // 'Designed and deployed a custom AI Agent as the interface layer for a work-hour tracking pipeline (<b>Google Apps Script</b> + Sheets), cutting manual overhead by 40%.',
       'Multi-sensor viewer for the nuScenes dataset, integrating <b>FastAPI</b> (Python) and R3F for <b>LiDAR point clouds</b>.',
-      'Leveraged <b> LLMs</b> (Claude Code, Cursor) and vibe coding methodologies to rapidly prototype and deploy automation tools and web applications.',
+      // 'Leveraged <b> LLMs</b> (Claude Code, Cursor) and vibe coding methodologies to rapidly prototype and deploy automation tools and web applications.',
       // 'Built and deployed full-stack a customizable CV generator with <b>Angular</b>, <b>RxJS</b> for reactive state management and dynamic rendering.',
     ],
     achievements: [ ]
@@ -181,12 +183,12 @@ export const seniorfrontend: CvData = {
     // "Graphics": ['C++','WASM', "Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     "Tooling": ["Vite","Storybook","Gradle","Webpack","Lint", "Jest"],
     "CI/CD": ['Linux','Docker','Jenkins','Kubernetes',"YAML","Grafana"],
-    "AI & LLMs": ["Claude Code", "Cursor","Notebook","Agents","GPT",],
+    "AI & LLMs": ["Claude Code", "Cursor","Notebook","Agents","MCPs",],
   },
   languages: languagesData,
   links: [
-    { label: "Portfolio", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
+    { label: "Portfolio", url: "https://mayit.dev/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
   courses: defaultCourses,
@@ -246,7 +248,7 @@ export const frontend3d: CvData = {
     "Full-Stack": ["Node.js", "Nest.js", "REST", "PostgreSQL", "Microservices"],
     "CI/CD": ["Git", "Docker", "Jenkins", "Linux", "K8", "Grafana"],
     "Tooling": ["Blender","Vite", "Storybook", "Photoshop"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
   },
 }
 
@@ -275,7 +277,7 @@ export const juniorfrontend: CvData = {
     "Graphics": ['C++',"Unity", 'C#',"Unreal","XR", "UI/UX", "Figma"],
     // "CI/CD": [/*'Linux',*/'Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","Vite","Storybook","Nest.js","Docker", "Kubernetes"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
   },
   languages: languagesData,
   links: [
@@ -405,12 +407,12 @@ export const seniorSoftware: CvData = {
     "Frontend": ["React", "Angular","Three.JS", "SCSS","TailwindCSS", "Figma", "UI/UX" ],
     "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana","Elasticsearch"],
     "Tooling": ["Git","bash","PostgreSQL","Microservices", "Jest"],
-    "AI & LLMs": ["Claude Code","NotebookLM","Gemini", "Agents", "SDD"]
+    "AI & LLMs": ["Claude Code","Gemini Notebook", "Agents", "SDD"]
   },
   languages: languagesData,
   links: [
-    { label: "Portfolio", url: "https://mayit.dev/" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidmayorga-software/" },
+    { label: "Portfolio", url: "https://mayit.dev/" },
     { label: "Github", url: "https://github.com/damayor" },
   ],
   courses: defaultCourses,
@@ -472,9 +474,54 @@ export const fullStackEngineer: CvData = {
    skills: {
     "Full-Stack": ["Typescript","Node.js","C++", "Next.JS", "Python" ],
     "Frontend": ["React","Angular", "Three.JS","SCSS","TailwindCSS", "Figma", "UI/UX" ],
+    "AI & LLMs": ["Claude Code","Gemini Notebook","SDD",],
     "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana"/*,"Elasticsearch"*/],
     "Tooling": ["Git",'AWS','Vite',"PostgreSQL","Storybook","ESLint", "Jest"],
-    "AI & LLMs": ["Claude Code","NotebookLM","Gemini","SDD",],
+  },
+}
+
+export const backend: CvData = {
+  ...fullStackEngineer,
+  occupation: {
+    value: "Full Stack Engineer ",
+    // value: "Full Stack Engineer - Backend Focus",
+    acronym: 'BE'
+  },
+  aboutme: `Software Engineer (M.Sc.) with 4+ years of experience
+    building Node.js and TypeScript backend services, REST and GraphQL APIs,
+    and React/Next.js web experiences for global e-commerce platforms at adidas.
+    Experienced in CI/CD, automated testing and AI-assisted development
+    (Claude Code) to deliver reliable, performant and scalable solutions.
+    ${appendedAboutMe}`,
+  skills: {
+    "Full-Stack": ["Typescript","Node.js", "Angular", "Python", "Google Apps Script" ],
+    "Backend": ["REST","Express.js","GraphQL","PostgreSQL","NestJs"],
+    "Frontend": ["React","Next.js","SCSS","TailwindCSS","Storybook","Figma"],
+    "Testing": ["Jest","Cypress","Prettier","ESLint","Git"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8s','AWS',"Redis"],
+    "AI & LLMs": ["Claude Code","Gemini Notebook","MCP","SDD"],
+  },
+}
+
+export const aiFullStack: CvData = {
+  ...fullStackEngineer,
+  occupation: {
+    value: "AI Full Stack Engineer",
+    acronym: 'AIFS'
+  },
+  aboutme: `Systems and Computer Engineer (M.Eng.)
+    with 6 years of experience building full-stack applications
+    with TypeScript, React, Angular and Node.js,
+    and backends in Python and C#. Daily AI-assisted development
+    (Claude Code, Codex) using Spec Driven Development,
+    MCPs, skills and context engineering. Solid foundations in Docker, Kubernetes, CI/CD and
+    observability to take solutions to production. ${appendedAboutMe}`,
+  skills: {
+    "Frontend": ["React","Next.js","Angular","Typescript","TailwindCSS"],
+    "Backend": ["Node.js","Nest.js","Python","FastAPI","REST"],
+    "AI & LLMs": ["Claude Code","Codex","Gemini Notebook","MCP","Spec Driven Dev"],
+    "DevOps & Cloud": ['Docker','K8s','Jenkins','CI/CD','Linux','Grafana','Elasticsearch'],
+    "Testing": ["Jest","Cypress","Git","ESLint"],
   },
 }
 
@@ -612,7 +659,7 @@ export const sre: CvData = {
     "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
     // "Full-Stack": ["bash", "Python", "Node.js","Typescript","React",],
     "Tooling": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest"],
-    "AI & LLMs": ["Claude", "Copilot","NotebookLM","Gemini","GPT",],
+    "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
   },
   languages: languagesData,
   links: [
