@@ -19,18 +19,14 @@ const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: isLatam ? "+57 312 3344936": "+49 1525 2198970",
-  // location: environment.cvScope !== 'ES' ? "10585 Berlin, Germany": "Berlin -> Spain (Nov 2026)",
-  location: isLatam ? "Berlin -> Bogotá (Nov 2026)" : "10585 Berlin, Germany",
+  location: "Bogotá, Colombia",
   nationality: "Colombian",
-  address:"Otto-Suhr-Allee 106C, 10585 Berlin",
-  workStatus: "Available 20h/week",
   titleRecognition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
-  visaStatus: 'Full-time available upon contract signing (approx. 6-week processing time, subject to Ausländerbehörde response times).',
-  arbeitsErlaubnis: environment.cvScope == 'EU' 
-    ? 'Visa sponsorship required to work outside Germany. Able to coordinate documentation and timelines to support the process.'
-    : environment.cvScope == 'ES' 
-      ? "Bachelor's Degree level recognized already by NARIC-Spain. Visa sponsorship required to work outside Germany. "
-      : 'Available for up to 20 hours per week. Full-time employment is possible upon contract signature and approval by the Ausländerbehörde.'
+  arbeitsErlaubnis: environment.cvScope == 'ES' 
+    ? "Bachelor's Degree level recognized already by NARIC-Spain. Open to relocation; visa sponsorship required."
+    : environment.cvScope == 'AM'
+        ? 'Based in Bogotá. Available for remote work across the Americas and open to relocation.'
+      : 'Available for full remote work from Bogotá and open to relocation. Visa sponsorship required. Able to coordinate documentation and timelines to support the process.'
 }
 
 const defaultSkills =  {
@@ -43,14 +39,11 @@ const defaultSkills =  {
 }
 
 const appendedAboutMe = `
-    ${environment.cvScope === 'AM'
-      // ? `Bogotá-based, available to work remotely across the Americas and Latin America.`
-      ? `Available to work remotely.`
-      : environment.cvScope === 'CO' 
-      ? `` 
-      : environment.cvScope === 'DE' 
-        ? `Berlin-based with work authorization and relocation flexibility within Germany.` 
-        : `Immediate relocation availability within Europe.` //ES, EU
+    ${environment.cvScope === 'CO'
+      ? `` // Header already says Bogotá; open to on-site/hybrid/remote (see CLAUDE.md > Work-mode availability)
+      : environment.cvScope === 'AM'
+      ? `Bogotá-based, available for remote work across the Americas and open to relocation if required.`
+      : `Bogotá-based, available for full remote work and open to relocating if required.`
     }
     Dedicated to contributing my expertise gained at global leaders,
     fostering collaboration through proactive engagement and empathetic leadership.`
@@ -122,7 +115,7 @@ const defaultEducation = {
 const freelancerExperience = {
     company: 'Freelancer',
     location: 'Berlin',
-    dates: 'Aug 2025 - present',
+    dates: 'Aug 2025 - Oct 2026',
     role: 'Full-Stack Engineer & Automation Specialist',
     tasks: [
       'Developed a per-task time tracker integrating <b>Google Sheets</b> through <b>MCP</b> servers with Claude, enabling the team to meet <b>38</b> weekly hours and saving project management time.',
@@ -172,7 +165,7 @@ export const seniorfrontend: CvData = {
   aboutme: `Frontend engineer 
     building large-scale web platforms and applications since 2020,
     specialized in Node.js,
-    TypeScript, and UI/UX solutions using Storybook
+    TypeScript, and UI/UX solutions using Storybook,
     TailwindCSS, and interactive 2D or 3D experiences. I own a deep experience of CI/CD practices
     and SRE in international environments.
     ${appendedAboutMe}`,
@@ -239,7 +232,7 @@ export const frontend: CvData = {
 export const frontend3d: CvData = {
   ...seniorfrontend,
   occupation: {
-    value: "Frontend Engineer - Focused on Computer Graphics",
+    value: "Software Engineer - Focused on Computer Graphics",
     acronym: 'F3D',
   },
   skills: {
@@ -270,7 +263,7 @@ export const juniorfrontend: CvData = {
     TailwindCSS, SCSS, and interactive experiences
     with Three.js. I own a deep understanding of CI/CD practices
     and SRE environments.
-    Berlin-based with work authorization and relocation flexibility within Germany`,
+    Bogotá-based, available for full remote work and open to relocation if required.`,
   skills: {
     "Frontend": ["React","Node.JS","TailwindCSS", "Three.js", "JS", "TS"],
     // "Full-Stack": ["Angular","RxJs","Typescript","Node.js","REST" /*"GraphQL",*/],
@@ -360,7 +353,7 @@ export const softwareFreelancer: CvData = {
     // {
     //   company: 'Freelancer',
     //   location: 'Berlin',
-    //   dates: 'Aug 2025 - present',
+    //   dates: 'Aug 2025 - Oct 2026',
     //   role: 'Full-Stack Engineer & Automation Specialist',
     //   tasks: [
     //     'Developed custom scripts using <b>Google Apps Script</b> to automate project scheduling and work-hour tracking in Google Sheets, increasing personal productivity by 40%.',
@@ -462,21 +455,22 @@ export const seniorSoftware: CvData = {
 export const fullStackEngineer: CvData = {
   ...seniorSoftware,
   occupation: {
-    value: "Full Stack Engineer",
+    value: "Full Stack Software Engineer",
     acronym: 'FSE'
   },
-  aboutme: `Software Engineer (M.Sc.) specialized in high-scale platforms
-    and interactive solutions since 2020.
-    Expert in Node.js, TypeScript, and microservices, 
-    with a proven track record of managing global-scale 
-    deployments at adidas with SRE/DevOps practices.
+  aboutme: `Software Engineer (M.Sc.) with 6 years of experience
+    building Node.js and TypeScript React/Next.js frontends for high-scale
+    e-commerce platforms, plus backend services, RESTful APIs
+    and microservices serving 30+ countries.
+    Strong in CI/CD, AI-assisted development, automated testing, code reviews.
     ${appendedAboutMe}`,
    skills: {
-    "Full-Stack": ["Typescript","Node.js","C++", "Next.JS", "Python" ],
-    "Frontend": ["React","Angular", "Three.JS","SCSS","TailwindCSS", "Figma", "UI/UX" ],
-    "AI & LLMs": ["Claude Code","Gemini Notebook","SDD",],
-    "CI/CD": ['Linux','Docker','Jenkins','K8s',"YAML","Grafana"/*,"Elasticsearch"*/],
-    "Tooling": ["Git",'AWS','Vite',"PostgreSQL","Storybook","ESLint", "Jest"],
+    "Frontend": ["React","Next.js","Angular","SCSS","TailwindCSS","Storybook"],
+    // Quité: C++, Python, Three.JS, Figma y UI/UX, 
+    "Backend": ["Node.js","Typescript","Express.js","Nest.js","REST","Microservices"],
+    "CI/CD": ['Linux','Docker','Jenkins','K8s','AWS',"Grafana"],
+    "Tooling": ["PostgreSQL","Jest","Cypress","ESLint","Git"],
+    "AI & LLMs": ["Claude Code","Codex","MCP","SDD"],
   },
 }
 
@@ -774,7 +768,7 @@ export const contentcreator: CvData = {
     Engineering practices, ensuring
     monitoring, performance and
     scalability.
-    Recently relocated to Berlin with work authorization,
+    Based in Bogotá and open to full remote work or relocation,
     I am looking for innovative teams where I can
     share knowledge, mentor others, and
     help elevate the collective skills.`,
@@ -874,7 +868,7 @@ export const supportAssistant: CvData = {
     Background as a software engineer
     and model.
     Reliable and adaptable with learning agibility.
-    Recently relocated to Berlin with work authorization,
+    Based in Bogotá and open to full remote work or relocation,
     I am looking for innovative teams,
     not only through my technical expertise,
     but by helping colleagues grow so the
@@ -997,7 +991,7 @@ export const itSupport: CvData = {
     macOS, and Linux environments, with basic networking knowledge (DNS,
     FTP, VLANs). Quick learner with a methodical approach
     under pressure and strong communication skills for supporting
-    non-technical users. Based in Berlin with work authorization,
+    non-technical users. Based in Bogotá and open to full remote work or relocation,
     eager to grow into a broader IT administration role with guidance
     from senior team members.`,
   //  skills: {

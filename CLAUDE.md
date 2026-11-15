@@ -76,6 +76,16 @@ The CV is a fixed `210mm` wide `<div>` (A4) composed of two side-by-side compone
 
 `environment.showPicture` (boolean, set in every `environment.*.ts`) toggles the profile photo. When `true`, the layout is the classic one: grey sidebar with the photo, and `<user-header>` inside `<main-panel>`. When `false` (e.g. `am`), the photo is not rendered and `<user-header>` spans the full width of the A4 page (rendered by `PdfDemoComponent` above the row); `<sidebar>` and `<main-panel>` then start below it side by side, and the sidebar has a white background with a vertical divider (80% height) instead of grey. The `am` scope (`cvScope: 'AM'`) targets remote work across the Americas/LatAm and shares CO's phone and education text; location is set in the mock files (`isLatam` helper).
 
+### Work-mode availability (by scope)
+
+Current residence is Bogotá (all scopes); the Berlin address and Chancenkarte/20h-week text were removed. What each scope states about work modes (`environment.openTo` holds these values per scope but is not read by code; keep `appendedAboutMe` and `arbeitsErlaubnis` in the mock files consistent with it. Values: `onsite`, `hybrid`, `remote`, `relocation`):
+
+| Scope | Open to | Text in profile |
+|---|---|---|
+| `CO` | on-site, hybrid, remote | none (header already says Bogotá) |
+| `AM` | remote across the Americas, relocation | yes |
+| `EU`, `ES`, `DE` | remote from Bogotá, relocation (visa sponsorship required) | yes |
+
 ### Theming
 
 Each mock data file includes a `colors` record. On load, `PdfDemoComponent.setThemeColors()` writes these as CSS custom properties on `:root` (`--clr-*` and `--color-*`). Tailwind + daisyUI consume these for the CV palette.

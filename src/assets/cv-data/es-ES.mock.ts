@@ -19,12 +19,14 @@ const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: isLatam ? "+57 3123344936": "+49 1525 2198970",
-  location: isLatam ? 'Berlin -> Bogota (Nov 2026)' : "Berlin -> España (2027)",
+  location: "Bogotá, Colombia",
   nationality: "Colombiano",
   // workStatus: "Transición a España desde Julio de 2026.",
   // visaStatus: 'Transicion a España desde Agosto 2026.',
   titleRecognition: 'Equivalencia a Grado universitario (NARIC-España, RD 889/2022)',
-  arbeitsErlaubnis: 'Se requiere patrocinio de visado para trabajar fuera de Alemania.'
+  arbeitsErlaubnis: environment.cvScope == 'AM'
+    ? 'Radicado en Bogotá. Disponible para trabajo remoto en América y abierto a reubicación.'
+    : 'Disponible para trabajo 100% remoto desde Bogotá y abierto a reubicación. Se requiere patrocinio de visado.'
 }
 
 const defaultSkills = {
@@ -37,8 +39,11 @@ const defaultSkills = {
   }
 
 const appendedAboutMe = 
-    `${isLatam ? '' :
-      'Radicado en Alemania, en proceso de relocalización.'
+    `${environment.cvScope === 'CO'
+      ? '' // El header ya dice Bogotá; abierto a presencial/híbrido/remoto (ver CLAUDE.md > Work-mode availability)
+      : environment.cvScope === 'AM'
+      ? 'Radicado en Bogotá, disponible para trabajo remoto en América y abierto a reubicación si es necesario.'
+      : 'Radicado en Bogotá, disponible para trabajo 100% remoto y abierto a reubicación si es necesario.'
     }
     Caracterizando un rol de apoyo constante a equipos multiculturales, 
     bajo una comunicación empática y proactiva.` 
@@ -132,7 +137,7 @@ const defaultExtraCurricular = {
 const freelancerExperience = {
     company: 'Freelancer',
     location: 'Berlin',
-    dates: 'Ago 2025 - present',
+    dates: 'Ago 2025 - Oct 2026',
     role: 'Ingeniero Full-Stack & Especialista en Automatización',
     tasks: [
       'Desarrollo de un seguimiento de horas por tarea integrando <b>Google Sheets</b> mediante servidores <b>MCP</b> con Claude, que permite al equipo cumplir <b>38</b> horas semanales, ahorrando tiempo de gestión de proyectos.',
@@ -144,7 +149,6 @@ const freelancerExperience = {
     achievements: [ ]
   }
 
-//CHK
 export const seniorfrontend: CvData = {
   sectionTitles,
   contact: contactDefault,
@@ -234,22 +238,16 @@ export const frontend3d: CvData = {
   },
 
   //C++
-  aboutme: 
-    `Ingeniero de Software con amplia trayectoria en proyectos web de gran escala, con bases solidas en C++, Linux bash y
-      SRE, asegurando monitoreo, trazabilidad 
-      y visualización. Tambien especializado en el ecosistema NodeJS, y React, y soluciones interactivas 
-      con Three.JS y Unity. ${appendedAboutMe}`,
-  //web graphics 
   // aboutme: 
-  // `Ingeniero de Software con amplia trayectoria en proyectos web de gran escala, especializado en el ecosistema NodeJS, y React, y soluciones interactivas 
-  //   con Three.JS y Unity. 
-  //   Tambien con bases solidas en C++, Linux bash y
-  //   SRE, asegurando monitoreo, trazabilidad 
-  //   y visualización. Tambien 
-  //   Actualmente radicado 
-  //   en Alemania, caracterizando 
-  //   un rol de apoyo constante al equipo y a la vez, con comunicación 
-  //   empática en las relaciones interpersonales. `,
+  //   `Ingeniero de Software con amplia trayectoria en proyectos web de gran escala, con bases solidas en C++, Linux bash y
+  //     SRE, asegurando monitoreo, trazabilidad 
+  //     y visualización. Tambien especializado en el ecosistema NodeJS, y React, y soluciones interactivas 
+  //     con Three.JS y Unity. ${appendedAboutMe}`,
+  //web graphics 
+  aboutme: `Ingeniero de Software con amplia trayectoria en proyectos web de gran escala, especializado en el ecosistema NodeJS, y React, y soluciones interactivas 
+    con Three.JS y Storybook. Bases sólidas en C++, Linux bash y
+    SRE, asegurando monitoreo, trazabilidad 
+    y visualización. ${appendedAboutMe} `,
 }
 
 //todo
@@ -430,7 +428,7 @@ export const seniorSoftware: CvData = {
 export const ingenieroFullStack: CvData = {
   ...seniorSoftware,
   occupation: {
-    value: "Ingeniero de Software",
+    value: "Ingeniero de Software Full Stack",
     acronym: 'FSE'
   },
   aboutme: `Ingeniero de Sistemas y Computacion (M. Eng.) 
@@ -441,7 +439,13 @@ export const ingenieroFullStack: CvData = {
       con Three.JS y Unity. Bases solidas en C++, Linux bash, LLMs y
       SRE asegurando monitoreo, trazabilidad 
       y visualizacion. ${appendedAboutMe}`,
-  skills: defaultSkills,
+  skills: {
+    "Frontend": ["React","Next.js","Typescript","TailwindCSS","Storybook"],
+    "Backend": ["Node.js","Nest.js","REST","GraphQL","Microservicios"],
+    "Cloud & DevOps": ["GCP","Docker","K8s","Jenkins","CI/CD","Grafana"],
+    "AI & LLMs": ["Claude Code","Codex","GitHub Copilot","Cursor","MCP"],
+    "Tooling": ["Git","Jest","Cypress","ESLint"],
+  },
 }
 
 export const ingenieroAI: CvData = {

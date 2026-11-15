@@ -17,13 +17,10 @@ const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
   phone: "+49 1525 2198970",
-  location: "Berlin, Deutschland",
-  address:"Otto-Suhr-Allee 106C, 10585 Berlin",
+  location: "Bogotá, Kolumbien",
   nationality: "Kolumbien",
-  workStatus: "Vorhanden - Sofortiger Einstieg: 20h/Woche", // "Chancenkarte",
-  visaStatus: 'Wechsel zur Vollzeit nach Vertragsschluss möglich (ca. 4 Wochen Bearbeitungszeit, abhängig von den Antwortzeiten der Ausländerbehörde).',
   titleRecognition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
-  arbeitsErlaubnis: 'Im Rahmen von 20h/Woche oder Minijob vorhanden. Vollzeitanstellung nach Vertragsabschluss und Genehmigung durch die Ausländerbehörde möglich.'
+  arbeitsErlaubnis: 'Vollzeit remote von Bogotá aus möglich; Umzugsbereitschaft vorhanden. Visa-Sponsoring erforderlich.'
 }
 
 const defaultSkills =  {
@@ -35,16 +32,8 @@ const defaultSkills =  {
   "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
 }
 
-// Da ich innerhalb Deutschlands flexibel und umzugsbereit bin, 
-
 const appendedAboutMe = `
-    Wohnhaft in Berlin
-    ${environment.cvScope === 'DE' ?
-      `  mit Arbeitsgenehmigung und Umzugsbereitschaft. 
- 
-        `
-      : `, da ich innerhalb Europas flexibel und umzugsbereit bin.`
-    }
+    Wohnhaft in Bogotá, verfügbar für Vollzeit-Remote-Arbeit und bei Bedarf umzugsbereit.
     Ich möchte meine internationale Erfahrung durch die hohen Qualitätstandards 
     bereichern und mich aktiv an die lokalen Arbeitsweisen anpassen.`
     //  //um gemeinsam mit dem Team zu wachsen.`
@@ -174,7 +163,7 @@ const defaultExtraCurricular = {
 const freelancerExperience = {
     company: 'Freelancer',
     location: 'Berlin',
-    dates: 'Aug 2025 - present',
+    dates: 'Aug 2025 - Okt 2026',
     role: 'Full-Stack Ingenieur & Automatisierungsspezialist',
     tasks: [
       // 'Rendering 3D-Masterpläne aus Unreal und 3ds Max in <b>R3F</b> unter Einbindung von <b>WebAssembly</b>, um Hochleistungs-Ergebnisse für mobile Geräte zu erreichen.',
@@ -295,7 +284,7 @@ export const juniorfrontend: CvData = {
    Teilzeit- oder Minijob-Stelle. Kenntnisse in NodeJS,
    TypeScript und UI/UX-Lösungen mit TailwindCSS, SCSS sowie
    interaktiven Erfahrungen u.a. mit Three.js. Flexibel, lernbereit
-   und sofort einsatzbereit. Arbeitsgenehmigung und Umzugsbereitschaft vorhanden.`,
+   und sofort einsatzbereit. Remote-Arbeit aus Bogotá möglich, Umzugsbereitschaft vorhanden.`,
   skills: {
     "Frontend": ["React","Vue.js","TailwindCSS", "Three.js", "JS", "Next.js"],
     "Full-Stack": ["Node.js","Typescript","REST", "NestJS", "Python" /*'Angular', "GraphQL",*/],
@@ -318,7 +307,7 @@ export const juniorfrontend: CvData = {
       {
         company: 'FREELANCER',
         location: 'Berlin',
-        dates: 'Aug 2025 - Present',
+        dates: 'Aug 2025 - Okt 2026',
         role: 'KI-Output-Bewertung & Automatisierung',
         tasks: [
           "Bewertung und Qualitätsprüfung von <b>KI-generierten Outputs</b> (Claude, NotebookLM) im Rahmen von Prototyping-Projekten.",
@@ -614,8 +603,7 @@ export const salesAssistant: CvData = {
     zur Warenverräumung. Ich begeistere mich persönlich 
     für Kreativität, Gestaltung und DIY, und bringe diese 
     Leidenschaft gerne in die Beratung ein.
-    Wohnhaft in Berlin-Charlottenburg, in der Nähe 
-    der Filiale. Flexibel, zuverlässig und teamorientiert.`,
+    Umzugsbereit nach Berlin. Flexibel, zuverlässig und teamorientiert.`,
     // ${appendedAboutMe}
     // `,
 
@@ -730,8 +718,8 @@ export const qaDataAnnotation: CvData = {
     Detailorientierte Fachkraft mit praktischer Erfahrung in Software-Testing
     (Jest, Cypress) und Qualitätskontrolle digitaler Produkte. Zuverlässig,
     strukturiert und geduldig bei repetitiven Prüfaufgaben. Interesse an
-    Data Annotation und Bewertung von KI-Trainingsdaten. Wohnhaft in Berlin
-    mit Arbeitsgenehmigung, sofort verfügbar für Teilzeit oder Minijob.`,
+    Data Annotation und Bewertung von KI-Trainingsdaten. Wohnhaft in Bogotá,
+    verfügbar für Remote-Arbeit und bei Bedarf umzugsbereit.`,
   skills: {
     "Daten & KI": ["Data Annotation", "Datenqualität", "Prompt-Bewertung"],
     "Testing": ["Jest", "Cypress", "Manuelles Testing", "Bug Tracking"],
@@ -761,7 +749,7 @@ export const qaDataAnnotation: CvData = {
       {
         company: 'FREELANCER',
         location: 'Berlin',
-        dates: 'Aug 2025 - Present',
+        dates: 'Aug 2025 - Okt 2026',
         role: 'KI-Output-Bewertung & Automatisierung',
         tasks: [
           "Bewertung und Qualitätsprüfung von <b>KI-generierten Outputs</b> (Claude, NotebookLM) im Rahmen von Prototyping-Projekten.",
@@ -796,8 +784,8 @@ export const itSupport: CvData = {
     Erfahrung im Support von IT-Ausstattung, Inventarverwaltung und
     täglichem Betrieb. Starkes Interesse an IT-Support und Helpdesk-
     Aufgaben, kundenorientierte Denkweise und schnelle Auffassungsgabe.
-    Kürzlich nach Berlin gezogen, mit Arbeitsgenehmigung und sofort
-    verfügbar für Teilzeit oder Minijob.`,
+    Wohnhaft in Bogotá, verfügbar für Remote-Arbeit und bei Bedarf
+    umzugsbereit.`,
   skills: {
     "Service": ["Kundenservice","Inventarverwaltung", "Netzwerk-Grundlagen","Problemlösung",],
     "Tech": [
@@ -818,7 +806,7 @@ export const itSupport: CvData = {
       {
         company: 'FREELANCER',
         location: 'Berlin',
-        dates: 'Aug 2025 - Present',
+        dates: 'Aug 2025 - Okt 2026',
         role: 'Technische Qualitätsprüfung & Datenvisualisierung',
         tasks: [
           "Prüfung und Validierung von <b>3D-Masterplänen</b> und Renderings auf Genauigkeit, Konsistenz und technische Fehler vor Auslieferung.",

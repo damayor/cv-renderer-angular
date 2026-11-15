@@ -87,7 +87,7 @@ From:
 Ago 2025
 
 To:
-present
+Oct 2026
 
 Role Description:
 Renderizado de maquetas 3D desde Unreal y 3Ds Max dentro de entornos Three.js para lograr resultados web de alto desempeño en móviles.

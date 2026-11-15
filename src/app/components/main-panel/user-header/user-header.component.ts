@@ -47,6 +47,6 @@ export class UserHeaderComponent {
 
   readonly env = environment;
 
-  location = computed(() =>  environment.cvScope === 'DE' ? this.userData().address : this.userData().location )
+  location = computed(() => this.userData().location)
 
 }

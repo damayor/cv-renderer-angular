@@ -38,7 +38,7 @@ const { exec } = require('child_process');
   const prefix = lang == 'EN'
     ? 'CV' 
     : lang == 'DE' ? 'LL' : 'HV'
-  const country = scope == 'EU' ? 'E': scope =='ES' ? 'S': (scope == 'CO' || scope == 'AM') ? 'A' : ''; 
+  const country = scope == 'EU' ? 'E': scope =='ES' ? 'S': scope == 'AM' ? 'A' : ''; 
   const namepdf = 'DavidMayorga'+(acronyms[role] ?? role);
 
   const browser = await puppeteer.launch();
