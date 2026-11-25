@@ -40,6 +40,6 @@ export class MainSectionTimelineComponent {
   @Input() title: string = '';
 
   itemsOf(exp: TimelineExperience): string[] {
-    return [...(exp.achievements ?? []), ...(exp.tasks ?? [])];
+    return [...(exp.tasks ?? []), ...(exp.achievements ?? [])];
   }
 }

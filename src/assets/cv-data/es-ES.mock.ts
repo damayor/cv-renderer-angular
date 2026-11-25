@@ -18,7 +18,7 @@ const isLatam = environment.cvScope == 'CO' || environment.cvScope == 'AM';
 const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
-  phone: isLatam ? "+57 3123344936": "+49 1525 2198970",
+  phone: isLatam ? "+57 3123344836": "+49 1525 2198970",
   location: "Bogotá, Colombia",
   nationality: "Colombiano",
   // workStatus: "Transición a España desde Julio de 2026.",
@@ -547,7 +547,17 @@ export const graphicsEngineer: CvData = {
   ],
 };
 
-//ToDo
+const sreFreelancerExperience = {
+    ...freelancerExperience,
+    role: 'Ingeniero Full-Stack, Automatización y DevOps',
+    tasks: [
+      'Automatización de un seguimiento de horas por tarea con <b>Google Sheets</b> y servidores <b>MCP</b>, eliminando procesos manuales y garantizando el cumplimiento de <b>38</b> horas semanales del equipo.',
+      'Construcción y despliegue de servicios <b>FastAPI</b> (Python) para el visor multi-sensor de nuScenes con nubes de puntos <b>LiDAR</b>, contenerizados con <b>Docker</b>.',
+      'Optimización del rendimiento y entrega de maquetas 3D en móviles, apoyada en <b>CI/CD</b> y monitoreo del comportamiento en producción.',
+    ],
+    achievements: [ ]
+  }
+
 export const sre: CvData = {
   sectionTitles,
   contact: contactDefault,
@@ -558,21 +568,23 @@ export const sre: CvData = {
   colors: {
     primary: '#287848',
   },
-  aboutme: `Ingeniero de Software con 5 años
-    de experiencia en plataformas
+  aboutme: `Ingeniero de Software con 6 años
+    de experiencia, 3 de ellos dedicados
+    a plataforma y SRE, en plataformas
     de gran escala en una multinacional,
-    combinando bases sólidas en LLMs,
-    Linux Bash y automatización DevOps.
-    Competente en CI/CD, monitoreo,
-    optimización de rendimiento y
-    aseguramiento de sistemas
-    escalables y resilientes. Experimentado en vincular
-    ingeniería de software con prácticas
-    de SRE para entregar soluciones
-    confiables. ${appendedAboutMe}`,
+    combinando bases sólidas en Linux Bash,
+    Docker y automatización DevOps.
+    Experiencia en CI/CD, observabilidad
+    y monitoreo (Grafana, alertas),
+    on-call, administración de servidores
+    y despliegue de sistemas
+    escalables y resilientes.
+    Actualmente cursando AWS Cloud Practitioner Essentials.
+    ${appendedAboutMe}`,
   skills: {
     "CI/CD": ['Docker','Jenkins','K8s',"YAML","Groovy","Helm"],
-    "Monitoring": ['Grafana','Instana','AWS','Elasticsearch','Prometheus','Opsgenie'],
+    "Observability": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
+    "Cloud": ['AWS (en curso)','Linux','Terraform','FTP / WordPress'],
     "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
     "Tooling": ['Linux','AWS',"Git","PostgreSQL","Terraform","Storybook","ESLint", "Jest"],
     "AI & LLMs": ["Claude Code","Codex","Gemini Notebook","MCPs",],
@@ -583,16 +595,17 @@ export const sre: CvData = {
     { label: "Stackshare", url: "https://stackshare.io/damayor/software-engineer" },
   ],
   courses: [
+    { name: "AWS Cloud Practitioner Essentials (en curso, 7 de 13 módulos)", institution: "AWS", date: "Nov 2026" },
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
-    {title: "Experiencia Laboral", entries: [ 
-      freelancerExperience,
+    {title: "Experiencia Laboral", entries: [
+      sreFreelancerExperience,
       {
         company: 'ADIDAS',
         location: 'Bogotá',
         dates: 'May 2021 - Jun 2025',
-        role: 'Software Engineer',
+        role: 'Software Engineer & SRE',
         tasks: [
           'Mejoré la confiabilidad del microservicio backend de Checkout mediante observabilidad con <b>Grafana</b> e integraciones de alertas, soportando transacciones diarias ininterrumpidas en <b>30+ países.</b>',
           `Participé en rotaciones on-call para diagnosticar y resolver
@@ -610,10 +623,11 @@ export const sre: CvData = {
         company: 'UMBRA 3D STUDIO - INTERACTIVE',
         location: 'Bogotá',
         dates: 'Ene 2020 - Sep 2020',
-        role: 'Desarrollador Frontend',
+        role: 'Desarrollador de Software y Administrador de Servidores',
         tasks: [
-          'Creación de <b>aplicaciones 3D inmersivas</b> con <b>React</b> y <b>Unreal/C++</b>, así como visualizaciones interactivas de masterplans para el sector inmobiliario (PropTech).',  
-          'Desarrollo de juegos casuales en <b>Unity</b> y <b>Realidad Virtual</b> para apoyar campañas de marketing en centros comerciales.',
+          'Responsable de los <b>servidores</b> y del mantenimiento de la página web de la empresa y de los sitios de sus clientes, como <b>Volvo, Hyundai, Jeep, Centro Chía</b> y constructoras como <b>Amarilo</b>, con <b>soporte 24/7</b>.',
+          'Actualizaciones y gestión de contenido vía <b>WordPress</b> y <b>FTP</b>, con monitoreo de disponibilidad, recuperación ante caídas y <b>re-despliegue</b> de los sitios.',
+          'Creación de <b>aplicaciones 3D inmersivas</b> con <b>React</b> y <b>Unreal/C++</b> para el sector inmobiliario (PropTech).',
         ]
       }
     ]},

@@ -18,7 +18,7 @@ const isLatam = environment.cvScope == 'CO' || environment.cvScope == 'AM';
 const contactDefault : Contact = {
   fullname: "David Mayorga",
   email: "dr.mayorga20@gmail.com",
-  phone: isLatam ? "+57 312 3344936": "+49 1525 2198970",
+  phone: isLatam ? "+57 312 3344836": "+49 1525 2198970",
   location: "Bogotá, Colombia",
   nationality: "Colombian",
   titleRecognition: 'B.Sc. System- und Computertechnik (Anabin H+ / A4)',
@@ -49,7 +49,7 @@ const appendedAboutMe = `
     fostering collaboration through proactive engagement and empathetic leadership.`
 
 const languagesData = [
-    { name: "English", level: 83, cefrLevel: 'C1' },
+    { name: "English", level: 70, cefrLevel: 'B2+' },
     { name: "German", level: 67, cefrLevel: 'B2' },
     { name: "Spanish", level: 100 , cefrLevel: 'C2'},
   ]
@@ -624,6 +624,17 @@ export const toolsDevOpsUnity: CvData = {
   },
 }
 
+const sreFreelancerExperience = {
+    ...freelancerExperience,
+    role: 'Full-Stack, Automation & DevOps Engineer',
+    tasks: [
+      'Optimized performance and delivery of 3D masterplans on mobile, backed by <b>CI/CD</b> and Github Actions.',
+      // 'Automated a per-task time tracker with <b>Google Sheets</b> and <b>MCP</b> servers, removing manual processes and ensuring the team met <b>38</b> weekly hours.',
+      'Built and deployed <b>FastAPI</b> (Python) services for a multi-sensor nuScenes viewer with <b>LiDAR point clouds</b>.',
+    ],
+    achievements: [ ]
+  }
+
 export const sre: CvData = {
   sectionTitles,
   contact: contactDefault,
@@ -634,26 +645,26 @@ export const sre: CvData = {
   colors: {
     primary: '#287848',
   },
-  aboutme: `Software Engineer with 5 years
-    of experience in large-scale
+  aboutme: `Software Engineer with 6 years
+    of experience, 3 of them dedicated to
+    platform engineering and SRE, in large-scale
     platforms at a multinational,
     combining strong foundations in
-    Linux Bash, and DevOps automation.
-    Experienced in bridging
-    software engineering with SRE
-    practices to deliver reliable
-    solutions based on observability
-    and monitoring. Skilled in CI/CD,
-    ensuring scalable, resilient
-    systems. Proficient in AI-powered engineering using LLMs, and spec-driven development.
+    Linux Bash, Docker and DevOps automation.
+    Experienced in CI/CD, observability
+    and monitoring (Grafana, alerting),
+    on-call rotations, server administration
+    and deployment of scalable, resilient
+    systems.
     ${appendedAboutMe}`,
   skills: {
-    "CI/CD": ['Docker','Jenkins','Kubernetes',"YAML","Helm", 'Groovy'],
-    "Monitoring": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie', 'SQL'],
-    "Full-Stack": ["Node.js","Typescript", "bash", "C++","Python", "React","Angular","Next.js"],
+    "CI/CD": ['Docker','Jenkins','Kubernetes',"YAML","Github Actions", 'Groovy'],
+    "Observability": ['Grafana','Instana','Elasticsearch','Prometheus','Opsgenie'],
+    "Cloud": ['AWS','Linux','WordPress', 'FTP'],
+    "Full-Stack": ["bash","Node.js","Typescript", "React","Angular","C++","Python"],
     // "Full-Stack": ["bash", "Python", "Node.js","Typescript","React",],
-    "Tooling": ['Linux','AWS',"Git","Vite","Storybook","ESLint", "Jest"],
-    "AI & LLMs": ["Claude Code", "Copilot","Gemini Notebook","MCPs",],
+    "Tooling": ['Linux',"Git","Storybook","ESLint", "Jest"],
+    "AI & LLMs": ["Claude Code", "Codex","Gemini Notebook","MCPs",],
   },
   languages: languagesData,
   links: [
@@ -661,17 +672,18 @@ export const sre: CvData = {
     { label: "Stackshare", url: "https://stackshare.io/damayor/software-engineer" },
   ],
   courses: [
+    { name: "AWS Cloud Practitioner Essentials", institution: "AWS", date: "In Progress" },
     { "name": "Claude Code in Action", "institution": "Anthropic", "date": "Jun 2026" },
     { name: "C++ PROGRAMMING - FROM BEGINNER TO BEYOND", institution: "Udemy", date: "May 2025" },
   ],
   experiences: [
     {title: "Work Experience", entries: [
-      freelancerExperience,
+      sreFreelancerExperience,
       {
         company: 'ADIDAS',
         location: 'Bogotá',
         dates: 'May 2021 - Jun 2025',
-        role: 'Software Engineer',
+        role: 'Software Engineer & SRE',
         tasks: [
           'Enhanced reliability of the Checkout backend microservice by observability with <b>Grafana</b> and alerting integrations, supporting uninterrupted daily transactions across <b>30+ countries.</b>',
          
@@ -679,8 +691,8 @@ export const sre: CvData = {
           practices, cutting
           deployment time from <b>15 minutes to under 7 minutes</b>`,
            `Participated in on-call rotations to troubleshoot and resolve
-          production issues, ensuring <b>99.99%</b> microservice availability.`,
-          'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Storybook</b> for the Global Team Sports platform, contributing to a personalized user experience for <b>20+ markets</b>.',
+          production issues, ensuring <b>99.99%</b> orchestrator availability.`,
+          // 'Developed and maintained scalable frontend components using <b>ReactJS</b> and <b>Storybook</b>, contributing to a personalized user experience for <b>20+ markets</b>.',
         ],
         achievements: [
           'Trained and mentored <b>14</b> career changers in the Campus Program, from programming fundamentals to <b>TypeScript</b> and <b>ReactJS</b>.'
@@ -690,10 +702,11 @@ export const sre: CvData = {
         company: 'UMBRA INTERACTIVE - 3D STUDIO',
         location: 'Bogotá',
         dates: 'Jan 2020 - Sep 2020',
-        role: 'Frontend Software Developer',
+        role: 'Software Developer & Server Administrator',
         tasks: [
-          'Created <b>immersive 3D applications</b> with <b>Unreal</b> and <b>React</b> creating interactive masterplan visualisations for the real estate sector (PropTech)',
-          'Developed hyper-casual games in <b>Unity</b> with <b>Virtual Reality</b> to support brand marketing campaigns and mall activations.',
+          'Responsible for the <b>servers</b> and maintenance of the company website and its clients\' sites, including <b>Volvo, Hyundai, Jeep, with </b>24/7 support.',
+          'Handled updates and content management via <b>WordPress</b> and <b>FTP</b>, uptime monitoring, recovery from outages and <b>re-deployment</b> of the sites.',
+          'Created <b>immersive 3D applications</b> with <b>Unreal</b> and <b>React</b> for the real estate sector such as <b>Amarilo</b> or <b>Prodesa</b>.',
         ]
       }
     ]},
@@ -727,9 +740,9 @@ export const sre: CvData = {
           location: "Bogotá, Colombia",
           tasks: [
             'GPA: 4.1/5.0',
-            "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
+            // "Recognized by Anabin (ZAB) as equivalent to the German <b>System- und Computertechnik</b> (Abschlussklasse A4/H+).",
             // "Research Monitor in IMAGINE group",
-            // "Scholarship <b>\"Quiero Estudiar\"</b> given to the best national ICFES scores"
+            "<b>\"Quiero Estudiar\"</b> Scholarship given to the best national ICFES scores"
           ]
         },
         {
@@ -743,7 +756,7 @@ export const sre: CvData = {
         }
       ]
     },
-    // defaultExtraCurricular
+    defaultExtraCurricular
   ],
 };
 
